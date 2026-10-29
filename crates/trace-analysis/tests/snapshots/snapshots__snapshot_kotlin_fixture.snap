@@ -1,0 +1,1365 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "kotlin",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/kotlin",
+    "fileCount": 2,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "kotlin"
+    ]
+  },
+  "languages": [
+    {
+      "language": "kotlin",
+      "grammar": "tree-sitter-kt 0.1.0"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "class:src/shapes.kt::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 1,
+          "byte": 186
+        },
+        "end": {
+          "line": 18,
+          "column": 2,
+          "byte": 393
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.kt::Rectangle",
+      "kind": "class",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "byte": 454
+        },
+        "end": {
+          "line": 29,
+          "column": 2,
+          "byte": 672
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.kt::Shape",
+      "kind": "class",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 63
+        },
+        "end": {
+          "line": 7,
+          "column": 2,
+          "byte": 133
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.kt::Square",
+      "kind": "class",
+      "name": "Square",
+      "qualifiedName": "Square",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 32,
+          "column": 1,
+          "byte": 717
+        },
+        "end": {
+          "line": 32,
+          "column": 55,
+          "byte": 771
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "constant:src/Main.kt::main.shapes",
+      "kind": "constant",
+      "name": "shapes",
+      "qualifiedName": "main.shapes",
+      "file": "src/Main.kt",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 34
+        },
+        "end": {
+          "line": 8,
+          "column": 6,
+          "byte": 143
+        }
+      },
+      "language": "kotlin",
+      "parent": "function:src/Main.kt::main",
+      "exported": true
+    },
+    {
+      "id": "constructor:src/shapes.kt::Circle.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Circle.constructor",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 13,
+          "byte": 198
+        },
+        "end": {
+          "line": 10,
+          "column": 33,
+          "byte": 218
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.kt::Rectangle.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Rectangle.constructor",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 16,
+          "byte": 469
+        },
+        "end": {
+          "line": 21,
+          "column": 55,
+          "byte": 508
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.kt::Square.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Square.constructor",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 32,
+          "column": 13,
+          "byte": 729
+        },
+        "end": {
+          "line": 32,
+          "column": 31,
+          "byte": 747
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Square",
+      "exported": false
+    },
+    {
+      "id": "file:src/Main.kt",
+      "kind": "file",
+      "name": "src/Main.kt",
+      "file": "src/Main.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "file:src/shapes.kt",
+      "kind": "file",
+      "name": "src/shapes.kt",
+      "file": "src/shapes.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "function:src/Main.kt::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "src/Main.kt",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 17
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 208
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/Main.kt",
+      "exported": true
+    },
+    {
+      "id": "function:src/shapes.kt::totalArea",
+      "kind": "function",
+      "name": "totalArea",
+      "qualifiedName": "totalArea",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 1,
+          "byte": 817
+        },
+        "end": {
+          "line": 37,
+          "column": 2,
+          "byte": 901
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 5,
+          "byte": 233
+        },
+        "end": {
+          "line": 13,
+          "column": 6,
+          "byte": 309
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Circle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Circle.perimeter",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 5,
+          "byte": 315
+        },
+        "end": {
+          "line": 17,
+          "column": 6,
+          "byte": 391
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Rectangle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Rectangle.area",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 22,
+          "column": 5,
+          "byte": 523
+        },
+        "end": {
+          "line": 24,
+          "column": 6,
+          "byte": 588
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Rectangle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Rectangle.perimeter",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 5,
+          "byte": 594
+        },
+        "end": {
+          "line": 28,
+          "column": 6,
+          "byte": 670
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 85
+        },
+        "end": {
+          "line": 5,
+          "column": 23,
+          "byte": 103
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.kt::Shape.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Shape.perimeter",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 108
+        },
+        "end": {
+          "line": 6,
+          "column": 28,
+          "byte": 131
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Shape",
+      "exported": true
+    },
+    {
+      "id": "module:src/Main.kt",
+      "kind": "module",
+      "name": "Main",
+      "file": "src/Main.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "module:src/shapes.kt",
+      "kind": "module",
+      "name": "shapes",
+      "file": "src/shapes.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "package:kotlin/shapes",
+      "kind": "package",
+      "name": "package:kotlin/shapes",
+      "file": "src/shapes.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "property:src/shapes.kt::Circle.radius",
+      "kind": "property",
+      "name": "radius",
+      "qualifiedName": "Circle.radius",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 14,
+          "byte": 199
+        },
+        "end": {
+          "line": 10,
+          "column": 32,
+          "byte": 217
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.kt::Rectangle.height",
+      "kind": "property",
+      "name": "height",
+      "qualifiedName": "Rectangle.height",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 36,
+          "byte": 489
+        },
+        "end": {
+          "line": 21,
+          "column": 54,
+          "byte": 507
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.kt::Rectangle.width",
+      "kind": "property",
+      "name": "width",
+      "qualifiedName": "Rectangle.width",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 17,
+          "byte": 470
+        },
+        "end": {
+          "line": 21,
+          "column": 34,
+          "byte": 487
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.kt::Square.side",
+      "kind": "property",
+      "name": "side",
+      "qualifiedName": "Square.side",
+      "file": "src/shapes.kt",
+      "range": {
+        "start": {
+          "line": 32,
+          "column": 14,
+          "byte": 730
+        },
+        "end": {
+          "line": 32,
+          "column": 30,
+          "byte": 746
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/shapes.kt::Square",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:src/shapes.kt::Circle",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 36,
+            "byte": 221
+          },
+          "end": {
+            "line": 10,
+            "column": 41,
+            "byte": 226
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.kt::Circle",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 36,
+            "byte": 221
+          },
+          "end": {
+            "line": 10,
+            "column": 41,
+            "byte": 226
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.kt::Rectangle",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 58,
+            "byte": 511
+          },
+          "end": {
+            "line": 21,
+            "column": 63,
+            "byte": 516
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.kt::Rectangle",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 58,
+            "byte": 511
+          },
+          "end": {
+            "line": 21,
+            "column": 63,
+            "byte": 516
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.kt::Square",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 34,
+            "byte": 750
+          },
+          "end": {
+            "line": 32,
+            "column": 43,
+            "byte": 759
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.kt::Square",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 34,
+            "byte": 750
+          },
+          "end": {
+            "line": 32,
+            "column": 43,
+            "byte": 759
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "constant:src/Main.kt::main.shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "function:src/Main.kt::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "module:src/Main.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "external:unknown:shapes",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 16,
+            "byte": 15
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "constant:src/Main.kt::main.shapes",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "function:src/Main.kt::main",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Main.kt",
+      "target": "function:src/Main.kt::main",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Square",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Circle.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Rectangle.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Square.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "function:src/shapes.kt::totalArea",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "module:src/shapes.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "property:src/shapes.kt::Circle.radius",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "property:src/shapes.kt::Rectangle.height",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "property:src/shapes.kt::Rectangle.width",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "property:src/shapes.kt::Square.side",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Square",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "class:src/shapes.kt::Square",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "function:src/shapes.kt::totalArea",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "function:src/shapes.kt::totalArea",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "external:kotlin:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 9,
+            "byte": 76
+          },
+          "end": {
+            "line": 5,
+            "column": 20,
+            "byte": 87
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "external:kotlin:Rectangle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 9,
+            "byte": 97
+          },
+          "end": {
+            "line": 6,
+            "column": 28,
+            "byte": 116
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "external:kotlin:Square",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 9,
+            "byte": 126
+          },
+          "end": {
+            "line": 7,
+            "column": 20,
+            "byte": 137
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "unresolved:format",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 28,
+            "byte": 171
+          },
+          "end": {
+            "line": 9,
+            "column": 60,
+            "byte": 203
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "unresolved:listOf",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 31,
+            "byte": 60
+          },
+          "end": {
+            "line": 8,
+            "column": 6,
+            "byte": 143
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "unresolved:println",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 5,
+            "byte": 148
+          },
+          "end": {
+            "line": 9,
+            "column": 63,
+            "byte": 206
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Main.kt::main",
+      "target": "unresolved:totalArea",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 42,
+            "byte": 185
+          },
+          "end": {
+            "line": 9,
+            "column": 59,
+            "byte": 202
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/shapes.kt::totalArea",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 36,
+            "column": 27,
+            "byte": 888
+          },
+          "end": {
+            "line": 36,
+            "column": 36,
+            "byte": 897
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/shapes.kt::totalArea",
+      "target": "unresolved:sumOf",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 36,
+            "column": 12,
+            "byte": 873
+          },
+          "end": {
+            "line": 36,
+            "column": 38,
+            "byte": 899
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/shapes.kt::totalArea",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 35,
+            "column": 28,
+            "byte": 844
+          },
+          "end": {
+            "line": 35,
+            "column": 33,
+            "byte": 849
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/Main.kt",
+      "target": "constant:src/Main.kt::main.shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Main.kt",
+      "target": "function:src/Main.kt::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "class:src/shapes.kt::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "class:src/shapes.kt::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "class:src/shapes.kt::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "class:src/shapes.kt::Square",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Circle.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Rectangle.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "constructor:src/shapes.kt::Square.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "function:src/shapes.kt::totalArea",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Circle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Rectangle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "method:src/shapes.kt::Shape.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "property:src/shapes.kt::Circle.radius",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "property:src/shapes.kt::Rectangle.height",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "property:src/shapes.kt::Rectangle.width",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.kt",
+      "target": "property:src/shapes.kt::Square.side",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "package:kotlin/shapes",
+      "target": "file:src/shapes.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Main.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/shapes.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:kotlin/shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 2,
+    "packages": 1,
+    "nodes": 26,
+    "edges": 82,
+    "symbols": 20,
+    "unresolvedEdges": 6,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "class": 4,
+      "constant": 1,
+      "constructor": 3,
+      "file": 2,
+      "function": 2,
+      "method": 6,
+      "module": 2,
+      "package": 1,
+      "property": 4,
+      "repository": 1
+    },
+    "byEdgeKind": {
+      "calls": 9,
+      "contains": 26,
+      "defines": 20,
+      "exports": 19,
+      "implements": 2,
+      "imports": 1,
+      "inherits": 1,
+      "uses_type": 4
+    },
+    "byLanguage": {
+      "kotlin": 25
+    },
+    "byStatus": {
+      "resolved_external": 4,
+      "resolved_internal": 72,
+      "unresolved": 6
+    }
+  }
+}

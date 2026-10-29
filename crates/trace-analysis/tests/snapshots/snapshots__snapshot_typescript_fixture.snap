@@ -1,0 +1,1130 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "typescript",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/typescript",
+    "fileCount": 2,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "typescript"
+    ]
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "class:src/extra.ts::N.Inner",
+      "kind": "class",
+      "name": "Inner",
+      "qualifiedName": "N.Inner",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 22,
+          "byte": 212
+        },
+        "end": {
+          "line": 7,
+          "column": 89,
+          "byte": 279
+        }
+      },
+      "language": "typescript",
+      "parent": "namespace:src/extra.ts::N",
+      "exported": true
+    },
+    {
+      "id": "class:src/math.ts::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 8,
+          "byte": 50
+        },
+        "end": {
+          "line": 5,
+          "column": 2,
+          "byte": 189
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "constant:src/math.ts::label",
+      "kind": "constant",
+      "name": "label",
+      "qualifiedName": "label",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 14,
+          "byte": 287
+        },
+        "end": {
+          "line": 8,
+          "column": 30,
+          "byte": 303
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "constant:src/math.ts::run.c",
+      "kind": "constant",
+      "name": "c",
+      "qualifiedName": "run.c",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 9,
+          "byte": 422
+        },
+        "end": {
+          "line": 12,
+          "column": 26,
+          "byte": 439
+        }
+      },
+      "language": "typescript",
+      "parent": "function:src/math.ts::run",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/math.ts::Circle.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Circle.constructor",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 3,
+          "byte": 84
+        },
+        "end": {
+          "line": 3,
+          "column": 41,
+          "byte": 122
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/math.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "enum:src/extra.ts::E",
+      "kind": "enum",
+      "name": "E",
+      "qualifiedName": "E",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "byte": 169
+        },
+        "end": {
+          "line": 6,
+          "column": 29,
+          "byte": 190
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": true
+    },
+    {
+      "id": "file:src/extra.ts",
+      "kind": "file",
+      "name": "src/extra.ts",
+      "file": "src/extra.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "file:src/math.ts",
+      "kind": "file",
+      "name": "src/math.ts",
+      "file": "src/math.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "function:src/extra.ts::arrow",
+      "kind": "function",
+      "name": "arrow",
+      "qualifiedName": "arrow",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 7,
+          "byte": 288
+        },
+        "end": {
+          "line": 8,
+          "column": 39,
+          "byte": 320
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    },
+    {
+      "id": "function:src/extra.ts::foo",
+      "kind": "function",
+      "name": "foo",
+      "qualifiedName": "foo",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 16,
+          "byte": 144
+        },
+        "end": {
+          "line": 5,
+          "column": 33,
+          "byte": 161
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/math.ts::run",
+      "kind": "function",
+      "name": "run",
+      "qualifiedName": "run",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 8,
+          "byte": 389
+        },
+        "end": {
+          "line": 14,
+          "column": 2,
+          "byte": 468
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/math.ts::twice",
+      "kind": "function",
+      "name": "twice",
+      "qualifiedName": "twice",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "byte": 197
+        },
+        "end": {
+          "line": 6,
+          "column": 59,
+          "byte": 248
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "interface:src/math.ts::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 8,
+          "byte": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 43,
+          "byte": 42
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "method:src/extra.ts::N.Inner.m",
+      "kind": "method",
+      "name": "m",
+      "qualifiedName": "N.Inner.m",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 59,
+          "byte": 249
+        },
+        "end": {
+          "line": 7,
+          "column": 87,
+          "byte": 277
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/extra.ts::N.Inner",
+      "exported": false
+    },
+    {
+      "id": "method:src/math.ts::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 3,
+          "byte": 125
+        },
+        "end": {
+          "line": 4,
+          "column": 65,
+          "byte": 187
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/math.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/math.ts::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 26,
+          "byte": 25
+        },
+        "end": {
+          "line": 1,
+          "column": 40,
+          "byte": 39
+        }
+      },
+      "language": "typescript",
+      "parent": "interface:src/math.ts::Shape",
+      "exported": false
+    },
+    {
+      "id": "module:src/extra.ts",
+      "kind": "module",
+      "name": "extra",
+      "file": "src/extra.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "module:src/math.ts",
+      "kind": "module",
+      "name": "math",
+      "file": "src/math.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "namespace:src/extra.ts::N",
+      "kind": "namespace",
+      "name": "N",
+      "qualifiedName": "N",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "byte": 191
+        },
+        "end": {
+          "line": 7,
+          "column": 91,
+          "byte": 281
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    },
+    {
+      "id": "property:src/extra.ts::N.Inner.p",
+      "kind": "property",
+      "name": "p",
+      "qualifiedName": "N.Inner.p",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 36,
+          "byte": 226
+        },
+        "end": {
+          "line": 7,
+          "column": 57,
+          "byte": 247
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/extra.ts::N.Inner",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "type:src/math.ts::ID",
+      "kind": "type",
+      "name": "ID",
+      "qualifiedName": "ID",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 8,
+          "byte": 256
+        },
+        "end": {
+          "line": 7,
+          "column": 25,
+          "byte": 273
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "variable:src/extra.ts::plain",
+      "kind": "variable",
+      "name": "plain",
+      "qualifiedName": "plain",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 326
+        },
+        "end": {
+          "line": 9,
+          "column": 33,
+          "byte": 354
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:src/math.ts::Circle",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 32,
+            "byte": 74
+          },
+          "end": {
+            "line": 2,
+            "column": 37,
+            "byte": 79
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::arrow",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "method:src/extra.ts::N.Inner.m",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "module:src/extra.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "namespace:src/extra.ts::N",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "property:src/extra.ts::N.Inner.p",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "variable:src/extra.ts::plain",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::run.c",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constructor:src/math.ts::Circle.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "method:src/math.ts::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "method:src/math.ts::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "module:src/math.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "external:unknown:path",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "byte": 352
+          },
+          "end": {
+            "line": 10,
+            "column": 30,
+            "byte": 381
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "file:src/math.ts",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "byte": 305
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "byte": 351
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "external:typescript:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 13,
+            "byte": 426
+          },
+          "end": {
+            "line": 12,
+            "column": 26,
+            "byte": 439
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "function:src/math.ts::twice",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 10,
+            "byte": 450
+          },
+          "end": {
+            "line": 13,
+            "column": 25,
+            "byte": 465
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 16,
+            "byte": 456
+          },
+          "end": {
+            "line": 13,
+            "column": 24,
+            "byte": 464
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "external:typescript:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 21,
+            "byte": 342
+          },
+          "end": {
+            "line": 9,
+            "column": 33,
+            "byte": 354
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 12,
+            "byte": 333
+          },
+          "end": {
+            "line": 9,
+            "column": 18,
+            "byte": 339
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "function:src/extra.ts::arrow",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "method:src/extra.ts::N.Inner.m",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "namespace:src/extra.ts::N",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "property:src/extra.ts::N.Inner.p",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "variable:src/extra.ts::plain",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constant:src/math.ts::run.c",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constructor:src/math.ts::Circle.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "method:src/math.ts::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "method:src/math.ts::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/extra.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/math.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./x`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 42,
+          "byte": 41
+        }
+      },
+      "language": "typescript"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./y`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 42
+        },
+        "end": {
+          "line": 2,
+          "column": 27,
+          "byte": 68
+        }
+      },
+      "language": "typescript"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./z`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 69
+        },
+        "end": {
+          "line": 3,
+          "column": 39,
+          "byte": 107
+        }
+      },
+      "language": "typescript"
+    }
+  ],
+  "statistics": {
+    "files": 2,
+    "packages": 0,
+    "nodes": 23,
+    "edges": 65,
+    "symbols": 18,
+    "unresolvedEdges": 2,
+    "diagnostics": 3,
+    "byNodeKind": {
+      "class": 2,
+      "constant": 2,
+      "constructor": 1,
+      "enum": 1,
+      "file": 2,
+      "function": 4,
+      "interface": 1,
+      "method": 3,
+      "module": 2,
+      "namespace": 1,
+      "property": 1,
+      "repository": 1,
+      "type": 1,
+      "variable": 1
+    },
+    "byEdgeKind": {
+      "calls": 4,
+      "contains": 22,
+      "defines": 18,
+      "exports": 17,
+      "implements": 1,
+      "imports": 2,
+      "uses_type": 1
+    },
+    "byLanguage": {
+      "typescript": 22
+    },
+    "byStatus": {
+      "resolved_external": 3,
+      "resolved_internal": 60,
+      "unresolved": 2
+    }
+  }
+}

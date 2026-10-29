@@ -1,0 +1,1037 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "rust",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/rust",
+    "fileCount": 2,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "rust"
+    ]
+  },
+  "languages": [
+    {
+      "language": "rust",
+      "grammar": "tree-sitter-rust 0.24.2"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "file:src/lib.rs",
+      "kind": "file",
+      "name": "src/lib.rs",
+      "file": "src/lib.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/main.rs",
+      "kind": "file",
+      "name": "src/main.rs",
+      "file": "src/main.rs",
+      "language": "rust"
+    },
+    {
+      "id": "function:src/lib.rs::total_area",
+      "kind": "function",
+      "name": "total_area",
+      "qualifiedName": "total_area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "byte": 742
+        },
+        "end": {
+          "line": 41,
+          "column": 2,
+          "byte": 835
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "function:src/main.rs::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "byte": 66
+        },
+        "end": {
+          "line": 11,
+          "column": 2,
+          "byte": 263
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/main.rs",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 234
+        },
+        "end": {
+          "line": 15,
+          "column": 6,
+          "byte": 320
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Circle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Circle.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 5,
+          "byte": 326
+        },
+        "end": {
+          "line": 19,
+          "column": 6,
+          "byte": 409
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Rectangle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Rectangle.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 5,
+          "byte": 550
+        },
+        "end": {
+          "line": 31,
+          "column": 6,
+          "byte": 612
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Rectangle.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 33,
+          "column": 5,
+          "byte": 618
+        },
+        "end": {
+          "line": 35,
+          "column": 6,
+          "byte": 693
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 70
+        },
+        "end": {
+          "line": 3,
+          "column": 27,
+          "byte": 92
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/lib.rs::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Shape.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Shape.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 97
+        },
+        "end": {
+          "line": 4,
+          "column": 32,
+          "byte": 124
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/lib.rs::Shape",
+      "exported": false
+    },
+    {
+      "id": "module:src/lib.rs",
+      "kind": "module",
+      "name": "crate",
+      "file": "src/lib.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:src/main.rs",
+      "kind": "module",
+      "name": "crate",
+      "file": "src/main.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:src/main.rs::shapes",
+      "kind": "module",
+      "name": "shapes",
+      "qualifiedName": "shapes",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12,
+          "byte": 11
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/main.rs",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Circle.radius",
+      "kind": "property",
+      "name": "radius",
+      "qualifiedName": "Circle.radius",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 186
+        },
+        "end": {
+          "line": 9,
+          "column": 20,
+          "byte": 201
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Rectangle.height",
+      "kind": "property",
+      "name": "height",
+      "qualifiedName": "Rectangle.height",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 499
+        },
+        "end": {
+          "line": 25,
+          "column": 20,
+          "byte": 514
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Rectangle.width",
+      "kind": "property",
+      "name": "width",
+      "qualifiedName": "Rectangle.width",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 5,
+          "byte": 479
+        },
+        "end": {
+          "line": 24,
+          "column": 19,
+          "byte": 493
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "struct:src/lib.rs::Circle",
+      "kind": "struct",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 162
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 204
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/lib.rs::Rectangle",
+      "kind": "struct",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "byte": 452
+        },
+        "end": {
+          "line": 26,
+          "column": 2,
+          "byte": 517
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "trait:src/lib.rs::Shape",
+      "kind": "trait",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 48
+        },
+        "end": {
+          "line": 5,
+          "column": 2,
+          "byte": 126
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "variable:src/main.rs::main.shapes",
+      "kind": "variable",
+      "name": "shapes",
+      "qualifiedName": "main.shapes",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 82
+        },
+        "end": {
+          "line": 9,
+          "column": 7,
+          "byte": 205
+        }
+      },
+      "language": "rust",
+      "parent": "function:src/main.rs::main",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "module:src/lib.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Circle.radius",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.height",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.width",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "module:src/main.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "module:src/main.rs::shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "variable:src/main.rs::main.shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "external:unknown:shapes",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "byte": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 52,
+            "byte": 64
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 27,
+            "byte": 818
+          },
+          "end": {
+            "line": 40,
+            "column": 35,
+            "byte": 826
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:iter",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 18,
+            "byte": 809
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:map",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 36,
+            "byte": 827
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:sum",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 42,
+            "byte": 833
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 39,
+            "column": 34,
+            "byte": 775
+          },
+          "end": {
+            "line": 39,
+            "column": 39,
+            "byte": 780
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:println",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 5,
+            "byte": 210
+          },
+          "end": {
+            "line": 10,
+            "column": 55,
+            "byte": 260
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 35,
+            "byte": 112
+          },
+          "end": {
+            "line": 9,
+            "column": 6,
+            "byte": 204
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:Shape",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 26,
+            "byte": 103
+          },
+          "end": {
+            "line": 6,
+            "column": 31,
+            "byte": 108
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 221
+          },
+          "end": {
+            "line": 12,
+            "column": 22,
+            "byte": 227
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 16,
+            "byte": 534
+          },
+          "end": {
+            "line": 28,
+            "column": 25,
+            "byte": 543
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Circle.radius",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.height",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.width",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "function:src/main.rs::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "module:src/main.rs::shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "variable:src/main.rs::main.shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/lib.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/main.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "struct:src/lib.rs::Circle",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 6,
+            "byte": 211
+          },
+          "end": {
+            "line": 12,
+            "column": 11,
+            "byte": 216
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/lib.rs::Rectangle",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 6,
+            "byte": 524
+          },
+          "end": {
+            "line": 28,
+            "column": 11,
+            "byte": 529
+          }
+        }
+      ]
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 2,
+    "packages": 0,
+    "nodes": 21,
+    "edges": 57,
+    "symbols": 15,
+    "unresolvedEdges": 7,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "file": 2,
+      "function": 2,
+      "method": 6,
+      "module": 3,
+      "property": 3,
+      "repository": 1,
+      "struct": 2,
+      "trait": 1,
+      "variable": 1
+    },
+    "byEdgeKind": {
+      "calls": 6,
+      "contains": 20,
+      "defines": 16,
+      "exports": 8,
+      "implements": 2,
+      "imports": 1,
+      "uses_type": 4
+    },
+    "byLanguage": {
+      "rust": 20
+    },
+    "byStatus": {
+      "resolved_external": 1,
+      "resolved_internal": 49,
+      "unresolved": 7
+    }
+  }
+}
