@@ -1,0 +1,2473 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "typescript",
+    "root": "../../fixtures/typescript",
+    "fileCount": 4,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "typescript"
+    ]
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "class:src/complex.ts::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 8,
+          "byte": 50
+        },
+        "end": {
+          "line": 5,
+          "column": 2,
+          "byte": 177
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/complex.ts",
+      "exported": true
+    },
+    {
+      "id": "class:src/extra.ts::N.Inner",
+      "kind": "class",
+      "name": "Inner",
+      "qualifiedName": "N.Inner",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 22,
+          "byte": 212
+        },
+        "end": {
+          "line": 7,
+          "column": 89,
+          "byte": 279
+        }
+      },
+      "language": "typescript",
+      "parent": "namespace:src/extra.ts::N",
+      "exported": true
+    },
+    {
+      "id": "class:src/math.ts::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 8,
+          "byte": 50
+        },
+        "end": {
+          "line": 5,
+          "column": 2,
+          "byte": 189
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "class:src/service.ts::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 8,
+          "byte": 137
+        },
+        "end": {
+          "line": 18,
+          "column": 2,
+          "byte": 384
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/service.ts",
+      "exported": true
+    },
+    {
+      "id": "class:src/service.ts::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 20,
+          "column": 8,
+          "byte": 393
+        },
+        "end": {
+          "line": 28,
+          "column": 2,
+          "byte": 617
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/service.ts",
+      "exported": true
+    },
+    {
+      "id": "constant:src/math.ts::label",
+      "kind": "constant",
+      "name": "label",
+      "qualifiedName": "label",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 14,
+          "byte": 287
+        },
+        "end": {
+          "line": 8,
+          "column": 30,
+          "byte": 303
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "constant:src/math.ts::run.c",
+      "kind": "constant",
+      "name": "c",
+      "qualifiedName": "run.c",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 9,
+          "byte": 422
+        },
+        "end": {
+          "line": 12,
+          "column": 26,
+          "byte": 439
+        }
+      },
+      "language": "typescript",
+      "parent": "function:src/math.ts::run",
+      "exported": false
+    },
+    {
+      "id": "constant:src/service.ts::ShapeService.area.shape",
+      "kind": "constant",
+      "name": "shape",
+      "qualifiedName": "ShapeService.area.shape",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 11,
+          "byte": 513
+        },
+        "end": {
+          "line": 24,
+          "column": 37,
+          "byte": 539
+        }
+      },
+      "language": "typescript",
+      "parent": "method:src/service.ts::ShapeService.area",
+      "exported": false
+    },
+    {
+      "id": "constant:src/service.ts::createService.repo",
+      "kind": "constant",
+      "name": "repo",
+      "qualifiedName": "createService.repo",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 9,
+          "byte": 675
+        },
+        "end": {
+          "line": 31,
+          "column": 48,
+          "byte": 714
+        }
+      },
+      "language": "typescript",
+      "parent": "function:src/service.ts::createService",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/complex.ts::Circle.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Circle.constructor",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 86
+        },
+        "end": {
+          "line": 3,
+          "column": 37,
+          "byte": 118
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/complex.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/math.ts::Circle.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "Circle.constructor",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 3,
+          "byte": 84
+        },
+        "end": {
+          "line": 3,
+          "column": 41,
+          "byte": 122
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/math.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/service.ts::ShapeService.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "ShapeService.constructor",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 3,
+          "byte": 416
+        },
+        "end": {
+          "line": 21,
+          "column": 59,
+          "byte": 472
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/service.ts::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "enum:src/extra.ts::E",
+      "kind": "enum",
+      "name": "E",
+      "qualifiedName": "E",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "byte": 169
+        },
+        "end": {
+          "line": 6,
+          "column": 29,
+          "byte": 190
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": true
+    },
+    {
+      "id": "external:unknown:path",
+      "kind": "external_symbol",
+      "name": "path",
+      "language": "typescript"
+    },
+    {
+      "id": "file:src/complex.ts",
+      "kind": "file",
+      "name": "src/complex.ts",
+      "file": "src/complex.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "file:src/extra.ts",
+      "kind": "file",
+      "name": "src/extra.ts",
+      "file": "src/extra.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "file:src/math.ts",
+      "kind": "file",
+      "name": "src/math.ts",
+      "file": "src/math.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "file:src/service.ts",
+      "kind": "file",
+      "name": "src/service.ts",
+      "file": "src/service.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "function:src/complex.ts::total",
+      "kind": "function",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "byte": 185
+        },
+        "end": {
+          "line": 6,
+          "column": 94,
+          "byte": 271
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/complex.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/extra.ts::arrow",
+      "kind": "function",
+      "name": "arrow",
+      "qualifiedName": "arrow",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 7,
+          "byte": 288
+        },
+        "end": {
+          "line": 8,
+          "column": 39,
+          "byte": 320
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    },
+    {
+      "id": "function:src/extra.ts::foo",
+      "kind": "function",
+      "name": "foo",
+      "qualifiedName": "foo",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 16,
+          "byte": 144
+        },
+        "end": {
+          "line": 5,
+          "column": 33,
+          "byte": 161
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/math.ts::run",
+      "kind": "function",
+      "name": "run",
+      "qualifiedName": "run",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 8,
+          "byte": 389
+        },
+        "end": {
+          "line": 14,
+          "column": 2,
+          "byte": 468
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/math.ts::twice",
+      "kind": "function",
+      "name": "twice",
+      "qualifiedName": "twice",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 8,
+          "byte": 197
+        },
+        "end": {
+          "line": 6,
+          "column": 59,
+          "byte": 248
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "function:src/service.ts::createService",
+      "kind": "function",
+      "name": "createService",
+      "qualifiedName": "createService",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 30,
+          "column": 8,
+          "byte": 626
+        },
+        "end": {
+          "line": 33,
+          "column": 2,
+          "byte": 750
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/service.ts",
+      "exported": true
+    },
+    {
+      "id": "interface:src/complex.ts::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 8,
+          "byte": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 43,
+          "byte": 42
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/complex.ts",
+      "exported": true
+    },
+    {
+      "id": "interface:src/math.ts::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 8,
+          "byte": 7
+        },
+        "end": {
+          "line": 1,
+          "column": 43,
+          "byte": 42
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "interface:src/service.ts::Repository",
+      "kind": "interface",
+      "name": "Repository",
+      "qualifiedName": "Repository",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 8,
+          "byte": 41
+        },
+        "end": {
+          "line": 6,
+          "column": 2,
+          "byte": 128
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/service.ts",
+      "exported": true
+    },
+    {
+      "id": "method:src/complex.ts::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 123
+        },
+        "end": {
+          "line": 4,
+          "column": 57,
+          "byte": 175
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/complex.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/complex.ts::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/complex.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 26,
+          "byte": 25
+        },
+        "end": {
+          "line": 1,
+          "column": 40,
+          "byte": 39
+        }
+      },
+      "language": "typescript",
+      "parent": "interface:src/complex.ts::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/extra.ts::N.Inner.m",
+      "kind": "method",
+      "name": "m",
+      "qualifiedName": "N.Inner.m",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 59,
+          "byte": 249
+        },
+        "end": {
+          "line": 7,
+          "column": 87,
+          "byte": 277
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/extra.ts::N.Inner",
+      "exported": false
+    },
+    {
+      "id": "method:src/math.ts::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 3,
+          "byte": 125
+        },
+        "end": {
+          "line": 4,
+          "column": 65,
+          "byte": 187
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/math.ts::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/math.ts::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 26,
+          "byte": 25
+        },
+        "end": {
+          "line": 1,
+          "column": 40,
+          "byte": 39
+        }
+      },
+      "language": "typescript",
+      "parent": "interface:src/math.ts::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.ts::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 3,
+          "byte": 235
+        },
+        "end": {
+          "line": 13,
+          "column": 4,
+          "byte": 303
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/service.ts::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.ts::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 3,
+          "byte": 307
+        },
+        "end": {
+          "line": 17,
+          "column": 4,
+          "byte": 382
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/service.ts::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.ts::Repository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "Repository.find",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 3,
+          "byte": 69
+        },
+        "end": {
+          "line": 4,
+          "column": 34,
+          "byte": 100
+        }
+      },
+      "language": "typescript",
+      "parent": "interface:src/service.ts::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.ts::Repository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "Repository.save",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 3,
+          "byte": 104
+        },
+        "end": {
+          "line": 5,
+          "column": 24,
+          "byte": 125
+        }
+      },
+      "language": "typescript",
+      "parent": "interface:src/service.ts::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.ts::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 23,
+          "column": 3,
+          "byte": 476
+        },
+        "end": {
+          "line": 27,
+          "column": 4,
+          "byte": 615
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/service.ts::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "module:src/complex.ts",
+      "kind": "module",
+      "name": "complex",
+      "file": "src/complex.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "module:src/extra.ts",
+      "kind": "module",
+      "name": "extra",
+      "file": "src/extra.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "module:src/math.ts",
+      "kind": "module",
+      "name": "math",
+      "file": "src/math.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "module:src/service.ts",
+      "kind": "module",
+      "name": "service",
+      "file": "src/service.ts",
+      "language": "typescript"
+    },
+    {
+      "id": "namespace:src/extra.ts::N",
+      "kind": "namespace",
+      "name": "N",
+      "qualifiedName": "N",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "byte": 191
+        },
+        "end": {
+          "line": 7,
+          "column": 91,
+          "byte": 281
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    },
+    {
+      "id": "property:src/extra.ts::N.Inner.p",
+      "kind": "property",
+      "name": "p",
+      "qualifiedName": "N.Inner.p",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 36,
+          "byte": 226
+        },
+        "end": {
+          "line": 7,
+          "column": 57,
+          "byte": 247
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/extra.ts::N.Inner",
+      "exported": false
+    },
+    {
+      "id": "property:src/service.ts::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/service.ts",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 3,
+          "byte": 194
+        },
+        "end": {
+          "line": 9,
+          "column": 39,
+          "byte": 230
+        }
+      },
+      "language": "typescript",
+      "parent": "class:src/service.ts::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "type:src/math.ts::ID",
+      "kind": "type",
+      "name": "ID",
+      "qualifiedName": "ID",
+      "file": "src/math.ts",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 8,
+          "byte": 256
+        },
+        "end": {
+          "line": 7,
+          "column": 25,
+          "byte": 273
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/math.ts",
+      "exported": true
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:reduce",
+      "kind": "unknown",
+      "name": "reduce",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:set",
+      "kind": "unknown",
+      "name": "set",
+      "language": "typescript"
+    },
+    {
+      "id": "variable:src/extra.ts::plain",
+      "kind": "variable",
+      "name": "plain",
+      "qualifiedName": "plain",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 326
+        },
+        "end": {
+          "line": 9,
+          "column": 33,
+          "byte": 354
+        }
+      },
+      "language": "typescript",
+      "parent": "module:src/extra.ts",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:src/complex.ts::Circle",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 32,
+            "byte": 74
+          },
+          "end": {
+            "line": 2,
+            "column": 37,
+            "byte": 79
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/math.ts::Circle",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 32,
+            "byte": 74
+          },
+          "end": {
+            "line": 2,
+            "column": 37,
+            "byte": 79
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/service.ts::InMemoryRepository",
+      "target": "external:typescript:Map",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 19,
+            "byte": 210
+          },
+          "end": {
+            "line": 9,
+            "column": 39,
+            "byte": 230
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/service.ts::InMemoryRepository",
+      "target": "interface:src/service.ts::Repository",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 47,
+            "byte": 176
+          },
+          "end": {
+            "line": 8,
+            "column": 57,
+            "byte": 186
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/service.ts::InMemoryRepository",
+      "target": "unresolved:T",
+      "kind": "implements",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 58,
+            "byte": 187
+          },
+          "end": {
+            "line": 8,
+            "column": 59,
+            "byte": 188
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/service.ts::ShapeService.constructor",
+      "target": "class:src/math.ts::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 48,
+            "byte": 461
+          },
+          "end": {
+            "line": 21,
+            "column": 54,
+            "byte": 467
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/service.ts::ShapeService.constructor",
+      "target": "class:src/service.ts::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 29,
+            "byte": 442
+          },
+          "end": {
+            "line": 21,
+            "column": 47,
+            "byte": 460
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "class:src/complex.ts::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "constructor:src/complex.ts::Circle.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "function:src/complex.ts::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "method:src/complex.ts::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "method:src/complex.ts::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "module:src/complex.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "class:src/complex.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "class:src/complex.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "function:src/complex.ts::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "function:src/complex.ts::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.ts",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::arrow",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "method:src/extra.ts::N.Inner.m",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "module:src/extra.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "namespace:src/extra.ts::N",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "property:src/extra.ts::N.Inner.p",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "variable:src/extra.ts::plain",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::run.c",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constructor:src/math.ts::Circle.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "method:src/math.ts::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "method:src/math.ts::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "module:src/math.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "external:unknown:path",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 1,
+            "byte": 352
+          },
+          "end": {
+            "line": 10,
+            "column": 30,
+            "byte": 381
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "file:src/math.ts",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "byte": 305
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "byte": 351
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "constant:src/service.ts::ShapeService.area.shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "constant:src/service.ts::createService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "constructor:src/service.ts::ShapeService.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "function:src/service.ts::createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "interface:src/service.ts::Repository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "method:src/service.ts::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "method:src/service.ts::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "method:src/service.ts::Repository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "method:src/service.ts::Repository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "method:src/service.ts::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "module:src/service.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "property:src/service.ts::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "file:src/math.ts",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 33,
+            "byte": 32
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "class:src/service.ts::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "function:src/service.ts::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "function:src/service.ts::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "interface:src/service.ts::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.ts",
+      "target": "interface:src/service.ts::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "function:src/complex.ts::total",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 80,
+            "byte": 257
+          },
+          "end": {
+            "line": 6,
+            "column": 88,
+            "byte": 265
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.ts::total",
+      "target": "unresolved:reduce",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 57,
+            "byte": 234
+          },
+          "end": {
+            "line": 6,
+            "column": 91,
+            "byte": 268
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.ts::total",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 31,
+            "byte": 208
+          },
+          "end": {
+            "line": 6,
+            "column": 36,
+            "byte": 213
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "external:typescript:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 13,
+            "byte": 426
+          },
+          "end": {
+            "line": 12,
+            "column": 26,
+            "byte": 439
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "function:src/math.ts::twice",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 10,
+            "byte": 450
+          },
+          "end": {
+            "line": 13,
+            "column": 25,
+            "byte": 465
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/math.ts::run",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 16,
+            "byte": 456
+          },
+          "end": {
+            "line": 13,
+            "column": 24,
+            "byte": 464
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/service.ts::createService",
+      "target": "external:typescript:InMemoryRepository",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 16,
+            "byte": 682
+          },
+          "end": {
+            "line": 31,
+            "column": 48,
+            "byte": 714
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/service.ts::createService",
+      "target": "external:typescript:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 10,
+            "byte": 725
+          },
+          "end": {
+            "line": 32,
+            "column": 32,
+            "byte": 747
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/service.ts::createService",
+      "target": "class:src/service.ts::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 30,
+            "column": 34,
+            "byte": 652
+          },
+          "end": {
+            "line": 30,
+            "column": 46,
+            "byte": 664
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:src/service.ts::Repository",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 21,
+            "byte": 87
+          },
+          "end": {
+            "line": 4,
+            "column": 22,
+            "byte": 88
+          }
+        },
+        {
+          "start": {
+            "line": 5,
+            "column": 16,
+            "byte": 117
+          },
+          "end": {
+            "line": 5,
+            "column": 17,
+            "byte": 118
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::InMemoryRepository.find",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 12,
+            "byte": 280
+          },
+          "end": {
+            "line": 12,
+            "column": 30,
+            "byte": 298
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::InMemoryRepository.find",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 21,
+            "byte": 253
+          },
+          "end": {
+            "line": 11,
+            "column": 22,
+            "byte": 254
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::InMemoryRepository.save",
+      "target": "unresolved:set",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 16,
+            "column": 5,
+            "byte": 335
+          },
+          "end": {
+            "line": 16,
+            "column": 47,
+            "byte": 377
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 16,
+            "byte": 320
+          },
+          "end": {
+            "line": 15,
+            "column": 17,
+            "byte": 321
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::ShapeService.area",
+      "target": "external:typescript:Error",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 23,
+            "byte": 563
+          },
+          "end": {
+            "line": 25,
+            "column": 45,
+            "byte": 585
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 12,
+            "byte": 598
+          },
+          "end": {
+            "line": 26,
+            "column": 24,
+            "byte": 610
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.ts::ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 24,
+            "column": 19,
+            "byte": 521
+          },
+          "end": {
+            "line": 24,
+            "column": 37,
+            "byte": 539
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "class:src/complex.ts::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "constructor:src/complex.ts::Circle.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "function:src/complex.ts::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "interface:src/complex.ts::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "method:src/complex.ts::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.ts",
+      "target": "method:src/complex.ts::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "external:typescript:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 21,
+            "byte": 342
+          },
+          "end": {
+            "line": 9,
+            "column": 33,
+            "byte": 354
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 12,
+            "byte": 333
+          },
+          "end": {
+            "line": 9,
+            "column": 18,
+            "byte": 339
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "class:src/extra.ts::N.Inner",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "enum:src/extra.ts::E",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "function:src/extra.ts::arrow",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "function:src/extra.ts::foo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "method:src/extra.ts::N.Inner.m",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "namespace:src/extra.ts::N",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "property:src/extra.ts::N.Inner.p",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/extra.ts",
+      "target": "variable:src/extra.ts::plain",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "class:src/math.ts::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constant:src/math.ts::label",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constant:src/math.ts::run.c",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "constructor:src/math.ts::Circle.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "function:src/math.ts::run",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "function:src/math.ts::twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "interface:src/math.ts::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "method:src/math.ts::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "method:src/math.ts::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/math.ts",
+      "target": "type:src/math.ts::ID",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "class:src/service.ts::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "class:src/service.ts::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "constant:src/service.ts::ShapeService.area.shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "constant:src/service.ts::createService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "constructor:src/service.ts::ShapeService.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "function:src/service.ts::createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "interface:src/service.ts::Repository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "method:src/service.ts::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "method:src/service.ts::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "method:src/service.ts::Repository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "method:src/service.ts::Repository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "method:src/service.ts::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.ts",
+      "target": "property:src/service.ts::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/complex.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/extra.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/math.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/service.ts",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./x`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 42,
+          "byte": 41
+        }
+      },
+      "language": "typescript"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./y`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 42
+        },
+        "end": {
+          "line": 2,
+          "column": 27,
+          "byte": 68
+        }
+      },
+      "language": "typescript"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `./z`",
+      "file": "src/extra.ts",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 69
+        },
+        "end": {
+          "line": 3,
+          "column": 39,
+          "byte": 107
+        }
+      },
+      "language": "typescript"
+    }
+  ],
+  "statistics": {
+    "files": 4,
+    "packages": 0,
+    "nodes": 54,
+    "edges": 142,
+    "symbols": 44,
+    "unresolvedEdges": 12,
+    "diagnostics": 3,
+    "byNodeKind": {
+      "class": 5,
+      "constant": 4,
+      "constructor": 3,
+      "enum": 1,
+      "external_symbol": 1,
+      "file": 4,
+      "function": 6,
+      "interface": 3,
+      "method": 10,
+      "module": 4,
+      "namespace": 1,
+      "property": 2,
+      "repository": 1,
+      "type": 1,
+      "unknown": 7,
+      "variable": 1
+    },
+    "byEdgeKind": {
+      "calls": 14,
+      "contains": 45,
+      "defines": 37,
+      "exports": 31,
+      "implements": 4,
+      "imports": 3,
+      "uses_type": 8
+    },
+    "byLanguage": {
+      "typescript": 53
+    },
+    "byStatus": {
+      "resolved_external": 7,
+      "resolved_internal": 123,
+      "unresolved": 12
+    },
+    "byFramework": {}
+  }
+}

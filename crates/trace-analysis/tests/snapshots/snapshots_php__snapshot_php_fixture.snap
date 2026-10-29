@@ -1,0 +1,1035 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "php",
+    "root": "../../fixtures/php",
+    "fileCount": 3,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "php"
+    ]
+  },
+  "languages": [
+    {
+      "language": "php",
+      "grammar": "tree-sitter-php 0.23.11"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "class:Complex.php::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 57
+        },
+        "end": {
+          "line": 3,
+          "column": 147,
+          "byte": 203
+        }
+      },
+      "language": "php",
+      "parent": "module:Complex.php",
+      "exported": true
+    },
+    {
+      "id": "class:src/Math.php::Math",
+      "kind": "class",
+      "name": "Math",
+      "qualifiedName": "Math",
+      "file": "src/Math.php",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 7
+        },
+        "end": {
+          "line": 11,
+          "column": 2,
+          "byte": 159
+        }
+      },
+      "language": "php",
+      "parent": "module:src/Math.php",
+      "exported": true
+    },
+    {
+      "id": "class:src/Service.php::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 7
+        },
+        "end": {
+          "line": 16,
+          "column": 2,
+          "byte": 298
+        }
+      },
+      "language": "php",
+      "parent": "module:src/Service.php",
+      "exported": true
+    },
+    {
+      "id": "class:src/Service.php::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 1,
+          "byte": 300
+        },
+        "end": {
+          "line": 32,
+          "column": 2,
+          "byte": 616
+        }
+      },
+      "language": "php",
+      "parent": "module:src/Service.php",
+      "exported": true
+    },
+    {
+      "id": "file:Complex.php",
+      "kind": "file",
+      "name": "Complex.php",
+      "file": "Complex.php",
+      "language": "php"
+    },
+    {
+      "id": "file:src/Math.php",
+      "kind": "file",
+      "name": "src/Math.php",
+      "file": "src/Math.php",
+      "language": "php"
+    },
+    {
+      "id": "file:src/Service.php",
+      "kind": "file",
+      "name": "src/Service.php",
+      "file": "src/Service.php",
+      "language": "php"
+    },
+    {
+      "id": "function:Complex.php::total",
+      "kind": "function",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 204
+        },
+        "end": {
+          "line": 4,
+          "column": 86,
+          "byte": 289
+        }
+      },
+      "language": "php",
+      "parent": "module:Complex.php",
+      "exported": true
+    },
+    {
+      "id": "function:src/Service.php::createService",
+      "kind": "function",
+      "name": "createService",
+      "qualifiedName": "createService",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 34,
+          "column": 1,
+          "byte": 618
+        },
+        "end": {
+          "line": 36,
+          "column": 2,
+          "byte": 701
+        }
+      },
+      "language": "php",
+      "parent": "module:src/Service.php",
+      "exported": true
+    },
+    {
+      "id": "interface:Complex.php::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 6
+        },
+        "end": {
+          "line": 2,
+          "column": 51,
+          "byte": 56
+        }
+      },
+      "language": "php",
+      "parent": "module:Complex.php",
+      "exported": true
+    },
+    {
+      "id": "method:Complex.php::Circle.__construct",
+      "kind": "method",
+      "name": "__construct",
+      "qualifiedName": "Circle.__construct",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 33,
+          "byte": 89
+        },
+        "end": {
+          "line": 3,
+          "column": 80,
+          "byte": 136
+        }
+      },
+      "language": "php",
+      "parent": "class:Complex.php::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:Complex.php::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 81,
+          "byte": 137
+        },
+        "end": {
+          "line": 3,
+          "column": 145,
+          "byte": 201
+        }
+      },
+      "language": "php",
+      "parent": "class:Complex.php::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:Complex.php::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "Complex.php",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 19,
+          "byte": 24
+        },
+        "end": {
+          "line": 2,
+          "column": 49,
+          "byte": 54
+        }
+      },
+      "language": "php",
+      "parent": "interface:Complex.php::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/Math.php::Math.add",
+      "kind": "method",
+      "name": "add",
+      "qualifiedName": "Math.add",
+      "file": "src/Math.php",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 24
+        },
+        "end": {
+          "line": 6,
+          "column": 6,
+          "byte": 83
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Math.php::Math",
+      "exported": true
+    },
+    {
+      "id": "method:src/Math.php::Math.twice",
+      "kind": "method",
+      "name": "twice",
+      "qualifiedName": "Math.twice",
+      "file": "src/Math.php",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 5,
+          "byte": 89
+        },
+        "end": {
+          "line": 10,
+          "column": 6,
+          "byte": 157
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Math.php::Math",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.php::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 69
+        },
+        "end": {
+          "line": 11,
+          "column": 6,
+          "byte": 211
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.php::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 217
+        },
+        "end": {
+          "line": 15,
+          "column": 6,
+          "byte": 296
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.php::ShapeService.__construct",
+      "kind": "method",
+      "name": "__construct",
+      "qualifiedName": "ShapeService.__construct",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 5,
+          "byte": 345
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 416
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.php::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 422
+        },
+        "end": {
+          "line": 31,
+          "column": 6,
+          "byte": 614
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "module:Complex.php",
+      "kind": "module",
+      "name": "Complex",
+      "file": "Complex.php",
+      "language": "php"
+    },
+    {
+      "id": "module:src/Math.php",
+      "kind": "module",
+      "name": "Math",
+      "file": "src/Math.php",
+      "language": "php"
+    },
+    {
+      "id": "module:src/Service.php",
+      "kind": "module",
+      "name": "Service",
+      "file": "src/Service.php",
+      "language": "php"
+    },
+    {
+      "id": "property:src/Service.php::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 38
+        },
+        "end": {
+          "line": 4,
+          "column": 30,
+          "byte": 63
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "property:src/Service.php::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/Service.php",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 5,
+          "byte": 325
+        },
+        "end": {
+          "line": 19,
+          "column": 19,
+          "byte": 339
+        }
+      },
+      "language": "php",
+      "parent": "class:src/Service.php::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:isset",
+      "kind": "unknown",
+      "name": "isset",
+      "language": "php"
+    },
+    {
+      "id": "unresolved:pi",
+      "kind": "unknown",
+      "name": "pi",
+      "language": "php"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Complex.php",
+      "target": "class:Complex.php::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "function:Complex.php::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "interface:Complex.php::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Circle.__construct",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "module:Complex.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "class:Complex.php::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "class:Complex.php::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "function:Complex.php::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "function:Complex.php::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "interface:Complex.php::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "interface:Complex.php::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Circle.__construct",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Circle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.php",
+      "target": "method:Complex.php::Shape.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "class:src/Math.php::Math",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "method:src/Math.php::Math.add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "method:src/Math.php::Math.twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "module:src/Math.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "class:src/Math.php::Math",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "class:src/Math.php::Math",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "method:src/Math.php::Math.add",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.php",
+      "target": "method:src/Math.php::Math.twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "function:src/Service.php::createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.__construct",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "module:src/Service.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "property:src/Service.php::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "property:src/Service.php::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "class:src/Service.php::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "function:src/Service.php::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "function:src/Service.php::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.__construct",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "property:src/Service.php::InMemoryRepository.store",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.php",
+      "target": "property:src/Service.php::ShapeService.repo",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "method:Complex.php::Circle.area",
+      "target": "unresolved:pi",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 120,
+            "byte": 176
+          },
+          "end": {
+            "line": 3,
+            "column": 124,
+            "byte": 180
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.php::InMemoryRepository.find",
+      "target": "unresolved:isset",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 13,
+            "byte": 109
+          },
+          "end": {
+            "line": 7,
+            "column": 37,
+            "byte": 133
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "class:Complex.php::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "function:Complex.php::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "interface:Complex.php::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "method:Complex.php::Circle.__construct",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "method:Complex.php::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.php",
+      "target": "method:Complex.php::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.php",
+      "target": "class:src/Math.php::Math",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.php",
+      "target": "method:src/Math.php::Math.add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.php",
+      "target": "method:src/Math.php::Math.twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "class:src/Service.php::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "class:src/Service.php::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "function:src/Service.php::createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "method:src/Service.php::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.__construct",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "method:src/Service.php::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "property:src/Service.php::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.php",
+      "target": "property:src/Service.php::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:Complex.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Math.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Service.php",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 3,
+    "packages": 0,
+    "nodes": 27,
+    "edges": 69,
+    "symbols": 20,
+    "unresolvedEdges": 2,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "class": 4,
+      "file": 3,
+      "function": 2,
+      "interface": 1,
+      "method": 9,
+      "module": 3,
+      "property": 2,
+      "repository": 1,
+      "unknown": 2
+    },
+    "byEdgeKind": {
+      "calls": 2,
+      "contains": 24,
+      "defines": 18,
+      "exports": 25
+    },
+    "byLanguage": {
+      "php": 26
+    },
+    "byStatus": {
+      "resolved_internal": 67,
+      "unresolved": 2
+    },
+    "byFramework": {}
+  }
+}

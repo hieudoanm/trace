@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <defs>
+    <!-- Notebook grid background -->
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#e6edf4" stroke-width="1"/>
+    </pattern>
+
+    <!-- Mouth mask from the logo: cuts the ring where columns meet it -->
+    <mask id="mouths" maskUnits="userSpaceOnUse" x="0" y="0" width="400" height="400">
+      <rect x="0" y="0" width="400" height="400" fill="#fff"/>
+      <rect x="190" y="90"  width="20" height="70" fill="#000"/>
+      <rect x="190" y="240" width="20" height="70" fill="#000"/>
+      <rect x="90"  y="190" width="70" height="20" fill="#000"/>
+      <rect x="240" y="190" width="70" height="20" fill="#000"/>
+    </mask>
+  </defs>
+
+  <!-- Background: white page + notebook grid -->
+  <rect width="1280" height="640" fill="#ffffff"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+
+  <!-- Logo mark (columns + ring, grid shows through) -->
+  <g transform="translate(90, 160) scale(0.8)">
+    <g fill="none" stroke="#2b3a55" stroke-width="16" stroke-linejoin="round">
+      <!-- Top -->
+      <path d="M 182 140 L 182 82  A 18 18 0 0 1 218 82  L 218 140"/>
+      <!-- Bottom -->
+      <path d="M 182 260 L 182 318 A 18 18 0 0 0 218 318 L 218 260"/>
+      <!-- Left -->
+      <path d="M 140 182 L 82 182  A 18 18 0 0 0 82 218  L 140 218"/>
+      <!-- Right -->
+      <path d="M 260 182 L 318 182 A 18 18 0 0 1 318 218 L 260 218"/>
+    </g>
+
+    <!-- Ring only, hollow mouths -->
+    <circle cx="200" cy="200" r="60"
+            fill="none" stroke="#2b3a55" stroke-width="16"
+            mask="url(#mouths)"/>
+  </g>
+
+  <!-- Text content -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+    <!-- Kicker / site name -->
+    <text x="470" y="145" font-size="22" font-weight="600"
+          letter-spacing="6" fill="#7c8aa5">TRACE</text>
+
+    <!-- Title -->
+    <text x="470" y="239" font-size="64" font-weight="800" fill="#2b3a55">Code Intelligence</text>
+    <text x="470" y="317" font-size="64" font-weight="800" fill="#2b3a55">Graph Analysis</text>
+
+    <!-- Description -->
+    <text x="470" y="383" font-size="26" fill="#5f6f89">Multi-language code analysis that builds a</text>
+    <text x="470" y="419" font-size="26" fill="#5f6f89">unified graph of your repository.</text>
+
+    <!-- URL -->
+    <text x="470" y="495" font-size="22" font-weight="500"
+          letter-spacing="2" fill="#7c8aa5">github.com/hieudoanm/trace</text>
+  </g>
+</svg>

@@ -1,0 +1,948 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "csharp",
+    "root": "../../fixtures/csharp",
+    "fileCount": 3,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "csharp"
+    ]
+  },
+  "languages": [
+    {
+      "language": "csharp",
+      "grammar": "tree-sitter-c-sharp 0.23.1"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "class:Complex.cs::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 36
+        },
+        "end": {
+          "line": 2,
+          "column": 108,
+          "byte": 143
+        }
+      },
+      "language": "csharp",
+      "parent": "module:Complex.cs",
+      "exported": false
+    },
+    {
+      "id": "class:Complex.cs::Complex",
+      "kind": "class",
+      "name": "Complex",
+      "qualifiedName": "Complex",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 144
+        },
+        "end": {
+          "line": 3,
+          "column": 110,
+          "byte": 253
+        }
+      },
+      "language": "csharp",
+      "parent": "module:Complex.cs",
+      "exported": false
+    },
+    {
+      "id": "class:src/Math.cs::Math",
+      "kind": "class",
+      "name": "Math",
+      "qualifiedName": "Math",
+      "file": "src/Math.cs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 20
+        },
+        "end": {
+          "line": 14,
+          "column": 2,
+          "byte": 175
+        }
+      },
+      "language": "csharp",
+      "parent": "module:src/Math.cs",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.cs::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 69
+        },
+        "end": {
+          "line": 20,
+          "column": 2,
+          "byte": 359
+        }
+      },
+      "language": "csharp",
+      "parent": "module:src/Service.cs",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.cs::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 22,
+          "column": 1,
+          "byte": 361
+        },
+        "end": {
+          "line": 42,
+          "column": 2,
+          "byte": 839
+        }
+      },
+      "language": "csharp",
+      "parent": "module:src/Service.cs",
+      "exported": false
+    },
+    {
+      "id": "constructor:Complex.cs::Circle.Circle",
+      "kind": "constructor",
+      "name": "Circle",
+      "qualifiedName": "Circle.Circle",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 42,
+          "byte": 77
+        },
+        "end": {
+          "line": 2,
+          "column": 71,
+          "byte": 106
+        }
+      },
+      "language": "csharp",
+      "parent": "class:Complex.cs::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/Service.cs::ShapeService.ShapeService",
+      "kind": "constructor",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService.ShapeService",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 5,
+          "byte": 448
+        },
+        "end": {
+          "line": 29,
+          "column": 6,
+          "byte": 538
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Service.cs::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "external:unknown:System",
+      "kind": "external_symbol",
+      "name": "System",
+      "language": "csharp"
+    },
+    {
+      "id": "external:unknown:System.Collections.Generic",
+      "kind": "external_symbol",
+      "name": "System.Collections.Generic",
+      "language": "csharp"
+    },
+    {
+      "id": "file:Complex.cs",
+      "kind": "file",
+      "name": "Complex.cs",
+      "file": "Complex.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "file:src/Math.cs",
+      "kind": "file",
+      "name": "src/Math.cs",
+      "file": "src/Math.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "file:src/Service.cs",
+      "kind": "file",
+      "name": "src/Service.cs",
+      "file": "src/Service.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "interface:Complex.cs::IShape",
+      "kind": "interface",
+      "name": "IShape",
+      "qualifiedName": "IShape",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "byte": 35
+        }
+      },
+      "language": "csharp",
+      "parent": "module:Complex.cs",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.cs::Circle.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Circle.Area",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 72,
+          "byte": 107
+        },
+        "end": {
+          "line": 2,
+          "column": 106,
+          "byte": 141
+        }
+      },
+      "language": "csharp",
+      "parent": "class:Complex.cs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.cs::Complex.Total",
+      "kind": "method",
+      "name": "Total",
+      "qualifiedName": "Complex.Total",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 17,
+          "byte": 160
+        },
+        "end": {
+          "line": 3,
+          "column": 108,
+          "byte": 251
+        }
+      },
+      "language": "csharp",
+      "parent": "class:Complex.cs::Complex",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.cs::IShape.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "IShape.Area",
+      "file": "Complex.cs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 20,
+          "byte": 19
+        },
+        "end": {
+          "line": 1,
+          "column": 34,
+          "byte": 33
+        }
+      },
+      "language": "csharp",
+      "parent": "interface:Complex.cs::IShape",
+      "exported": false
+    },
+    {
+      "id": "method:src/Math.cs::Math.Add",
+      "kind": "method",
+      "name": "Add",
+      "qualifiedName": "Math.Add",
+      "file": "src/Math.cs",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 44
+        },
+        "end": {
+          "line": 8,
+          "column": 6,
+          "byte": 106
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Math.cs::Math",
+      "exported": false
+    },
+    {
+      "id": "method:src/Math.cs::Math.Twice",
+      "kind": "method",
+      "name": "Twice",
+      "qualifiedName": "Math.Twice",
+      "file": "src/Math.cs",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 5,
+          "byte": 112
+        },
+        "end": {
+          "line": 13,
+          "column": 6,
+          "byte": 173
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Math.cs::Math",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.cs::InMemoryRepository.Find",
+      "kind": "method",
+      "name": "Find",
+      "qualifiedName": "InMemoryRepository.Find",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 5,
+          "byte": 169
+        },
+        "end": {
+          "line": 14,
+          "column": 6,
+          "byte": 274
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Service.cs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.cs::InMemoryRepository.Save",
+      "kind": "method",
+      "name": "Save",
+      "qualifiedName": "InMemoryRepository.Save",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 5,
+          "byte": 280
+        },
+        "end": {
+          "line": 19,
+          "column": 6,
+          "byte": 357
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Service.cs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.cs::ShapeService.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "ShapeService.Area",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 5,
+          "byte": 544
+        },
+        "end": {
+          "line": 36,
+          "column": 6,
+          "byte": 710
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Service.cs::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.cs::ShapeService.CreateService",
+      "kind": "method",
+      "name": "CreateService",
+      "qualifiedName": "ShapeService.CreateService",
+      "file": "src/Service.cs",
+      "range": {
+        "start": {
+          "line": 38,
+          "column": 5,
+          "byte": 716
+        },
+        "end": {
+          "line": 41,
+          "column": 6,
+          "byte": 837
+        }
+      },
+      "language": "csharp",
+      "parent": "class:src/Service.cs::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "module:Complex.cs",
+      "kind": "module",
+      "name": "Complex",
+      "file": "Complex.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "module:src/Math.cs",
+      "kind": "module",
+      "name": "Math",
+      "file": "src/Math.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "module:src/Service.cs",
+      "kind": "module",
+      "name": "Service",
+      "file": "src/Service.cs",
+      "language": "csharp"
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:Area",
+      "kind": "unknown",
+      "name": "Area",
+      "language": "csharp"
+    },
+    {
+      "id": "unresolved:Find",
+      "kind": "unknown",
+      "name": "Find",
+      "language": "csharp"
+    },
+    {
+      "id": "unresolved:TryGetValue",
+      "kind": "unknown",
+      "name": "TryGetValue",
+      "language": "csharp"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:Complex.cs",
+      "target": "class:Complex.cs::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "class:Complex.cs::Complex",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "constructor:Complex.cs::Circle.Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "interface:Complex.cs::IShape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "method:Complex.cs::Circle.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "method:Complex.cs::Complex.Total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "method:Complex.cs::IShape.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.cs",
+      "target": "module:Complex.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.cs",
+      "target": "class:src/Math.cs::Math",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.cs",
+      "target": "method:src/Math.cs::Math.Add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.cs",
+      "target": "method:src/Math.cs::Math.Twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.cs",
+      "target": "module:src/Math.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "class:src/Service.cs::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "class:src/Service.cs::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "constructor:src/Service.cs::ShapeService.ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "method:src/Service.cs::InMemoryRepository.Find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "method:src/Service.cs::InMemoryRepository.Save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "method:src/Service.cs::ShapeService.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "method:src/Service.cs::ShapeService.CreateService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "module:src/Service.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "external:unknown:System",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 14,
+            "byte": 13
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Service.cs",
+      "target": "external:unknown:System.Collections.Generic",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 1,
+            "byte": 14
+          },
+          "end": {
+            "line": 2,
+            "column": 34,
+            "byte": 47
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:Complex.cs::Complex.Total",
+      "target": "unresolved:Area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 89,
+            "byte": 232
+          },
+          "end": {
+            "line": 3,
+            "column": 97,
+            "byte": 240
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Math.cs::Math.Twice",
+      "target": "method:src/Math.cs::Math.Add",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 157
+          },
+          "end": {
+            "line": 12,
+            "column": 25,
+            "byte": 166
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.cs::InMemoryRepository.Find",
+      "target": "unresolved:TryGetValue",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 9,
+            "byte": 209
+          },
+          "end": {
+            "line": 12,
+            "column": 45,
+            "byte": 245
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.cs::ShapeService.Area",
+      "target": "method:src/Service.cs::ShapeService.Area",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 35,
+            "column": 16,
+            "byte": 691
+          },
+          "end": {
+            "line": 35,
+            "column": 28,
+            "byte": 703
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.cs::ShapeService.Area",
+      "target": "unresolved:Find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 33,
+            "column": 21,
+            "byte": 600
+          },
+          "end": {
+            "line": 33,
+            "column": 34,
+            "byte": 613
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "class:Complex.cs::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "class:Complex.cs::Complex",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "constructor:Complex.cs::Circle.Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "interface:Complex.cs::IShape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "method:Complex.cs::Circle.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "method:Complex.cs::Complex.Total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.cs",
+      "target": "method:Complex.cs::IShape.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.cs",
+      "target": "class:src/Math.cs::Math",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.cs",
+      "target": "method:src/Math.cs::Math.Add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.cs",
+      "target": "method:src/Math.cs::Math.Twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "class:src/Service.cs::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "class:src/Service.cs::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "constructor:src/Service.cs::ShapeService.ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "method:src/Service.cs::InMemoryRepository.Find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "method:src/Service.cs::InMemoryRepository.Save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "method:src/Service.cs::ShapeService.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.cs",
+      "target": "method:src/Service.cs::ShapeService.CreateService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:Complex.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Math.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Service.cs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 3,
+    "packages": 0,
+    "nodes": 29,
+    "edges": 47,
+    "symbols": 20,
+    "unresolvedEdges": 3,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "class": 5,
+      "constructor": 2,
+      "external_symbol": 2,
+      "file": 3,
+      "interface": 1,
+      "method": 9,
+      "module": 3,
+      "repository": 1,
+      "unknown": 3
+    },
+    "byEdgeKind": {
+      "calls": 5,
+      "contains": 23,
+      "defines": 17,
+      "imports": 2
+    },
+    "byLanguage": {
+      "csharp": 28
+    },
+    "byStatus": {
+      "resolved_external": 2,
+      "resolved_internal": 42,
+      "unresolved": 3
+    },
+    "byFramework": {}
+  }
+}

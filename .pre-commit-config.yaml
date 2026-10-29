@@ -1,0 +1,16 @@
+repos:
+  - repo: https://github.com/doublify/pre-commit-rust
+    rev: v1.0
+    hooks:
+      - id: fmt
+      - id: cargo-check
+      - id: clippy
+        args: [--all-targets, --, -D, warnings]
+
+  - repo: local
+    hooks:
+      - id: trace-scan
+        name: trace scan
+        entry: bash -c 'cd "$(git rev-parse --show-toplevel)" && (./target/release/trace scan . || ./target/debug/trace scan .)'
+        language: system
+        pass_filenames: false

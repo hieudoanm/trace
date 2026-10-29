@@ -1,0 +1,1266 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "java",
+    "root": "../../fixtures/java",
+    "fileCount": 3,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "java"
+    ]
+  },
+  "languages": [
+    {
+      "language": "java",
+      "grammar": "tree-sitter-java 0.23.5"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "class:Complex.java::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 35
+        },
+        "end": {
+          "line": 2,
+          "column": 114,
+          "byte": 148
+        }
+      },
+      "language": "java",
+      "parent": "module:Complex.java",
+      "exported": false
+    },
+    {
+      "id": "class:Complex.java::Complex",
+      "kind": "class",
+      "name": "Complex",
+      "qualifiedName": "Complex",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 149
+        },
+        "end": {
+          "line": 3,
+          "column": 97,
+          "byte": 245
+        }
+      },
+      "language": "java",
+      "parent": "module:Complex.java",
+      "exported": false
+    },
+    {
+      "id": "class:src/Math.java::Math",
+      "kind": "class",
+      "name": "Math",
+      "qualifiedName": "Math",
+      "file": "src/Math.java",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 22
+        },
+        "end": {
+          "line": 11,
+          "column": 2,
+          "byte": 169
+        }
+      },
+      "language": "java",
+      "parent": "module:src/Math.java",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.java::Service",
+      "kind": "class",
+      "name": "Service",
+      "qualifiedName": "Service",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 71
+        },
+        "end": {
+          "line": 38,
+          "column": 2,
+          "byte": 951
+        }
+      },
+      "language": "java",
+      "parent": "module:src/Service.java",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.java::Service.InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "Service.InMemoryRepository",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 5,
+          "byte": 98
+        },
+        "end": {
+          "line": 17,
+          "column": 6,
+          "byte": 383
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.java::Service.ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "Service.ShapeService",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 5,
+          "byte": 389
+        },
+        "end": {
+          "line": 33,
+          "column": 6,
+          "byte": 826
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service",
+      "exported": false
+    },
+    {
+      "id": "constructor:Complex.java::Circle.Circle",
+      "kind": "constructor",
+      "name": "Circle",
+      "qualifiedName": "Circle.Circle",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 43,
+          "byte": 77
+        },
+        "end": {
+          "line": 2,
+          "column": 70,
+          "byte": 104
+        }
+      },
+      "language": "java",
+      "parent": "class:Complex.java::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/Service.java::Service.ShapeService.ShapeService",
+      "kind": "constructor",
+      "name": "ShapeService",
+      "qualifiedName": "Service.ShapeService.ShapeService",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 22,
+          "column": 9,
+          "byte": 488
+        },
+        "end": {
+          "line": 24,
+          "column": 10,
+          "byte": 582
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.ShapeService",
+      "exported": false
+    },
+    {
+      "id": "external:unknown:java.util.HashMap",
+      "kind": "external_symbol",
+      "name": "java.util.HashMap",
+      "language": "java"
+    },
+    {
+      "id": "external:unknown:java.util.Map",
+      "kind": "external_symbol",
+      "name": "java.util.Map",
+      "language": "java"
+    },
+    {
+      "id": "file:Complex.java",
+      "kind": "file",
+      "name": "Complex.java",
+      "file": "Complex.java",
+      "language": "java"
+    },
+    {
+      "id": "file:src/Math.java",
+      "kind": "file",
+      "name": "src/Math.java",
+      "file": "src/Math.java",
+      "language": "java"
+    },
+    {
+      "id": "file:src/Service.java",
+      "kind": "file",
+      "name": "src/Service.java",
+      "file": "src/Service.java",
+      "language": "java"
+    },
+    {
+      "id": "interface:Complex.java::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 35,
+          "byte": 34
+        }
+      },
+      "language": "java",
+      "parent": "module:Complex.java",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.java::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 71,
+          "byte": 105
+        },
+        "end": {
+          "line": 2,
+          "column": 112,
+          "byte": 146
+        }
+      },
+      "language": "java",
+      "parent": "class:Complex.java::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.java::Complex.total",
+      "kind": "method",
+      "name": "total",
+      "qualifiedName": "Complex.total",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 17,
+          "byte": 165
+        },
+        "end": {
+          "line": 3,
+          "column": 95,
+          "byte": 243
+        }
+      },
+      "language": "java",
+      "parent": "class:Complex.java::Complex",
+      "exported": false
+    },
+    {
+      "id": "method:Complex.java::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 19,
+          "byte": 18
+        },
+        "end": {
+          "line": 1,
+          "column": 33,
+          "byte": 32
+        }
+      },
+      "language": "java",
+      "parent": "interface:Complex.java::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/Math.java::Math.add",
+      "kind": "method",
+      "name": "add",
+      "qualifiedName": "Math.add",
+      "file": "src/Math.java",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 46
+        },
+        "end": {
+          "line": 6,
+          "column": 6,
+          "byte": 104
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Math.java::Math",
+      "exported": false
+    },
+    {
+      "id": "method:src/Math.java::Math.twice",
+      "kind": "method",
+      "name": "twice",
+      "qualifiedName": "Math.twice",
+      "file": "src/Math.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 5,
+          "byte": 110
+        },
+        "end": {
+          "line": 10,
+          "column": 6,
+          "byte": 167
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Math.java::Math",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.java::Service.InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "Service.InMemoryRepository.find",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 9,
+          "byte": 213
+        },
+        "end": {
+          "line": 12,
+          "column": 10,
+          "byte": 283
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.java::Service.InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "Service.InMemoryRepository.save",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 9,
+          "byte": 293
+        },
+        "end": {
+          "line": 16,
+          "column": 10,
+          "byte": 377
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.java::Service.ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Service.ShapeService.area",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 9,
+          "byte": 592
+        },
+        "end": {
+          "line": 32,
+          "column": 10,
+          "byte": 820
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.ShapeService",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.java::Service.createService",
+      "kind": "method",
+      "name": "createService",
+      "qualifiedName": "Service.createService",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 5,
+          "byte": 832
+        },
+        "end": {
+          "line": 37,
+          "column": 6,
+          "byte": 949
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service",
+      "exported": false
+    },
+    {
+      "id": "module:Complex.java",
+      "kind": "module",
+      "name": "Complex",
+      "file": "Complex.java",
+      "language": "java"
+    },
+    {
+      "id": "module:src/Math.java",
+      "kind": "module",
+      "name": "Math",
+      "file": "src/Math.java",
+      "language": "java"
+    },
+    {
+      "id": "module:src/Service.java",
+      "kind": "module",
+      "name": "Service",
+      "file": "src/Service.java",
+      "language": "java"
+    },
+    {
+      "id": "property:Complex.java::Circle.r",
+      "kind": "property",
+      "name": "r",
+      "qualifiedName": "Circle.r",
+      "file": "Complex.java",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 33,
+          "byte": 67
+        },
+        "end": {
+          "line": 2,
+          "column": 42,
+          "byte": 76
+        }
+      },
+      "language": "java",
+      "parent": "class:Complex.java::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.java::Service.InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "Service.InMemoryRepository.store",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 9,
+          "byte": 150
+        },
+        "end": {
+          "line": 8,
+          "column": 62,
+          "byte": 203
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.java::Service.ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "Service.ShapeService.repo",
+      "file": "src/Service.java",
+      "range": {
+        "start": {
+          "line": 20,
+          "column": 9,
+          "byte": 432
+        },
+        "end": {
+          "line": 20,
+          "column": 55,
+          "byte": 478
+        }
+      },
+      "language": "java",
+      "parent": "class:src/Service.java::Service.ShapeService",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:Map<String, T>",
+      "kind": "unknown",
+      "name": "Map<String, T>",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:double",
+      "kind": "unknown",
+      "name": "double",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "java"
+    },
+    {
+      "id": "unresolved:put",
+      "kind": "unknown",
+      "name": "put",
+      "language": "java"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:Complex.java::Circle",
+      "target": "interface:Complex.java::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 25,
+            "byte": 59
+          },
+          "end": {
+            "line": 2,
+            "column": 30,
+            "byte": 64
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:Complex.java::Circle",
+      "target": "unresolved:double",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 33,
+            "byte": 67
+          },
+          "end": {
+            "line": 2,
+            "column": 39,
+            "byte": 73
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.java::Service.InMemoryRepository",
+      "target": "unresolved:Map<String, T>",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 23,
+            "byte": 164
+          },
+          "end": {
+            "line": 8,
+            "column": 37,
+            "byte": 178
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.java::Service.ShapeService",
+      "target": "class:src/Service.java::Service.InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 23,
+            "byte": 446
+          },
+          "end": {
+            "line": 20,
+            "column": 49,
+            "byte": 472
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "class:Complex.java::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "class:Complex.java::Complex",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "constructor:Complex.java::Circle.Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "interface:Complex.java::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "method:Complex.java::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "method:Complex.java::Complex.total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "method:Complex.java::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "module:Complex.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:Complex.java",
+      "target": "property:Complex.java::Circle.r",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.java",
+      "target": "class:src/Math.java::Math",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.java",
+      "target": "method:src/Math.java::Math.add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.java",
+      "target": "method:src/Math.java::Math.twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Math.java",
+      "target": "module:src/Math.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "class:src/Service.java::Service",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "class:src/Service.java::Service.InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "class:src/Service.java::Service.ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "constructor:src/Service.java::Service.ShapeService.ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "method:src/Service.java::Service.InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "method:src/Service.java::Service.InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "method:src/Service.java::Service.ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "method:src/Service.java::Service.createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "module:src/Service.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "property:src/Service.java::Service.InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "property:src/Service.java::Service.ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "external:unknown:java.util.HashMap",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "byte": 22
+          },
+          "end": {
+            "line": 3,
+            "column": 26,
+            "byte": 47
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Service.java",
+      "target": "external:unknown:java.util.Map",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "byte": 48
+          },
+          "end": {
+            "line": 4,
+            "column": 22,
+            "byte": 69
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:Complex.java::Complex.total",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 76,
+            "byte": 224
+          },
+          "end": {
+            "line": 3,
+            "column": 84,
+            "byte": 232
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:Complex.java::Complex.total",
+      "target": "interface:Complex.java::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 37,
+            "byte": 185
+          },
+          "end": {
+            "line": 3,
+            "column": 44,
+            "byte": 192
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Math.java::Math.twice",
+      "target": "method:src/Math.java::Math.add",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 16,
+            "byte": 151
+          },
+          "end": {
+            "line": 9,
+            "column": 25,
+            "byte": 160
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.java::Service.InMemoryRepository.find",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 20,
+            "byte": 259
+          },
+          "end": {
+            "line": 11,
+            "column": 33,
+            "byte": 272
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.java::Service.InMemoryRepository.save",
+      "target": "unresolved:put",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 13,
+            "byte": 345
+          },
+          "end": {
+            "line": 15,
+            "column": 34,
+            "byte": 366
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.java::Service.InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 37,
+            "byte": 321
+          },
+          "end": {
+            "line": 14,
+            "column": 38,
+            "byte": 322
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.java::Service.ShapeService.area",
+      "target": "method:src/Service.java::Service.ShapeService.area",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 20,
+            "byte": 797
+          },
+          "end": {
+            "line": 31,
+            "column": 32,
+            "byte": 809
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.java::Service.ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 28,
+            "byte": 651
+          },
+          "end": {
+            "line": 27,
+            "column": 41,
+            "byte": 664
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "class:Complex.java::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "class:Complex.java::Complex",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "constructor:Complex.java::Circle.Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "interface:Complex.java::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "method:Complex.java::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "method:Complex.java::Complex.total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "method:Complex.java::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:Complex.java",
+      "target": "property:Complex.java::Circle.r",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.java",
+      "target": "class:src/Math.java::Math",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.java",
+      "target": "method:src/Math.java::Math.add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Math.java",
+      "target": "method:src/Math.java::Math.twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "class:src/Service.java::Service",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "class:src/Service.java::Service.InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "class:src/Service.java::Service.ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "constructor:src/Service.java::Service.ShapeService.ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "method:src/Service.java::Service.InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "method:src/Service.java::Service.InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "method:src/Service.java::Service.ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "method:src/Service.java::Service.createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "property:src/Service.java::Service.InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.java",
+      "target": "property:src/Service.java::Service.ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:Complex.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Math.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Service.java",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 3,
+    "packages": 0,
+    "nodes": 37,
+    "edges": 62,
+    "symbols": 28,
+    "unresolvedEdges": 7,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "class": 6,
+      "constructor": 2,
+      "external_symbol": 2,
+      "file": 3,
+      "interface": 1,
+      "method": 9,
+      "module": 3,
+      "property": 3,
+      "repository": 1,
+      "unknown": 7
+    },
+    "byEdgeKind": {
+      "calls": 6,
+      "contains": 27,
+      "defines": 21,
+      "implements": 1,
+      "imports": 2,
+      "uses_type": 5
+    },
+    "byLanguage": {
+      "java": 36
+    },
+    "byStatus": {
+      "resolved_external": 2,
+      "resolved_internal": 53,
+      "unresolved": 7
+    },
+    "byFramework": {}
+  }
+}

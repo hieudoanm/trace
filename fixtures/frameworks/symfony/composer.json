@@ -1,0 +1,7 @@
+{
+    "name": "symfony-app",
+    "version": "1.0.0",
+    "require": {
+        "symfony/framework-bundle": "^6.0"
+    }
+}

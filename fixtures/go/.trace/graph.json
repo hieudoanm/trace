@@ -1,0 +1,2745 @@
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "go",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-cli/../../fixtures/go",
+    "fileCount": 4,
+    "languageCount": 18
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": true,
+    "semanticMode": "off",
+    "languages": []
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "tsx",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "javascript",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "jsx",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "python",
+      "grammar": "tree-sitter-python 0.25.0"
+    },
+    {
+      "language": "go",
+      "grammar": "tree-sitter-go 0.25.0"
+    },
+    {
+      "language": "rust",
+      "grammar": "tree-sitter-rust 0.24.2"
+    },
+    {
+      "language": "kotlin",
+      "grammar": "tree-sitter-kt 0.1.0"
+    },
+    {
+      "language": "swift",
+      "grammar": "tree-sitter-swift 0.7.4"
+    },
+    {
+      "language": "java",
+      "grammar": "tree-sitter-java 0.23.5"
+    },
+    {
+      "language": "csharp",
+      "grammar": "tree-sitter-c-sharp 0.23.1"
+    },
+    {
+      "language": "php",
+      "grammar": "tree-sitter-php 0.23.11"
+    },
+    {
+      "language": "ruby",
+      "grammar": "tree-sitter-ruby 0.23.1"
+    },
+    {
+      "language": "c",
+      "grammar": "tree-sitter-c 0.23.6"
+    },
+    {
+      "language": "cpp",
+      "grammar": "tree-sitter-cpp 0.23.4"
+    },
+    {
+      "language": "dart",
+      "grammar": "tree-sitter-dart 0.0.4"
+    },
+    {
+      "language": "scala",
+      "grammar": "tree-sitter-scala 0.24.0"
+    },
+    {
+      "language": "r",
+      "grammar": "tree-sitter-r 1.2.0"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "external:go:Circle",
+      "kind": "external_symbol",
+      "name": "Circle",
+      "language": "go"
+    },
+    {
+      "id": "external:go:MemoryRepository",
+      "kind": "external_symbol",
+      "name": "MemoryRepository",
+      "language": "go"
+    },
+    {
+      "id": "external:go:Rectangle",
+      "kind": "external_symbol",
+      "name": "Rectangle",
+      "language": "go"
+    },
+    {
+      "id": "external:go:ShapeService",
+      "kind": "external_symbol",
+      "name": "ShapeService",
+      "language": "go"
+    },
+    {
+      "id": "external:go:[]geometry.Shape",
+      "kind": "external_symbol",
+      "name": "Shape",
+      "language": "go"
+    },
+    {
+      "id": "external:unknown:fmt",
+      "kind": "external_symbol",
+      "name": "fmt",
+      "language": "go"
+    },
+    {
+      "id": "external:unknown:github.com/example/trace/fixtures/go/pkg/math",
+      "kind": "external_symbol",
+      "name": "github.com/example/trace/fixtures/go/pkg/math",
+      "language": "go"
+    },
+    {
+      "id": "external:unknown:math",
+      "kind": "external_symbol",
+      "name": "math",
+      "language": "go"
+    },
+    {
+      "id": "file:pkg/service/service.go",
+      "kind": "file",
+      "name": "pkg/service/service.go",
+      "file": "pkg/service/service.go",
+      "language": "go"
+    },
+    {
+      "id": "file:src/complex/complex.go",
+      "kind": "file",
+      "name": "src/complex/complex.go",
+      "file": "src/complex/complex.go",
+      "language": "go"
+    },
+    {
+      "id": "file:src/geometry/geometry.go",
+      "kind": "file",
+      "name": "src/geometry/geometry.go",
+      "file": "src/geometry/geometry.go",
+      "language": "go"
+    },
+    {
+      "id": "file:src/main.go",
+      "kind": "file",
+      "name": "src/main.go",
+      "file": "src/main.go",
+      "language": "go"
+    },
+    {
+      "id": "function:pkg/service/service.go::NewMemoryRepository",
+      "kind": "function",
+      "name": "NewMemoryRepository",
+      "qualifiedName": "NewMemoryRepository",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 1,
+          "byte": 240
+        },
+        "end": {
+          "line": 16,
+          "column": 2,
+          "byte": 352
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "function:pkg/service/service.go::NewShapeService",
+      "kind": "function",
+      "name": "NewShapeService",
+      "qualifiedName": "NewShapeService",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 1,
+          "byte": 587
+        },
+        "end": {
+          "line": 33,
+          "column": 2,
+          "byte": 676
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "function:src/complex/complex.go::Total",
+      "kind": "function",
+      "name": "Total",
+      "qualifiedName": "Total",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "byte": 148
+        },
+        "end": {
+          "line": 5,
+          "column": 102,
+          "byte": 249
+        }
+      },
+      "language": "go",
+      "parent": "module:src/complex/complex.go",
+      "exported": true
+    },
+    {
+      "id": "function:src/geometry/geometry.go::TotalArea",
+      "kind": "function",
+      "name": "TotalArea",
+      "qualifiedName": "TotalArea",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "byte": 908
+        },
+        "end": {
+          "line": 49,
+          "column": 2,
+          "byte": 1055
+        }
+      },
+      "language": "go",
+      "parent": "module:src/geometry/geometry.go",
+      "exported": true
+    },
+    {
+      "id": "function:src/main.go::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "src/main.go",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "byte": 56
+        },
+        "end": {
+          "line": 15,
+          "column": 2,
+          "byte": 244
+        }
+      },
+      "language": "go",
+      "parent": "module:src/main.go",
+      "exported": false
+    },
+    {
+      "id": "interface:pkg/service/service.go::Repository",
+      "kind": "interface",
+      "name": "Repository",
+      "qualifiedName": "Repository",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 6,
+          "byte": 78
+        },
+        "end": {
+          "line": 8,
+          "column": 2,
+          "byte": 173
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "interface:src/complex/complex.go::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 6,
+          "byte": 21
+        },
+        "end": {
+          "line": 2,
+          "column": 40,
+          "byte": 55
+        }
+      },
+      "language": "go",
+      "parent": "module:src/complex/complex.go",
+      "exported": true
+    },
+    {
+      "id": "interface:src/geometry/geometry.go::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 6,
+          "byte": 85
+        },
+        "end": {
+          "line": 9,
+          "column": 2,
+          "byte": 147
+        }
+      },
+      "language": "go",
+      "parent": "module:src/geometry/geometry.go",
+      "exported": true
+    },
+    {
+      "id": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "kind": "method",
+      "name": "Find",
+      "qualifiedName": "*MemoryRepository.Find",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 1,
+          "byte": 354
+        },
+        "end": {
+          "line": 21,
+          "column": 2,
+          "byte": 457
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "kind": "method",
+      "name": "Save",
+      "qualifiedName": "*MemoryRepository.Save",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "byte": 459
+        },
+        "end": {
+          "line": 25,
+          "column": 2,
+          "byte": 538
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "method:pkg/service/service.go::*ShapeService.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "*ShapeService.Area",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 1,
+          "byte": 678
+        },
+        "end": {
+          "line": 41,
+          "column": 2,
+          "byte": 805
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "method:pkg/service/service.go::Repository.Find",
+      "kind": "method",
+      "name": "Find",
+      "qualifiedName": "Repository.Find",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 2,
+          "byte": 102
+        },
+        "end": {
+          "line": 6,
+          "column": 38,
+          "byte": 138
+        }
+      },
+      "language": "go",
+      "parent": "interface:pkg/service/service.go::Repository",
+      "exported": true
+    },
+    {
+      "id": "method:pkg/service/service.go::Repository.Save",
+      "kind": "method",
+      "name": "Save",
+      "qualifiedName": "Repository.Save",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 2,
+          "byte": 140
+        },
+        "end": {
+          "line": 7,
+          "column": 33,
+          "byte": 171
+        }
+      },
+      "language": "go",
+      "parent": "interface:pkg/service/service.go::Repository",
+      "exported": true
+    },
+    {
+      "id": "method:src/complex/complex.go::Circle.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Circle.Area",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 89
+        },
+        "end": {
+          "line": 4,
+          "column": 59,
+          "byte": 147
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/complex/complex.go::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/complex/complex.go::Shape.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Shape.Area",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 24,
+          "byte": 39
+        },
+        "end": {
+          "line": 2,
+          "column": 38,
+          "byte": 53
+        }
+      },
+      "language": "go",
+      "parent": "interface:src/complex/complex.go::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Circle.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Circle.Area",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "byte": 283
+        },
+        "end": {
+          "line": 19,
+          "column": 2,
+          "byte": 358
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Circle.Perimeter",
+      "kind": "method",
+      "name": "Perimeter",
+      "qualifiedName": "Circle.Perimeter",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 22,
+          "column": 1,
+          "byte": 410
+        },
+        "end": {
+          "line": 24,
+          "column": 2,
+          "byte": 483
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Rectangle.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Rectangle.Area",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 33,
+          "column": 1,
+          "byte": 652
+        },
+        "end": {
+          "line": 35,
+          "column": 2,
+          "byte": 719
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Rectangle.Perimeter",
+      "kind": "method",
+      "name": "Perimeter",
+      "qualifiedName": "Rectangle.Perimeter",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 38,
+          "column": 1,
+          "byte": 774
+        },
+        "end": {
+          "line": 40,
+          "column": 2,
+          "byte": 852
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Shape.Area",
+      "kind": "method",
+      "name": "Area",
+      "qualifiedName": "Shape.Area",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 5,
+          "byte": 107
+        },
+        "end": {
+          "line": 7,
+          "column": 19,
+          "byte": 121
+        }
+      },
+      "language": "go",
+      "parent": "interface:src/geometry/geometry.go::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/geometry/geometry.go::Shape.Perimeter",
+      "kind": "method",
+      "name": "Perimeter",
+      "qualifiedName": "Shape.Perimeter",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 5,
+          "byte": 126
+        },
+        "end": {
+          "line": 8,
+          "column": 24,
+          "byte": 145
+        }
+      },
+      "language": "go",
+      "parent": "interface:src/geometry/geometry.go::Shape",
+      "exported": true
+    },
+    {
+      "id": "module:pkg/service/service.go",
+      "kind": "module",
+      "name": "service",
+      "file": "pkg/service/service.go",
+      "language": "go"
+    },
+    {
+      "id": "module:src/complex/complex.go",
+      "kind": "module",
+      "name": "complex",
+      "file": "src/complex/complex.go",
+      "language": "go"
+    },
+    {
+      "id": "module:src/geometry/geometry.go",
+      "kind": "module",
+      "name": "geometry",
+      "file": "src/geometry/geometry.go",
+      "language": "go"
+    },
+    {
+      "id": "module:src/main.go",
+      "kind": "module",
+      "name": "main",
+      "file": "src/main.go",
+      "language": "go"
+    },
+    {
+      "id": "package:pkg/service",
+      "kind": "package",
+      "name": "package:pkg/service",
+      "file": "pkg/service/service.go",
+      "language": "go"
+    },
+    {
+      "id": "package:src",
+      "kind": "package",
+      "name": "package:src",
+      "file": "src/main.go",
+      "language": "go"
+    },
+    {
+      "id": "package:src/complex",
+      "kind": "package",
+      "name": "package:src/complex",
+      "file": "src/complex/complex.go",
+      "language": "go"
+    },
+    {
+      "id": "package:src/geometry",
+      "kind": "package",
+      "name": "package:src/geometry",
+      "file": "src/geometry/geometry.go",
+      "language": "go"
+    },
+    {
+      "id": "property:pkg/service/service.go::MemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "MemoryRepository.store",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 2,
+          "byte": 207
+        },
+        "end": {
+          "line": 11,
+          "column": 31,
+          "byte": 236
+        }
+      },
+      "language": "go",
+      "parent": "struct:pkg/service/service.go::MemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:pkg/service/service.go::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 28,
+          "column": 2,
+          "byte": 568
+        },
+        "end": {
+          "line": 28,
+          "column": 17,
+          "byte": 583
+        }
+      },
+      "language": "go",
+      "parent": "struct:pkg/service/service.go::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "property:src/complex/complex.go::Circle.R",
+      "kind": "property",
+      "name": "R",
+      "qualifiedName": "Circle.R",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 22,
+          "byte": 77
+        },
+        "end": {
+          "line": 3,
+          "column": 31,
+          "byte": 86
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/complex/complex.go::Circle",
+      "exported": true
+    },
+    {
+      "id": "property:src/geometry/geometry.go::Circle.Radius",
+      "kind": "property",
+      "name": "Radius",
+      "qualifiedName": "Circle.Radius",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 225
+        },
+        "end": {
+          "line": 13,
+          "column": 19,
+          "byte": 239
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Circle",
+      "exported": true
+    },
+    {
+      "id": "property:src/geometry/geometry.go::Rectangle.Height",
+      "kind": "property",
+      "name": "Height",
+      "qualifiedName": "Rectangle.Height",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 5,
+          "byte": 591
+        },
+        "end": {
+          "line": 29,
+          "column": 19,
+          "byte": 605
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "property:src/geometry/geometry.go::Rectangle.Width",
+      "kind": "property",
+      "name": "Width",
+      "qualifiedName": "Rectangle.Width",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 28,
+          "column": 5,
+          "byte": 572
+        },
+        "end": {
+          "line": 28,
+          "column": 19,
+          "byte": 586
+        }
+      },
+      "language": "go",
+      "parent": "struct:src/geometry/geometry.go::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "struct",
+      "name": "MemoryRepository",
+      "qualifiedName": "MemoryRepository",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 6,
+          "byte": 180
+        },
+        "end": {
+          "line": 12,
+          "column": 2,
+          "byte": 238
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "struct:pkg/service/service.go::ShapeService",
+      "kind": "struct",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 27,
+          "column": 6,
+          "byte": 545
+        },
+        "end": {
+          "line": 29,
+          "column": 2,
+          "byte": 585
+        }
+      },
+      "language": "go",
+      "parent": "module:pkg/service/service.go",
+      "exported": true
+    },
+    {
+      "id": "struct:src/complex/complex.go::Circle",
+      "kind": "struct",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 6,
+          "byte": 61
+        },
+        "end": {
+          "line": 3,
+          "column": 33,
+          "byte": 88
+        }
+      },
+      "language": "go",
+      "parent": "module:src/complex/complex.go",
+      "exported": true
+    },
+    {
+      "id": "struct:src/geometry/geometry.go::Circle",
+      "kind": "struct",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 6,
+          "byte": 205
+        },
+        "end": {
+          "line": 14,
+          "column": 2,
+          "byte": 241
+        }
+      },
+      "language": "go",
+      "parent": "module:src/geometry/geometry.go",
+      "exported": true
+    },
+    {
+      "id": "struct:src/geometry/geometry.go::Rectangle",
+      "kind": "struct",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 27,
+          "column": 6,
+          "byte": 549
+        },
+        "end": {
+          "line": 30,
+          "column": 2,
+          "byte": 607
+        }
+      },
+      "language": "go",
+      "parent": "module:src/geometry/geometry.go",
+      "exported": true
+    },
+    {
+      "id": "unresolved:Area",
+      "kind": "unknown",
+      "name": "Area",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Find",
+      "kind": "unknown",
+      "name": "Find",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Printf",
+      "kind": "unknown",
+      "name": "Printf",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Rectangle",
+      "kind": "unknown",
+      "name": "Rectangle",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:TotalArea",
+      "kind": "unknown",
+      "name": "TotalArea",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:make",
+      "kind": "unknown",
+      "name": "make",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:panic",
+      "kind": "unknown",
+      "name": "panic",
+      "language": "go"
+    },
+    {
+      "id": "variable:pkg/service/service.go::*MemoryRepository.Find.c",
+      "kind": "variable",
+      "name": "c",
+      "qualifiedName": "*MemoryRepository.Find.c",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 2,
+          "byte": 421
+        },
+        "end": {
+          "line": 19,
+          "column": 22,
+          "byte": 441
+        }
+      },
+      "language": "go",
+      "parent": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "exported": false
+    },
+    {
+      "id": "variable:pkg/service/service.go::*ShapeService.Area.c",
+      "kind": "variable",
+      "name": "c",
+      "qualifiedName": "*ShapeService.Area.c",
+      "file": "pkg/service/service.go",
+      "range": {
+        "start": {
+          "line": 36,
+          "column": 2,
+          "byte": 728
+        },
+        "end": {
+          "line": 36,
+          "column": 26,
+          "byte": 752
+        }
+      },
+      "language": "go",
+      "parent": "method:pkg/service/service.go::*ShapeService.Area",
+      "exported": false
+    },
+    {
+      "id": "variable:src/complex/complex.go::Total.t",
+      "kind": "variable",
+      "name": "t",
+      "qualifiedName": "Total.t",
+      "file": "src/complex/complex.go",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 42,
+          "byte": 189
+        },
+        "end": {
+          "line": 5,
+          "column": 51,
+          "byte": 198
+        }
+      },
+      "language": "go",
+      "parent": "function:src/complex/complex.go::Total",
+      "exported": false
+    },
+    {
+      "id": "variable:src/geometry/geometry.go::TotalArea.total",
+      "kind": "variable",
+      "name": "total",
+      "qualifiedName": "TotalArea.total",
+      "file": "src/geometry/geometry.go",
+      "range": {
+        "start": {
+          "line": 44,
+          "column": 5,
+          "byte": 953
+        },
+        "end": {
+          "line": 44,
+          "column": 17,
+          "byte": 965
+        }
+      },
+      "language": "go",
+      "parent": "function:src/geometry/geometry.go::TotalArea",
+      "exported": false
+    },
+    {
+      "id": "variable:src/main.go::main.shapes",
+      "kind": "variable",
+      "name": "shapes",
+      "qualifiedName": "main.shapes",
+      "file": "src/main.go",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 2,
+          "byte": 71
+        },
+        "end": {
+          "line": 13,
+          "column": 3,
+          "byte": 180
+        }
+      },
+      "language": "go",
+      "parent": "function:src/main.go::main",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*ShapeService.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "module:pkg/service/service.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "property:pkg/service/service.go::MemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "property:pkg/service/service.go::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "variable:pkg/service/service.go::*MemoryRepository.Find.c",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "variable:pkg/service/service.go::*ShapeService.Area.c",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "external:unknown:github.com/example/trace/fixtures/go/pkg/math",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 8,
+            "byte": 24
+          },
+          "end": {
+            "line": 3,
+            "column": 55,
+            "byte": 71
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*ShapeService.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*ShapeService.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "function:src/complex/complex.go::Total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "interface:src/complex/complex.go::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Circle.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Shape.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "module:src/complex/complex.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "property:src/complex/complex.go::Circle.R",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "struct:src/complex/complex.go::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "variable:src/complex/complex.go::Total.t",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "function:src/complex/complex.go::Total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "function:src/complex/complex.go::Total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "interface:src/complex/complex.go::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "interface:src/complex/complex.go::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Circle.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Shape.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "property:src/complex/complex.go::Circle.R",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "struct:src/complex/complex.go::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex/complex.go",
+      "target": "struct:src/complex/complex.go::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "function:src/geometry/geometry.go::TotalArea",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "interface:src/geometry/geometry.go::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "module:src/geometry/geometry.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Circle.Radius",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Height",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Width",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "variable:src/geometry/geometry.go::TotalArea.total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "external:unknown:math",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 8,
+            "byte": 25
+          },
+          "end": {
+            "line": 3,
+            "column": 14,
+            "byte": 31
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "function:src/geometry/geometry.go::TotalArea",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "function:src/geometry/geometry.go::TotalArea",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "interface:src/geometry/geometry.go::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "interface:src/geometry/geometry.go::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Circle.Radius",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Height",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Width",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.go",
+      "target": "function:src/main.go::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.go",
+      "target": "module:src/main.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.go",
+      "target": "variable:src/main.go::main.shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.go",
+      "target": "external:unknown:fmt",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 2,
+            "byte": 24
+          },
+          "end": {
+            "line": 4,
+            "column": 7,
+            "byte": 29
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewMemoryRepository",
+      "target": "external:go:MemoryRepository",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 10,
+            "byte": 296
+          },
+          "end": {
+            "line": 15,
+            "column": 64,
+            "byte": 350
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewMemoryRepository",
+      "target": "unresolved:make",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 34,
+            "byte": 320
+          },
+          "end": {
+            "line": 15,
+            "column": 63,
+            "byte": 349
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewMemoryRepository",
+      "target": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 29,
+            "byte": 268
+          },
+          "end": {
+            "line": 14,
+            "column": 45,
+            "byte": 284
+          }
+        },
+        {
+          "start": {
+            "line": 15,
+            "column": 10,
+            "byte": 296
+          },
+          "end": {
+            "line": 15,
+            "column": 26,
+            "byte": 312
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewShapeService",
+      "target": "external:go:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 32,
+            "column": 10,
+            "byte": 650
+          },
+          "end": {
+            "line": 32,
+            "column": 34,
+            "byte": 674
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewShapeService",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 27,
+            "byte": 613
+          },
+          "end": {
+            "line": 31,
+            "column": 37,
+            "byte": 623
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:pkg/service/service.go::NewShapeService",
+      "target": "struct:pkg/service/service.go::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 40,
+            "byte": 626
+          },
+          "end": {
+            "line": 31,
+            "column": 52,
+            "byte": 638
+          }
+        },
+        {
+          "start": {
+            "line": 32,
+            "column": 10,
+            "byte": 650
+          },
+          "end": {
+            "line": 32,
+            "column": 22,
+            "byte": 662
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex/complex.go::Total",
+      "target": "unresolved:Area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 80,
+            "byte": 227
+          },
+          "end": {
+            "line": 5,
+            "column": 88,
+            "byte": 235
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex/complex.go::Total",
+      "target": "interface:src/complex/complex.go::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 21,
+            "byte": 168
+          },
+          "end": {
+            "line": 5,
+            "column": 26,
+            "byte": 173
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/geometry/geometry.go::TotalArea",
+      "target": "unresolved:Area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 18,
+            "byte": 1018
+          },
+          "end": {
+            "line": 46,
+            "column": 30,
+            "byte": 1030
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/geometry/geometry.go::TotalArea",
+      "target": "interface:src/geometry/geometry.go::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 43,
+            "column": 25,
+            "byte": 932
+          },
+          "end": {
+            "line": 43,
+            "column": 30,
+            "byte": 937
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "external:go:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 3,
+            "byte": 101
+          },
+          "end": {
+            "line": 11,
+            "column": 31,
+            "byte": 129
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "external:go:Rectangle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 3,
+            "byte": 133
+          },
+          "end": {
+            "line": 12,
+            "column": 46,
+            "byte": 176
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "external:go:[]geometry.Shape",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 12,
+            "byte": 81
+          },
+          "end": {
+            "line": 13,
+            "column": 3,
+            "byte": 180
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "unresolved:Printf",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 2,
+            "byte": 182
+          },
+          "end": {
+            "line": 14,
+            "column": 62,
+            "byte": 242
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "unresolved:TotalArea",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 35,
+            "byte": 215
+          },
+          "end": {
+            "line": 14,
+            "column": 61,
+            "byte": 241
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 3,
+            "byte": 101
+          },
+          "end": {
+            "line": 11,
+            "column": 18,
+            "byte": 116
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "unresolved:Rectangle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 3,
+            "byte": 133
+          },
+          "end": {
+            "line": 12,
+            "column": 21,
+            "byte": 151
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.go::main",
+      "target": "unresolved:Shape",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 14,
+            "byte": 83
+          },
+          "end": {
+            "line": 10,
+            "column": 28,
+            "byte": 97
+          }
+        }
+      ]
+    },
+    {
+      "source": "interface:pkg/service/service.go::Repository",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 20,
+            "byte": 120
+          },
+          "end": {
+            "line": 6,
+            "column": 31,
+            "byte": 131
+          }
+        },
+        {
+          "start": {
+            "line": 7,
+            "column": 21,
+            "byte": 159
+          },
+          "end": {
+            "line": 7,
+            "column": 32,
+            "byte": 170
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 18,
+            "column": 46,
+            "byte": 399
+          },
+          "end": {
+            "line": 18,
+            "column": 57,
+            "byte": 410
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 23,
+            "column": 47,
+            "byte": 505
+          },
+          "end": {
+            "line": 23,
+            "column": 58,
+            "byte": 516
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:pkg/service/service.go::*ShapeService.Area",
+      "target": "unresolved:Area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 9,
+            "byte": 795
+          },
+          "end": {
+            "line": 40,
+            "column": 17,
+            "byte": 803
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:pkg/service/service.go::*ShapeService.Area",
+      "target": "unresolved:Find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 36,
+            "column": 11,
+            "byte": 737
+          },
+          "end": {
+            "line": 36,
+            "column": 26,
+            "byte": 752
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:pkg/service/service.go::*ShapeService.Area",
+      "target": "unresolved:panic",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 38,
+            "column": 3,
+            "byte": 765
+          },
+          "end": {
+            "line": 38,
+            "column": 21,
+            "byte": 783
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "function:pkg/service/service.go::NewShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*MemoryRepository.Save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::*ShapeService.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "method:pkg/service/service.go::Repository.Save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "property:pkg/service/service.go::MemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "property:pkg/service/service.go::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::MemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "struct:pkg/service/service.go::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "variable:pkg/service/service.go::*MemoryRepository.Find.c",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:pkg/service/service.go",
+      "target": "variable:pkg/service/service.go::*ShapeService.Area.c",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "function:src/complex/complex.go::Total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "interface:src/complex/complex.go::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Circle.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "method:src/complex/complex.go::Shape.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "property:src/complex/complex.go::Circle.R",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "struct:src/complex/complex.go::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex/complex.go",
+      "target": "variable:src/complex/complex.go::Total.t",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "function:src/geometry/geometry.go::TotalArea",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "interface:src/geometry/geometry.go::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Circle.Perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Rectangle.Perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "method:src/geometry/geometry.go::Shape.Perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Circle.Radius",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Height",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "property:src/geometry/geometry.go::Rectangle.Width",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "struct:src/geometry/geometry.go::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/geometry/geometry.go",
+      "target": "variable:src/geometry/geometry.go::TotalArea.total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.go",
+      "target": "function:src/main.go::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.go",
+      "target": "variable:src/main.go::main.shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "package:pkg/service",
+      "target": "file:pkg/service/service.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "package:src",
+      "target": "file:src/main.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "package:src/complex",
+      "target": "file:src/complex/complex.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "package:src/geometry",
+      "target": "file:src/geometry/geometry.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:pkg/service/service.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/complex/complex.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/geometry/geometry.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/main.go",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:pkg/service",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:src",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:src/complex",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:src/geometry",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "struct:pkg/service/service.go::MemoryRepository",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 11,
+            "column": 20,
+            "byte": 225
+          },
+          "end": {
+            "line": 11,
+            "column": 31,
+            "byte": 236
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:pkg/service/service.go::ShapeService",
+      "target": "interface:pkg/service/service.go::Repository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 7,
+            "byte": 573
+          },
+          "end": {
+            "line": 28,
+            "column": 17,
+            "byte": 583
+          }
+        }
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "error",
+      "kind": "parse_error",
+      "message": "syntax error; file was partially analysed",
+      "file": "src/main.go",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 2,
+          "byte": 32
+        },
+        "end": {
+          "line": 6,
+          "column": 22,
+          "byte": 52
+        }
+      },
+      "language": "go"
+    }
+  ],
+  "statistics": {
+    "files": 4,
+    "packages": 4,
+    "nodes": 67,
+    "edges": 163,
+    "symbols": 46,
+    "unresolvedEdges": 15,
+    "diagnostics": 1,
+    "byNodeKind": {
+      "external_symbol": 8,
+      "file": 4,
+      "function": 5,
+      "interface": 3,
+      "method": 13,
+      "module": 4,
+      "package": 4,
+      "property": 6,
+      "repository": 1,
+      "struct": 5,
+      "unknown": 9,
+      "variable": 5
+    },
+    "byEdgeKind": {
+      "calls": 13,
+      "contains": 53,
+      "defines": 37,
+      "exports": 44,
+      "imports": 3,
+      "uses_type": 13
+    },
+    "byLanguage": {
+      "go": 66
+    },
+    "byStatus": {
+      "resolved_external": 8,
+      "resolved_internal": 140,
+      "unresolved": 15
+    },
+    "byFramework": {}
+  }
+}

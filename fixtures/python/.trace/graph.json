@@ -1,0 +1,2606 @@
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "python",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-cli/../../fixtures/python",
+    "fileCount": 5,
+    "languageCount": 18
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": true,
+    "semanticMode": "off",
+    "languages": []
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "tsx",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "javascript",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "jsx",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "python",
+      "grammar": "tree-sitter-python 0.25.0"
+    },
+    {
+      "language": "go",
+      "grammar": "tree-sitter-go 0.25.0"
+    },
+    {
+      "language": "rust",
+      "grammar": "tree-sitter-rust 0.24.2"
+    },
+    {
+      "language": "kotlin",
+      "grammar": "tree-sitter-kt 0.1.0"
+    },
+    {
+      "language": "swift",
+      "grammar": "tree-sitter-swift 0.7.4"
+    },
+    {
+      "language": "java",
+      "grammar": "tree-sitter-java 0.23.5"
+    },
+    {
+      "language": "csharp",
+      "grammar": "tree-sitter-c-sharp 0.23.1"
+    },
+    {
+      "language": "php",
+      "grammar": "tree-sitter-php 0.23.11"
+    },
+    {
+      "language": "ruby",
+      "grammar": "tree-sitter-ruby 0.23.1"
+    },
+    {
+      "language": "c",
+      "grammar": "tree-sitter-c 0.23.6"
+    },
+    {
+      "language": "cpp",
+      "grammar": "tree-sitter-cpp 0.23.4"
+    },
+    {
+      "language": "dart",
+      "grammar": "tree-sitter-dart 0.0.4"
+    },
+    {
+      "language": "scala",
+      "grammar": "tree-sitter-scala 0.24.0"
+    },
+    {
+      "language": "r",
+      "grammar": "tree-sitter-r 1.2.0"
+    }
+  ],
+  "frameworks": [],
+  "nodes": [
+    {
+      "id": "class:src/complex.py::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 84
+        },
+        "end": {
+          "line": 6,
+          "column": 62,
+          "byte": 211
+        }
+      },
+      "language": "python",
+      "parent": "module:src/complex.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/complex.py::Shape",
+      "kind": "class",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 28
+        },
+        "end": {
+          "line": 3,
+          "column": 33,
+          "byte": 83
+        }
+      },
+      "language": "python",
+      "parent": "module:src/complex.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/main.py::Shape",
+      "kind": "class",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 1,
+          "byte": 209
+        },
+        "end": {
+          "line": 16,
+          "column": 12,
+          "byte": 317
+        }
+      },
+      "language": "python",
+      "parent": "module:src/main.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/service.py::Repository",
+      "kind": "class",
+      "name": "Repository",
+      "qualifiedName": "Repository",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 27
+        },
+        "end": {
+          "line": 12,
+          "column": 36,
+          "byte": 235
+        }
+      },
+      "language": "python",
+      "parent": "module:src/service.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/service.py::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "byte": 238
+        },
+        "end": {
+          "line": 23,
+          "column": 28,
+          "byte": 478
+        }
+      },
+      "language": "python",
+      "parent": "module:src/service.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.py::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 46
+        },
+        "end": {
+          "line": 18,
+          "column": 41,
+          "byte": 428
+        }
+      },
+      "language": "python",
+      "parent": "module:src/shapes.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.py::Rectangle",
+      "kind": "class",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "byte": 431
+        },
+        "end": {
+          "line": 34,
+          "column": 46,
+          "byte": 862
+        }
+      },
+      "language": "python",
+      "parent": "module:src/shapes.py",
+      "exported": true
+    },
+    {
+      "id": "class:src/shapes.py::Square",
+      "kind": "class",
+      "name": "Square",
+      "qualifiedName": "Square",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "byte": 865
+        },
+        "end": {
+          "line": 41,
+          "column": 37,
+          "byte": 1024
+        }
+      },
+      "language": "python",
+      "parent": "module:src/shapes.py",
+      "exported": true
+    },
+    {
+      "id": "constructor:src/complex.py::Circle.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "Circle.__init__",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 109
+        },
+        "end": {
+          "line": 5,
+          "column": 45,
+          "byte": 149
+        }
+      },
+      "language": "python",
+      "parent": "class:src/complex.py::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/service.py::Repository.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "Repository.__init__",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 49
+        },
+        "end": {
+          "line": 6,
+          "column": 25,
+          "byte": 93
+        }
+      },
+      "language": "python",
+      "parent": "class:src/service.py::Repository",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/service.py::ShapeService.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "ShapeService.__init__",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 5,
+          "byte": 262
+        },
+        "end": {
+          "line": 17,
+          "column": 25,
+          "byte": 312
+        }
+      },
+      "language": "python",
+      "parent": "class:src/service.py::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.py::Circle.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "Circle.__init__",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 105
+        },
+        "end": {
+          "line": 10,
+          "column": 29,
+          "byte": 176
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.py::Rectangle.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "Rectangle.__init__",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 5,
+          "byte": 498
+        },
+        "end": {
+          "line": 26,
+          "column": 29,
+          "byte": 610
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.py::Square.__init__",
+      "kind": "constructor",
+      "name": "__init__",
+      "qualifiedName": "Square.__init__",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 40,
+          "column": 5,
+          "byte": 947
+        },
+        "end": {
+          "line": 41,
+          "column": 37,
+          "byte": 1024
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Square",
+      "exported": false
+    },
+    {
+      "id": "external:python:Circle",
+      "kind": "external_symbol",
+      "name": "Circle",
+      "language": "python"
+    },
+    {
+      "id": "external:python:Rectangle",
+      "kind": "external_symbol",
+      "name": "Rectangle",
+      "language": "python"
+    },
+    {
+      "id": "external:python:Repository",
+      "kind": "external_symbol",
+      "name": "Repository",
+      "language": "python"
+    },
+    {
+      "id": "external:python:ShapeService",
+      "kind": "external_symbol",
+      "name": "ShapeService",
+      "language": "python"
+    },
+    {
+      "id": "external:python:ValueError",
+      "kind": "external_symbol",
+      "name": "ValueError",
+      "language": "python"
+    },
+    {
+      "id": "external:python:super().__init__",
+      "kind": "external_symbol",
+      "name": "__init__",
+      "language": "python"
+    },
+    {
+      "id": "file:src/complex.py",
+      "kind": "file",
+      "name": "src/complex.py",
+      "file": "src/complex.py",
+      "language": "python"
+    },
+    {
+      "id": "file:src/main.py",
+      "kind": "file",
+      "name": "src/main.py",
+      "file": "src/main.py",
+      "language": "python"
+    },
+    {
+      "id": "file:src/service.py",
+      "kind": "file",
+      "name": "src/service.py",
+      "file": "src/service.py",
+      "language": "python"
+    },
+    {
+      "id": "file:src/shapes.py",
+      "kind": "file",
+      "name": "src/shapes.py",
+      "file": "src/shapes.py",
+      "language": "python"
+    },
+    {
+      "id": "file:src/utils.py",
+      "kind": "file",
+      "name": "src/utils.py",
+      "file": "src/utils.py",
+      "language": "python"
+    },
+    {
+      "id": "function:src/complex.py::total",
+      "kind": "function",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "byte": 212
+        },
+        "end": {
+          "line": 7,
+          "column": 56,
+          "byte": 267
+        }
+      },
+      "language": "python",
+      "parent": "module:src/complex.py",
+      "exported": true
+    },
+    {
+      "id": "function:src/main.py::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 1,
+          "byte": 467
+        },
+        "end": {
+          "line": 26,
+          "column": 61,
+          "byte": 608
+        }
+      },
+      "language": "python",
+      "parent": "module:src/main.py",
+      "exported": true
+    },
+    {
+      "id": "function:src/main.py::total_area",
+      "kind": "function",
+      "name": "total_area",
+      "qualifiedName": "total_area",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 1,
+          "byte": 320
+        },
+        "end": {
+          "line": 21,
+          "column": 49,
+          "byte": 464
+        }
+      },
+      "language": "python",
+      "parent": "module:src/main.py",
+      "exported": true
+    },
+    {
+      "id": "function:src/service.py::create_service",
+      "kind": "function",
+      "name": "create_service",
+      "qualifiedName": "create_service",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 1,
+          "byte": 481
+        },
+        "end": {
+          "line": 28,
+          "column": 30,
+          "byte": 556
+        }
+      },
+      "language": "python",
+      "parent": "module:src/service.py",
+      "exported": true
+    },
+    {
+      "id": "function:src/utils.py::circle_area",
+      "kind": "function",
+      "name": "circle_area",
+      "qualifiedName": "circle_area",
+      "file": "src/utils.py",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "byte": 166
+        },
+        "end": {
+          "line": 13,
+          "column": 37,
+          "byte": 300
+        }
+      },
+      "language": "python",
+      "parent": "module:src/utils.py",
+      "exported": true
+    },
+    {
+      "id": "function:src/utils.py::format_float",
+      "kind": "function",
+      "name": "format_float",
+      "qualifiedName": "format_float",
+      "file": "src/utils.py",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 51
+        },
+        "end": {
+          "line": 8,
+          "column": 26,
+          "byte": 163
+        }
+      },
+      "language": "python",
+      "parent": "module:src/utils.py",
+      "exported": true
+    },
+    {
+      "id": "method:src/complex.py::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 154
+        },
+        "end": {
+          "line": 6,
+          "column": 62,
+          "byte": 211
+        }
+      },
+      "language": "python",
+      "parent": "class:src/complex.py::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/complex.py::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 55
+        },
+        "end": {
+          "line": 3,
+          "column": 33,
+          "byte": 83
+        }
+      },
+      "language": "python",
+      "parent": "class:src/complex.py::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/main.py::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 15,
+          "column": 5,
+          "byte": 281
+        },
+        "end": {
+          "line": 16,
+          "column": 12,
+          "byte": 317
+        }
+      },
+      "language": "python",
+      "parent": "class:src/main.py::Shape",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.py::Repository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "Repository.find",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 5,
+          "byte": 99
+        },
+        "end": {
+          "line": 9,
+          "column": 40,
+          "byte": 163
+        }
+      },
+      "language": "python",
+      "parent": "class:src/service.py::Repository",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.py::Repository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "Repository.save",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 5,
+          "byte": 169
+        },
+        "end": {
+          "line": 12,
+          "column": 36,
+          "byte": 235
+        }
+      },
+      "language": "python",
+      "parent": "class:src/service.py::Repository",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.py::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 19,
+          "column": 5,
+          "byte": 318
+        },
+        "end": {
+          "line": 23,
+          "column": 28,
+          "byte": 478
+        }
+      },
+      "language": "python",
+      "parent": "class:src/service.py::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.py::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 5,
+          "byte": 182
+        },
+        "end": {
+          "line": 14,
+          "column": 51,
+          "byte": 302
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.py::Circle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Circle.perimeter",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 5,
+          "byte": 308
+        },
+        "end": {
+          "line": 18,
+          "column": 41,
+          "byte": 428
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Circle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.py::Rectangle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Rectangle.area",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 28,
+          "column": 5,
+          "byte": 616
+        },
+        "end": {
+          "line": 30,
+          "column": 40,
+          "byte": 728
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "method:src/shapes.py::Rectangle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Rectangle.perimeter",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 32,
+          "column": 5,
+          "byte": 734
+        },
+        "end": {
+          "line": 34,
+          "column": 46,
+          "byte": 862
+        }
+      },
+      "language": "python",
+      "parent": "class:src/shapes.py::Rectangle",
+      "exported": true
+    },
+    {
+      "id": "module:src/complex.py",
+      "kind": "module",
+      "name": "src.complex",
+      "file": "src/complex.py",
+      "language": "python"
+    },
+    {
+      "id": "module:src/main.py",
+      "kind": "module",
+      "name": "src.main",
+      "file": "src/main.py",
+      "language": "python"
+    },
+    {
+      "id": "module:src/service.py",
+      "kind": "module",
+      "name": "src.service",
+      "file": "src/service.py",
+      "language": "python"
+    },
+    {
+      "id": "module:src/shapes.py",
+      "kind": "module",
+      "name": "src.shapes",
+      "file": "src/shapes.py",
+      "language": "python"
+    },
+    {
+      "id": "module:src/utils.py",
+      "kind": "module",
+      "name": "src.utils",
+      "file": "src/utils.py",
+      "language": "python"
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:Protocol",
+      "kind": "unknown",
+      "name": "Protocol",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:list",
+      "kind": "unknown",
+      "name": "list",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:print",
+      "kind": "unknown",
+      "name": "print",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:sum",
+      "kind": "unknown",
+      "name": "sum",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:super",
+      "kind": "unknown",
+      "name": "super",
+      "language": "python"
+    },
+    {
+      "id": "variable:src/main.py::main.shapes",
+      "kind": "variable",
+      "name": "shapes",
+      "qualifiedName": "main.shapes",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 491
+        },
+        "end": {
+          "line": 25,
+          "column": 61,
+          "byte": 547
+        }
+      },
+      "language": "python",
+      "parent": "function:src/main.py::main",
+      "exported": false
+    },
+    {
+      "id": "variable:src/service.py::ShapeService.area.shape",
+      "kind": "variable",
+      "name": "shape",
+      "qualifiedName": "ShapeService.area.shape",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 20,
+          "column": 9,
+          "byte": 351
+        },
+        "end": {
+          "line": 20,
+          "column": 40,
+          "byte": 382
+        }
+      },
+      "language": "python",
+      "parent": "method:src/service.py::ShapeService.area",
+      "exported": false
+    },
+    {
+      "id": "variable:src/service.py::create_service.repo",
+      "kind": "variable",
+      "name": "repo",
+      "qualifiedName": "create_service.repo",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 27,
+          "column": 5,
+          "byte": 507
+        },
+        "end": {
+          "line": 27,
+          "column": 24,
+          "byte": 526
+        }
+      },
+      "language": "python",
+      "parent": "function:src/service.py::create_service",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:src/complex.py::Circle",
+      "target": "class:src/complex.py::Shape",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 14,
+            "byte": 97
+          },
+          "end": {
+            "line": 4,
+            "column": 19,
+            "byte": 102
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/complex.py::Circle",
+      "target": "class:src/complex.py::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 14,
+            "byte": 97
+          },
+          "end": {
+            "line": 4,
+            "column": 19,
+            "byte": 102
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/complex.py::Shape",
+      "target": "unresolved:Protocol",
+      "kind": "inherits",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 13,
+            "byte": 40
+          },
+          "end": {
+            "line": 2,
+            "column": 21,
+            "byte": 48
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/complex.py::Shape",
+      "target": "unresolved:Protocol",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 13,
+            "byte": 40
+          },
+          "end": {
+            "line": 2,
+            "column": 21,
+            "byte": 48
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/main.py::Shape",
+      "target": "unresolved:Protocol",
+      "kind": "inherits",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 13,
+            "byte": 221
+          },
+          "end": {
+            "line": 12,
+            "column": 21,
+            "byte": 229
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/main.py::Shape",
+      "target": "unresolved:Protocol",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 13,
+            "byte": 221
+          },
+          "end": {
+            "line": 12,
+            "column": 21,
+            "byte": 229
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.py::Square",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 37,
+            "column": 14,
+            "byte": 878
+          },
+          "end": {
+            "line": 37,
+            "column": 23,
+            "byte": 887
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.py::Square",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 37,
+            "column": 14,
+            "byte": 878
+          },
+          "end": {
+            "line": 37,
+            "column": 23,
+            "byte": 887
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/shapes.py::Square.__init__",
+      "target": "external:python:super().__init__",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 9,
+            "byte": 996
+          },
+          "end": {
+            "line": 41,
+            "column": 37,
+            "byte": 1024
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/shapes.py::Square.__init__",
+      "target": "unresolved:super",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 9,
+            "byte": 996
+          },
+          "end": {
+            "line": 41,
+            "column": 16,
+            "byte": 1003
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "constructor:src/complex.py::Circle.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "function:src/complex.py::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "method:src/complex.py::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "method:src/complex.py::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "module:src/complex.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "class:src/complex.py::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "function:src/complex.py::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "function:src/complex.py::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "method:src/complex.py::Circle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.py",
+      "target": "method:src/complex.py::Shape.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "class:src/main.py::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::total_area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "method:src/main.py::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "module:src/main.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "variable:src/main.py::main.shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "file:src/shapes.py",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 1,
+            "byte": 139
+          },
+          "end": {
+            "line": 8,
+            "column": 37,
+            "byte": 175
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "file:src/utils.py",
+      "kind": "imports",
+      "status": "resolved_internal",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "byte": 176
+          },
+          "end": {
+            "line": 9,
+            "column": 31,
+            "byte": 206
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "class:src/main.py::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "class:src/main.py::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::main",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::main",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "function:src/main.py::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.py",
+      "target": "method:src/main.py::Shape.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::Repository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "constructor:src/service.py::Repository.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "constructor:src/service.py::ShapeService.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "function:src/service.py::create_service",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::Repository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::Repository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "module:src/service.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "variable:src/service.py::ShapeService.area.shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "variable:src/service.py::create_service.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "class:src/service.py::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "function:src/service.py::create_service",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "function:src/service.py::create_service",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::Repository.find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::Repository.save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.py",
+      "target": "method:src/service.py::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Square",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "constructor:src/shapes.py::Circle.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "constructor:src/shapes.py::Rectangle.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "constructor:src/shapes.py::Square.__init__",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "module:src/shapes.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Square",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "class:src/shapes.py::Square",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.perimeter",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::circle_area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::format_float",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "module:src/utils.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::circle_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::circle_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::format_float",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.py",
+      "target": "function:src/utils.py::format_float",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "function:src/complex.py::total",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 31,
+            "byte": 242
+          },
+          "end": {
+            "line": 7,
+            "column": 39,
+            "byte": 250
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.py::total",
+      "target": "unresolved:sum",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 27,
+            "byte": 238
+          },
+          "end": {
+            "line": 7,
+            "column": 56,
+            "byte": 267
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "external:python:Circle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 28,
+            "byte": 514
+          },
+          "end": {
+            "line": 25,
+            "column": 39,
+            "byte": 525
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "external:python:Rectangle",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 41,
+            "byte": 527
+          },
+          "end": {
+            "line": 25,
+            "column": 60,
+            "byte": 546
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "function:src/main.py::total_area",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 39,
+            "byte": 586
+          },
+          "end": {
+            "line": 26,
+            "column": 57,
+            "byte": 604
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "function:src/utils.py::format_float",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 26,
+            "byte": 573
+          },
+          "end": {
+            "line": 26,
+            "column": 58,
+            "byte": 605
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "unresolved:print",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 5,
+            "byte": 552
+          },
+          "end": {
+            "line": 26,
+            "column": 61,
+            "byte": 608
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "class:src/main.py::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 18,
+            "byte": 504
+          },
+          "end": {
+            "line": 25,
+            "column": 23,
+            "byte": 509
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::main",
+      "target": "unresolved:list",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 13,
+            "byte": 499
+          },
+          "end": {
+            "line": 25,
+            "column": 17,
+            "byte": 503
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::total_area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 16,
+            "byte": 431
+          },
+          "end": {
+            "line": 21,
+            "column": 28,
+            "byte": 443
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::total_area",
+      "target": "unresolved:sum",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 12,
+            "byte": 427
+          },
+          "end": {
+            "line": 21,
+            "column": 49,
+            "byte": 464
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::total_area",
+      "target": "class:src/main.py::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 19,
+            "column": 29,
+            "byte": 348
+          },
+          "end": {
+            "line": 19,
+            "column": 34,
+            "byte": 353
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.py::total_area",
+      "target": "unresolved:list",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 19,
+            "column": 24,
+            "byte": 343
+          },
+          "end": {
+            "line": 19,
+            "column": 28,
+            "byte": 347
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/service.py::create_service",
+      "target": "external:python:Repository",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 12,
+            "byte": 514
+          },
+          "end": {
+            "line": 27,
+            "column": 24,
+            "byte": 526
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/service.py::create_service",
+      "target": "external:python:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 12,
+            "byte": 538
+          },
+          "end": {
+            "line": 28,
+            "column": 30,
+            "byte": 556
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.py::Repository.find",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 16,
+            "byte": 139
+          },
+          "end": {
+            "line": 9,
+            "column": 40,
+            "byte": 163
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.py::ShapeService.area",
+      "target": "external:python:ValueError",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 19,
+            "byte": 427
+          },
+          "end": {
+            "line": 22,
+            "column": 42,
+            "byte": 450
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.py::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 23,
+            "column": 16,
+            "byte": 466
+          },
+          "end": {
+            "line": 23,
+            "column": 28,
+            "byte": 478
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.py::ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 17,
+            "byte": 359
+          },
+          "end": {
+            "line": 20,
+            "column": 40,
+            "byte": 382
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "class:src/complex.py::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "class:src/complex.py::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "constructor:src/complex.py::Circle.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "function:src/complex.py::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "method:src/complex.py::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.py",
+      "target": "method:src/complex.py::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "function:src/main.py::main",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 30,
+            "column": 5,
+            "byte": 642
+          },
+          "end": {
+            "line": 30,
+            "column": 11,
+            "byte": 648
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "class:src/main.py::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "function:src/main.py::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "function:src/main.py::total_area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "method:src/main.py::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.py",
+      "target": "variable:src/main.py::main.shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "class:src/service.py::Repository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "class:src/service.py::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "constructor:src/service.py::Repository.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "constructor:src/service.py::ShapeService.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "function:src/service.py::create_service",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "method:src/service.py::Repository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "method:src/service.py::Repository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "method:src/service.py::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "variable:src/service.py::ShapeService.area.shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.py",
+      "target": "variable:src/service.py::create_service.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "class:src/shapes.py::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "class:src/shapes.py::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "class:src/shapes.py::Square",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "constructor:src/shapes.py::Circle.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "constructor:src/shapes.py::Rectangle.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "constructor:src/shapes.py::Square.__init__",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "method:src/shapes.py::Circle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.py",
+      "target": "method:src/shapes.py::Rectangle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/utils.py",
+      "target": "function:src/utils.py::circle_area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/utils.py",
+      "target": "function:src/utils.py::format_float",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/complex.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/main.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/service.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/shapes.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/utils.py",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `typing`",
+      "file": "src/complex.py",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 28,
+          "byte": 27
+        }
+      },
+      "language": "python"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `math`",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 8,
+          "byte": 105
+        },
+        "end": {
+          "line": 5,
+          "column": 12,
+          "byte": 109
+        }
+      },
+      "language": "python"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `typing`",
+      "file": "src/main.py",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 110
+        },
+        "end": {
+          "line": 6,
+          "column": 28,
+          "byte": 137
+        }
+      },
+      "language": "python"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `.math`",
+      "file": "src/service.py",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 25,
+          "byte": 24
+        }
+      },
+      "language": "python"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `math`",
+      "file": "src/shapes.py",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 8,
+          "byte": 39
+        },
+        "end": {
+          "line": 3,
+          "column": 12,
+          "byte": 43
+        }
+      },
+      "language": "python"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `math`",
+      "file": "src/utils.py",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 8,
+          "byte": 44
+        },
+        "end": {
+          "line": 3,
+          "column": 12,
+          "byte": 48
+        }
+      },
+      "language": "python"
+    }
+  ],
+  "statistics": {
+    "files": 5,
+    "packages": 0,
+    "nodes": 58,
+    "edges": 146,
+    "symbols": 41,
+    "unresolvedEdges": 15,
+    "diagnostics": 6,
+    "byNodeKind": {
+      "class": 8,
+      "constructor": 6,
+      "external_symbol": 6,
+      "file": 5,
+      "function": 6,
+      "method": 10,
+      "module": 5,
+      "repository": 1,
+      "unknown": 8,
+      "variable": 3
+    },
+    "byEdgeKind": {
+      "calls": 18,
+      "contains": 43,
+      "defines": 33,
+      "exports": 38,
+      "imports": 2,
+      "inherits": 4,
+      "uses_type": 8
+    },
+    "byLanguage": {
+      "python": 57
+    },
+    "byStatus": {
+      "resolved_external": 6,
+      "resolved_internal": 125,
+      "unresolved": 15
+    },
+    "byFramework": {}
+  }
+}
