@@ -2,4 +2,4 @@ module echo-app
 
 go 1.27.3
 
-require github.com/labstack/echo/v4 v4.16.1
+require github.com/labstack/echo/v4 v4.16.2
