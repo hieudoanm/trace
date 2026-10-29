@@ -1,0 +1,819 @@
+---
+source: crates/trace-analysis/tests/snapshots.rs
+expression: document
+---
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "ruby",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/ruby",
+    "fileCount": 2,
+    "languageCount": 1
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": false,
+    "semanticMode": "off",
+    "languages": [
+      "ruby"
+    ]
+  },
+  "languages": [
+    {
+      "language": "ruby",
+      "grammar": "tree-sitter-ruby 0.23.1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "class:lib/math.rb::Math",
+      "kind": "class",
+      "name": "Math",
+      "qualifiedName": "Math",
+      "file": "lib/math.rb",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 4,
+          "byte": 82
+        }
+      },
+      "language": "ruby",
+      "parent": "module:lib/math.rb",
+      "exported": true
+    },
+    {
+      "id": "class:lib/service.rb::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 27
+        },
+        "end": {
+          "line": 15,
+          "column": 4,
+          "byte": 185
+        }
+      },
+      "language": "ruby",
+      "parent": "module:lib/service.rb",
+      "exported": true
+    },
+    {
+      "id": "class:lib/service.rb::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "byte": 187
+        },
+        "end": {
+          "line": 27,
+          "column": 4,
+          "byte": 355
+        }
+      },
+      "language": "ruby",
+      "parent": "module:lib/service.rb",
+      "exported": true
+    },
+    {
+      "id": "external:unknown:./math",
+      "kind": "external_symbol",
+      "name": "./math",
+      "language": "ruby"
+    },
+    {
+      "id": "file:lib/math.rb",
+      "kind": "file",
+      "name": "lib/math.rb",
+      "file": "lib/math.rb",
+      "language": "ruby"
+    },
+    {
+      "id": "file:lib/service.rb",
+      "kind": "file",
+      "name": "lib/service.rb",
+      "file": "lib/service.rb",
+      "language": "ruby"
+    },
+    {
+      "id": "function:lib/service.rb::create_service",
+      "kind": "function",
+      "name": "create_service",
+      "qualifiedName": "create_service",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "byte": 357
+        },
+        "end": {
+          "line": 31,
+          "column": 4,
+          "byte": 422
+        }
+      },
+      "language": "ruby",
+      "parent": "module:lib/service.rb",
+      "exported": true
+    },
+    {
+      "id": "method:lib/math.rb::Math.add",
+      "kind": "method",
+      "name": "add",
+      "qualifiedName": "Math.add",
+      "file": "lib/math.rb",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 3,
+          "byte": 13
+        },
+        "end": {
+          "line": 4,
+          "column": 6,
+          "byte": 42
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/math.rb::Math",
+      "exported": true
+    },
+    {
+      "id": "method:lib/math.rb::Math.twice",
+      "kind": "method",
+      "name": "twice",
+      "qualifiedName": "Math.twice",
+      "file": "lib/math.rb",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 3,
+          "byte": 46
+        },
+        "end": {
+          "line": 8,
+          "column": 6,
+          "byte": 78
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/math.rb::Math",
+      "exported": true
+    },
+    {
+      "id": "method:lib/service.rb::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 3,
+          "byte": 94
+        },
+        "end": {
+          "line": 10,
+          "column": 6,
+          "byte": 127
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/service.rb::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:lib/service.rb::InMemoryRepository.initialize",
+      "kind": "method",
+      "name": "initialize",
+      "qualifiedName": "InMemoryRepository.initialize",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 3,
+          "byte": 54
+        },
+        "end": {
+          "line": 6,
+          "column": 6,
+          "byte": 90
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/service.rb::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:lib/service.rb::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 3,
+          "byte": 131
+        },
+        "end": {
+          "line": 14,
+          "column": 6,
+          "byte": 181
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/service.rb::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:lib/service.rb::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 22,
+          "column": 3,
+          "byte": 255
+        },
+        "end": {
+          "line": 26,
+          "column": 6,
+          "byte": 351
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/service.rb::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:lib/service.rb::ShapeService.initialize",
+      "kind": "method",
+      "name": "initialize",
+      "qualifiedName": "ShapeService.initialize",
+      "file": "lib/service.rb",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 3,
+          "byte": 208
+        },
+        "end": {
+          "line": 20,
+          "column": 6,
+          "byte": 251
+        }
+      },
+      "language": "ruby",
+      "parent": "class:lib/service.rb::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "module:lib/math.rb",
+      "kind": "module",
+      "name": "math",
+      "file": "lib/math.rb",
+      "language": "ruby"
+    },
+    {
+      "id": "module:lib/service.rb",
+      "kind": "module",
+      "name": "service",
+      "file": "lib/service.rb",
+      "language": "ruby"
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "ruby"
+    },
+    {
+      "id": "unresolved:new",
+      "kind": "unknown",
+      "name": "new",
+      "language": "ruby"
+    },
+    {
+      "id": "unresolved:nil?",
+      "kind": "unknown",
+      "name": "nil?",
+      "language": "ruby"
+    },
+    {
+      "id": "unresolved:raise",
+      "kind": "unknown",
+      "name": "raise",
+      "language": "ruby"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:lib/math.rb",
+      "target": "class:lib/math.rb::Math",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "method:lib/math.rb::Math.add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "method:lib/math.rb::Math.twice",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "module:lib/math.rb",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "class:lib/math.rb::Math",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "class:lib/math.rb::Math",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "method:lib/math.rb::Math.add",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/math.rb",
+      "target": "method:lib/math.rb::Math.twice",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "function:lib/service.rb::create_service",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.initialize",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.initialize",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "module:lib/service.rb",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "external:unknown:./math",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 26,
+            "byte": 25
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "class:lib/service.rb::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "function:lib/service.rb::create_service",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "function:lib/service.rb::create_service",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.initialize",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.initialize",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "function:lib/service.rb::create_service",
+      "target": "unresolved:new",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 30,
+            "column": 3,
+            "byte": 378
+          },
+          "end": {
+            "line": 30,
+            "column": 43,
+            "byte": 418
+          }
+        },
+        {
+          "start": {
+            "line": 30,
+            "column": 20,
+            "byte": 395
+          },
+          "end": {
+            "line": 30,
+            "column": 42,
+            "byte": 417
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:lib/math.rb::Math.twice",
+      "target": "method:lib/math.rb::Math.add",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 5,
+            "byte": 63
+          },
+          "end": {
+            "line": 7,
+            "column": 14,
+            "byte": 72
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:lib/service.rb::ShapeService.area",
+      "target": "method:lib/service.rb::ShapeService.area",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 5,
+            "byte": 335
+          },
+          "end": {
+            "line": 25,
+            "column": 15,
+            "byte": 345
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:lib/service.rb::ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 23,
+            "column": 13,
+            "byte": 280
+          },
+          "end": {
+            "line": 23,
+            "column": 27,
+            "byte": 294
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:lib/service.rb::ShapeService.area",
+      "target": "unresolved:nil?",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 24,
+            "column": 26,
+            "byte": 320
+          },
+          "end": {
+            "line": 24,
+            "column": 36,
+            "byte": 330
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:lib/service.rb::ShapeService.area",
+      "target": "unresolved:raise",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 24,
+            "column": 5,
+            "byte": 299
+          },
+          "end": {
+            "line": 24,
+            "column": 22,
+            "byte": 316
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:lib/math.rb",
+      "target": "class:lib/math.rb::Math",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/math.rb",
+      "target": "method:lib/math.rb::Math.add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/math.rb",
+      "target": "method:lib/math.rb::Math.twice",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "class:lib/service.rb::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "class:lib/service.rb::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "function:lib/service.rb::create_service",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.initialize",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "method:lib/service.rb::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:lib/service.rb",
+      "target": "method:lib/service.rb::ShapeService.initialize",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:lib/math.rb",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:lib/service.rb",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [],
+  "statistics": {
+    "files": 2,
+    "packages": 0,
+    "nodes": 21,
+    "edges": 48,
+    "symbols": 15,
+    "unresolvedEdges": 4,
+    "diagnostics": 0,
+    "byNodeKind": {
+      "class": 3,
+      "external_symbol": 1,
+      "file": 2,
+      "function": 1,
+      "method": 7,
+      "module": 2,
+      "repository": 1,
+      "unknown": 4
+    },
+    "byEdgeKind": {
+      "calls": 6,
+      "contains": 15,
+      "defines": 11,
+      "exports": 15,
+      "imports": 1
+    },
+    "byLanguage": {
+      "ruby": 20
+    },
+    "byStatus": {
+      "resolved_external": 1,
+      "resolved_internal": 43,
+      "unresolved": 4
+    }
+  }
+}

@@ -21,4 +21,4 @@ pub use id::{external_id, file_id, module_id, package_id, repository_id, symbol_
 pub use language::Language;
 pub use location::{Position, SourceRange};
 pub use node::{Node, NodeKind, Visibility};
-pub use query::{ImpactNode, Neighbor, PathResult, QueryOptions};
+pub use query::{ImpactNode, Neighbor, PathResult, Query, QueryOptions};

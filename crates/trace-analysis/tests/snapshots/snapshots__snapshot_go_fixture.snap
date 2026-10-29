@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 85
 expression: document
 ---
 {
@@ -28,6 +27,24 @@ expression: document
     }
   ],
   "nodes": [
+    {
+      "id": "external:unknown:fmt",
+      "kind": "external_symbol",
+      "name": "fmt",
+      "language": "go"
+    },
+    {
+      "id": "external:unknown:github.com/example/trace/fixtures/go/pkg/math",
+      "kind": "external_symbol",
+      "name": "github.com/example/trace/fixtures/go/pkg/math",
+      "language": "go"
+    },
+    {
+      "id": "external:unknown:math",
+      "kind": "external_symbol",
+      "name": "math",
+      "language": "go"
+    },
     {
       "id": "file:pkg/service/service.go",
       "kind": "file",
@@ -667,6 +684,60 @@ expression: document
       "language": "go",
       "parent": "module:src/geometry/geometry.go",
       "exported": true
+    },
+    {
+      "id": "unresolved:Area",
+      "kind": "unknown",
+      "name": "Area",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Find",
+      "kind": "unknown",
+      "name": "Find",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Printf",
+      "kind": "unknown",
+      "name": "Printf",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Rectangle",
+      "kind": "unknown",
+      "name": "Rectangle",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:TotalArea",
+      "kind": "unknown",
+      "name": "TotalArea",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:make",
+      "kind": "unknown",
+      "name": "make",
+      "language": "go"
+    },
+    {
+      "id": "unresolved:panic",
+      "kind": "unknown",
+      "name": "panic",
+      "language": "go"
     },
     {
       "id": "variable:pkg/service/service.go::*MemoryRepository.Find.c",
@@ -2135,12 +2206,13 @@ expression: document
   "statistics": {
     "files": 3,
     "packages": 3,
-    "nodes": 40,
+    "nodes": 52,
     "edges": 134,
-    "symbols": 30,
+    "symbols": 39,
     "unresolvedEdges": 14,
     "diagnostics": 1,
     "byNodeKind": {
+      "external_symbol": 3,
       "file": 3,
       "function": 4,
       "interface": 2,
@@ -2150,6 +2222,7 @@ expression: document
       "property": 5,
       "repository": 1,
       "struct": 4,
+      "unknown": 9,
       "variable": 4
     },
     "byEdgeKind": {
@@ -2161,7 +2234,7 @@ expression: document
       "uses_type": 12
     },
     "byLanguage": {
-      "go": 39
+      "go": 51
     },
     "byStatus": {
       "resolved_external": 8,

@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 137
 expression: document
 ---
 {
@@ -291,6 +290,12 @@ expression: document
       "language": "kotlin",
       "parent": "class:src/shapes.kt::Square",
       "exported": false
+    },
+    {
+      "id": "external:unknown:shapes",
+      "kind": "external_symbol",
+      "name": "shapes",
+      "language": "kotlin"
     },
     {
       "id": "file:src/Main.kt",
@@ -748,6 +753,60 @@ expression: document
       "id": "repository:.",
       "kind": "repository",
       "name": "repository"
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:format",
+      "kind": "unknown",
+      "name": "format",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:listOf",
+      "kind": "unknown",
+      "name": "listOf",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:mutableMapOf",
+      "kind": "unknown",
+      "name": "mutableMapOf",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:println",
+      "kind": "unknown",
+      "name": "println",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:sumOf",
+      "kind": "unknown",
+      "name": "sumOf",
+      "language": "kotlin"
+    },
+    {
+      "id": "unresolved:totalArea",
+      "kind": "unknown",
+      "name": "totalArea",
+      "language": "kotlin"
     }
   ],
   "edges": [
@@ -1974,22 +2033,24 @@ expression: document
   "statistics": {
     "files": 3,
     "packages": 2,
-    "nodes": 39,
+    "nodes": 49,
     "edges": 124,
-    "symbols": 30,
+    "symbols": 39,
     "unresolvedEdges": 10,
     "diagnostics": 0,
     "byNodeKind": {
       "class": 6,
       "constant": 2,
       "constructor": 4,
+      "external_symbol": 1,
       "file": 3,
       "function": 3,
       "method": 9,
       "module": 3,
       "package": 2,
       "property": 6,
-      "repository": 1
+      "repository": 1,
+      "unknown": 9
     },
     "byEdgeKind": {
       "calls": 13,
@@ -2002,7 +2063,7 @@ expression: document
       "uses_type": 8
     },
     "byLanguage": {
-      "kotlin": 38
+      "kotlin": 48
     },
     "byStatus": {
       "resolved_external": 6,

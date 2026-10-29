@@ -740,6 +740,51 @@
       "exported": true
     },
     {
+      "id": "unresolved:Area",
+      "kind": "unknown",
+      "name": "Area"
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle"
+    },
+    {
+      "id": "unresolved:Find",
+      "kind": "unknown",
+      "name": "Find"
+    },
+    {
+      "id": "unresolved:Printf",
+      "kind": "unknown",
+      "name": "Printf"
+    },
+    {
+      "id": "unresolved:Rectangle",
+      "kind": "unknown",
+      "name": "Rectangle"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape"
+    },
+    {
+      "id": "unresolved:TotalArea",
+      "kind": "unknown",
+      "name": "TotalArea"
+    },
+    {
+      "id": "unresolved:make",
+      "kind": "unknown",
+      "name": "make"
+    },
+    {
+      "id": "unresolved:panic",
+      "kind": "unknown",
+      "name": "panic"
+    },
+    {
       "id": "variable:pkg/service/service.go::*MemoryRepository.Find.c",
       "kind": "variable",
       "name": "c",
@@ -2206,9 +2251,9 @@
   "statistics": {
     "files": 3,
     "packages": 3,
-    "nodes": 45,
+    "nodes": 54,
     "edges": 134,
-    "symbols": 30,
+    "symbols": 39,
     "unresolvedEdges": 14,
     "diagnostics": 1,
     "byNodeKind": {
@@ -2222,6 +2267,7 @@
       "property": 5,
       "repository": 1,
       "struct": 4,
+      "unknown": 9,
       "variable": 4
     },
     "byEdgeKind": {

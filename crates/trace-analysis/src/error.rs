@@ -1,5 +1,7 @@
 use thiserror::Error;
 
+use trace_core::error::CoreError;
+
 #[derive(Debug, Error)]
 pub enum AnalysisError {
     #[error("invalid configuration: {0}")]
@@ -12,6 +14,8 @@ pub enum AnalysisError {
     Parser(String),
     #[error("graph construction failed: {0}")]
     Graph(String),
+    #[error("core graph error: {0}")]
+    Core(#[from] CoreError),
     #[error("cache operation failed: {0}")]
     Cache(String),
     #[error("analysis did not produce a valid graph: {0}")]

@@ -162,3 +162,107 @@ fn snapshot_swift_fixture() {
 
     insta::assert_json_snapshot!(document);
 }
+
+#[test]
+fn snapshot_java_fixture() {
+    let path = fixtures_dir().join("java");
+    let builder = GraphBuilder::new();
+    let result = builder.build_repository(&path).unwrap();
+
+    let languages = vec![LanguageInfo {
+        language: "java".to_string(),
+        grammar: "tree-sitter-java 0.23.5".to_string(),
+    }];
+
+    let document = export_graph(
+        &result.graph,
+        "java",
+        path.to_str().unwrap(),
+        &result.diagnostics,
+        Some(result.graph.stats(&result.diagnostics)),
+        &languages,
+        false,
+        "off",
+        &["java".to_string()],
+    );
+
+    insta::assert_json_snapshot!(document);
+}
+
+#[test]
+fn snapshot_csharp_fixture() {
+    let path = fixtures_dir().join("csharp");
+    let builder = GraphBuilder::new();
+    let result = builder.build_repository(&path).unwrap();
+
+    let languages = vec![LanguageInfo {
+        language: "csharp".to_string(),
+        grammar: "tree-sitter-c-sharp 0.23.1".to_string(),
+    }];
+
+    let document = export_graph(
+        &result.graph,
+        "csharp",
+        path.to_str().unwrap(),
+        &result.diagnostics,
+        Some(result.graph.stats(&result.diagnostics)),
+        &languages,
+        false,
+        "off",
+        &["csharp".to_string()],
+    );
+
+    insta::assert_json_snapshot!(document);
+}
+
+#[test]
+fn snapshot_php_fixture() {
+    let path = fixtures_dir().join("php");
+    let builder = GraphBuilder::new();
+    let result = builder.build_repository(&path).unwrap();
+
+    let languages = vec![LanguageInfo {
+        language: "php".to_string(),
+        grammar: "tree-sitter-php 0.23.11".to_string(),
+    }];
+
+    let document = export_graph(
+        &result.graph,
+        "php",
+        path.to_str().unwrap(),
+        &result.diagnostics,
+        Some(result.graph.stats(&result.diagnostics)),
+        &languages,
+        false,
+        "off",
+        &["php".to_string()],
+    );
+
+    insta::assert_json_snapshot!(document);
+}
+
+#[test]
+fn snapshot_ruby_fixture() {
+    let path = fixtures_dir().join("ruby");
+    let builder = GraphBuilder::new();
+    let result = builder.build_repository(&path).unwrap();
+
+    let languages = vec![LanguageInfo {
+        language: "ruby".to_string(),
+        grammar: "tree-sitter-ruby 0.23.1".to_string(),
+    }];
+
+    let document = export_graph(
+        &result.graph,
+        "ruby",
+        path.to_str().unwrap(),
+        &result.diagnostics,
+        Some(result.graph.stats(&result.diagnostics)),
+        &languages,
+        false,
+        "off",
+        &["ruby".to_string()],
+    );
+
+    insta::assert_json_snapshot!(document);
+}

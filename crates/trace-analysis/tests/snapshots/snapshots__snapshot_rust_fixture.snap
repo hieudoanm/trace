@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 111
 expression: document
 ---
 {
@@ -28,6 +27,12 @@ expression: document
     }
   ],
   "nodes": [
+    {
+      "id": "external:unknown:shapes",
+      "kind": "external_symbol",
+      "name": "shapes",
+      "language": "rust"
+    },
     {
       "id": "file:src/lib.rs",
       "kind": "file",
@@ -690,6 +695,84 @@ expression: document
       "language": "rust",
       "parent": "module:src/service.rs",
       "exported": true
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:cloned",
+      "kind": "unknown",
+      "name": "cloned",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:expect",
+      "kind": "unknown",
+      "name": "expect",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:insert",
+      "kind": "unknown",
+      "name": "insert",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:iter",
+      "kind": "unknown",
+      "name": "iter",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:map",
+      "kind": "unknown",
+      "name": "map",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:println",
+      "kind": "unknown",
+      "name": "println",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:sum",
+      "kind": "unknown",
+      "name": "sum",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:vec",
+      "kind": "unknown",
+      "name": "vec",
+      "language": "rust"
     },
     {
       "id": "variable:src/main.rs::main.shapes",
@@ -2140,12 +2223,13 @@ expression: document
   "statistics": {
     "files": 3,
     "packages": 0,
-    "nodes": 37,
+    "nodes": 51,
     "edges": 119,
-    "symbols": 29,
+    "symbols": 42,
     "unresolvedEdges": 22,
     "diagnostics": 2,
     "byNodeKind": {
+      "external_symbol": 1,
       "file": 3,
       "function": 2,
       "method": 14,
@@ -2154,6 +2238,7 @@ expression: document
       "repository": 1,
       "struct": 4,
       "trait": 2,
+      "unknown": 13,
       "variable": 2
     },
     "byEdgeKind": {
@@ -2166,7 +2251,7 @@ expression: document
       "uses_type": 14
     },
     "byLanguage": {
-      "rust": 36
+      "rust": 50
     },
     "byStatus": {
       "resolved_external": 5,

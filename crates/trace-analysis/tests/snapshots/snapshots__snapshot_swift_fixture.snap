@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 163
 expression: document
 ---
 {
@@ -269,6 +268,12 @@ expression: document
       "language": "swift",
       "parent": "class:src/shapes.swift::Square",
       "exported": false
+    },
+    {
+      "id": "external:unknown:Foundation",
+      "kind": "external_symbol",
+      "name": "Foundation",
+      "language": "swift"
     },
     {
       "id": "file:src/Service.swift",
@@ -814,6 +819,48 @@ expression: document
       "id": "repository:.",
       "kind": "repository",
       "name": "repository"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:fatalError",
+      "kind": "unknown",
+      "name": "fatalError",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:print",
+      "kind": "unknown",
+      "name": "print",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:reduce",
+      "kind": "unknown",
+      "name": "reduce",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:store",
+      "kind": "unknown",
+      "name": "store",
+      "language": "swift"
     }
   ],
   "edges": [
@@ -1927,22 +1974,24 @@ expression: document
   "statistics": {
     "files": 4,
     "packages": 0,
-    "nodes": 42,
+    "nodes": 50,
     "edges": 101,
-    "symbols": 33,
+    "symbols": 40,
     "unresolvedEdges": 10,
     "diagnostics": 1,
     "byNodeKind": {
       "class": 5,
       "constant": 2,
       "constructor": 4,
+      "external_symbol": 1,
       "file": 4,
       "function": 4,
       "interface": 1,
       "method": 11,
       "module": 4,
       "property": 6,
-      "repository": 1
+      "repository": 1,
+      "unknown": 7
     },
     "byEdgeKind": {
       "calls": 11,
@@ -1953,7 +2002,7 @@ expression: document
       "uses_type": 11
     },
     "byLanguage": {
-      "swift": 41
+      "swift": 49
     },
     "byStatus": {
       "resolved_external": 4,

@@ -12,6 +12,7 @@ Trace is a high-performance, multi-language code intelligence and graph analysis
 - **Incremental caching**: Fast repeated scans with content-addressed caching
 - **Deterministic output**: Reproducible results for identical source trees
 - **Machine-readable export**: JSON output with schema validation
+- **Graph validation**: `trace validate` checks every edge references an existing node
 - **Local analysis**: No cloud services or external APIs required
 
 ## Installation
@@ -88,6 +89,9 @@ trace cycles
 # Check configuration and parser availability
 trace check
 
+# Validate graph integrity (every edge references an existing node)
+trace validate
+
 # List supported languages
 trace languages
 ```
@@ -116,6 +120,7 @@ Analyse a repository and generate a graph.
 - `--language <LANGUAGE>`: Only analyse the given language(s)
 - `--no-cache`: Disable the syntax cache
 - `--jobs <N>`: Number of parallel jobs
+- `--write-trace-dir`: Also write `.trace/graph.json` and `.trace/graph.html` for the visual explorer
 - `--config <PATH>`: Path to a trace.toml configuration file
 
 #### `trace graph [PATH]`
@@ -198,6 +203,10 @@ Report supported languages and analysis capabilities.
 
 Validate configuration, discovery, and parser availability.
 
+#### `trace validate [PATH]`
+
+Validate graph integrity: every edge must reference an existing node. Fails if any dangling edge targets are found.
+
 ## Architecture
 
 Trace is organized as a Rust workspace with the following crates:
@@ -222,6 +231,10 @@ Trace supports the following languages with syntax-level analysis:
 | Rust       | .rs        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
 | Kotlin     | .kt, .kts  | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
 | Swift      | .swift     | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
+| Java       | .java      | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
+| C#         | .cs        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
+| PHP        | .php       | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
+| Ruby       | .rb        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
 
 ### Current Limitations
 
@@ -231,6 +244,10 @@ Trace supports the following languages with syntax-level analysis:
 - **Rust**: crate/self/super use paths and simple module files are resolved. Macro expansion and trait method resolution are not performed.
 - **Kotlin**: Imports and same-package declarations are resolved. Overload selection and extension resolution are conservative.
 - **Swift**: Files in the same Swift package/module root share a lexical scope. Protocol witness and dynamic dispatch resolution are not performed.
+- **Java**: Imports and same-package declarations are resolved. Overloads and type erasure are handled conservatively.
+- **C#**: Using directives and namespace scope are considered. Advanced generics and LINQ are not fully modelled.
+- **PHP**: Use statements and namespaced declarations are resolved. Dynamic includes and magic methods are not modelled.
+- **Ruby**: require/require_relative are tracked. Dynamic method definition and metaprogramming are not modelled.
 
 ## Configuration
 

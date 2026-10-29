@@ -618,6 +618,54 @@ expression: document
       "name": "repository"
     },
     {
+      "id": "unresolved:Protocol",
+      "kind": "unknown",
+      "name": "Protocol",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:list",
+      "kind": "unknown",
+      "name": "list",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:print",
+      "kind": "unknown",
+      "name": "print",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:sum",
+      "kind": "unknown",
+      "name": "sum",
+      "language": "python"
+    },
+    {
+      "id": "unresolved:super",
+      "kind": "unknown",
+      "name": "super",
+      "language": "python"
+    },
+    {
       "id": "variable:src/main.py::main.shapes",
       "kind": "variable",
       "name": "shapes",
@@ -1976,9 +2024,9 @@ expression: document
   "statistics": {
     "files": 4,
     "packages": 0,
-    "nodes": 36,
+    "nodes": 44,
     "edges": 118,
-    "symbols": 27,
+    "symbols": 35,
     "unresolvedEdges": 11,
     "diagnostics": 5,
     "byNodeKind": {
@@ -1989,6 +2037,7 @@ expression: document
       "method": 8,
       "module": 4,
       "repository": 1,
+      "unknown": 8,
       "variable": 3
     },
     "byEdgeKind": {
@@ -2001,7 +2050,7 @@ expression: document
       "uses_type": 6
     },
     "byLanguage": {
-      "python": 35
+      "python": 43
     },
     "byStatus": {
       "resolved_external": 6,

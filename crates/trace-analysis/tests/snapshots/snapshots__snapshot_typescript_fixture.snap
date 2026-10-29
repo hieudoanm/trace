@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 33
 expression: document
 ---
 {
@@ -269,6 +268,12 @@ expression: document
       "language": "typescript",
       "parent": "module:src/extra.ts",
       "exported": true
+    },
+    {
+      "id": "external:unknown:path",
+      "kind": "external_symbol",
+      "name": "path",
+      "language": "typescript"
     },
     {
       "id": "file:src/extra.ts",
@@ -734,6 +739,42 @@ expression: document
       "language": "typescript",
       "parent": "module:src/math.ts",
       "exported": true
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "typescript"
+    },
+    {
+      "id": "unresolved:set",
+      "kind": "unknown",
+      "name": "set",
+      "language": "typescript"
     },
     {
       "id": "variable:src/extra.ts::plain",
@@ -2010,9 +2051,9 @@ expression: document
   "statistics": {
     "files": 3,
     "packages": 0,
-    "nodes": 38,
+    "nodes": 45,
     "edges": 118,
-    "symbols": 31,
+    "symbols": 37,
     "unresolvedEdges": 10,
     "diagnostics": 3,
     "byNodeKind": {
@@ -2020,6 +2061,7 @@ expression: document
       "constant": 4,
       "constructor": 2,
       "enum": 1,
+      "external_symbol": 1,
       "file": 3,
       "function": 5,
       "interface": 2,
@@ -2029,6 +2071,7 @@ expression: document
       "property": 2,
       "repository": 1,
       "type": 1,
+      "unknown": 6,
       "variable": 1
     },
     "byEdgeKind": {
@@ -2041,7 +2084,7 @@ expression: document
       "uses_type": 7
     },
     "byLanguage": {
-      "typescript": 37
+      "typescript": 44
     },
     "byStatus": {
       "resolved_external": 7,
