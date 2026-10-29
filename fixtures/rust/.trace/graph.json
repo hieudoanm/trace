@@ -68,6 +68,7 @@
       "grammar": "tree-sitter-ruby 0.23.1"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "external:rust:Self",
@@ -123,14 +124,14 @@
       "file": "src/complex.rs",
       "range": {
         "start": {
-          "line": 4,
+          "line": 12,
           "column": 1,
-          "byte": 167
+          "byte": 192
         },
         "end": {
-          "line": 4,
-          "column": 89,
-          "byte": 255
+          "line": 14,
+          "column": 2,
+          "byte": 284
         }
       },
       "language": "rust",
@@ -189,14 +190,14 @@
       "file": "src/complex.rs",
       "range": {
         "start": {
-          "line": 3,
-          "column": 25,
-          "byte": 100
+          "line": 8,
+          "column": 5,
+          "byte": 113
         },
         "end": {
-          "line": 3,
-          "column": 89,
-          "byte": 164
+          "line": 10,
+          "column": 6,
+          "byte": 189
         }
       },
       "language": "rust",
@@ -211,14 +212,14 @@
       "file": "src/complex.rs",
       "range": {
         "start": {
-          "line": 1,
-          "column": 19,
-          "byte": 18
+          "line": 2,
+          "column": 5,
+          "byte": 22
         },
         "end": {
-          "line": 1,
-          "column": 41,
-          "byte": 40
+          "line": 2,
+          "column": 27,
+          "byte": 44
         }
       },
       "language": "rust",
@@ -591,14 +592,14 @@
       "file": "src/complex.rs",
       "range": {
         "start": {
-          "line": 2,
-          "column": 21,
-          "byte": 63
+          "line": 5,
+          "column": 5,
+          "byte": 71
         },
         "end": {
-          "line": 2,
-          "column": 31,
-          "byte": 73
+          "line": 5,
+          "column": 15,
+          "byte": 81
         }
       },
       "language": "rust",
@@ -728,14 +729,14 @@
       "file": "src/complex.rs",
       "range": {
         "start": {
-          "line": 2,
+          "line": 4,
           "column": 1,
-          "byte": 43
+          "byte": 47
         },
         "end": {
-          "line": 2,
-          "column": 33,
-          "byte": 75
+          "line": 6,
+          "column": 2,
+          "byte": 84
         }
       },
       "language": "rust",
@@ -843,9 +844,9 @@
           "byte": 0
         },
         "end": {
-          "line": 1,
-          "column": 43,
-          "byte": 42
+          "line": 3,
+          "column": 2,
+          "byte": 46
         }
       },
       "language": "rust",
@@ -1498,14 +1499,14 @@
       "sites": [
         {
           "start": {
-            "line": 4,
-            "column": 72,
-            "byte": 238
+            "line": 13,
+            "column": 27,
+            "byte": 267
           },
           "end": {
-            "line": 4,
-            "column": 80,
-            "byte": 246
+            "line": 13,
+            "column": 35,
+            "byte": 275
           }
         }
       ]
@@ -1519,14 +1520,14 @@
       "sites": [
         {
           "start": {
-            "line": 4,
-            "column": 50,
-            "byte": 216
+            "line": 13,
+            "column": 5,
+            "byte": 245
           },
           "end": {
-            "line": 4,
-            "column": 63,
-            "byte": 229
+            "line": 13,
+            "column": 18,
+            "byte": 258
           }
         }
       ]
@@ -1540,14 +1541,14 @@
       "sites": [
         {
           "start": {
-            "line": 4,
-            "column": 50,
-            "byte": 216
+            "line": 13,
+            "column": 5,
+            "byte": 245
           },
           "end": {
-            "line": 4,
-            "column": 81,
-            "byte": 247
+            "line": 13,
+            "column": 36,
+            "byte": 276
           }
         }
       ]
@@ -1561,14 +1562,14 @@
       "sites": [
         {
           "start": {
-            "line": 4,
-            "column": 50,
-            "byte": 216
+            "line": 13,
+            "column": 5,
+            "byte": 245
           },
           "end": {
-            "line": 4,
-            "column": 87,
-            "byte": 253
+            "line": 13,
+            "column": 42,
+            "byte": 282
           }
         }
       ]
@@ -1582,14 +1583,14 @@
       "sites": [
         {
           "start": {
-            "line": 4,
+            "line": 12,
             "column": 32,
-            "byte": 198
+            "byte": 223
           },
           "end": {
-            "line": 4,
+            "line": 12,
             "column": 37,
-            "byte": 203
+            "byte": 228
           }
         }
       ]
@@ -2107,14 +2108,14 @@
       "sites": [
         {
           "start": {
-            "line": 3,
+            "line": 7,
             "column": 16,
-            "byte": 91
+            "byte": 100
           },
           "end": {
-            "line": 3,
+            "line": 7,
             "column": 22,
-            "byte": 97
+            "byte": 106
           }
         }
       ]
@@ -2537,14 +2538,14 @@
       "sites": [
         {
           "start": {
-            "line": 3,
+            "line": 7,
             "column": 6,
-            "byte": 81
+            "byte": 90
           },
           "end": {
-            "line": 3,
+            "line": 7,
             "column": 11,
-            "byte": 86
+            "byte": 95
           }
         }
       ]
@@ -2744,6 +2745,7 @@
       "resolved_external": 5,
       "resolved_internal": 115,
       "unresolved": 26
-    }
+    },
+    "byFramework": {}
   }
 }

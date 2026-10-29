@@ -3,12 +3,15 @@
 use trace_core::Graph;
 
 use crate::cache::SyntaxCache;
+use crate::framework::Framework;
 
 /// The result of building a graph.
 #[derive(Debug, Clone)]
 pub struct GraphBuildResult {
     pub graph: Graph,
     pub diagnostics: Vec<trace_core::Diagnostic>,
+    /// Frameworks detected during the build.
+    pub frameworks: Vec<Framework>,
 }
 
 /// Builds a [`Graph`] from discovered, parsed, and resolved source files.

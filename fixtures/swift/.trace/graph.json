@@ -68,6 +68,7 @@
       "grammar": "tree-sitter-ruby 0.23.1"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:src/Complex.swift::Circle",
@@ -2381,6 +2382,7 @@
       "resolved_external": 4,
       "resolved_internal": 100,
       "unresolved": 14
-    }
+    },
+    "byFramework": {}
   }
 }

@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-typescript 0.23.2"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:src/complex.ts::Circle",
@@ -2466,6 +2467,7 @@ expression: document
       "resolved_external": 7,
       "resolved_internal": 123,
       "unresolved": 12
-    }
+    },
+    "byFramework": {}
   }
 }

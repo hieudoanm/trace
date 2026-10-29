@@ -123,6 +123,7 @@ fn run() -> Result<()> {
         Commands::Cycles { path } => crate::cli::validate::cmd_cycles(&path),
         Commands::Stats { path } => crate::cli::validate::cmd_stats(&path),
         Commands::Languages => crate::cli::validate::cmd_languages(),
+        Commands::Frameworks { path } => crate::cli::validate::cmd_frameworks(&path),
         Commands::Check { path } => crate::cli::validate::cmd_check(&path),
         Commands::Validate { path } => crate::cli::validate::cmd_validate(&path),
     }

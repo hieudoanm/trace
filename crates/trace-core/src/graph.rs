@@ -262,6 +262,7 @@ impl Graph {
         let mut by_language = BTreeMap::new();
         let mut by_edge_kind = BTreeMap::new();
         let mut by_status = BTreeMap::new();
+        let mut by_framework = BTreeMap::new();
         let mut files = 0usize;
         let mut packages = 0usize;
         for node in &self.nodes {
@@ -273,6 +274,11 @@ impl Graph {
             }
             if node.kind == NodeKind::Package {
                 packages += 1;
+            }
+            if node.kind == NodeKind::Framework {
+                if let Some(fw) = node.metadata.get("framework") {
+                    *by_framework.entry(fw.clone()).or_insert(0) += 1;
+                }
             }
             if let Some(language) = node.language {
                 *by_language
@@ -325,6 +331,7 @@ impl Graph {
             by_edge_kind,
             by_language,
             by_status,
+            by_framework,
         }
     }
 
@@ -508,6 +515,8 @@ pub struct Stats {
     pub by_language: BTreeMap<String, usize>,
     #[serde(default)]
     pub by_status: BTreeMap<String, usize>,
+    #[serde(default)]
+    pub by_framework: BTreeMap<String, usize>,
 }
 
 /// Build a repository node with a fixed canonical ID.

@@ -68,6 +68,7 @@
       "grammar": "tree-sitter-ruby 0.23.1"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "external:go:Circle",
@@ -2718,6 +2719,7 @@
       "resolved_external": 8,
       "resolved_internal": 140,
       "unresolved": 15
-    }
+    },
+    "byFramework": {}
   }
 }

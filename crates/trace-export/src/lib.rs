@@ -15,28 +15,11 @@ use trace_core::{
     id,
     node::{Node, NodeKind},
 };
-
 /// Current schema version for the exported graph document.
 pub const SCHEMA_VERSION: &str = "1.0";
 
 /// Trace crate version, injected at compile time.
 pub const TRACE_VERSION: &str = env!("CARGO_PKG_VERSION");
-
-/// A versioned graph document suitable for JSON export.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-pub struct GraphDocument {
-    pub schema_version: String,
-    pub trace_version: String,
-    pub repository: RepositoryMetadata,
-    pub analysis: AnalysisMetadata,
-    pub languages: Vec<LanguageInfo>,
-    pub nodes: Vec<Node>,
-    pub edges: Vec<Edge>,
-    pub diagnostics: Vec<Diagnostic>,
-    #[serde(skip_serializing_if = "Option::is_none")]
-    pub statistics: Option<Stats>,
-}
 
 /// Metadata about the analysed repository.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
@@ -67,7 +50,34 @@ pub struct LanguageInfo {
     pub grammar: String,
 }
 
-/// Export a graph to a deterministic JSON value.
+/// Information about one detected framework.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct FrameworkInfo {
+    pub name: String,
+    pub display_name: String,
+    pub family: String,
+    pub version: Option<String>,
+    pub confidence: String,
+}
+
+/// A versioned graph document suitable for JSON export.
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+pub struct GraphDocument {
+    pub schema_version: String,
+    pub trace_version: String,
+    pub repository: RepositoryMetadata,
+    pub analysis: AnalysisMetadata,
+    pub languages: Vec<LanguageInfo>,
+    pub frameworks: Vec<FrameworkInfo>,
+    pub nodes: Vec<Node>,
+    pub edges: Vec<Edge>,
+    pub diagnostics: Vec<Diagnostic>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub statistics: Option<Stats>,
+}
+
 #[allow(clippy::too_many_arguments)]
 pub fn export_graph(
     graph: &Graph,
@@ -76,6 +86,7 @@ pub fn export_graph(
     diagnostics: &[Diagnostic],
     statistics: Option<Stats>,
     languages: &[LanguageInfo],
+    frameworks: &[FrameworkInfo],
     cache_enabled: bool,
     semantic_mode: &str,
     enabled_languages: &[String],
@@ -115,6 +126,7 @@ pub fn export_graph(
             languages: enabled_languages.to_vec(),
         },
         languages: languages.to_vec(),
+        frameworks: frameworks.to_vec(),
         nodes: nodes.into_iter().collect(),
         edges: edges.into_iter().collect(),
         diagnostics: diagnostics.to_vec(),
@@ -189,6 +201,7 @@ fn node_kind_color(kind: &NodeKind) -> &'static str {
         }
         NodeKind::Type => "yellow",
         NodeKind::ExternalSymbol => "lightgray",
+        NodeKind::Framework => "magenta",
         NodeKind::Unknown => "black",
     }
 }
@@ -206,6 +219,11 @@ fn edge_style(kind: &EdgeKind) -> &'static str {
         EdgeKind::Defines => "solid",
         EdgeKind::Overrides => "dashed",
         EdgeKind::DependsOn => "dotted",
+        EdgeKind::UsesFramework => "dashed",
+        EdgeKind::ImplementsPattern => "dotted",
+        EdgeKind::ExtendsFramework => "dotted",
+        EdgeKind::RoutesTo => "bold",
+        EdgeKind::Injects => "dotted",
     }
 }
 
@@ -273,6 +291,7 @@ mod tests {
                 language: "typescript".to_string(),
                 grammar: "tree-sitter-typescript 0.23.2".to_string(),
             }],
+            &[],
             false,
             "off",
             &["typescript".to_string()],
@@ -291,6 +310,7 @@ mod tests {
             "/repo",
             &[],
             None,
+            &[],
             &[],
             false,
             "off",
@@ -311,6 +331,7 @@ mod tests {
             &[],
             None,
             &[],
+            &[],
             false,
             "off",
             &[],
@@ -329,6 +350,7 @@ mod tests {
             "/repo",
             &[],
             None,
+            &[],
             &[],
             false,
             "off",
@@ -354,6 +376,7 @@ mod tests {
                 language: "typescript".to_string(),
                 grammar: "tree-sitter-typescript 0.23.2".to_string(),
             }],
+            &[],
             false,
             "off",
             &["typescript".to_string()],

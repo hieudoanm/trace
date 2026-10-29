@@ -12,6 +12,7 @@
 //! * module:     `module:<path>`
 //! * symbol:     `<kind>:<path>::<qualified>[~<ordinal>]`
 //! * external:   `external:<language>:<qualified>`
+//! * framework:  `framework:<name>[:<version>]`
 //!
 //! The ordinal is assigned in source order among symbols that share a kind,
 //! path and qualified name (for example overloads or same-named local
@@ -48,6 +49,13 @@ pub fn symbol_id(kind: NodeKind, path: &str, qualified: &str, ordinal: u32) -> S
 
 pub fn external_id(language: Language, qualified: &str) -> String {
     format!("external:{}:{}", language.as_str(), qualified)
+}
+
+pub fn framework_id(name: &str, version: Option<&str>) -> String {
+    match version {
+        Some(version) => format!("framework:{name}:{version}"),
+        None => format!("framework:{name}"),
+    }
 }
 
 /// Normalise repository-relative paths for canonical output.
@@ -98,5 +106,12 @@ mod tests {
             symbol_id(NodeKind::Function, "a.ts", "X", 0),
             symbol_id(NodeKind::Method, "a.ts", "X", 0)
         );
+    }
+
+    #[test]
+    fn framework_id_is_deterministic() {
+        assert_eq!(framework_id("react", None), "framework:react");
+        assert_eq!(framework_id("django", Some("4.2")), "framework:django:4.2");
+        assert_eq!(framework_id("react", None), framework_id("react", None));
     }
 }

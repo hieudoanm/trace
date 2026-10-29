@@ -1,6 +1,5 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
-assertion_line: 122
 expression: document
 ---
 {
@@ -27,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-rust 0.24.2"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "external:unknown:shapes",
@@ -2691,6 +2691,7 @@ expression: document
       "resolved_external": 5,
       "resolved_internal": 115,
       "unresolved": 26
-    }
+    },
+    "byFramework": {}
   }
 }

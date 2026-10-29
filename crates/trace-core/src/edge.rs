@@ -17,10 +17,15 @@ pub enum EdgeKind {
     Defines,
     Overrides,
     DependsOn,
+    UsesFramework,
+    ImplementsPattern,
+    ExtendsFramework,
+    RoutesTo,
+    Injects,
 }
 
 impl EdgeKind {
-    pub const ALL: [EdgeKind; 11] = [
+    pub const ALL: [EdgeKind; 16] = [
         EdgeKind::Contains,
         EdgeKind::Imports,
         EdgeKind::Exports,
@@ -32,6 +37,11 @@ impl EdgeKind {
         EdgeKind::Defines,
         EdgeKind::Overrides,
         EdgeKind::DependsOn,
+        EdgeKind::UsesFramework,
+        EdgeKind::ImplementsPattern,
+        EdgeKind::ExtendsFramework,
+        EdgeKind::RoutesTo,
+        EdgeKind::Injects,
     ];
 
     pub fn as_str(self) -> &'static str {
@@ -47,6 +57,11 @@ impl EdgeKind {
             EdgeKind::Defines => "defines",
             EdgeKind::Overrides => "overrides",
             EdgeKind::DependsOn => "depends_on",
+            EdgeKind::UsesFramework => "uses_framework",
+            EdgeKind::ImplementsPattern => "implements_pattern",
+            EdgeKind::ExtendsFramework => "extends_framework",
+            EdgeKind::RoutesTo => "routes_to",
+            EdgeKind::Injects => "injects",
         }
     }
 
@@ -58,7 +73,7 @@ impl EdgeKind {
     pub fn is_dependency(self) -> bool {
         matches!(
             self,
-            EdgeKind::Imports | EdgeKind::DependsOn | EdgeKind::UsesType
+            EdgeKind::Imports | EdgeKind::DependsOn | EdgeKind::UsesType | EdgeKind::UsesFramework
         )
     }
 }

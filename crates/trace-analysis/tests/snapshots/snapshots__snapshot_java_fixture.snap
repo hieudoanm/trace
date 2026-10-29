@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-java 0.23.5"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:Complex.java::Circle",
@@ -1259,6 +1260,7 @@ expression: document
       "resolved_external": 2,
       "resolved_internal": 53,
       "unresolved": 7
-    }
+    },
+    "byFramework": {}
   }
 }

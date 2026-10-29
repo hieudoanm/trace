@@ -10,6 +10,7 @@
     "repository",
     "analysis",
     "languages",
+    "frameworks",
     "nodes",
     "edges",
     "diagnostics"
@@ -35,6 +36,12 @@
       "type": "array",
       "items": {
         "$ref": "#/$defs/languageInfo"
+      }
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/frameworkInfo"
       }
     },
     "nodes": {
@@ -130,6 +137,34 @@
         }
       }
     },
+    "frameworkInfo": {
+      "type": "object",
+      "required": ["name", "displayName", "family", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Canonical framework name (e.g. \"react\", \"django\")."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Human-readable framework name."
+        },
+        "family": {
+          "type": "string",
+          "description": "Language family the framework belongs to."
+        },
+        "version": {
+          "type": "string",
+          "description": "Optional version hint from package manifest."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Confidence in the framework detection."
+        }
+      }
+    },
     "node": {
       "type": "object",
       "required": ["id", "kind", "name"],
@@ -210,6 +245,7 @@
         "property",
         "parameter",
         "external_symbol",
+        "framework",
         "unknown"
       ]
     },
@@ -260,7 +296,12 @@
         "uses_type",
         "defines",
         "overrides",
-        "depends_on"
+        "depends_on",
+        "uses_framework",
+        "implements_pattern",
+        "extends_framework",
+        "routes_to",
+        "injects"
       ]
     },
     "resolutionStatus": {
@@ -446,6 +487,13 @@
           }
         },
         "byStatus": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byFramework": {
           "type": "object",
           "additionalProperties": {
             "type": "integer",

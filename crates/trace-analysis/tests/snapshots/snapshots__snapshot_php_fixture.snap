@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-php 0.23.11"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:Complex.php::Circle",
@@ -1028,6 +1029,7 @@ expression: document
     "byStatus": {
       "resolved_internal": 67,
       "unresolved": 2
-    }
+    },
+    "byFramework": {}
   }
 }

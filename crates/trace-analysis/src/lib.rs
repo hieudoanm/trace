@@ -10,6 +10,7 @@ pub mod cache;
 pub mod capabilities;
 pub mod config;
 pub mod error;
+pub mod framework;
 pub mod graph;
 pub mod index;
 pub mod resolve;

@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-kt 0.1.0"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:src/Complex.kt::Circle",
@@ -2510,6 +2511,7 @@ expression: document
       "resolved_external": 6,
       "resolved_internal": 135,
       "unresolved": 12
-    }
+    },
+    "byFramework": {}
   }
 }

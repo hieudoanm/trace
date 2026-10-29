@@ -12,12 +12,54 @@ use trace_parser::{
 
 use super::graph_symbol_edges::module_id_str;
 use crate::cache::SyntaxCache;
+use crate::framework::{Framework, FrameworkDetector, ManifestContents};
 use crate::index::RepositoryIndex;
 use trace_core::SourceRange;
 
 use super::graph_file_nodes::add_file_nodes_and_edges;
 use super::graph_symbol_edges::add_symbol_edges;
 use super::graph_types::{GraphBuildResult, GraphBuilder};
+
+/// Known manifest file names used for framework detection.
+const MANIFEST_FILES: &[&str] = &[
+    "package.json",
+    "Cargo.toml",
+    "go.mod",
+    "requirements.txt",
+    "pyproject.toml",
+    "setup.py",
+    "setup.cfg",
+    "Gemfile",
+    "Gemfile.lock",
+    "composer.json",
+    "pom.xml",
+    "build.gradle",
+    "build.gradle.kts",
+    "settings.gradle",
+    "angular.json",
+    "next.config.js",
+    "next.config.mjs",
+    "config/application.rb",
+];
+
+/// Discover manifest files under `root` whose names are known framework
+/// signals. Returns repository-relative paths to file contents.
+fn discover_manifests(root: &Path) -> ManifestContents {
+    let mut files = ManifestContents::empty();
+    for name in MANIFEST_FILES {
+        let path = root.join(name);
+        if path.is_file() {
+            if let Ok(text) = std::fs::read_to_string(&path) {
+                let relative = path
+                    .strip_prefix(root)
+                    .map(|p| p.to_string_lossy().to_string())
+                    .unwrap_or_else(|_| name.to_string());
+                files.files.insert(relative, text);
+            }
+        }
+    }
+    files
+}
 
 impl GraphBuilder {
     pub fn new() -> Self {
@@ -152,10 +194,17 @@ impl GraphBuilder {
 
         parsed_files_ok.sort_by(|a, b| a.path.cmp(&b.path));
 
+        // Framework detection: run before index construction takes ownership
+        // of parsed_files_ok. Imports, decorators, base classes, and calls
+        // are all available from the parsed files.
+        let manifests = discover_manifests(root);
+        let detector = FrameworkDetector::new();
+        let detection = detector.detect(root, &parsed_files_ok, &manifests);
+
         let mut index = RepositoryIndex::build(root, parsed_files_ok)?;
         let import_pass = crate::resolve::resolve_imports(&mut index);
 
-        let mut result = self.build_from_index(&index, &import_pass)?;
+        let mut result = self.build_from_index(&index, &import_pass, &detection.frameworks)?;
         diagnostics.extend(import_pass.diagnostics);
         diagnostics.extend(report.diagnostics.clone());
         diagnostics.sort_by_key(|d| d.sort_key());
@@ -171,9 +220,14 @@ impl GraphBuilder {
         root: &Path,
         parsed_files: Vec<ParsedFile>,
     ) -> crate::error::Result<GraphBuildResult> {
-        let mut index = RepositoryIndex::build(root, parsed_files)?;
+        let mut index = RepositoryIndex::build(root, parsed_files.clone())?;
         let import_pass = crate::resolve::resolve_imports(&mut index);
-        let mut result = self.build_from_index(&index, &import_pass)?;
+
+        let manifests = discover_manifests(root);
+        let detector = FrameworkDetector::new();
+        let detection = detector.detect(root, &parsed_files, &manifests);
+
+        let mut result = self.build_from_index(&index, &import_pass, &detection.frameworks)?;
         result.diagnostics.extend(import_pass.diagnostics);
         result.diagnostics.sort_by_key(|d| d.sort_key());
         result.diagnostics.dedup();
@@ -185,6 +239,7 @@ impl GraphBuilder {
         &self,
         index: &RepositoryIndex,
         import_pass: &crate::resolve::ImportPass,
+        frameworks: &[Framework],
     ) -> crate::error::Result<GraphBuildResult> {
         let mut graph = Graph::new();
         let diagnostics = Vec::new();
@@ -192,6 +247,36 @@ impl GraphBuilder {
         let repository = trace_core::graph::repository_node("repository");
         let repository_id = repository.id.clone();
         graph.add_node(repository)?;
+
+        // Add framework nodes and edges from the repository node.
+        for framework in frameworks {
+            let framework_id =
+                trace_core::id::framework_id(&framework.name, framework.version.as_deref());
+            let mut framework_node = Node::new(
+                framework_id.clone(),
+                NodeKind::Framework,
+                framework.display_name.clone(),
+            );
+            framework_node
+                .metadata
+                .insert("framework".to_string(), framework.name.clone());
+            framework_node
+                .metadata
+                .insert("family".to_string(), framework.family.as_str().to_string());
+            framework_node.metadata.insert(
+                "confidence".to_string(),
+                framework.confidence.as_str().to_string(),
+            );
+            graph.add_node(framework_node)?;
+
+            graph.add_edge(Edge::new(
+                repository_id.clone(),
+                framework_id,
+                EdgeKind::UsesFramework,
+                ResolutionStatus::ResolvedInternal,
+                ResolutionOrigin::Syntax,
+            ))?;
+        }
 
         // Import edges aggregated by (from file, module target) for diagnostics.
         let import_edges: std::collections::BTreeMap<(String, String), Vec<SourceRange>> =
@@ -284,6 +369,10 @@ impl GraphBuilder {
 
         graph.finalize();
 
-        Ok(GraphBuildResult { graph, diagnostics })
+        Ok(GraphBuildResult {
+            graph,
+            diagnostics,
+            frameworks: frameworks.to_vec(),
+        })
     }
 }

@@ -23,7 +23,7 @@ fn builds_file_and_symbol_nodes() {
     let mut index = RepositoryIndex::build(dir.path(), parsed).unwrap();
     let import_pass = resolve_imports(&mut index);
     let builder = GraphBuilder::new();
-    let result = builder.build_from_index(&index, &import_pass).unwrap();
+    let result = builder.build_from_index(&index, &import_pass, &[]).unwrap();
     assert!(result.graph.node(&file_id("a.ts")).is_some());
     assert!(result
         .graph
@@ -50,7 +50,7 @@ fn builds_call_edge_between_files() {
     let mut index = RepositoryIndex::build(dir.path(), parsed).unwrap();
     let import_pass = resolve_imports(&mut index);
     let builder = GraphBuilder::new();
-    let result = builder.build_from_index(&index, &import_pass).unwrap();
+    let result = builder.build_from_index(&index, &import_pass, &[]).unwrap();
     let run_id = symbol_id(NodeKind::Function, "main.ts", "run", 0);
     let twice_id = symbol_id(NodeKind::Function, "math.ts", "twice", 0);
     let graph = &result.graph;
@@ -74,7 +74,7 @@ fn records_unresolved_call() {
     let mut index = RepositoryIndex::build(dir.path(), parsed).unwrap();
     let import_pass = resolve_imports(&mut index);
     let builder = GraphBuilder::new();
-    let result = builder.build_from_index(&index, &import_pass).unwrap();
+    let result = builder.build_from_index(&index, &import_pass, &[]).unwrap();
     let run_id = symbol_id(NodeKind::Function, "a.ts", "run", 0);
     let graph = &result.graph;
     let out_edges = graph.out_edges(&run_id);

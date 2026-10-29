@@ -190,6 +190,12 @@ pub enum Commands {
     },
     /// List supported languages.
     Languages,
+    /// Report detected frameworks in the repository.
+    Frameworks {
+        /// Repository path to scan (defaults to current directory).
+        #[arg(default_value = ".")]
+        path: PathBuf,
+    },
     /// Validate configuration and parser availability.
     Check {
         /// Repository path to check (defaults to current directory).

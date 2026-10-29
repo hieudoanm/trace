@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-swift 0.7.4"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:src/Complex.swift::Circle",
@@ -2327,6 +2328,7 @@ expression: document
       "resolved_external": 4,
       "resolved_internal": 100,
       "unresolved": 14
-    }
+    },
+    "byFramework": {}
   }
 }

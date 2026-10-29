@@ -27,6 +27,7 @@ pub(crate) fn cmd_graph(
             &result.diagnostics,
             Some(result.graph.stats(&result.diagnostics)),
             &[],
+            &[],
             false,
             "off",
             &[],

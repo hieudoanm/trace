@@ -31,11 +31,12 @@ pub enum NodeKind {
     Property,
     Parameter,
     ExternalSymbol,
+    Framework,
     Unknown,
 }
 
 impl NodeKind {
-    pub const ALL: [NodeKind; 20] = [
+    pub const ALL: [NodeKind; 21] = [
         NodeKind::Repository,
         NodeKind::File,
         NodeKind::Module,
@@ -55,6 +56,7 @@ impl NodeKind {
         NodeKind::Property,
         NodeKind::Parameter,
         NodeKind::ExternalSymbol,
+        NodeKind::Framework,
         NodeKind::Unknown,
     ];
 
@@ -79,6 +81,7 @@ impl NodeKind {
             NodeKind::Property => "property",
             NodeKind::Parameter => "parameter",
             NodeKind::ExternalSymbol => "external_symbol",
+            NodeKind::Framework => "framework",
             NodeKind::Unknown => "unknown",
         }
     }
@@ -101,6 +104,7 @@ impl NodeKind {
                 | NodeKind::Interface
                 | NodeKind::Trait
                 | NodeKind::Enum
+                | NodeKind::Framework
         )
     }
 

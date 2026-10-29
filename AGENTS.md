@@ -1151,6 +1151,101 @@ At completion:
 
 Do not claim to have executed tests or benchmarks unless they were actually run.
 
+## 18. Framework Awareness
+
+Trace is framework aware: it detects which application frameworks are used in a repository and models framework-specific constructs (components, controllers, services, models, routes, hooks, views, middleware, etc.) as first-class graph nodes and edges.
+
+### 18.1 Design goals
+
+- Detect frameworks from import/require statements, package manifests (package.json, Cargo.toml, go.mod, requirements.txt, Gemfile, composer.json, etc.), decorators/annotations, base-class inheritance, and naming conventions.
+- Represent each detected framework as a `Framework` node with the framework name, family, version hint, and detection confidence.
+- Represent framework-specific artefacts (React component, Django model, Spring controller, Express route, etc.) as typed nodes linked to their framework.
+- Add framework-specific edges: `uses_framework`, `implements_pattern`, `extends_framework`, `routes_to`, `injects`, `renders`.
+- Never invent framework usage: report only what imports, decorators, inheritance, or manifests actually indicate. Use `ResolutionStatus` and `ResolutionOrigin` to record confidence.
+- Keep framework detection separate from syntax parsing: it runs as a post-index, pre-graph-build pass over imports, decorators, heritage clauses, and manifest files.
+
+### 18.2 Detected frameworks (initial set)
+
+| Language              | Framework    | Detection signals                                                         |
+| --------------------- | ------------ | ------------------------------------------------------------------------- |
+| TypeScript/JavaScript | React        | `react` import, `React.Component`, `React.FC`, hooks                      |
+| TypeScript/JavaScript | Vue          | `vue` import, `defineComponent`, `<script setup>`, Vue options API        |
+| TypeScript/JavaScript | Angular      | `@angular/core` import, `@Component`, `@Injectable`, `@NgModule`          |
+| TypeScript/JavaScript | Express      | `express` import, `express()`, `app.get`/`app.post`, middleware           |
+| TypeScript/JavaScript | Next.js      | `next/navigation`, `next/link`, `next/route` imports                      |
+| Python                | Django       | `django` import, `django.db.models.Model`, `django.views`, `django.urls`  |
+| Python                | Flask        | `flask` import, `Flask(__name__)`, `@app.route`                           |
+| Python                | FastAPI      | `fastapi` import, `FastAPI()`, `@app.get`/`@app.post`                     |
+| Go                    | Gin          | `gin-gonic/gin` import, `gin.Default()`, `router.GET`                     |
+| Go                    | Echo         | `labstack/echo` import, `echo.New()`, `router.GET`                        |
+| Rust                  | Actix-web    | `actix-web` import, `#[get]`, `#[post]`, `HttpServer`                     |
+| Rust                  | Axum         | `axum` import, `Router::new()`, `route()`                                 |
+| Kotlin                | Spring Boot  | `org.springframework` import, `@SpringBootApplication`, `@RestController` |
+| Java                  | Spring Boot  | `org.springframework` import, `@SpringBootApplication`, `@RestController` |
+| Java                  | Jakarta EE   | `jakarta.*` import, `@WebServlet`, `@Stateless`                           |
+| C#                    | ASP.NET Core | `Microsoft.AspNetCore` import, `[ApiController]`, `ControllerBase`        |
+| PHP                   | Laravel      | `Illuminate` import, `Route::get`, `extends Controller`                   |
+| PHP                   | Symfony      | `symfony` import, `@Route`, `extends AbstractController`                  |
+| Ruby                  | Rails        | `rails` import, `ApplicationController`, `ActiveRecord::Base`             |
+
+### 18.3 Graph model additions
+
+**Node kind:** `Framework` (`trace-core/src/node.rs`).
+
+**Node metadata:** `framework`, `family`, `version`, `confidence`, `detection_signal`.
+
+**Edge kinds** (`trace-core/src/edge.rs`):
+
+- `UsesFramework` — file/module/symbol depends on a framework package.
+- `ImplementsPattern` — symbol implements a framework pattern (component, controller, route, model, etc.).
+- `ExtendsFramework` — class extends a framework base class.
+- `RoutesTo` — symbol declares a framework route/endpoint.
+- `Injects` — dependency injection into a framework-managed symbol.
+
+**ID format** (`trace-core/src/id.rs`): `framework:<name>[:<version>]`.
+
+### 18.4 Implementation milestones
+
+#### Milestone A: Core types and detection engine
+
+- Add `NodeKind::Framework` to `trace-core/src/node.rs`.
+- Add framework edge kinds to `trace-core/src/edge.rs`.
+- Add `framework_id()` to `trace-core/src/id.rs`.
+- Create `trace-analysis/src/framework/` with `types.rs`, `detector.rs`, `registry.rs`, `language_detectors.rs`.
+- Define framework signature database (import prefixes, decorator names, base class names, manifest files).
+- Detect frameworks from parsed imports, decorators, heritage clauses, and discovered manifest files.
+- Unit tests for each detector.
+
+#### Milestone B: Graph construction integration
+
+- Run framework detection after index/import resolution and before graph build in `graph_builder.rs`.
+- Add `Framework` nodes to the graph for each detected framework.
+- Add `UsesFramework`, `ImplementsPattern`, `ExtendsFramework`, `RoutesTo`, `Injects` edges.
+- Wire framework detection into `build_repository_with_options` and `build_from_parsed`.
+
+#### Milestone C: Stats, export, and CLI
+
+- Add framework counts to `trace-core/src/graph.rs` `Stats` (`by_framework`).
+- Add framework information to `trace-export` `GraphDocument`/`AnalysisMetadata` and DOT export colors.
+- Add `trace frameworks` CLI command reporting detected frameworks with signals and confidence.
+- Add framework breakdown to `trace stats` and `trace languages`.
+
+#### Milestone D: Tests and fixtures
+
+- Add framework fixtures for React, Django, Flask, Express, Spring Boot, ASP.NET Core, Laravel, Rails, Gin, Actix-web, Axum, Next.js, Vue, Angular, FastAPI, Echo, Jakarta EE, Symfony.
+- Unit tests for detection precision/recall on fixtures.
+- Integration test verifying framework nodes appear in exported JSON.
+- Schema validation for framework nodes and edges.
+
+### 18.5 Acceptance criteria
+
+1. `cargo build` succeeds and `trace frameworks <path>` runs without error.
+2. Detected frameworks appear as `Framework` nodes in exported JSON with name, family, and confidence.
+3. Framework-specific symbols (components, controllers, routes, models) are linked to their framework via `ImplementsPattern` or `ExtendsFramework` edges.
+4. No framework node is created without an import, decorator, inheritance, or manifest signal.
+5. `trace stats` reports per-framework node and edge counts.
+6. Unit and integration tests pass; `cargo fmt --check` and `cargo clippy` are clean.
+
 ## Final Instruction
 
 Implement Trace as a real, extensible, multi-language code intelligence engine, prioritising correctness, clear architectural boundaries, and a useful CLI.

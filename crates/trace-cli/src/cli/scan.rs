@@ -5,7 +5,7 @@ use std::path::Path;
 use anyhow::{Context, Result};
 use trace_analysis::{cache::SyntaxCache, config::TraceConfig, graph::GraphBuilder};
 use trace_core::Language;
-use trace_export::{to_dot, to_json_string, LanguageInfo};
+use trace_export::{to_dot, to_json_string, FrameworkInfo, LanguageInfo};
 use trace_parser::discovery::DiscoveryOptions;
 
 /// Build a graph from a repository path with discovery and parsing options.
@@ -87,6 +87,17 @@ pub(crate) fn cmd_scan(
         &result.diagnostics,
         Some(result.graph.stats(&result.diagnostics)),
         &languages,
+        &result
+            .frameworks
+            .iter()
+            .map(|fw| FrameworkInfo {
+                name: fw.name.clone(),
+                display_name: fw.display_name.clone(),
+                family: fw.family.as_str().to_string(),
+                version: fw.version.clone(),
+                confidence: fw.confidence.as_str().to_string(),
+            })
+            .collect::<Vec<_>>(),
         !no_cache,
         "off",
         &config.analysis.languages,

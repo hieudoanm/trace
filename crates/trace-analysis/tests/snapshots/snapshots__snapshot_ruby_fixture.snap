@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-ruby 0.23.1"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:lib/complex.rb::Circle",
@@ -1229,6 +1230,7 @@ expression: document
       "resolved_external": 1,
       "resolved_internal": 66,
       "unresolved": 8
-    }
+    },
+    "byFramework": {}
   }
 }

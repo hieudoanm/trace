@@ -26,6 +26,7 @@ expression: document
       "grammar": "tree-sitter-c-sharp 0.23.1"
     }
   ],
+  "frameworks": [],
   "nodes": [
     {
       "id": "class:Complex.cs::Circle",
@@ -941,6 +942,7 @@ expression: document
       "resolved_external": 2,
       "resolved_internal": 42,
       "unresolved": 3
-    }
+    },
+    "byFramework": {}
   }
 }
