@@ -38,7 +38,7 @@ fn detects_django_on_fixture() {
         .find(|f| f.name == "django")
         .unwrap();
     assert_eq!(django.display_name, "Django");
-    assert_eq!(django.version.as_deref(), Some("4.2.0"));
+    assert_eq!(django.version.as_deref(), Some("5.2.18"));
 }
 
 #[test]
