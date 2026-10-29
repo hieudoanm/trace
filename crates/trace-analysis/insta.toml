@@ -1,0 +1,21 @@
+[insta]
+# Snapshot path
+snapshot_path = "snapshots"
+
+# Inline snapshots
+inline_snapshots = false
+
+# Additional extensions for snapshot files
+additional_extensions = []
+
+# Prepend module name to snapshot files
+module_name = false
+
+# Use the expression as the snapshot name when inline
+snapshot_subdir = ""
+
+# Sort snapshot keys
+sort_keys = true
+
+# Filters for snapshot values
+filters = []

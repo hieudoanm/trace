@@ -1,0 +1,40 @@
+[package]
+name = "trace-parser"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Repository discovery and tree-sitter syntax extraction for Trace"
+
+[dependencies]
+trace-core = { path = "../trace-core" }
+blake3 = { workspace = true }
+globset = { workspace = true }
+ignore = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tree-sitter = { workspace = true }
+tree-sitter-c = { workspace = true }
+tree-sitter-cpp = { workspace = true }
+tree-sitter-dart = { workspace = true }
+tree-sitter-go = { workspace = true }
+tree-sitter-javascript = { workspace = true }
+tree-sitter-kt = { workspace = true }
+tree-sitter-python = { workspace = true }
+tree-sitter-r = { workspace = true }
+tree-sitter-ruby = { workspace = true }
+tree-sitter-rust = { workspace = true }
+tree-sitter-scala = { workspace = true }
+tree-sitter-swift = { workspace = true }
+tree-sitter-typescript = { workspace = true }
+tree-sitter-java = { workspace = true }
+tree-sitter-c-sharp = { workspace = true }
+tree-sitter-php = { workspace = true }
+tree-sitter-zig = { workspace = true }
+tree-sitter-matlab = { workspace = true }
+tree-sitter-gdscript = { workspace = true }
+tree-sitter-bash = { workspace = true }
+
+[dev-dependencies]
+tempfile = "=3.27.0"

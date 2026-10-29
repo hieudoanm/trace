@@ -1,0 +1,23 @@
+[package]
+name = "trace-analysis"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Symbol resolution, graph construction and caching for Trace"
+
+[dependencies]
+trace-core = { path = "../trace-core" }
+trace-parser = { path = "../trace-parser" }
+blake3 = { workspace = true }
+rayon = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+toml = { workspace = true }
+tracing = { workspace = true }
+
+[dev-dependencies]
+insta = { workspace = true }
+tempfile = "=3.27.0"
+trace-export = { path = "../trace-export" }

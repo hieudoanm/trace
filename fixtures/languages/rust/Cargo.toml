@@ -1,0 +1,11 @@
+[package]
+name = "geometry"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "geometry"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
