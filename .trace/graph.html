@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace Graph</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #333; }
+        .info { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
+        .stat { background: #e3f2fd; padding: 10px; border-radius: 4px; text-align: center; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Trace Graph Visualization</h1>
+        <div class="info">
+            <p>Graph data available in graph.json and graph.dot formats</p>
+            <div class="stats" id="stats"></div>
+        </div>
+    </div>
+    <script>
+        fetch('graph.json')
+            .then(r => r.json())
+            .then(data => {
+                const stats = document.getElementById('stats');
+                stats.innerHTML = `
+                    <div class="stat"><strong>Nodes</strong><br>${data.nodes.length}</div>
+                    <div class="stat"><strong>Edges</strong><br>${data.edges.length}</div>
+                    <div class="stat"><strong>Files</strong><br>${data.repository.fileCount}</div>
+                    <div class="stat"><strong>Languages</strong><br>${data.repository.languageCount}</div>
+                `;
+            });
+    </script>
+</body>
+</html>
