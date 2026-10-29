@@ -21136,12 +21136,12 @@
         "start": {
           "line": 38,
           "column": 1,
-          "byte": 1676
+          "byte": 1681
         },
         "end": {
           "line": 57,
           "column": 2,
-          "byte": 2659
+          "byte": 2664
         }
       },
       "language": "rust",
@@ -21158,12 +21158,12 @@
         "start": {
           "line": 59,
           "column": 1,
-          "byte": 2661
+          "byte": 2666
         },
         "end": {
           "line": 61,
           "column": 2,
-          "byte": 2737
+          "byte": 2742
         }
       },
       "language": "rust",
@@ -21180,12 +21180,12 @@
         "start": {
           "line": 68,
           "column": 5,
-          "byte": 2799
+          "byte": 2804
         },
         "end": {
           "line": 74,
           "column": 6,
-          "byte": 3077
+          "byte": 3082
         }
       },
       "language": "rust",
@@ -21207,7 +21207,7 @@
         "end": {
           "line": 34,
           "column": 2,
-          "byte": 1552
+          "byte": 1557
         }
       },
       "language": "rust",
@@ -36743,12 +36743,12 @@
         "start": {
           "line": 64,
           "column": 1,
-          "byte": 2752
+          "byte": 2757
         },
         "end": {
           "line": 75,
           "column": 2,
-          "byte": 3079
+          "byte": 3084
         }
       },
       "language": "rust",
@@ -49052,12 +49052,6 @@
       "id": "unresolved:kotlin_annotations",
       "kind": "unknown",
       "name": "kotlin_annotations",
-      "language": "rust"
-    },
-    {
-      "id": "unresolved:language",
-      "kind": "unknown",
-      "name": "language",
       "language": "rust"
     },
     {
@@ -75538,12 +75532,12 @@
         "start": {
           "line": 70,
           "column": 13,
-          "byte": 2890
+          "byte": 2895
         },
         "end": {
           "line": 70,
           "column": 58,
-          "byte": 2935
+          "byte": 2940
         }
       },
       "language": "rust",
@@ -123609,12 +123603,12 @@
           "start": {
             "line": 65,
             "column": 5,
-            "byte": 2768
+            "byte": 2773
           },
           "end": {
             "line": 65,
             "column": 18,
-            "byte": 2781
+            "byte": 2786
           }
         }
       ]
@@ -246418,12 +246412,12 @@
           "start": {
             "line": 38,
             "column": 34,
-            "byte": 1709
+            "byte": 1714
           },
           "end": {
             "line": 38,
             "column": 42,
-            "byte": 1717
+            "byte": 1722
           }
         }
       ]
@@ -246439,12 +246433,12 @@
           "start": {
             "line": 70,
             "column": 27,
-            "byte": 2904
+            "byte": 2909
           },
           "end": {
             "line": 70,
             "column": 57,
-            "byte": 2934
+            "byte": 2939
           }
         }
       ]
@@ -246460,24 +246454,24 @@
           "start": {
             "line": 71,
             "column": 13,
-            "byte": 2948
+            "byte": 2953
           },
           "end": {
             "line": 71,
             "column": 65,
-            "byte": 3000
+            "byte": 3005
           }
         },
         {
           "start": {
             "line": 72,
             "column": 13,
-            "byte": 3014
+            "byte": 3019
           },
           "end": {
             "line": 72,
             "column": 59,
-            "byte": 3060
+            "byte": 3065
           }
         }
       ]
@@ -246659,47 +246653,38 @@
         },
         {
           "start": {
-            "line": 31,
-            "column": 28,
-            "byte": 1454
-          },
-          "end": {
-            "line": 31,
-            "column": 62,
-            "byte": 1488
-          }
-        },
-        {
-          "start": {
-            "line": 32,
-            "column": 24,
-            "byte": 1513
-          },
-          "end": {
-            "line": 32,
-            "column": 54,
-            "byte": 1543
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-parser/src/language.rs::tree_sitter_language",
-      "target": "unresolved:language",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
             "line": 30,
             "column": 27,
             "byte": 1397
           },
           "end": {
             "line": 30,
-            "column": 55,
-            "byte": 1425
+            "column": 60,
+            "byte": 1430
+          }
+        },
+        {
+          "start": {
+            "line": 31,
+            "column": 28,
+            "byte": 1459
+          },
+          "end": {
+            "line": 31,
+            "column": 62,
+            "byte": 1493
+          }
+        },
+        {
+          "start": {
+            "line": 32,
+            "column": 24,
+            "byte": 1518
+          },
+          "end": {
+            "line": 32,
+            "column": 54,
+            "byte": 1548
           }
         }
       ]
@@ -318985,10 +318970,10 @@
   "statistics": {
     "files": 318,
     "packages": 9,
-    "nodes": 4533,
-    "edges": 15475,
-    "symbols": 3392,
-    "unresolvedEdges": 4573,
+    "nodes": 4532,
+    "edges": 15474,
+    "symbols": 3391,
+    "unresolvedEdges": 4572,
     "diagnostics": 40,
     "byNodeKind": {
       "class": 59,
@@ -319009,11 +318994,11 @@
       "struct": 69,
       "trait": 4,
       "type": 3,
-      "unknown": 563,
+      "unknown": 562,
       "variable": 1201
     },
     "byEdgeKind": {
-      "calls": 4939,
+      "calls": 4938,
       "contains": 3705,
       "defines": 3051,
       "exports": 1495,
@@ -319032,7 +319017,7 @@
       "php": 35,
       "python": 100,
       "ruby": 35,
-      "rust": 3939,
+      "rust": 3938,
       "swift": 54,
       "tsx": 8,
       "typescript": 71
@@ -319041,7 +319026,7 @@
       "ambiguous": 216,
       "resolved_external": 906,
       "resolved_internal": 9996,
-      "unresolved": 4357
+      "unresolved": 4356
     },
     "byFramework": {
       "angular": 1,

@@ -27,7 +27,7 @@ pub fn tree_sitter_language(language: Language) -> tree_sitter::Language {
         Language::Ruby => tree_sitter_ruby::LANGUAGE.into(),
         Language::C => tree_sitter_c::LANGUAGE.into(),
         Language::Cpp => tree_sitter_cpp::LANGUAGE.into(),
-        Language::Dart => tree_sitter_dart::language(),
+        Language::Dart => tree_sitter_dart::LANGUAGE.into(),
         Language::Scala => tree_sitter_scala::LANGUAGE.into(),
         Language::R => tree_sitter_r::LANGUAGE.into(),
     }
