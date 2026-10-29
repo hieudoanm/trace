@@ -3,8 +3,9 @@ repos:
     rev: v1.0
     hooks:
       - id: fmt
-      - id: cargo-scan
+      - id: cargo-check
       - id: clippy
+        args: [--all-targets, --, -D, warnings]
 
   - repo: local
     hooks:
