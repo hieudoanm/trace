@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trace Graph Explorer</title>
+    <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; background: #0f172a; color: #e2e8f0; }
+        .header { padding: 12px 20px; background: #1e293b; border-bottom: 1px solid #334155; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+        .header h1 { font-size: 18px; font-weight: 600; color: #f1f5f9; }
+        .stats { display: flex; gap: 16px; font-size: 13px; color: #94a3b8; }
+        .stat { display: flex; gap: 6px; }
+        .stat-value { color: #38bdf8; font-weight: 600; }
+        .controls { display: flex; gap: 8px; margin-left: auto; flex-wrap: wrap; }
+        .controls input, .controls select { padding: 6px 10px; background: #0f172a; border: 1px solid #475569; color: #e2e8f0; border-radius: 4px; font-size: 13px; }
+        .controls button { padding: 6px 12px; background: #3b82f6; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 13px; }
+        .controls button:hover { background: #2563eb; }
+        #cy { width: 100%; height: calc(100vh - 60px); background: #0f172a; }
+        .info-panel { position: absolute; top: 70px; right: 10px; background: rgba(30, 41, 59, 0.95); padding: 12px; border-radius: 6px; border: 1px solid #475569; max-width: 300px; font-size: 12px; display: none; }
+        .info-panel.visible { display: block; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🔍 Trace Graph Explorer</h1>
+        <div class="stats">
+            <div class="stat"><span>Nodes:</span><span class="stat-value" id="nodeCount">-</span></div>
+            <div class="stat"><span>Edges:</span><span class="stat-value" id="edgeCount">-</span></div>
+            <div class="stat"><span>Files:</span><span class="stat-value" id="fileCount">-</span></div>
+        </div>
+        <div class="controls">
+            <input type="text" id="search" placeholder="Search nodes..." />
+            <select id="nodeFilter">
+                <option value="all">All Nodes</option>
+                <option value="file">Files</option>
+                <option value="function">Functions</option>
+                <option value="class">Classes</option>
+                <option value="method">Methods</option>
+            </select>
+            <button onclick="cy.fit()">Fit</button>
+            <button onclick="cy.reset()">Reset</button>
+        </div>
+    </div>
+    <div id="cy"></div>
+    <div class="info-panel" id="infoPanel"></div>
+
+    <script>
+        let cy;
+        fetch('graph.json')
+            .then(r => r.json())
+            .then(data => {
+                document.getElementById('nodeCount').textContent = data.nodes.length;
+                document.getElementById('edgeCount').textContent = data.edges.length;
+                document.getElementById('fileCount').textContent = data.repository.fileCount;
+                
+                const elements = [];
+                data.nodes.slice(0, 2000).forEach(node => {
+                    elements.push({
+                        data: { id: node.id, label: node.name, kind: node.kind, path: node.path },
+                        classes: node.kind
+                    });
+                });
+                data.edges.slice(0, 4000).forEach(edge => {
+                    elements.push({
+                        data: { id: edge.source + '->' + edge.target + edge.kind, source: edge.source, target: edge.target, kind: edge.kind },
+                        classes: edge.kind
+                    });
+                });
+                
+                cy = cytoscape({
+                    container: document.getElementById('cy'),
+                    elements: elements,
+                    style: [
+                        { selector: 'node', style: { 'background-color': '#3b82f6', 'label': 'data(label)', 'color': '#e2e8f0', 'font-size': '8px', 'text-valign': 'center', 'text-halign': 'center', 'width': 28, 'height': 28 } },
+                        { selector: 'node.file', style: { 'background-color': '#10b981', 'shape': 'rectangle', 'width': 36, 'height': 22 } },
+                        { selector: 'node.function', style: { 'background-color': '#f59e0b' } },
+                        { selector: 'node.class', style: { 'background-color': '#8b5cf6', 'shape': 'diamond' } },
+                        { selector: 'node.method', style: { 'background-color': '#ec4899' } },
+                        { selector: 'node.module', style: { 'background-color': '#06b6d4', 'shape': 'roundrectangle' } },
+                        { selector: 'edge', style: { 'width': 1, 'line-color': '#475569', 'target-arrow-color': '#475569', 'target-arrow-shape': 'triangle', 'curve-style': 'bezier' } },
+                        { selector: 'edge.calls', style: { 'line-color': '#f59e0b', 'target-arrow-color': '#f59e0b' } },
+                        { selector: 'edge.imports', style: { 'line-color': '#10b981', 'target-arrow-color': '#10b981', 'line-style': 'dashed' } },
+                        { selector: 'edge.contains', style: { 'line-color': '#6366f1', 'target-arrow-color': '#6366f1' } }
+                    ],
+                    layout: { name: 'cose', idealEdgeLength: 80, nodeOverlap: 20, refresh: 20, fit: true, padding: 30, randomize: false, nodeRepulsion: 400000, gravity: 80, numIter: 800 }
+                });
+                
+                cy.on('tap', 'node', function(evt) {
+                    const node = evt.target;
+                    const panel = document.getElementById('infoPanel');
+                    panel.innerHTML = '<strong>' + node.data('label') + '</strong><br/>Kind: ' + node.data('kind') + (node.data('path') ? '<br/>Path: ' + node.data('path') : '');
+                    panel.classList.add('visible');
+                });
+                cy.on('tap', function(evt) {
+                    if (evt.target === cy) document.getElementById('infoPanel').classList.remove('visible');
+                });
+                
+                document.getElementById('search').addEventListener('input', function(e) {
+                    const val = e.target.value.toLowerCase();
+                    cy.nodes().forEach(n => {
+                        n.style('opacity', val === '' || n.data('label').toLowerCase().includes(val) ? 1 : 0.15);
+                    });
+                });
+                document.getElementById('nodeFilter').addEventListener('change', function(e) {
+                    const v = e.target.value;
+                    if (v === 'all') {
+                        cy.nodes().style('display', 'element');
+                    } else {
+                        cy.nodes().forEach(n => {
+                            n.style('display', n.data('kind') === v ? 'element' : 'none');
+                        });
+                    }
+                    cy.layout({ name: 'cose', fit: true, padding: 30 }).run();
+                });
+            });
+    </script>
+</body>
+</html>

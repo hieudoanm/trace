@@ -418,7 +418,8 @@ fn cmd_scan(
             println!("Graph written to {}", output_path.display());
             if output_format != "dot" {
                 let html_path = trace_dir.join("graph.html");
-                std::fs::write(&html_path, "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Trace Graph</title></head><body><h1>Trace Graph</h1><p>See graph.json and graph.dot</p></body></html>").ok();
+                let html = include_str!("graph_template.html");
+                std::fs::write(&html_path, html).ok();
             }
         }
     }
