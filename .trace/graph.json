@@ -8653,14 +8653,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 525,
+          "line": 539,
           "column": 1,
-          "byte": 15366
+          "byte": 16271
         },
         "end": {
-          "line": 536,
+          "line": 550,
           "column": 2,
-          "byte": 16012
+          "byte": 16917
         }
       },
       "language": "rust",
@@ -8675,14 +8675,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 512,
+          "line": 526,
           "column": 1,
-          "byte": 14718
+          "byte": 15623
         },
         "end": {
-          "line": 523,
+          "line": 537,
           "column": 2,
-          "byte": 15364
+          "byte": 16269
         }
       },
       "language": "rust",
@@ -8697,14 +8697,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 689,
+          "line": 703,
           "column": 1,
-          "byte": 21961
+          "byte": 22866
         },
         "end": {
-          "line": 714,
+          "line": 728,
           "column": 2,
-          "byte": 22916
+          "byte": 23821
         }
       },
       "language": "rust",
@@ -8719,14 +8719,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 614,
+          "line": 628,
           "column": 1,
-          "byte": 19499
+          "byte": 20404
         },
         "end": {
-          "line": 633,
+          "line": 647,
           "column": 2,
-          "byte": 20141
+          "byte": 21046
         }
       },
       "language": "rust",
@@ -8741,14 +8741,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 551,
+          "line": 565,
           "column": 1,
-          "byte": 16659
+          "byte": 17564
         },
         "end": {
-          "line": 564,
+          "line": 578,
           "column": 2,
-          "byte": 17378
+          "byte": 18283
         }
       },
       "language": "rust",
@@ -8763,14 +8763,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 416,
+          "line": 430,
           "column": 1,
-          "byte": 11563
+          "byte": 12468
         },
         "end": {
-          "line": 510,
+          "line": 524,
           "column": 2,
-          "byte": 14716
+          "byte": 15621
         }
       },
       "language": "rust",
@@ -8785,14 +8785,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 566,
+          "line": 580,
           "column": 1,
-          "byte": 17380
+          "byte": 18285
         },
         "end": {
-          "line": 588,
+          "line": 602,
           "column": 2,
-          "byte": 18403
+          "byte": 19308
         }
       },
       "language": "rust",
@@ -8807,14 +8807,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 667,
+          "line": 681,
           "column": 1,
-          "byte": 21314
+          "byte": 22219
         },
         "end": {
-          "line": 687,
+          "line": 701,
           "column": 2,
-          "byte": 21959
+          "byte": 22864
         }
       },
       "language": "rust",
@@ -8829,14 +8829,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 590,
+          "line": 604,
           "column": 1,
-          "byte": 18405
+          "byte": 19310
         },
         "end": {
-          "line": 612,
+          "line": 626,
           "column": 2,
-          "byte": 19497
+          "byte": 20402
         }
       },
       "language": "rust",
@@ -8851,14 +8851,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 538,
+          "line": 552,
           "column": 1,
-          "byte": 16014
+          "byte": 16919
         },
         "end": {
-          "line": 549,
+          "line": 563,
           "column": 2,
-          "byte": 16657
+          "byte": 17562
         }
       },
       "language": "rust",
@@ -8878,9 +8878,9 @@
           "byte": 10133
         },
         "end": {
-          "line": 414,
+          "line": 427,
           "column": 2,
-          "byte": 11561
+          "byte": 12429
         }
       },
       "language": "rust",
@@ -8895,14 +8895,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 635,
+          "line": 649,
           "column": 1,
-          "byte": 20143
+          "byte": 21048
         },
         "end": {
-          "line": 665,
+          "line": 679,
           "column": 2,
-          "byte": 21312
+          "byte": 22217
         }
       },
       "language": "rust",
@@ -8939,14 +8939,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 716,
+          "line": 730,
           "column": 1,
-          "byte": 22918
+          "byte": 23823
         },
         "end": {
-          "line": 729,
+          "line": 743,
           "column": 2,
-          "byte": 23354
+          "byte": 24259
         }
       },
       "language": "rust",
@@ -39199,14 +39199,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 533,
+          "line": 547,
           "column": 5,
-          "byte": 15893
+          "byte": 16798
         },
         "end": {
-          "line": 533,
+          "line": 547,
           "column": 61,
-          "byte": 15949
+          "byte": 16854
         }
       },
       "language": "rust",
@@ -39221,14 +39221,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 528,
+          "line": 542,
           "column": 5,
-          "byte": 15622
+          "byte": 16527
         },
         "end": {
-          "line": 529,
+          "line": 543,
           "column": 80,
-          "byte": 15769
+          "byte": 16674
         }
       },
       "language": "rust",
@@ -39243,14 +39243,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 530,
+          "line": 544,
           "column": 5,
-          "byte": 15774
+          "byte": 16679
         },
         "end": {
-          "line": 532,
+          "line": 546,
           "column": 34,
-          "byte": 15888
+          "byte": 16793
         }
       },
       "language": "rust",
@@ -39265,14 +39265,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 527,
+          "line": 541,
           "column": 5,
-          "byte": 15560
+          "byte": 16465
         },
         "end": {
-          "line": 527,
+          "line": 541,
           "column": 62,
-          "byte": 15617
+          "byte": 16522
         }
       },
       "language": "rust",
@@ -39287,14 +39287,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 520,
+          "line": 534,
           "column": 5,
-          "byte": 15245
+          "byte": 16150
         },
         "end": {
-          "line": 520,
+          "line": 534,
           "column": 61,
-          "byte": 15301
+          "byte": 16206
         }
       },
       "language": "rust",
@@ -39309,14 +39309,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 515,
+          "line": 529,
           "column": 5,
-          "byte": 14974
+          "byte": 15879
         },
         "end": {
-          "line": 516,
+          "line": 530,
           "column": 80,
-          "byte": 15121
+          "byte": 16026
         }
       },
       "language": "rust",
@@ -39331,14 +39331,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 517,
+          "line": 531,
           "column": 5,
-          "byte": 15126
+          "byte": 16031
         },
         "end": {
-          "line": 519,
+          "line": 533,
           "column": 34,
-          "byte": 15240
+          "byte": 16145
         }
       },
       "language": "rust",
@@ -39353,14 +39353,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 514,
+          "line": 528,
           "column": 5,
-          "byte": 14912
+          "byte": 15817
         },
         "end": {
-          "line": 514,
+          "line": 528,
           "column": 62,
-          "byte": 14969
+          "byte": 15874
         }
       },
       "language": "rust",
@@ -39375,14 +39375,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 693,
+          "line": 707,
           "column": 5,
-          "byte": 22159
+          "byte": 23064
         },
         "end": {
-          "line": 693,
+          "line": 707,
           "column": 47,
-          "byte": 22201
+          "byte": 23106
         }
       },
       "language": "rust",
@@ -39397,14 +39397,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 694,
+          "line": 708,
           "column": 5,
-          "byte": 22206
+          "byte": 23111
         },
         "end": {
-          "line": 696,
+          "line": 710,
           "column": 47,
-          "byte": 22352
+          "byte": 23257
         }
       },
       "language": "rust",
@@ -39419,14 +39419,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 617,
+          "line": 631,
           "column": 5,
-          "byte": 19702
+          "byte": 20607
         },
         "end": {
-          "line": 617,
+          "line": 631,
           "column": 36,
-          "byte": 19733
+          "byte": 20638
         }
       },
       "language": "rust",
@@ -39441,14 +39441,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 616,
+          "line": 630,
           "column": 5,
-          "byte": 19640
+          "byte": 20545
         },
         "end": {
-          "line": 616,
+          "line": 630,
           "column": 62,
-          "byte": 19697
+          "byte": 20602
         }
       },
       "language": "rust",
@@ -39463,14 +39463,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 557,
+          "line": 571,
           "column": 5,
-          "byte": 17139
+          "byte": 18044
         },
         "end": {
-          "line": 561,
+          "line": 575,
           "column": 7,
-          "byte": 17313
+          "byte": 18218
         }
       },
       "language": "rust",
@@ -39485,14 +39485,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 554,
+          "line": 568,
           "column": 5,
-          "byte": 16910
+          "byte": 17815
         },
         "end": {
-          "line": 555,
+          "line": 569,
           "column": 80,
-          "byte": 17057
+          "byte": 17962
         }
       },
       "language": "rust",
@@ -39507,14 +39507,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 556,
+          "line": 570,
           "column": 5,
-          "byte": 17062
+          "byte": 17967
         },
         "end": {
-          "line": 556,
+          "line": 570,
           "column": 77,
-          "byte": 17134
+          "byte": 18039
         }
       },
       "language": "rust",
@@ -39529,14 +39529,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 553,
+          "line": 567,
           "column": 5,
-          "byte": 16848
+          "byte": 17753
         },
         "end": {
-          "line": 553,
+          "line": 567,
           "column": 62,
-          "byte": 16905
+          "byte": 17810
         }
       },
       "language": "rust",
@@ -39551,14 +39551,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 464,
+          "line": 478,
           "column": 5,
-          "byte": 13179
+          "byte": 14084
         },
         "end": {
-          "line": 497,
+          "line": 511,
           "column": 7,
-          "byte": 14431
+          "byte": 15336
         }
       },
       "language": "rust",
@@ -39573,14 +39573,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 461,
+          "line": 475,
           "column": 5,
-          "byte": 13079
+          "byte": 13984
         },
         "end": {
-          "line": 461,
+          "line": 475,
           "column": 50,
-          "byte": 13124
+          "byte": 14029
         }
       },
       "language": "rust",
@@ -39595,14 +39595,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 467,
+          "line": 481,
           "column": 9,
-          "byte": 13257
+          "byte": 14162
         },
         "end": {
-          "line": 495,
+          "line": 509,
           "column": 11,
-          "byte": 14390
+          "byte": 15295
         }
       },
       "language": "rust",
@@ -39617,14 +39617,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 426,
+          "line": 440,
           "column": 5,
-          "byte": 11854
+          "byte": 12759
         },
         "end": {
-          "line": 449,
+          "line": 463,
           "column": 7,
-          "byte": 12792
+          "byte": 13697
         }
       },
       "language": "rust",
@@ -39639,14 +39639,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 425,
+          "line": 439,
           "column": 5,
-          "byte": 11823
+          "byte": 12728
         },
         "end": {
-          "line": 425,
+          "line": 439,
           "column": 31,
-          "byte": 11849
+          "byte": 12754
         }
       },
       "language": "rust",
@@ -39661,14 +39661,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 427,
+          "line": 441,
           "column": 9,
-          "byte": 11906
+          "byte": 12811
         },
         "end": {
-          "line": 428,
+          "line": 442,
           "column": 77,
-          "byte": 12036
+          "byte": 12941
         }
       },
       "language": "rust",
@@ -39683,14 +39683,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 429,
+          "line": 443,
           "column": 9,
-          "byte": 12045
+          "byte": 12950
         },
         "end": {
-          "line": 434,
+          "line": 448,
           "column": 27,
-          "byte": 12256
+          "byte": 13161
         }
       },
       "language": "rust",
@@ -39705,14 +39705,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 453,
+          "line": 467,
           "column": 5,
-          "byte": 12849
+          "byte": 13754
         },
         "end": {
-          "line": 459,
+          "line": 473,
           "column": 30,
-          "byte": 13073
+          "byte": 13978
         }
       },
       "language": "rust",
@@ -39727,14 +39727,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 441,
+          "line": 455,
           "column": 9,
-          "byte": 12476
+          "byte": 13381
         },
         "end": {
-          "line": 442,
+          "line": 456,
           "column": 76,
-          "byte": 12605
+          "byte": 13510
         }
       },
       "language": "rust",
@@ -39749,14 +39749,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 462,
+          "line": 476,
           "column": 5,
-          "byte": 13129
+          "byte": 14034
         },
         "end": {
-          "line": 462,
+          "line": 476,
           "column": 49,
-          "byte": 13173
+          "byte": 14078
         }
       },
       "language": "rust",
@@ -39771,14 +39771,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 574,
+          "line": 588,
           "column": 5,
-          "byte": 17906
+          "byte": 18811
         },
         "end": {
-          "line": 574,
+          "line": 588,
           "column": 59,
-          "byte": 17960
+          "byte": 18865
         }
       },
       "language": "rust",
@@ -39793,14 +39793,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 569,
+          "line": 583,
           "column": 5,
-          "byte": 17635
+          "byte": 18540
         },
         "end": {
-          "line": 570,
+          "line": 584,
           "column": 80,
-          "byte": 17782
+          "byte": 18687
         }
       },
       "language": "rust",
@@ -39815,14 +39815,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 571,
+          "line": 585,
           "column": 5,
-          "byte": 17787
+          "byte": 18692
         },
         "end": {
-          "line": 573,
+          "line": 587,
           "column": 34,
-          "byte": 17901
+          "byte": 18806
         }
       },
       "language": "rust",
@@ -39837,14 +39837,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 568,
+          "line": 582,
           "column": 5,
-          "byte": 17573
+          "byte": 18478
         },
         "end": {
-          "line": 568,
+          "line": 582,
           "column": 62,
-          "byte": 17630
+          "byte": 18535
         }
       },
       "language": "rust",
@@ -39859,14 +39859,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 668,
+          "line": 682,
           "column": 5,
-          "byte": 21353
+          "byte": 22258
         },
         "end": {
-          "line": 668,
+          "line": 682,
           "column": 43,
-          "byte": 21391
+          "byte": 22296
         }
       },
       "language": "rust",
@@ -39881,14 +39881,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 597,
+          "line": 611,
           "column": 5,
-          "byte": 18970
+          "byte": 19875
         },
         "end": {
-          "line": 597,
+          "line": 611,
           "column": 77,
-          "byte": 19042
+          "byte": 19947
         }
       },
       "language": "rust",
@@ -39903,14 +39903,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 598,
+          "line": 612,
           "column": 5,
-          "byte": 19047
+          "byte": 19952
         },
         "end": {
-          "line": 598,
+          "line": 612,
           "column": 94,
-          "byte": 19136
+          "byte": 20041
         }
       },
       "language": "rust",
@@ -39925,14 +39925,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 592,
+          "line": 606,
           "column": 5,
-          "byte": 18590
+          "byte": 19495
         },
         "end": {
-          "line": 592,
+          "line": 606,
           "column": 62,
-          "byte": 18647
+          "byte": 19552
         }
       },
       "language": "rust",
@@ -39947,14 +39947,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 593,
+          "line": 607,
           "column": 5,
-          "byte": 18652
+          "byte": 19557
         },
         "end": {
-          "line": 594,
+          "line": 608,
           "column": 80,
-          "byte": 18806
+          "byte": 19711
         }
       },
       "language": "rust",
@@ -39969,14 +39969,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 595,
+          "line": 609,
           "column": 5,
-          "byte": 18811
+          "byte": 19716
         },
         "end": {
-          "line": 596,
+          "line": 610,
           "column": 80,
-          "byte": 18965
+          "byte": 19870
         }
       },
       "language": "rust",
@@ -39991,14 +39991,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 541,
+          "line": 555,
           "column": 5,
-          "byte": 16267
+          "byte": 17172
         },
         "end": {
-          "line": 542,
+          "line": 556,
           "column": 80,
-          "byte": 16414
+          "byte": 17319
         }
       },
       "language": "rust",
@@ -40013,14 +40013,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 543,
+          "line": 557,
           "column": 5,
-          "byte": 16419
+          "byte": 17324
         },
         "end": {
-          "line": 545,
+          "line": 559,
           "column": 34,
-          "byte": 16533
+          "byte": 17438
         }
       },
       "language": "rust",
@@ -40035,14 +40035,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 540,
+          "line": 554,
           "column": 5,
-          "byte": 16205
+          "byte": 17110
         },
         "end": {
-          "line": 540,
+          "line": 554,
           "column": 62,
-          "byte": 16262
+          "byte": 17167
         }
       },
       "language": "rust",
@@ -40057,14 +40057,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 546,
+          "line": 560,
           "column": 5,
-          "byte": 16538
+          "byte": 17443
         },
         "end": {
-          "line": 546,
+          "line": 560,
           "column": 61,
-          "byte": 16594
+          "byte": 17499
         }
       },
       "language": "rust",
@@ -40116,6 +40116,50 @@
       "exported": false
     },
     {
+      "id": "variable:crates/trace-cli/src/main.rs::cmd_scan.ext",
+      "kind": "variable",
+      "name": "ext",
+      "qualifiedName": "cmd_scan.ext",
+      "file": "crates/trace-cli/src/main.rs",
+      "range": {
+        "start": {
+          "line": 414,
+          "column": 13,
+          "byte": 11729
+        },
+        "end": {
+          "line": 414,
+          "column": 75,
+          "byte": 11791
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/trace-cli/src/main.rs::cmd_scan.html_path",
+      "kind": "variable",
+      "name": "html_path",
+      "qualifiedName": "cmd_scan.html_path",
+      "file": "crates/trace-cli/src/main.rs",
+      "range": {
+        "start": {
+          "line": 420,
+          "column": 17,
+          "byte": 12128
+        },
+        "end": {
+          "line": 420,
+          "column": 62,
+          "byte": 12173
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "exported": false
+    },
+    {
       "id": "variable:crates/trace-cli/src/main.rs::cmd_scan.languages",
       "kind": "variable",
       "name": "languages",
@@ -40138,6 +40182,50 @@
       "exported": false
     },
     {
+      "id": "variable:crates/trace-cli/src/main.rs::cmd_scan.output_path",
+      "kind": "variable",
+      "name": "output_path",
+      "qualifiedName": "cmd_scan.output_path",
+      "file": "crates/trace-cli/src/main.rs",
+      "range": {
+        "start": {
+          "line": 415,
+          "column": 13,
+          "byte": 11804
+        },
+        "end": {
+          "line": 415,
+          "column": 70,
+          "byte": 11861
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/trace-cli/src/main.rs::cmd_scan.trace_dir",
+      "kind": "variable",
+      "name": "trace_dir",
+      "qualifiedName": "cmd_scan.trace_dir",
+      "file": "crates/trace-cli/src/main.rs",
+      "range": {
+        "start": {
+          "line": 412,
+          "column": 13,
+          "byte": 11630
+        },
+        "end": {
+          "line": 412,
+          "column": 49,
+          "byte": 11666
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "exported": false
+    },
+    {
       "id": "variable:crates/trace-cli/src/main.rs::cmd_stats.stats",
       "kind": "variable",
       "name": "stats",
@@ -40145,14 +40233,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 637,
+          "line": 651,
           "column": 5,
-          "byte": 20283
+          "byte": 21188
         },
         "end": {
-          "line": 637,
+          "line": 651,
           "column": 57,
-          "byte": 20335
+          "byte": 21240
         }
       },
       "language": "rust",
@@ -40167,14 +40255,14 @@
       "file": "crates/trace-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 723,
+          "line": 737,
           "column": 9,
-          "byte": 23169
+          "byte": 24074
         },
         "end": {
-          "line": 723,
+          "line": 737,
           "column": 35,
-          "byte": 23195
+          "byte": 24100
         }
       },
       "language": "rust",
@@ -63328,7 +63416,35 @@
     },
     {
       "source": "file:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.ext",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.html_path",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/trace-cli/src/main.rs",
       "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.languages",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.output_path",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.trace_dir",
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -96375,14 +96491,14 @@
       "sites": [
         {
           "start": {
-            "line": 530,
+            "line": 544,
             "column": 19,
-            "byte": 15788
+            "byte": 16693
           },
           "end": {
-            "line": 530,
+            "line": 544,
             "column": 54,
-            "byte": 15823
+            "byte": 16728
           }
         }
       ]
@@ -96396,14 +96512,14 @@
       "sites": [
         {
           "start": {
-            "line": 527,
+            "line": 541,
             "column": 17,
-            "byte": 15572
+            "byte": 16477
           },
           "end": {
-            "line": 527,
+            "line": 541,
             "column": 61,
-            "byte": 15616
+            "byte": 16521
           }
         }
       ]
@@ -96417,14 +96533,14 @@
       "sites": [
         {
           "start": {
-            "line": 526,
+            "line": 540,
             "column": 29,
-            "byte": 15490
+            "byte": 16395
           },
           "end": {
-            "line": 526,
+            "line": 540,
             "column": 92,
-            "byte": 15553
+            "byte": 16458
           }
         }
       ]
@@ -96438,14 +96554,14 @@
       "sites": [
         {
           "start": {
-            "line": 534,
+            "line": 548,
             "column": 5,
-            "byte": 15954
+            "byte": 16859
           },
           "end": {
-            "line": 534,
+            "line": 548,
             "column": 49,
-            "byte": 15998
+            "byte": 16903
           }
         }
       ]
@@ -96459,14 +96575,14 @@
       "sites": [
         {
           "start": {
-            "line": 535,
+            "line": 549,
             "column": 5,
-            "byte": 16004
+            "byte": 16909
           },
           "end": {
-            "line": 535,
+            "line": 549,
             "column": 11,
-            "byte": 16010
+            "byte": 16915
           }
         }
       ]
@@ -96480,14 +96596,14 @@
       "sites": [
         {
           "start": {
-            "line": 529,
+            "line": 543,
             "column": 22,
-            "byte": 15711
+            "byte": 16616
           },
           "end": {
-            "line": 529,
+            "line": 543,
             "column": 77,
-            "byte": 15766
+            "byte": 16671
           }
         }
       ]
@@ -96501,14 +96617,14 @@
       "sites": [
         {
           "start": {
-            "line": 533,
+            "line": 547,
             "column": 33,
-            "byte": 15921
+            "byte": 16826
           },
           "end": {
-            "line": 533,
+            "line": 547,
             "column": 49,
-            "byte": 15937
+            "byte": 16842
           }
         }
       ]
@@ -96522,14 +96638,14 @@
       "sites": [
         {
           "start": {
-            "line": 533,
+            "line": 547,
             "column": 19,
-            "byte": 15907
+            "byte": 16812
           },
           "end": {
-            "line": 533,
+            "line": 547,
             "column": 60,
-            "byte": 15948
+            "byte": 16853
           }
         }
       ]
@@ -96543,14 +96659,14 @@
       "sites": [
         {
           "start": {
-            "line": 528,
+            "line": 542,
             "column": 16,
-            "byte": 15633
+            "byte": 16538
           },
           "end": {
-            "line": 529,
+            "line": 543,
             "column": 78,
-            "byte": 15767
+            "byte": 16672
           }
         }
       ]
@@ -96564,14 +96680,14 @@
       "sites": [
         {
           "start": {
-            "line": 528,
+            "line": 542,
             "column": 16,
-            "byte": 15633
+            "byte": 16538
           },
           "end": {
-            "line": 528,
+            "line": 542,
             "column": 72,
-            "byte": 15689
+            "byte": 16594
           }
         }
       ]
@@ -96585,14 +96701,14 @@
       "sites": [
         {
           "start": {
-            "line": 530,
+            "line": 544,
             "column": 19,
-            "byte": 15788
+            "byte": 16693
           },
           "end": {
-            "line": 531,
+            "line": 545,
             "column": 31,
-            "byte": 15854
+            "byte": 16759
           }
         }
       ]
@@ -96606,14 +96722,14 @@
       "sites": [
         {
           "start": {
-            "line": 530,
+            "line": 544,
             "column": 19,
-            "byte": 15788
+            "byte": 16693
           },
           "end": {
-            "line": 532,
+            "line": 546,
             "column": 33,
-            "byte": 15887
+            "byte": 16792
           }
         }
       ]
@@ -96627,14 +96743,14 @@
       "sites": [
         {
           "start": {
-            "line": 525,
+            "line": 539,
             "column": 37,
-            "byte": 15402
+            "byte": 16307
           },
           "end": {
-            "line": 525,
+            "line": 539,
             "column": 41,
-            "byte": 15406
+            "byte": 16311
           }
         }
       ]
@@ -96648,14 +96764,14 @@
       "sites": [
         {
           "start": {
-            "line": 517,
+            "line": 531,
             "column": 19,
-            "byte": 15140
+            "byte": 16045
           },
           "end": {
-            "line": 517,
+            "line": 531,
             "column": 54,
-            "byte": 15175
+            "byte": 16080
           }
         }
       ]
@@ -96669,14 +96785,14 @@
       "sites": [
         {
           "start": {
-            "line": 514,
+            "line": 528,
             "column": 17,
-            "byte": 14924
+            "byte": 15829
           },
           "end": {
-            "line": 514,
+            "line": 528,
             "column": 61,
-            "byte": 14968
+            "byte": 15873
           }
         }
       ]
@@ -96690,14 +96806,14 @@
       "sites": [
         {
           "start": {
-            "line": 513,
+            "line": 527,
             "column": 29,
-            "byte": 14842
+            "byte": 15747
           },
           "end": {
-            "line": 513,
+            "line": 527,
             "column": 92,
-            "byte": 14905
+            "byte": 15810
           }
         }
       ]
@@ -96711,14 +96827,14 @@
       "sites": [
         {
           "start": {
-            "line": 521,
+            "line": 535,
             "column": 5,
-            "byte": 15306
+            "byte": 16211
           },
           "end": {
-            "line": 521,
+            "line": 535,
             "column": 49,
-            "byte": 15350
+            "byte": 16255
           }
         }
       ]
@@ -96732,14 +96848,14 @@
       "sites": [
         {
           "start": {
-            "line": 522,
+            "line": 536,
             "column": 5,
-            "byte": 15356
+            "byte": 16261
           },
           "end": {
-            "line": 522,
+            "line": 536,
             "column": 11,
-            "byte": 15362
+            "byte": 16267
           }
         }
       ]
@@ -96753,14 +96869,14 @@
       "sites": [
         {
           "start": {
-            "line": 516,
+            "line": 530,
             "column": 22,
-            "byte": 15063
+            "byte": 15968
           },
           "end": {
-            "line": 516,
+            "line": 530,
             "column": 77,
-            "byte": 15118
+            "byte": 16023
           }
         }
       ]
@@ -96774,14 +96890,14 @@
       "sites": [
         {
           "start": {
-            "line": 520,
+            "line": 534,
             "column": 33,
-            "byte": 15273
+            "byte": 16178
           },
           "end": {
-            "line": 520,
+            "line": 534,
             "column": 49,
-            "byte": 15289
+            "byte": 16194
           }
         }
       ]
@@ -96795,14 +96911,14 @@
       "sites": [
         {
           "start": {
-            "line": 520,
+            "line": 534,
             "column": 19,
-            "byte": 15259
+            "byte": 16164
           },
           "end": {
-            "line": 520,
+            "line": 534,
             "column": 60,
-            "byte": 15300
+            "byte": 16205
           }
         }
       ]
@@ -96816,14 +96932,14 @@
       "sites": [
         {
           "start": {
-            "line": 515,
+            "line": 529,
             "column": 16,
-            "byte": 14985
+            "byte": 15890
           },
           "end": {
-            "line": 516,
+            "line": 530,
             "column": 78,
-            "byte": 15119
+            "byte": 16024
           }
         }
       ]
@@ -96837,14 +96953,14 @@
       "sites": [
         {
           "start": {
-            "line": 515,
+            "line": 529,
             "column": 16,
-            "byte": 14985
+            "byte": 15890
           },
           "end": {
-            "line": 515,
+            "line": 529,
             "column": 72,
-            "byte": 15041
+            "byte": 15946
           }
         }
       ]
@@ -96858,14 +96974,14 @@
       "sites": [
         {
           "start": {
-            "line": 517,
+            "line": 531,
             "column": 19,
-            "byte": 15140
+            "byte": 16045
           },
           "end": {
-            "line": 518,
+            "line": 532,
             "column": 31,
-            "byte": 15206
+            "byte": 16111
           }
         }
       ]
@@ -96879,14 +96995,14 @@
       "sites": [
         {
           "start": {
-            "line": 517,
+            "line": 531,
             "column": 19,
-            "byte": 15140
+            "byte": 16045
           },
           "end": {
-            "line": 519,
+            "line": 533,
             "column": 33,
-            "byte": 15239
+            "byte": 16144
           }
         }
       ]
@@ -96900,14 +97016,14 @@
       "sites": [
         {
           "start": {
-            "line": 512,
+            "line": 526,
             "column": 37,
-            "byte": 14754
+            "byte": 15659
           },
           "end": {
-            "line": 512,
+            "line": 526,
             "column": 41,
-            "byte": 14758
+            "byte": 15663
           }
         }
       ]
@@ -96921,14 +97037,14 @@
       "sites": [
         {
           "start": {
-            "line": 693,
+            "line": 707,
             "column": 19,
-            "byte": 22173
+            "byte": 23078
           },
           "end": {
-            "line": 693,
+            "line": 707,
             "column": 46,
-            "byte": 22200
+            "byte": 23105
           }
         }
       ]
@@ -96942,14 +97058,14 @@
       "sites": [
         {
           "start": {
-            "line": 690,
+            "line": 704,
             "column": 23,
-            "byte": 22025
+            "byte": 22930
           },
           "end": {
-            "line": 690,
+            "line": 704,
             "column": 52,
-            "byte": 22054
+            "byte": 22959
           }
         }
       ]
@@ -96963,14 +97079,14 @@
       "sites": [
         {
           "start": {
-            "line": 708,
+            "line": 722,
             "column": 17,
-            "byte": 22765
+            "byte": 23670
           },
           "end": {
-            "line": 708,
+            "line": 722,
             "column": 35,
-            "byte": 22783
+            "byte": 23688
           }
         }
       ]
@@ -96984,14 +97100,14 @@
       "sites": [
         {
           "start": {
-            "line": 713,
+            "line": 727,
             "column": 5,
-            "byte": 22908
+            "byte": 23813
           },
           "end": {
-            "line": 713,
+            "line": 727,
             "column": 11,
-            "byte": 22914
+            "byte": 23819
           }
         }
       ]
@@ -97005,38 +97121,38 @@
       "sites": [
         {
           "start": {
-            "line": 690,
+            "line": 704,
             "column": 23,
-            "byte": 22025
+            "byte": 22930
           },
           "end": {
-            "line": 690,
+            "line": 704,
             "column": 92,
-            "byte": 22094
+            "byte": 22999
           }
         },
         {
           "start": {
-            "line": 691,
+            "line": 705,
             "column": 5,
-            "byte": 22101
+            "byte": 23006
           },
           "end": {
-            "line": 691,
+            "line": 705,
             "column": 55,
-            "byte": 22151
+            "byte": 23056
           }
         },
         {
           "start": {
-            "line": 694,
+            "line": 708,
             "column": 18,
-            "byte": 22219
+            "byte": 23124
           },
           "end": {
-            "line": 696,
+            "line": 710,
             "column": 45,
-            "byte": 22350
+            "byte": 23255
           }
         }
       ]
@@ -97050,14 +97166,14 @@
       "sites": [
         {
           "start": {
-            "line": 694,
+            "line": 708,
             "column": 18,
-            "byte": 22219
+            "byte": 23124
           },
           "end": {
-            "line": 694,
+            "line": 708,
             "column": 67,
-            "byte": 22268
+            "byte": 23173
           }
         }
       ]
@@ -97071,14 +97187,14 @@
       "sites": [
         {
           "start": {
-            "line": 694,
+            "line": 708,
             "column": 18,
-            "byte": 22219
+            "byte": 23124
           },
           "end": {
-            "line": 695,
+            "line": 709,
             "column": 37,
-            "byte": 22305
+            "byte": 23210
           }
         }
       ]
@@ -97092,158 +97208,158 @@
       "sites": [
         {
           "start": {
-            "line": 698,
+            "line": 712,
             "column": 5,
-            "byte": 22358
+            "byte": 23263
           },
           "end": {
-            "line": 698,
+            "line": 712,
             "column": 37,
-            "byte": 22390
+            "byte": 23295
           }
         },
         {
           "start": {
-            "line": 699,
+            "line": 713,
             "column": 5,
-            "byte": 22396
+            "byte": 23301
           },
           "end": {
-            "line": 699,
+            "line": 713,
             "column": 57,
-            "byte": 22448
+            "byte": 23353
           }
         },
         {
           "start": {
-            "line": 700,
+            "line": 714,
             "column": 5,
-            "byte": 22454
+            "byte": 23359
           },
           "end": {
-            "line": 700,
+            "line": 714,
             "column": 37,
-            "byte": 22486
+            "byte": 23391
           }
         },
         {
           "start": {
-            "line": 701,
+            "line": 715,
             "column": 5,
-            "byte": 22492
+            "byte": 23397
           },
           "end": {
-            "line": 701,
+            "line": 715,
             "column": 15,
-            "byte": 22502
+            "byte": 23407
           }
         },
         {
           "start": {
-            "line": 702,
+            "line": 716,
             "column": 5,
-            "byte": 22508
+            "byte": 23413
           },
           "end": {
-            "line": 702,
+            "line": 716,
             "column": 27,
-            "byte": 22530
+            "byte": 23435
           }
         },
         {
           "start": {
-            "line": 703,
+            "line": 717,
             "column": 5,
-            "byte": 22536
+            "byte": 23441
           },
           "end": {
-            "line": 703,
+            "line": 717,
             "column": 58,
-            "byte": 22589
+            "byte": 23494
           }
         },
         {
           "start": {
-            "line": 704,
+            "line": 718,
             "column": 5,
-            "byte": 22595
+            "byte": 23500
           },
           "end": {
-            "line": 704,
+            "line": 718,
             "column": 52,
-            "byte": 22642
+            "byte": 23547
           }
         },
         {
           "start": {
-            "line": 705,
+            "line": 719,
             "column": 5,
-            "byte": 22648
+            "byte": 23553
           },
           "end": {
-            "line": 705,
+            "line": 719,
             "column": 60,
-            "byte": 22703
+            "byte": 23608
           }
         },
         {
           "start": {
-            "line": 706,
+            "line": 720,
             "column": 5,
-            "byte": 22709
+            "byte": 23614
           },
           "end": {
-            "line": 706,
+            "line": 720,
             "column": 15,
-            "byte": 22719
+            "byte": 23624
           }
         },
         {
           "start": {
-            "line": 707,
+            "line": 721,
             "column": 5,
-            "byte": 22725
+            "byte": 23630
           },
           "end": {
-            "line": 707,
+            "line": 721,
             "column": 27,
-            "byte": 22747
+            "byte": 23652
           }
         },
         {
           "start": {
-            "line": 709,
+            "line": 723,
             "column": 9,
-            "byte": 22794
+            "byte": 23699
           },
           "end": {
-            "line": 709,
+            "line": 723,
             "column": 64,
-            "byte": 22849
+            "byte": 23754
           }
         },
         {
           "start": {
-            "line": 711,
+            "line": 725,
             "column": 5,
-            "byte": 22861
+            "byte": 23766
           },
           "end": {
-            "line": 711,
+            "line": 725,
             "column": 15,
-            "byte": 22871
+            "byte": 23776
           }
         },
         {
           "start": {
-            "line": 712,
+            "line": 726,
             "column": 5,
-            "byte": 22877
+            "byte": 23782
           },
           "end": {
-            "line": 712,
+            "line": 726,
             "column": 30,
-            "byte": 22902
+            "byte": 23807
           }
         }
       ]
@@ -97257,14 +97373,14 @@
       "sites": [
         {
           "start": {
-            "line": 691,
+            "line": 705,
             "column": 5,
-            "byte": 22101
+            "byte": 23006
           },
           "end": {
-            "line": 691,
+            "line": 705,
             "column": 22,
-            "byte": 22118
+            "byte": 23023
           }
         }
       ]
@@ -97278,14 +97394,14 @@
       "sites": [
         {
           "start": {
-            "line": 689,
+            "line": 703,
             "column": 21,
-            "byte": 21981
+            "byte": 22886
           },
           "end": {
-            "line": 689,
+            "line": 703,
             "column": 25,
-            "byte": 21985
+            "byte": 22890
           }
         }
       ]
@@ -97299,14 +97415,14 @@
       "sites": [
         {
           "start": {
-            "line": 616,
+            "line": 630,
             "column": 17,
-            "byte": 19652
+            "byte": 20557
           },
           "end": {
-            "line": 616,
+            "line": 630,
             "column": 61,
-            "byte": 19696
+            "byte": 20601
           }
         }
       ]
@@ -97320,14 +97436,14 @@
       "sites": [
         {
           "start": {
-            "line": 615,
+            "line": 629,
             "column": 29,
-            "byte": 19570
+            "byte": 20475
           },
           "end": {
-            "line": 615,
+            "line": 629,
             "column": 92,
-            "byte": 19633
+            "byte": 20538
           }
         }
       ]
@@ -97341,14 +97457,14 @@
       "sites": [
         {
           "start": {
-            "line": 632,
+            "line": 646,
             "column": 5,
-            "byte": 20133
+            "byte": 21038
           },
           "end": {
-            "line": 632,
+            "line": 646,
             "column": 11,
-            "byte": 20139
+            "byte": 21044
           }
         }
       ]
@@ -97362,14 +97478,14 @@
       "sites": [
         {
           "start": {
-            "line": 617,
+            "line": 631,
             "column": 18,
-            "byte": 19715
+            "byte": 20620
           },
           "end": {
-            "line": 617,
+            "line": 631,
             "column": 35,
-            "byte": 19732
+            "byte": 20637
           }
         }
       ]
@@ -97383,14 +97499,14 @@
       "sites": [
         {
           "start": {
-            "line": 623,
+            "line": 637,
             "column": 30,
-            "byte": 19926
+            "byte": 20831
           },
           "end": {
-            "line": 623,
+            "line": 637,
             "column": 54,
-            "byte": 19950
+            "byte": 20855
           }
         }
       ]
@@ -97404,14 +97520,14 @@
       "sites": [
         {
           "start": {
-            "line": 618,
+            "line": 632,
             "column": 8,
-            "byte": 19741
+            "byte": 20646
           },
           "end": {
-            "line": 618,
+            "line": 632,
             "column": 25,
-            "byte": 19758
+            "byte": 20663
           }
         }
       ]
@@ -97425,14 +97541,14 @@
       "sites": [
         {
           "start": {
-            "line": 623,
+            "line": 637,
             "column": 30,
-            "byte": 19926
+            "byte": 20831
           },
           "end": {
-            "line": 623,
+            "line": 637,
             "column": 42,
-            "byte": 19938
+            "byte": 20843
           }
         }
       ]
@@ -97446,26 +97562,26 @@
       "sites": [
         {
           "start": {
-            "line": 625,
+            "line": 639,
             "column": 21,
-            "byte": 20000
+            "byte": 20905
           },
           "end": {
-            "line": 625,
+            "line": 639,
             "column": 35,
-            "byte": 20014
+            "byte": 20919
           }
         },
         {
           "start": {
-            "line": 627,
+            "line": 641,
             "column": 17,
-            "byte": 20050
+            "byte": 20955
           },
           "end": {
-            "line": 627,
+            "line": 641,
             "column": 40,
-            "byte": 20073
+            "byte": 20978
           }
         }
       ]
@@ -97479,38 +97595,38 @@
       "sites": [
         {
           "start": {
-            "line": 619,
+            "line": 633,
             "column": 9,
-            "byte": 19769
+            "byte": 20674
           },
           "end": {
-            "line": 619,
+            "line": 633,
             "column": 51,
-            "byte": 19811
+            "byte": 20716
           }
         },
         {
           "start": {
-            "line": 621,
+            "line": 635,
             "column": 9,
-            "byte": 19834
+            "byte": 20739
           },
           "end": {
-            "line": 621,
+            "line": 635,
             "column": 39,
-            "byte": 19864
+            "byte": 20769
           }
         },
         {
           "start": {
-            "line": 629,
+            "line": 643,
             "column": 13,
-            "byte": 20101
+            "byte": 21006
           },
           "end": {
-            "line": 629,
+            "line": 643,
             "column": 23,
-            "byte": 20111
+            "byte": 21016
           }
         }
       ]
@@ -97524,14 +97640,14 @@
       "sites": [
         {
           "start": {
-            "line": 614,
+            "line": 628,
             "column": 22,
-            "byte": 19520
+            "byte": 20425
           },
           "end": {
-            "line": 614,
+            "line": 628,
             "column": 26,
-            "byte": 19524
+            "byte": 20429
           }
         }
       ]
@@ -97545,14 +97661,14 @@
       "sites": [
         {
           "start": {
-            "line": 556,
+            "line": 570,
             "column": 19,
-            "byte": 17076
+            "byte": 17981
           },
           "end": {
-            "line": 556,
+            "line": 570,
             "column": 54,
-            "byte": 17111
+            "byte": 18016
           }
         }
       ]
@@ -97566,14 +97682,14 @@
       "sites": [
         {
           "start": {
-            "line": 553,
+            "line": 567,
             "column": 17,
-            "byte": 16860
+            "byte": 17765
           },
           "end": {
-            "line": 553,
+            "line": 567,
             "column": 61,
-            "byte": 16904
+            "byte": 17809
           }
         }
       ]
@@ -97587,14 +97703,14 @@
       "sites": [
         {
           "start": {
-            "line": 552,
+            "line": 566,
             "column": 29,
-            "byte": 16778
+            "byte": 17683
           },
           "end": {
-            "line": 552,
+            "line": 566,
             "column": 92,
-            "byte": 16841
+            "byte": 17746
           }
         }
       ]
@@ -97608,14 +97724,14 @@
       "sites": [
         {
           "start": {
-            "line": 562,
+            "line": 576,
             "column": 5,
-            "byte": 17318
+            "byte": 18223
           },
           "end": {
-            "line": 562,
+            "line": 576,
             "column": 51,
-            "byte": 17364
+            "byte": 18269
           }
         }
       ]
@@ -97629,14 +97745,14 @@
       "sites": [
         {
           "start": {
-            "line": 563,
+            "line": 577,
             "column": 5,
-            "byte": 17370
+            "byte": 18275
           },
           "end": {
-            "line": 563,
+            "line": 577,
             "column": 11,
-            "byte": 17376
+            "byte": 18281
           }
         }
       ]
@@ -97650,14 +97766,14 @@
       "sites": [
         {
           "start": {
-            "line": 555,
+            "line": 569,
             "column": 22,
-            "byte": 16999
+            "byte": 17904
           },
           "end": {
-            "line": 555,
+            "line": 569,
             "column": 77,
-            "byte": 17054
+            "byte": 17959
           }
         }
       ]
@@ -97671,26 +97787,26 @@
       "sites": [
         {
           "start": {
-            "line": 558,
+            "line": 572,
             "column": 39,
-            "byte": 17204
+            "byte": 18109
           },
           "end": {
-            "line": 558,
+            "line": 572,
             "column": 55,
-            "byte": 17220
+            "byte": 18125
           }
         },
         {
           "start": {
-            "line": 560,
+            "line": 574,
             "column": 35,
-            "byte": 17279
+            "byte": 18184
           },
           "end": {
-            "line": 560,
+            "line": 574,
             "column": 51,
-            "byte": 17295
+            "byte": 18200
           }
         }
       ]
@@ -97704,14 +97820,14 @@
       "sites": [
         {
           "start": {
-            "line": 560,
+            "line": 574,
             "column": 9,
-            "byte": 17253
+            "byte": 18158
           },
           "end": {
-            "line": 560,
+            "line": 574,
             "column": 62,
-            "byte": 17306
+            "byte": 18211
           }
         }
       ]
@@ -97725,14 +97841,14 @@
       "sites": [
         {
           "start": {
-            "line": 554,
+            "line": 568,
             "column": 16,
-            "byte": 16921
+            "byte": 17826
           },
           "end": {
-            "line": 555,
+            "line": 569,
             "column": 78,
-            "byte": 17055
+            "byte": 17960
           }
         }
       ]
@@ -97746,14 +97862,14 @@
       "sites": [
         {
           "start": {
-            "line": 554,
+            "line": 568,
             "column": 16,
-            "byte": 16921
+            "byte": 17826
           },
           "end": {
-            "line": 554,
+            "line": 568,
             "column": 72,
-            "byte": 16977
+            "byte": 17882
           }
         }
       ]
@@ -97767,14 +97883,14 @@
       "sites": [
         {
           "start": {
-            "line": 558,
+            "line": 572,
             "column": 9,
-            "byte": 17174
+            "byte": 18079
           },
           "end": {
-            "line": 558,
+            "line": 572,
             "column": 66,
-            "byte": 17231
+            "byte": 18136
           }
         }
       ]
@@ -97788,14 +97904,14 @@
       "sites": [
         {
           "start": {
-            "line": 556,
+            "line": 570,
             "column": 19,
-            "byte": 17076
+            "byte": 17981
           },
           "end": {
-            "line": 556,
+            "line": 570,
             "column": 76,
-            "byte": 17133
+            "byte": 18038
           }
         }
       ]
@@ -97809,14 +97925,14 @@
       "sites": [
         {
           "start": {
-            "line": 551,
+            "line": 565,
             "column": 34,
-            "byte": 16692
+            "byte": 17597
           },
           "end": {
-            "line": 551,
+            "line": 565,
             "column": 38,
-            "byte": 16696
+            "byte": 17601
           }
         }
       ]
@@ -97830,26 +97946,26 @@
       "sites": [
         {
           "start": {
-            "line": 438,
+            "line": 452,
             "column": 15,
-            "byte": 12393
+            "byte": 13298
           },
           "end": {
-            "line": 438,
+            "line": 452,
             "column": 33,
-            "byte": 12411
+            "byte": 13316
           }
         },
         {
           "start": {
-            "line": 445,
+            "line": 459,
             "column": 15,
-            "byte": 12695
+            "byte": 13600
           },
           "end": {
-            "line": 445,
+            "line": 459,
             "column": 33,
-            "byte": 12713
+            "byte": 13618
           }
         }
       ]
@@ -97863,26 +97979,26 @@
       "sites": [
         {
           "start": {
-            "line": 431,
+            "line": 445,
             "column": 17,
-            "byte": 12104
+            "byte": 13009
           },
           "end": {
-            "line": 431,
+            "line": 445,
             "column": 52,
-            "byte": 12139
+            "byte": 13044
           }
         },
         {
           "start": {
-            "line": 441,
+            "line": 455,
             "column": 20,
-            "byte": 12487
+            "byte": 13392
           },
           "end": {
-            "line": 441,
+            "line": 455,
             "column": 62,
-            "byte": 12529
+            "byte": 13434
           }
         }
       ]
@@ -97896,14 +98012,14 @@
       "sites": [
         {
           "start": {
-            "line": 427,
+            "line": 441,
             "column": 20,
-            "byte": 11917
+            "byte": 12822
           },
           "end": {
-            "line": 427,
+            "line": 441,
             "column": 62,
-            "byte": 11959
+            "byte": 12864
           }
         }
       ]
@@ -97917,26 +98033,26 @@
       "sites": [
         {
           "start": {
-            "line": 435,
+            "line": 449,
             "column": 9,
-            "byte": 12265
+            "byte": 13170
           },
           "end": {
-            "line": 439,
+            "line": 453,
             "column": 10,
-            "byte": 12421
+            "byte": 13326
           }
         },
         {
           "start": {
-            "line": 443,
+            "line": 457,
             "column": 9,
-            "byte": 12614
+            "byte": 13519
           },
           "end": {
-            "line": 446,
+            "line": 460,
             "column": 10,
-            "byte": 12723
+            "byte": 13628
           }
         }
       ]
@@ -97950,14 +98066,14 @@
       "sites": [
         {
           "start": {
-            "line": 448,
+            "line": 462,
             "column": 9,
-            "byte": 12745
+            "byte": 13650
           },
           "end": {
-            "line": 448,
+            "line": 462,
             "column": 49,
-            "byte": 12785
+            "byte": 13690
           }
         }
       ]
@@ -97971,14 +98087,14 @@
       "sites": [
         {
           "start": {
-            "line": 484,
+            "line": 498,
             "column": 23,
-            "byte": 14049
+            "byte": 14954
           },
           "end": {
-            "line": 489,
+            "line": 503,
             "column": 14,
-            "byte": 14261
+            "byte": 15166
           }
         }
       ]
@@ -97992,14 +98108,14 @@
       "sites": [
         {
           "start": {
-            "line": 467,
+            "line": 481,
             "column": 24,
-            "byte": 13272
+            "byte": 14177
           },
           "end": {
-            "line": 495,
+            "line": 509,
             "column": 10,
-            "byte": 14389
+            "byte": 15294
           }
         }
       ]
@@ -98013,14 +98129,14 @@
       "sites": [
         {
           "start": {
-            "line": 470,
+            "line": 484,
             "column": 25,
-            "byte": 13464
+            "byte": 14369
           },
           "end": {
-            "line": 483,
+            "line": 497,
             "column": 14,
-            "byte": 14025
+            "byte": 14930
           }
         }
       ]
@@ -98034,26 +98150,26 @@
       "sites": [
         {
           "start": {
-            "line": 453,
+            "line": 467,
             "column": 21,
-            "byte": 12865
+            "byte": 13770
           },
           "end": {
-            "line": 453,
+            "line": 467,
             "column": 39,
-            "byte": 12883
+            "byte": 13788
           }
         },
         {
           "start": {
-            "line": 453,
+            "line": 467,
             "column": 21,
-            "byte": 12865
+            "byte": 13770
           },
           "end": {
-            "line": 459,
+            "line": 473,
             "column": 29,
-            "byte": 13072
+            "byte": 13977
           }
         }
       ]
@@ -98067,14 +98183,14 @@
       "sites": [
         {
           "start": {
-            "line": 455,
+            "line": 469,
             "column": 20,
-            "byte": 12919
+            "byte": 13824
           },
           "end": {
-            "line": 458,
+            "line": 472,
             "column": 10,
-            "byte": 13042
+            "byte": 13947
           }
         }
       ]
@@ -98088,14 +98204,14 @@
       "sites": [
         {
           "start": {
-            "line": 465,
+            "line": 479,
             "column": 9,
-            "byte": 13222
+            "byte": 14127
           },
           "end": {
-            "line": 465,
+            "line": 479,
             "column": 22,
-            "byte": 13235
+            "byte": 14140
           }
         }
       ]
@@ -98109,14 +98225,14 @@
       "sites": [
         {
           "start": {
-            "line": 496,
+            "line": 510,
             "column": 9,
-            "byte": 14399
+            "byte": 15304
           },
           "end": {
-            "line": 496,
+            "line": 510,
             "column": 34,
-            "byte": 14424
+            "byte": 15329
           }
         }
       ]
@@ -98130,14 +98246,14 @@
       "sites": [
         {
           "start": {
-            "line": 423,
+            "line": 437,
             "column": 29,
-            "byte": 11748
+            "byte": 12653
           },
           "end": {
-            "line": 423,
+            "line": 437,
             "column": 96,
-            "byte": 11815
+            "byte": 12720
           }
         }
       ]
@@ -98151,14 +98267,14 @@
       "sites": [
         {
           "start": {
-            "line": 509,
+            "line": 523,
             "column": 5,
-            "byte": 14708
+            "byte": 15613
           },
           "end": {
-            "line": 509,
+            "line": 523,
             "column": 11,
-            "byte": 14714
+            "byte": 15619
           }
         }
       ]
@@ -98172,14 +98288,14 @@
       "sites": [
         {
           "start": {
-            "line": 462,
+            "line": 476,
             "column": 17,
-            "byte": 13141
+            "byte": 14046
           },
           "end": {
-            "line": 462,
+            "line": 476,
             "column": 48,
-            "byte": 13172
+            "byte": 14077
           }
         }
       ]
@@ -98193,14 +98309,14 @@
       "sites": [
         {
           "start": {
-            "line": 472,
+            "line": 486,
             "column": 23,
-            "byte": 13574
+            "byte": 14479
           },
           "end": {
-            "line": 474,
+            "line": 488,
             "column": 46,
-            "byte": 13657
+            "byte": 14562
           }
         }
       ]
@@ -98214,14 +98330,14 @@
       "sites": [
         {
           "start": {
-            "line": 456,
+            "line": 470,
             "column": 23,
-            "byte": 12956
+            "byte": 13861
           },
           "end": {
-            "line": 456,
+            "line": 470,
             "column": 44,
-            "byte": 12977
+            "byte": 13882
           }
         }
       ]
@@ -98235,26 +98351,26 @@
       "sites": [
         {
           "start": {
-            "line": 457,
+            "line": 471,
             "column": 22,
-            "byte": 13012
+            "byte": 13917
           },
           "end": {
-            "line": 457,
+            "line": 471,
             "column": 41,
-            "byte": 13031
+            "byte": 13936
           }
         },
         {
           "start": {
-            "line": 461,
+            "line": 475,
             "column": 23,
-            "byte": 13097
+            "byte": 14002
           },
           "end": {
-            "line": 461,
+            "line": 475,
             "column": 49,
-            "byte": 13123
+            "byte": 14028
           }
         }
       ]
@@ -98268,14 +98384,14 @@
       "sites": [
         {
           "start": {
-            "line": 436,
+            "line": 450,
             "column": 24,
-            "byte": 12320
+            "byte": 13225
           },
           "end": {
-            "line": 436,
+            "line": 450,
             "column": 50,
-            "byte": 12346
+            "byte": 13251
           }
         }
       ]
@@ -98289,14 +98405,14 @@
       "sites": [
         {
           "start": {
-            "line": 478,
+            "line": 492,
             "column": 29,
-            "byte": 13829
+            "byte": 14734
           },
           "end": {
-            "line": 481,
+            "line": 495,
             "column": 29,
-            "byte": 13961
+            "byte": 14866
           }
         }
       ]
@@ -98310,14 +98426,14 @@
       "sites": [
         {
           "start": {
-            "line": 472,
+            "line": 486,
             "column": 23,
-            "byte": 13574
+            "byte": 14479
           },
           "end": {
-            "line": 473,
+            "line": 487,
             "column": 33,
-            "byte": 13611
+            "byte": 14516
           }
         }
       ]
@@ -98331,14 +98447,14 @@
       "sites": [
         {
           "start": {
-            "line": 478,
+            "line": 492,
             "column": 29,
-            "byte": 13829
+            "byte": 14734
           },
           "end": {
-            "line": 480,
+            "line": 494,
             "column": 70,
-            "byte": 13932
+            "byte": 14837
           }
         }
       ]
@@ -98352,14 +98468,14 @@
       "sites": [
         {
           "start": {
-            "line": 451,
+            "line": 465,
             "column": 26,
-            "byte": 12819
+            "byte": 13724
           },
           "end": {
-            "line": 451,
+            "line": 465,
             "column": 49,
-            "byte": 12842
+            "byte": 13747
           }
         }
       ]
@@ -98373,50 +98489,50 @@
       "sites": [
         {
           "start": {
-            "line": 428,
+            "line": 442,
             "column": 30,
-            "byte": 11989
+            "byte": 12894
           },
           "end": {
-            "line": 428,
+            "line": 442,
             "column": 74,
-            "byte": 12033
+            "byte": 12938
           }
         },
         {
           "start": {
-            "line": 432,
+            "line": 446,
             "column": 38,
-            "byte": 12177
+            "byte": 13082
           },
           "end": {
-            "line": 432,
+            "line": 446,
             "column": 74,
-            "byte": 12213
+            "byte": 13118
           }
         },
         {
           "start": {
-            "line": 442,
+            "line": 456,
             "column": 30,
-            "byte": 12559
+            "byte": 13464
           },
           "end": {
-            "line": 442,
+            "line": 456,
             "column": 73,
-            "byte": 12602
+            "byte": 13507
           }
         },
         {
           "start": {
-            "line": 502,
+            "line": 516,
             "column": 34,
-            "byte": 14566
+            "byte": 15471
           },
           "end": {
-            "line": 502,
+            "line": 516,
             "column": 88,
-            "byte": 14620
+            "byte": 15525
           }
         }
       ]
@@ -98430,14 +98546,14 @@
       "sites": [
         {
           "start": {
-            "line": 436,
+            "line": 450,
             "column": 24,
-            "byte": 12320
+            "byte": 13225
           },
           "end": {
-            "line": 436,
+            "line": 450,
             "column": 40,
-            "byte": 12336
+            "byte": 13241
           }
         }
       ]
@@ -98451,26 +98567,26 @@
       "sites": [
         {
           "start": {
-            "line": 453,
+            "line": 467,
             "column": 21,
-            "byte": 12865
+            "byte": 13770
           },
           "end": {
-            "line": 454,
+            "line": 468,
             "column": 16,
-            "byte": 12899
+            "byte": 13804
           }
         },
         {
           "start": {
-            "line": 478,
+            "line": 492,
             "column": 29,
-            "byte": 13829
+            "byte": 14734
           },
           "end": {
-            "line": 479,
+            "line": 493,
             "column": 28,
-            "byte": 13862
+            "byte": 14767
           }
         }
       ]
@@ -98484,14 +98600,14 @@
       "sites": [
         {
           "start": {
-            "line": 482,
+            "line": 496,
             "column": 33,
-            "byte": 13995
+            "byte": 14900
           },
           "end": {
-            "line": 482,
+            "line": 496,
             "column": 48,
-            "byte": 14010
+            "byte": 14915
           }
         }
       ]
@@ -98505,26 +98621,26 @@
       "sites": [
         {
           "start": {
-            "line": 429,
+            "line": 443,
             "column": 20,
-            "byte": 12056
+            "byte": 12961
           },
           "end": {
-            "line": 433,
+            "line": 447,
             "column": 15,
-            "byte": 12229
+            "byte": 13134
           }
         },
         {
           "start": {
-            "line": 453,
+            "line": 467,
             "column": 21,
-            "byte": 12865
+            "byte": 13770
           },
           "end": {
-            "line": 458,
+            "line": 472,
             "column": 11,
-            "byte": 13043
+            "byte": 13948
           }
         }
       ]
@@ -98538,14 +98654,14 @@
       "sites": [
         {
           "start": {
-            "line": 505,
+            "line": 519,
             "column": 13,
-            "byte": 14664
+            "byte": 15569
           },
           "end": {
-            "line": 505,
+            "line": 519,
             "column": 34,
-            "byte": 14685
+            "byte": 15590
           }
         }
       ]
@@ -98559,14 +98675,14 @@
       "sites": [
         {
           "start": {
-            "line": 471,
+            "line": 485,
             "column": 21,
-            "byte": 13519
+            "byte": 14424
           },
           "end": {
-            "line": 471,
+            "line": 485,
             "column": 52,
-            "byte": 13550
+            "byte": 14455
           }
         }
       ]
@@ -98580,14 +98696,14 @@
       "sites": [
         {
           "start": {
-            "line": 462,
+            "line": 476,
             "column": 22,
-            "byte": 13146
+            "byte": 14051
           },
           "end": {
-            "line": 462,
+            "line": 476,
             "column": 47,
-            "byte": 13171
+            "byte": 14076
           }
         }
       ]
@@ -98601,26 +98717,26 @@
       "sites": [
         {
           "start": {
-            "line": 474,
+            "line": 488,
             "column": 35,
-            "byte": 13646
+            "byte": 14551
           },
           "end": {
-            "line": 474,
+            "line": 488,
             "column": 45,
-            "byte": 13656
+            "byte": 14561
           }
         },
         {
           "start": {
-            "line": 477,
+            "line": 491,
             "column": 23,
-            "byte": 13759
+            "byte": 14664
           },
           "end": {
-            "line": 477,
+            "line": 491,
             "column": 36,
-            "byte": 13772
+            "byte": 14677
           }
         }
       ]
@@ -98634,86 +98750,86 @@
       "sites": [
         {
           "start": {
-            "line": 456,
+            "line": 470,
             "column": 23,
-            "byte": 12956
+            "byte": 13861
           },
           "end": {
-            "line": 456,
+            "line": 470,
             "column": 56,
-            "byte": 12989
+            "byte": 13894
           }
         },
         {
           "start": {
-            "line": 468,
+            "line": 482,
             "column": 29,
-            "byte": 13330
+            "byte": 14235
           },
           "end": {
-            "line": 468,
+            "line": 482,
             "column": 69,
-            "byte": 13370
+            "byte": 14275
           }
         },
         {
           "start": {
-            "line": 469,
+            "line": 483,
             "column": 28,
-            "byte": 13399
+            "byte": 14304
           },
           "end": {
-            "line": 469,
+            "line": 483,
             "column": 67,
-            "byte": 13438
+            "byte": 14343
           }
         },
         {
           "start": {
-            "line": 472,
+            "line": 486,
             "column": 23,
-            "byte": 13574
+            "byte": 14479
           },
           "end": {
-            "line": 476,
+            "line": 490,
             "column": 33,
-            "byte": 13735
+            "byte": 14640
           }
         },
         {
           "start": {
-            "line": 477,
+            "line": 491,
             "column": 23,
-            "byte": 13759
+            "byte": 14664
           },
           "end": {
-            "line": 477,
+            "line": 491,
             "column": 63,
-            "byte": 13799
+            "byte": 14704
           }
         },
         {
           "start": {
-            "line": 485,
+            "line": 499,
             "column": 25,
-            "byte": 14106
+            "byte": 15011
           },
           "end": {
-            "line": 485,
+            "line": 499,
             "column": 43,
-            "byte": 14124
+            "byte": 15029
           }
         },
         {
           "start": {
-            "line": 487,
+            "line": 501,
             "column": 32,
-            "byte": 14194
+            "byte": 15099
           },
           "end": {
-            "line": 487,
+            "line": 501,
             "column": 49,
-            "byte": 14211
+            "byte": 15116
           }
         }
       ]
@@ -98727,14 +98843,14 @@
       "sites": [
         {
           "start": {
-            "line": 429,
+            "line": 443,
             "column": 20,
-            "byte": 12056
+            "byte": 12961
           },
           "end": {
-            "line": 434,
+            "line": 448,
             "column": 25,
-            "byte": 12254
+            "byte": 13159
           }
         }
       ]
@@ -98748,26 +98864,26 @@
       "sites": [
         {
           "start": {
-            "line": 472,
+            "line": 486,
             "column": 23,
-            "byte": 13574
+            "byte": 14479
           },
           "end": {
-            "line": 475,
+            "line": 489,
             "column": 45,
-            "byte": 13702
+            "byte": 14607
           }
         },
         {
           "start": {
-            "line": 477,
+            "line": 491,
             "column": 23,
-            "byte": 13759
+            "byte": 14664
           },
           "end": {
-            "line": 477,
+            "line": 491,
             "column": 51,
-            "byte": 13787
+            "byte": 14692
           }
         }
       ]
@@ -98781,38 +98897,38 @@
       "sites": [
         {
           "start": {
-            "line": 437,
+            "line": 451,
             "column": 20,
-            "byte": 12367
+            "byte": 13272
           },
           "end": {
-            "line": 437,
+            "line": 451,
             "column": 30,
-            "byte": 12377
+            "byte": 13282
           }
         },
         {
           "start": {
-            "line": 444,
+            "line": 458,
             "column": 24,
-            "byte": 12669
+            "byte": 13574
           },
           "end": {
-            "line": 444,
+            "line": 458,
             "column": 34,
-            "byte": 12679
+            "byte": 13584
           }
         },
         {
           "start": {
-            "line": 488,
+            "line": 502,
             "column": 28,
-            "byte": 14240
+            "byte": 15145
           },
           "end": {
-            "line": 488,
+            "line": 502,
             "column": 34,
-            "byte": 14246
+            "byte": 15151
           }
         }
       ]
@@ -98826,50 +98942,50 @@
       "sites": [
         {
           "start": {
-            "line": 427,
-            "column": 20,
-            "byte": 11917
-          },
-          "end": {
-            "line": 428,
-            "column": 75,
-            "byte": 12034
-          }
-        },
-        {
-          "start": {
-            "line": 431,
-            "column": 17,
-            "byte": 12104
-          },
-          "end": {
-            "line": 432,
-            "column": 75,
-            "byte": 12214
-          }
-        },
-        {
-          "start": {
             "line": 441,
             "column": 20,
-            "byte": 12487
+            "byte": 12822
           },
           "end": {
             "line": 442,
-            "column": 74,
-            "byte": 12603
+            "column": 75,
+            "byte": 12939
           }
         },
         {
           "start": {
-            "line": 501,
-            "column": 13,
-            "byte": 14495
+            "line": 445,
+            "column": 17,
+            "byte": 13009
           },
           "end": {
-            "line": 502,
+            "line": 446,
+            "column": 75,
+            "byte": 13119
+          }
+        },
+        {
+          "start": {
+            "line": 455,
+            "column": 20,
+            "byte": 13392
+          },
+          "end": {
+            "line": 456,
+            "column": 74,
+            "byte": 13508
+          }
+        },
+        {
+          "start": {
+            "line": 515,
+            "column": 13,
+            "byte": 15400
+          },
+          "end": {
+            "line": 516,
             "column": 89,
-            "byte": 14621
+            "byte": 15526
           }
         }
       ]
@@ -98883,14 +98999,14 @@
       "sites": [
         {
           "start": {
-            "line": 501,
+            "line": 515,
             "column": 13,
-            "byte": 14495
+            "byte": 15400
           },
           "end": {
-            "line": 501,
+            "line": 515,
             "column": 50,
-            "byte": 14532
+            "byte": 15437
           }
         }
       ]
@@ -98904,14 +99020,14 @@
       "sites": [
         {
           "start": {
-            "line": 484,
+            "line": 498,
             "column": 23,
-            "byte": 14049
+            "byte": 14954
           },
           "end": {
-            "line": 484,
+            "line": 498,
             "column": 53,
-            "byte": 14079
+            "byte": 14984
           }
         }
       ]
@@ -98925,14 +99041,14 @@
       "sites": [
         {
           "start": {
-            "line": 467,
+            "line": 481,
             "column": 24,
-            "byte": 13272
+            "byte": 14177
           },
           "end": {
-            "line": 467,
+            "line": 481,
             "column": 51,
-            "byte": 13299
+            "byte": 14204
           }
         }
       ]
@@ -98946,14 +99062,14 @@
       "sites": [
         {
           "start": {
-            "line": 455,
+            "line": 469,
             "column": 20,
-            "byte": 12919
+            "byte": 13824
           },
           "end": {
-            "line": 455,
+            "line": 469,
             "column": 32,
-            "byte": 12931
+            "byte": 13836
           }
         }
       ]
@@ -98967,26 +99083,26 @@
       "sites": [
         {
           "start": {
-            "line": 435,
+            "line": 449,
             "column": 9,
-            "byte": 12265
+            "byte": 13170
           },
           "end": {
-            "line": 435,
+            "line": 449,
             "column": 38,
-            "byte": 12294
+            "byte": 13199
           }
         },
         {
           "start": {
-            "line": 443,
+            "line": 457,
             "column": 9,
-            "byte": 12614
+            "byte": 13519
           },
           "end": {
-            "line": 443,
+            "line": 457,
             "column": 38,
-            "byte": 12643
+            "byte": 13548
           }
         }
       ]
@@ -99000,26 +99116,26 @@
       "sites": [
         {
           "start": {
-            "line": 417,
+            "line": 431,
             "column": 12,
-            "byte": 11588
+            "byte": 12493
           },
           "end": {
-            "line": 417,
+            "line": 431,
             "column": 16,
-            "byte": 11592
+            "byte": 12497
           }
         },
         {
           "start": {
-            "line": 419,
+            "line": 433,
             "column": 21,
-            "byte": 11632
+            "byte": 12537
           },
           "end": {
-            "line": 419,
+            "line": 433,
             "column": 36,
-            "byte": 11647
+            "byte": 12552
           }
         }
       ]
@@ -99033,14 +99149,14 @@
       "sites": [
         {
           "start": {
-            "line": 470,
+            "line": 484,
             "column": 25,
-            "byte": 13464
+            "byte": 14369
           },
           "end": {
-            "line": 470,
+            "line": 484,
             "column": 57,
-            "byte": 13496
+            "byte": 14401
           }
         }
       ]
@@ -99054,14 +99170,14 @@
       "sites": [
         {
           "start": {
-            "line": 571,
+            "line": 585,
             "column": 19,
-            "byte": 17801
+            "byte": 18706
           },
           "end": {
-            "line": 571,
+            "line": 585,
             "column": 54,
-            "byte": 17836
+            "byte": 18741
           }
         }
       ]
@@ -99075,14 +99191,14 @@
       "sites": [
         {
           "start": {
-            "line": 568,
+            "line": 582,
             "column": 17,
-            "byte": 17585
+            "byte": 18490
           },
           "end": {
-            "line": 568,
+            "line": 582,
             "column": 61,
-            "byte": 17629
+            "byte": 18534
           }
         }
       ]
@@ -99096,14 +99212,14 @@
       "sites": [
         {
           "start": {
-            "line": 567,
+            "line": 581,
             "column": 29,
-            "byte": 17503
+            "byte": 18408
           },
           "end": {
-            "line": 567,
+            "line": 581,
             "column": 92,
-            "byte": 17566
+            "byte": 18471
           }
         }
       ]
@@ -99117,14 +99233,14 @@
       "sites": [
         {
           "start": {
-            "line": 587,
+            "line": 601,
             "column": 5,
-            "byte": 18395
+            "byte": 19300
           },
           "end": {
-            "line": 587,
+            "line": 601,
             "column": 11,
-            "byte": 18401
+            "byte": 19306
           }
         }
       ]
@@ -99138,14 +99254,14 @@
       "sites": [
         {
           "start": {
-            "line": 570,
+            "line": 584,
             "column": 22,
-            "byte": 17724
+            "byte": 18629
           },
           "end": {
-            "line": 570,
+            "line": 584,
             "column": 77,
-            "byte": 17779
+            "byte": 18684
           }
         }
       ]
@@ -99159,14 +99275,14 @@
       "sites": [
         {
           "start": {
-            "line": 574,
+            "line": 588,
             "column": 31,
-            "byte": 17932
+            "byte": 18837
           },
           "end": {
-            "line": 574,
+            "line": 588,
             "column": 47,
-            "byte": 17948
+            "byte": 18853
           }
         }
       ]
@@ -99180,14 +99296,14 @@
       "sites": [
         {
           "start": {
-            "line": 579,
+            "line": 593,
             "column": 23,
-            "byte": 18217
+            "byte": 19122
           },
           "end": {
-            "line": 579,
+            "line": 593,
             "column": 55,
-            "byte": 18249
+            "byte": 19154
           }
         }
       ]
@@ -99201,14 +99317,14 @@
       "sites": [
         {
           "start": {
-            "line": 574,
+            "line": 588,
             "column": 18,
-            "byte": 17919
+            "byte": 18824
           },
           "end": {
-            "line": 574,
+            "line": 588,
             "column": 58,
-            "byte": 17959
+            "byte": 18864
           }
         }
       ]
@@ -99222,14 +99338,14 @@
       "sites": [
         {
           "start": {
-            "line": 579,
+            "line": 593,
             "column": 23,
-            "byte": 18217
+            "byte": 19122
           },
           "end": {
-            "line": 579,
+            "line": 593,
             "column": 43,
-            "byte": 18237
+            "byte": 19142
           }
         }
       ]
@@ -99243,14 +99359,14 @@
       "sites": [
         {
           "start": {
-            "line": 569,
+            "line": 583,
             "column": 16,
-            "byte": 17646
+            "byte": 18551
           },
           "end": {
-            "line": 570,
+            "line": 584,
             "column": 78,
-            "byte": 17780
+            "byte": 18685
           }
         }
       ]
@@ -99264,26 +99380,26 @@
       "sites": [
         {
           "start": {
-            "line": 581,
+            "line": 595,
             "column": 17,
-            "byte": 18291
+            "byte": 19196
           },
           "end": {
-            "line": 581,
+            "line": 595,
             "column": 31,
-            "byte": 18305
+            "byte": 19210
           }
         },
         {
           "start": {
-            "line": 583,
+            "line": 597,
             "column": 13,
-            "byte": 18333
+            "byte": 19238
           },
           "end": {
-            "line": 583,
+            "line": 597,
             "column": 33,
-            "byte": 18353
+            "byte": 19258
           }
         }
       ]
@@ -99297,50 +99413,50 @@
       "sites": [
         {
           "start": {
-            "line": 575,
+            "line": 589,
             "column": 5,
-            "byte": 17965
+            "byte": 18870
           },
           "end": {
-            "line": 575,
+            "line": 589,
             "column": 46,
-            "byte": 18006
+            "byte": 18911
           }
         },
         {
           "start": {
-            "line": 576,
+            "line": 590,
             "column": 5,
-            "byte": 18012
+            "byte": 18917
           },
           "end": {
-            "line": 576,
+            "line": 590,
             "column": 83,
-            "byte": 18090
+            "byte": 18995
           }
         },
         {
           "start": {
-            "line": 578,
+            "line": 592,
             "column": 9,
-            "byte": 18130
+            "byte": 19035
           },
           "end": {
-            "line": 578,
+            "line": 592,
             "column": 72,
-            "byte": 18193
+            "byte": 19098
           }
         },
         {
           "start": {
-            "line": 585,
+            "line": 599,
             "column": 9,
-            "byte": 18373
+            "byte": 19278
           },
           "end": {
-            "line": 585,
+            "line": 599,
             "column": 19,
-            "byte": 18383
+            "byte": 19288
           }
         }
       ]
@@ -99354,14 +99470,14 @@
       "sites": [
         {
           "start": {
-            "line": 569,
+            "line": 583,
             "column": 16,
-            "byte": 17646
+            "byte": 18551
           },
           "end": {
-            "line": 569,
+            "line": 583,
             "column": 72,
-            "byte": 17702
+            "byte": 18607
           }
         }
       ]
@@ -99375,14 +99491,14 @@
       "sites": [
         {
           "start": {
-            "line": 571,
+            "line": 585,
             "column": 19,
-            "byte": 17801
+            "byte": 18706
           },
           "end": {
-            "line": 572,
+            "line": 586,
             "column": 31,
-            "byte": 17867
+            "byte": 18772
           }
         }
       ]
@@ -99396,14 +99512,14 @@
       "sites": [
         {
           "start": {
-            "line": 571,
+            "line": 585,
             "column": 19,
-            "byte": 17801
+            "byte": 18706
           },
           "end": {
-            "line": 573,
+            "line": 587,
             "column": 33,
-            "byte": 17900
+            "byte": 18805
           }
         }
       ]
@@ -99417,14 +99533,14 @@
       "sites": [
         {
           "start": {
-            "line": 566,
+            "line": 580,
             "column": 36,
-            "byte": 17415
+            "byte": 18320
           },
           "end": {
-            "line": 566,
+            "line": 580,
             "column": 40,
-            "byte": 17419
+            "byte": 18324
           }
         }
       ]
@@ -99438,14 +99554,14 @@
       "sites": [
         {
           "start": {
-            "line": 668,
+            "line": 682,
             "column": 24,
-            "byte": 21372
+            "byte": 22277
           },
           "end": {
-            "line": 668,
+            "line": 682,
             "column": 42,
-            "byte": 21390
+            "byte": 22295
           }
         }
       ]
@@ -99459,14 +99575,14 @@
       "sites": [
         {
           "start": {
-            "line": 686,
+            "line": 700,
             "column": 5,
-            "byte": 21951
+            "byte": 22856
           },
           "end": {
-            "line": 686,
+            "line": 700,
             "column": 11,
-            "byte": 21957
+            "byte": 22862
           }
         }
       ]
@@ -99480,38 +99596,38 @@
       "sites": [
         {
           "start": {
-            "line": 669,
+            "line": 683,
             "column": 5,
-            "byte": 21396
+            "byte": 22301
           },
           "end": {
-            "line": 669,
+            "line": 683,
             "column": 37,
-            "byte": 21428
+            "byte": 22333
           }
         },
         {
           "start": {
-            "line": 671,
+            "line": 685,
             "column": 9,
-            "byte": 21469
+            "byte": 22374
           },
           "end": {
-            "line": 681,
+            "line": 695,
             "column": 10,
-            "byte": 21856
+            "byte": 22761
           }
         },
         {
           "start": {
-            "line": 683,
+            "line": 697,
             "column": 13,
-            "byte": 21903
+            "byte": 22808
           },
           "end": {
-            "line": 683,
+            "line": 697,
             "column": 39,
-            "byte": 21929
+            "byte": 22834
           }
         }
       ]
@@ -99525,14 +99641,14 @@
       "sites": [
         {
           "start": {
-            "line": 597,
+            "line": 611,
             "column": 19,
-            "byte": 18984
+            "byte": 19889
           },
           "end": {
-            "line": 597,
+            "line": 611,
             "column": 54,
-            "byte": 19019
+            "byte": 19924
           }
         }
       ]
@@ -99546,14 +99662,14 @@
       "sites": [
         {
           "start": {
-            "line": 592,
+            "line": 606,
             "column": 17,
-            "byte": 18602
+            "byte": 19507
           },
           "end": {
-            "line": 592,
+            "line": 606,
             "column": 61,
-            "byte": 18646
+            "byte": 19551
           }
         }
       ]
@@ -99567,14 +99683,14 @@
       "sites": [
         {
           "start": {
-            "line": 591,
+            "line": 605,
             "column": 29,
-            "byte": 18520
+            "byte": 19425
           },
           "end": {
-            "line": 591,
+            "line": 605,
             "column": 92,
-            "byte": 18583
+            "byte": 19488
           }
         }
       ]
@@ -99588,14 +99704,14 @@
       "sites": [
         {
           "start": {
-            "line": 611,
+            "line": 625,
             "column": 5,
-            "byte": 19489
+            "byte": 20394
           },
           "end": {
-            "line": 611,
+            "line": 625,
             "column": 11,
-            "byte": 19495
+            "byte": 20400
           }
         }
       ]
@@ -99609,26 +99725,26 @@
       "sites": [
         {
           "start": {
-            "line": 594,
+            "line": 608,
             "column": 22,
-            "byte": 18748
+            "byte": 19653
           },
           "end": {
-            "line": 594,
+            "line": 608,
             "column": 77,
-            "byte": 18803
+            "byte": 19708
           }
         },
         {
           "start": {
-            "line": 596,
+            "line": 610,
             "column": 22,
-            "byte": 18907
+            "byte": 19812
           },
           "end": {
-            "line": 596,
+            "line": 610,
             "column": 77,
-            "byte": 18962
+            "byte": 19867
           }
         }
       ]
@@ -99642,26 +99758,26 @@
       "sites": [
         {
           "start": {
-            "line": 598,
+            "line": 612,
             "column": 34,
-            "byte": 19076
+            "byte": 19981
           },
           "end": {
-            "line": 598,
+            "line": 612,
             "column": 57,
-            "byte": 19099
+            "byte": 20004
           }
         },
         {
           "start": {
-            "line": 598,
+            "line": 612,
             "column": 59,
-            "byte": 19101
+            "byte": 20006
           },
           "end": {
-            "line": 598,
+            "line": 612,
             "column": 82,
-            "byte": 19124
+            "byte": 20029
           }
         }
       ]
@@ -99675,14 +99791,14 @@
       "sites": [
         {
           "start": {
-            "line": 601,
+            "line": 615,
             "column": 23,
-            "byte": 19239
+            "byte": 20144
           },
           "end": {
-            "line": 601,
+            "line": 615,
             "column": 59,
-            "byte": 19275
+            "byte": 20180
           }
         }
       ]
@@ -99696,14 +99812,14 @@
       "sites": [
         {
           "start": {
-            "line": 601,
+            "line": 615,
             "column": 23,
-            "byte": 19239
+            "byte": 20144
           },
           "end": {
-            "line": 601,
+            "line": 615,
             "column": 47,
-            "byte": 19263
+            "byte": 20168
           }
         }
       ]
@@ -99717,26 +99833,26 @@
       "sites": [
         {
           "start": {
-            "line": 593,
+            "line": 607,
             "column": 23,
-            "byte": 18670
+            "byte": 19575
           },
           "end": {
-            "line": 594,
+            "line": 608,
             "column": 78,
-            "byte": 18804
+            "byte": 19709
           }
         },
         {
           "start": {
-            "line": 595,
+            "line": 609,
             "column": 23,
-            "byte": 18829
+            "byte": 19734
           },
           "end": {
-            "line": 596,
+            "line": 610,
             "column": 78,
-            "byte": 18963
+            "byte": 19868
           }
         }
       ]
@@ -99750,14 +99866,14 @@
       "sites": [
         {
           "start": {
-            "line": 598,
+            "line": 612,
             "column": 23,
-            "byte": 19065
+            "byte": 19970
           },
           "end": {
-            "line": 598,
+            "line": 612,
             "column": 93,
-            "byte": 19135
+            "byte": 20040
           }
         }
       ]
@@ -99771,26 +99887,26 @@
       "sites": [
         {
           "start": {
-            "line": 603,
+            "line": 617,
             "column": 17,
-            "byte": 19317
+            "byte": 20222
           },
           "end": {
-            "line": 603,
+            "line": 617,
             "column": 31,
-            "byte": 19331
+            "byte": 20236
           }
         },
         {
           "start": {
-            "line": 605,
+            "line": 619,
             "column": 13,
-            "byte": 19359
+            "byte": 20264
           },
           "end": {
-            "line": 605,
+            "line": 619,
             "column": 33,
-            "byte": 19379
+            "byte": 20284
           }
         }
       ]
@@ -99804,38 +99920,38 @@
       "sites": [
         {
           "start": {
-            "line": 600,
+            "line": 614,
             "column": 9,
-            "byte": 19172
+            "byte": 20077
           },
           "end": {
-            "line": 600,
+            "line": 614,
             "column": 52,
-            "byte": 19215
+            "byte": 20120
           }
         },
         {
           "start": {
-            "line": 607,
+            "line": 621,
             "column": 9,
-            "byte": 19399
+            "byte": 20304
           },
           "end": {
-            "line": 607,
+            "line": 621,
             "column": 19,
-            "byte": 19409
+            "byte": 20314
           }
         },
         {
           "start": {
-            "line": 609,
+            "line": 623,
             "column": 9,
-            "byte": 19432
+            "byte": 20337
           },
           "end": {
-            "line": 609,
+            "line": 623,
             "column": 54,
-            "byte": 19477
+            "byte": 20382
           }
         }
       ]
@@ -99849,26 +99965,26 @@
       "sites": [
         {
           "start": {
-            "line": 593,
+            "line": 607,
             "column": 23,
-            "byte": 18670
+            "byte": 19575
           },
           "end": {
-            "line": 593,
+            "line": 607,
             "column": 79,
-            "byte": 18726
+            "byte": 19631
           }
         },
         {
           "start": {
-            "line": 595,
+            "line": 609,
             "column": 23,
-            "byte": 18829
+            "byte": 19734
           },
           "end": {
-            "line": 595,
+            "line": 609,
             "column": 79,
-            "byte": 18885
+            "byte": 19790
           }
         }
       ]
@@ -99882,14 +99998,14 @@
       "sites": [
         {
           "start": {
-            "line": 597,
+            "line": 611,
             "column": 19,
-            "byte": 18984
+            "byte": 19889
           },
           "end": {
-            "line": 597,
+            "line": 611,
             "column": 76,
-            "byte": 19041
+            "byte": 19946
           }
         }
       ]
@@ -99903,14 +100019,14 @@
       "sites": [
         {
           "start": {
-            "line": 590,
+            "line": 604,
             "column": 48,
-            "byte": 18452
+            "byte": 19357
           },
           "end": {
-            "line": 590,
+            "line": 604,
             "column": 52,
-            "byte": 18456
+            "byte": 19361
           }
         }
       ]
@@ -99924,14 +100040,14 @@
       "sites": [
         {
           "start": {
-            "line": 543,
+            "line": 557,
             "column": 19,
-            "byte": 16433
+            "byte": 17338
           },
           "end": {
-            "line": 543,
+            "line": 557,
             "column": 54,
-            "byte": 16468
+            "byte": 17373
           }
         }
       ]
@@ -99945,14 +100061,14 @@
       "sites": [
         {
           "start": {
-            "line": 540,
+            "line": 554,
             "column": 17,
-            "byte": 16217
+            "byte": 17122
           },
           "end": {
-            "line": 540,
+            "line": 554,
             "column": 61,
-            "byte": 16261
+            "byte": 17166
           }
         }
       ]
@@ -99966,14 +100082,14 @@
       "sites": [
         {
           "start": {
-            "line": 539,
+            "line": 553,
             "column": 29,
-            "byte": 16135
+            "byte": 17040
           },
           "end": {
-            "line": 539,
+            "line": 553,
             "column": 92,
-            "byte": 16198
+            "byte": 17103
           }
         }
       ]
@@ -99987,14 +100103,14 @@
       "sites": [
         {
           "start": {
-            "line": 547,
+            "line": 561,
             "column": 5,
-            "byte": 16599
+            "byte": 17504
           },
           "end": {
-            "line": 547,
+            "line": 561,
             "column": 49,
-            "byte": 16643
+            "byte": 17548
           }
         }
       ]
@@ -100008,14 +100124,14 @@
       "sites": [
         {
           "start": {
-            "line": 548,
+            "line": 562,
             "column": 5,
-            "byte": 16649
+            "byte": 17554
           },
           "end": {
-            "line": 548,
+            "line": 562,
             "column": 11,
-            "byte": 16655
+            "byte": 17560
           }
         }
       ]
@@ -100029,14 +100145,14 @@
       "sites": [
         {
           "start": {
-            "line": 542,
+            "line": 556,
             "column": 22,
-            "byte": 16356
+            "byte": 17261
           },
           "end": {
-            "line": 542,
+            "line": 556,
             "column": 77,
-            "byte": 16411
+            "byte": 17316
           }
         }
       ]
@@ -100050,14 +100166,14 @@
       "sites": [
         {
           "start": {
-            "line": 546,
+            "line": 560,
             "column": 33,
-            "byte": 16566
+            "byte": 17471
           },
           "end": {
-            "line": 546,
+            "line": 560,
             "column": 49,
-            "byte": 16582
+            "byte": 17487
           }
         }
       ]
@@ -100071,14 +100187,14 @@
       "sites": [
         {
           "start": {
-            "line": 541,
+            "line": 555,
             "column": 16,
-            "byte": 16278
+            "byte": 17183
           },
           "end": {
-            "line": 542,
+            "line": 556,
             "column": 78,
-            "byte": 16412
+            "byte": 17317
           }
         }
       ]
@@ -100092,14 +100208,14 @@
       "sites": [
         {
           "start": {
-            "line": 546,
+            "line": 560,
             "column": 16,
-            "byte": 16549
+            "byte": 17454
           },
           "end": {
-            "line": 546,
+            "line": 560,
             "column": 60,
-            "byte": 16593
+            "byte": 17498
           }
         }
       ]
@@ -100113,14 +100229,14 @@
       "sites": [
         {
           "start": {
-            "line": 541,
+            "line": 555,
             "column": 16,
-            "byte": 16278
+            "byte": 17183
           },
           "end": {
-            "line": 541,
+            "line": 555,
             "column": 72,
-            "byte": 16334
+            "byte": 17239
           }
         }
       ]
@@ -100134,14 +100250,14 @@
       "sites": [
         {
           "start": {
-            "line": 543,
+            "line": 557,
             "column": 19,
-            "byte": 16433
+            "byte": 17338
           },
           "end": {
-            "line": 544,
+            "line": 558,
             "column": 31,
-            "byte": 16499
+            "byte": 17404
           }
         }
       ]
@@ -100155,14 +100271,14 @@
       "sites": [
         {
           "start": {
-            "line": 543,
+            "line": 557,
             "column": 19,
-            "byte": 16433
+            "byte": 17338
           },
           "end": {
-            "line": 545,
+            "line": 559,
             "column": 33,
-            "byte": 16532
+            "byte": 17437
           }
         }
       ]
@@ -100176,14 +100292,14 @@
       "sites": [
         {
           "start": {
-            "line": 538,
+            "line": 552,
             "column": 34,
-            "byte": 16047
+            "byte": 16952
           },
           "end": {
-            "line": 538,
+            "line": 552,
             "column": 38,
-            "byte": 16051
+            "byte": 16956
           }
         }
       ]
@@ -100314,14 +100430,14 @@
       "sites": [
         {
           "start": {
-            "line": 413,
+            "line": 426,
             "column": 5,
-            "byte": 11553
+            "byte": 12421
           },
           "end": {
-            "line": 413,
+            "line": 426,
             "column": 11,
-            "byte": 11559
+            "byte": 12427
           }
         }
       ]
@@ -100412,6 +100528,39 @@
     },
     {
       "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "target": "unresolved:create_dir_all",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 406,
+            "column": 17,
+            "byte": 11401
+          },
+          "end": {
+            "line": 406,
+            "column": 48,
+            "byte": 11432
+          }
+        },
+        {
+          "start": {
+            "line": 413,
+            "column": 13,
+            "byte": 11679
+          },
+          "end": {
+            "line": 413,
+            "column": 48,
+            "byte": 11714
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
       "target": "unresolved:export_graph",
       "kind": "calls",
       "status": "unresolved",
@@ -100461,14 +100610,38 @@
       "sites": [
         {
           "start": {
-            "line": 406,
+            "line": 409,
             "column": 34,
-            "byte": 11411
+            "byte": 11532
           },
           "end": {
-            "line": 406,
+            "line": 409,
             "column": 88,
-            "byte": 11465
+            "byte": 11586
+          }
+        },
+        {
+          "start": {
+            "line": 415,
+            "column": 46,
+            "byte": 11837
+          },
+          "end": {
+            "line": 415,
+            "column": 68,
+            "byte": 11859
+          }
+        },
+        {
+          "start": {
+            "line": 417,
+            "column": 34,
+            "byte": 11946
+          },
+          "end": {
+            "line": 417,
+            "column": 88,
+            "byte": 12000
           }
         }
       ]
@@ -100496,6 +100669,51 @@
     },
     {
       "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 412,
+            "column": 29,
+            "byte": 11646
+          },
+          "end": {
+            "line": 412,
+            "column": 48,
+            "byte": 11665
+          }
+        },
+        {
+          "start": {
+            "line": 415,
+            "column": 31,
+            "byte": 11822
+          },
+          "end": {
+            "line": 415,
+            "column": 69,
+            "byte": 11860
+          }
+        },
+        {
+          "start": {
+            "line": 420,
+            "column": 33,
+            "byte": 12144
+          },
+          "end": {
+            "line": 420,
+            "column": 61,
+            "byte": 12172
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
       "target": "unresolved:map",
       "kind": "calls",
       "status": "unresolved",
@@ -100517,6 +100735,48 @@
     },
     {
       "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "target": "unresolved:ok",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 421,
+            "column": 17,
+            "byte": 12190
+          },
+          "end": {
+            "line": 421,
+            "column": 211,
+            "byte": 12384
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
+      "target": "unresolved:parent",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 405,
+            "column": 35,
+            "byte": 11362
+          },
+          "end": {
+            "line": 405,
+            "column": 55,
+            "byte": 11382
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-cli/src/main.rs::cmd_scan",
       "target": "unresolved:println",
       "kind": "calls",
       "status": "unresolved",
@@ -100524,14 +100784,14 @@
       "sites": [
         {
           "start": {
-            "line": 409,
+            "line": 418,
             "column": 13,
-            "byte": 11509
+            "byte": 12016
           },
           "end": {
-            "line": 409,
-            "column": 34,
-            "byte": 11530
+            "line": 418,
+            "column": 67,
+            "byte": 12070
           }
         }
       ]
@@ -100653,14 +100913,26 @@
       "sites": [
         {
           "start": {
-            "line": 405,
+            "line": 408,
             "column": 13,
-            "byte": 11340
+            "byte": 11461
           },
           "end": {
-            "line": 406,
+            "line": 409,
             "column": 89,
-            "byte": 11466
+            "byte": 11587
+          }
+        },
+        {
+          "start": {
+            "line": 416,
+            "column": 13,
+            "byte": 11874
+          },
+          "end": {
+            "line": 417,
+            "column": 89,
+            "byte": 12001
           }
         }
       ]
@@ -100674,14 +100946,38 @@
       "sites": [
         {
           "start": {
-            "line": 405,
+            "line": 408,
             "column": 13,
-            "byte": 11340
+            "byte": 11461
           },
           "end": {
-            "line": 405,
+            "line": 408,
             "column": 50,
-            "byte": 11377
+            "byte": 11498
+          }
+        },
+        {
+          "start": {
+            "line": 416,
+            "column": 13,
+            "byte": 11874
+          },
+          "end": {
+            "line": 416,
+            "column": 51,
+            "byte": 11912
+          }
+        },
+        {
+          "start": {
+            "line": 421,
+            "column": 17,
+            "byte": 12190
+          },
+          "end": {
+            "line": 421,
+            "column": 206,
+            "byte": 12379
           }
         }
       ]
@@ -100761,14 +101057,14 @@
       "sites": [
         {
           "start": {
-            "line": 636,
+            "line": 650,
             "column": 29,
-            "byte": 20213
+            "byte": 21118
           },
           "end": {
-            "line": 636,
+            "line": 650,
             "column": 92,
-            "byte": 20276
+            "byte": 21181
           }
         }
       ]
@@ -100782,14 +101078,14 @@
       "sites": [
         {
           "start": {
-            "line": 664,
+            "line": 678,
             "column": 5,
-            "byte": 21304
+            "byte": 22209
           },
           "end": {
-            "line": 664,
+            "line": 678,
             "column": 11,
-            "byte": 21310
+            "byte": 22215
           }
         }
       ]
@@ -100803,38 +101099,38 @@
       "sites": [
         {
           "start": {
-            "line": 646,
+            "line": 660,
             "column": 9,
-            "byte": 20744
+            "byte": 21649
           },
           "end": {
-            "line": 646,
+            "line": 660,
             "column": 37,
-            "byte": 20772
+            "byte": 21677
           }
         },
         {
           "start": {
-            "line": 652,
+            "line": 666,
             "column": 9,
-            "byte": 20930
+            "byte": 21835
           },
           "end": {
-            "line": 652,
+            "line": 666,
             "column": 38,
-            "byte": 20959
+            "byte": 21864
           }
         },
         {
           "start": {
-            "line": 658,
+            "line": 672,
             "column": 9,
-            "byte": 21119
+            "byte": 22024
           },
           "end": {
-            "line": 658,
+            "line": 672,
             "column": 38,
-            "byte": 21148
+            "byte": 22053
           }
         }
       ]
@@ -100848,170 +101144,170 @@
       "sites": [
         {
           "start": {
-            "line": 638,
+            "line": 652,
             "column": 5,
-            "byte": 20340
+            "byte": 21245
           },
           "end": {
-            "line": 638,
+            "line": 652,
             "column": 34,
-            "byte": 20369
+            "byte": 21274
           }
         },
         {
           "start": {
-            "line": 639,
+            "line": 653,
             "column": 5,
-            "byte": 20375
+            "byte": 21280
           },
           "end": {
-            "line": 639,
+            "line": 653,
             "column": 48,
-            "byte": 20418
+            "byte": 21323
           }
         },
         {
           "start": {
-            "line": 640,
+            "line": 654,
             "column": 5,
-            "byte": 20424
+            "byte": 21329
           },
           "end": {
-            "line": 640,
+            "line": 654,
             "column": 51,
-            "byte": 20470
+            "byte": 21375
           }
         },
         {
           "start": {
-            "line": 641,
+            "line": 655,
             "column": 5,
-            "byte": 20476
+            "byte": 21381
           },
           "end": {
-            "line": 641,
+            "line": 655,
             "column": 48,
-            "byte": 20519
+            "byte": 21424
           }
         },
         {
           "start": {
-            "line": 642,
+            "line": 656,
             "column": 5,
-            "byte": 20525
+            "byte": 21430
           },
           "end": {
-            "line": 642,
+            "line": 656,
             "column": 48,
-            "byte": 20568
+            "byte": 21473
           }
         },
         {
           "start": {
-            "line": 643,
+            "line": 657,
             "column": 5,
-            "byte": 20574
+            "byte": 21479
           },
           "end": {
-            "line": 643,
+            "line": 657,
             "column": 50,
-            "byte": 20619
+            "byte": 21524
           }
         },
         {
           "start": {
-            "line": 644,
+            "line": 658,
             "column": 5,
-            "byte": 20625
+            "byte": 21530
           },
           "end": {
-            "line": 644,
+            "line": 658,
             "column": 59,
-            "byte": 20679
+            "byte": 21584
           }
         },
         {
           "start": {
-            "line": 645,
+            "line": 659,
             "column": 5,
-            "byte": 20685
+            "byte": 21590
           },
           "end": {
-            "line": 645,
+            "line": 659,
             "column": 54,
-            "byte": 20734
+            "byte": 21639
           }
         },
         {
           "start": {
-            "line": 647,
+            "line": 661,
             "column": 9,
-            "byte": 20783
+            "byte": 21688
           },
           "end": {
-            "line": 647,
+            "line": 661,
             "column": 35,
-            "byte": 20809
+            "byte": 21714
           }
         },
         {
           "start": {
-            "line": 649,
+            "line": 663,
             "column": 13,
-            "byte": 20873
+            "byte": 21778
           },
           "end": {
-            "line": 649,
+            "line": 663,
             "column": 44,
-            "byte": 20904
+            "byte": 21809
           }
         },
         {
           "start": {
-            "line": 653,
+            "line": 667,
             "column": 9,
-            "byte": 20970
+            "byte": 21875
           },
           "end": {
-            "line": 653,
+            "line": 667,
             "column": 36,
-            "byte": 20997
+            "byte": 21902
           }
         },
         {
           "start": {
-            "line": 655,
+            "line": 669,
             "column": 13,
-            "byte": 21062
+            "byte": 21967
           },
           "end": {
-            "line": 655,
+            "line": 669,
             "column": 44,
-            "byte": 21093
+            "byte": 21998
           }
         },
         {
           "start": {
-            "line": 659,
+            "line": 673,
             "column": 9,
-            "byte": 21159
+            "byte": 22064
           },
           "end": {
-            "line": 659,
+            "line": 673,
             "column": 36,
-            "byte": 21186
+            "byte": 22091
           }
         },
         {
           "start": {
-            "line": 661,
+            "line": 675,
             "column": 13,
-            "byte": 21251
+            "byte": 22156
           },
           "end": {
-            "line": 661,
+            "line": 675,
             "column": 44,
-            "byte": 21282
+            "byte": 22187
           }
         }
       ]
@@ -101025,14 +101321,14 @@
       "sites": [
         {
           "start": {
-            "line": 637,
+            "line": 651,
             "column": 17,
-            "byte": 20295
+            "byte": 21200
           },
           "end": {
-            "line": 637,
+            "line": 651,
             "column": 56,
-            "byte": 20334
+            "byte": 21239
           }
         }
       ]
@@ -101046,14 +101342,14 @@
       "sites": [
         {
           "start": {
-            "line": 635,
+            "line": 649,
             "column": 21,
-            "byte": 20163
+            "byte": 21068
           },
           "end": {
-            "line": 635,
+            "line": 649,
             "column": 25,
-            "byte": 20167
+            "byte": 21072
           }
         }
       ]
@@ -101130,14 +101426,14 @@
       "sites": [
         {
           "start": {
-            "line": 718,
+            "line": 732,
             "column": 8,
-            "byte": 23054
+            "byte": 23959
           },
           "end": {
-            "line": 718,
+            "line": 732,
             "column": 28,
-            "byte": 23074
+            "byte": 23979
           }
         }
       ]
@@ -101151,38 +101447,38 @@
       "sites": [
         {
           "start": {
-            "line": 717,
+            "line": 731,
             "column": 5,
-            "byte": 23013
+            "byte": 23918
           },
           "end": {
-            "line": 717,
+            "line": 731,
             "column": 37,
-            "byte": 23045
+            "byte": 23950
           }
         },
         {
           "start": {
-            "line": 719,
+            "line": 733,
             "column": 9,
-            "byte": 23085
+            "byte": 23990
           },
           "end": {
-            "line": 719,
+            "line": 733,
             "column": 29,
-            "byte": 23105
+            "byte": 24010
           }
         },
         {
           "start": {
-            "line": 724,
+            "line": 738,
             "column": 9,
-            "byte": 23204
+            "byte": 24109
           },
           "end": {
-            "line": 727,
+            "line": 741,
             "column": 10,
-            "byte": 23345
+            "byte": 24250
           }
         }
       ]
@@ -101196,14 +101492,14 @@
       "sites": [
         {
           "start": {
-            "line": 716,
+            "line": 730,
             "column": 60,
-            "byte": 22977
+            "byte": 23882
           },
           "end": {
-            "line": 716,
+            "line": 730,
             "column": 87,
-            "byte": 23004
+            "byte": 23909
           }
         }
       ]
@@ -219887,7 +220183,35 @@
     },
     {
       "source": "module:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.ext",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.html_path",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/trace-cli/src/main.rs",
       "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.languages",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.output_path",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/trace-cli/src/main.rs",
+      "target": "variable:crates/trace-cli/src/main.rs::cmd_scan.trace_dir",
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -236349,10 +236673,10 @@
   "statistics": {
     "files": 68,
     "packages": 5,
-    "nodes": 2711,
-    "edges": 11116,
-    "symbols": 2367,
-    "unresolvedEdges": 3377,
+    "nodes": 2715,
+    "edges": 11128,
+    "symbols": 2371,
+    "unresolvedEdges": 3381,
     "diagnostics": 12,
     "byNodeKind": {
       "class": 34,
@@ -236372,12 +236696,12 @@
       "struct": 60,
       "trait": 3,
       "type": 3,
-      "variable": 1066
+      "variable": 1070
     },
     "byEdgeKind": {
-      "calls": 4090,
-      "contains": 2564,
-      "defines": 2418,
+      "calls": 4094,
+      "contains": 2568,
+      "defines": 2422,
       "exports": 795,
       "implements": 18,
       "imports": 195,
@@ -236392,15 +236716,15 @@
       "php": 16,
       "python": 41,
       "ruby": 15,
-      "rust": 2435,
+      "rust": 2439,
       "swift": 43,
       "typescript": 42
     },
     "byStatus": {
       "ambiguous": 2,
       "resolved_external": 475,
-      "resolved_internal": 7264,
-      "unresolved": 3375
+      "resolved_internal": 7272,
+      "unresolved": 3379
     }
   }
 }

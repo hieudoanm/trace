@@ -402,17 +402,31 @@ fn cmd_scan(
 
     match output {
         Some(output_path) => {
+            if let Some(parent) = output_path.parent() {
+                std::fs::create_dir_all(parent)?;
+            }
             std::fs::write(output_path, &content)
                 .with_context(|| format!("failed to write output to {:?}", output_path))?;
         }
         None => {
-            println!("{content}");
+            let trace_dir = path.join(".trace");
+            std::fs::create_dir_all(&trace_dir)?;
+            let ext = if output_format == "dot" { "dot" } else { "json" };
+            let output_path = trace_dir.join(format!("graph.{ext}"));
+            std::fs::write(&output_path, &content)
+                .with_context(|| format!("failed to write output to {:?}", output_path))?;
+            println!("Graph written to {}", output_path.display());
+            if output_format != "dot" {
+                let html_path = trace_dir.join("graph.html");
+                std::fs::write(&html_path, "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>Trace Graph</title></head><body><h1>Trace Graph</h1><p>See graph.json and graph.dot</p></body></html>").ok();
+            }
         }
     }
 
     Ok(())
 }
 
+#[allow(clippy::too_many_arguments)]
 fn cmd_graph(
     path: &Path,
     format: &str,
