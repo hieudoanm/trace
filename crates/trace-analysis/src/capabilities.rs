@@ -99,6 +99,10 @@ pub fn capabilities(language: Language, files: usize) -> LanguageCapability {
                 "Dynamic method definition and metaprogramming are not modelled.",
             ],
         ),
+        Language::C | Language::Cpp | Language::Dart | Language::Scala | Language::R => (
+            None,
+            &["Syntax-level parsing only; no semantic integration."],
+        ),
     };
     LanguageCapability {
         language,

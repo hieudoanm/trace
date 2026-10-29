@@ -1,9 +1,14 @@
 use trace_core::Language;
 
+extern crate tree_sitter_c;
 extern crate tree_sitter_c_sharp;
+extern crate tree_sitter_cpp;
+extern crate tree_sitter_dart;
 extern crate tree_sitter_java;
 extern crate tree_sitter_php;
+extern crate tree_sitter_r;
 extern crate tree_sitter_ruby;
+extern crate tree_sitter_scala;
 
 /// Return the tree-sitter grammar for a Trace language.
 pub fn tree_sitter_language(language: Language) -> tree_sitter::Language {
@@ -20,6 +25,11 @@ pub fn tree_sitter_language(language: Language) -> tree_sitter::Language {
         Language::CSharp => tree_sitter_c_sharp::LANGUAGE.into(),
         Language::Php => tree_sitter_php::LANGUAGE_PHP.into(),
         Language::Ruby => tree_sitter_ruby::LANGUAGE.into(),
+        Language::C => tree_sitter_c::LANGUAGE.into(),
+        Language::Cpp => tree_sitter_cpp::LANGUAGE.into(),
+        Language::Dart => tree_sitter_dart::language(),
+        Language::Scala => tree_sitter_scala::LANGUAGE.into(),
+        Language::R => tree_sitter_r::LANGUAGE.into(),
     }
 }
 
@@ -38,6 +48,11 @@ pub fn grammar_version(language: Language) -> &'static str {
         Language::CSharp => "tree-sitter-c-sharp 0.23.1",
         Language::Php => "tree-sitter-php 0.23.11",
         Language::Ruby => "tree-sitter-ruby 0.23.1",
+        Language::C => "tree-sitter-c 0.23.6",
+        Language::Cpp => "tree-sitter-cpp 0.23.4",
+        Language::Dart => "tree-sitter-dart 0.0.4",
+        Language::Scala => "tree-sitter-scala 0.24.0",
+        Language::R => "tree-sitter-r 1.2.0",
     }
 }
 

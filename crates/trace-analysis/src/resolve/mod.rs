@@ -4,7 +4,7 @@
 //! whether it is internal, external, unresolved or ambiguous; name-only matches
 //! across unrelated modules are not treated as resolved.
 
-pub mod resolve_bindings;
+pub mod bindings;
 pub mod resolve_import_misc;
 pub mod resolve_import_pass;
 pub mod resolve_members;

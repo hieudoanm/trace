@@ -4,7 +4,8 @@ Trace is a high-performance, multi-language code intelligence and graph analysis
 
 ## Features
 
-- **Multi-language support**: TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, and Ruby
+- **Multi-language support**: TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, and R
+- **Framework detection**: Detects React, Vue, Angular, Express, Next.js, NestJS, Svelte, SvelteKit, Nuxt, Hono, tRPC, Prisma, and Drizzle ORM
 - **Interactive Visual Explorer**: Built-in Obsidian-style graph view powered by D3.js & HTML5 Canvas with real-time physics, ego-network hover, search, and filtering
 - **Syntax-level analysis**: Tree-sitter based parsing across all supported languages
 - **Graph queries**: Find callers, callees, references, dependencies, and impact

@@ -194,7 +194,7 @@ This is the repository structure. Every crate contains implemented functionality
 - File discovery integration.
 - Language detection.
 - Tree-sitter parser registry.
-- Syntax extraction across 10 languages (TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby).
+- Syntax extraction across 15 languages (TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, R).
 - Source location mapping.
 - Parser diagnostics.
 
@@ -1035,7 +1035,7 @@ Implement in the following order.
 
 Deliverable: Trace scans a repository and emits a valid, deterministic graph containing files.
 
-### Milestone 2: Syntax extraction across all ten languages
+### Milestone 2: Syntax extraction across all fifteen languages
 
 - Integrate Tree-sitter grammars.
 - Implement language detection.
@@ -1043,7 +1043,7 @@ Deliverable: Trace scans a repository and emits a valid, deterministic graph con
 - Record syntax-level relationships and diagnostics.
 - Add realistic fixtures for all languages.
 
-Deliverable: Trace produces useful syntax-level graphs for TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, and Ruby.
+Deliverable: Trace produces useful syntax-level graphs for TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, and R.
 
 ### Milestone 3: Dependency analysis
 
@@ -1172,10 +1172,20 @@ Trace is framework aware: it detects which application frameworks are used in a 
 | TypeScript/JavaScript | Vue          | `vue` import, `defineComponent`, `<script setup>`, Vue options API                                            |
 | TypeScript/JavaScript | Angular      | `@angular/core` import, `@Component`, `@Injectable`, `@NgModule`                                              |
 | TypeScript/JavaScript | Express      | `express` import, `express()`, `app.get`/`app.post`, middleware                                               |
-| TypeScript/JavaScript | Next.js      | `next/navigation`, `next/link`, `next/route` imports                                                          |
-| TypeScript/JavaScript | NestJS       | `@nestjs/core`, `@nestjs/common` imports, `@Controller`, `@Get`, `@Post`, `@Injectable`, `@Module` decorators |
+| TypeScript/JavaScript | Next.js      | `next/` imports, `next.config.*`                                                                              |
+| TypeScript/JavaScript | NestJS       | `@nestjs/*` imports, Nest decorators                                                                            |
+| TypeScript/JavaScript | Svelte       | `svelte` import                                                                                                 |
+| TypeScript/JavaScript | SvelteKit    | `@sveltejs/kit` imports, `svelte.config.*`                                                                      |
+| TypeScript/JavaScript | Nuxt         | `nuxt`, `#app`, `#imports`, `nuxt.config.*`                                                                     |
+| TypeScript/JavaScript | Hono         | `hono` import, `Hono()`                                                                                          |
+| TypeScript/JavaScript | tRPC         | `@trpc/*` imports, `initTRPC()`, `router()`                                                                    |
+| TypeScript/JavaScript | Prisma       | `@prisma/client`, `PrismaClient`                                                                                |
+| TypeScript/JavaScript | Drizzle ORM  | `drizzle-orm`, `drizzle()`, table helpers                                                                      |
 | Python                | Click        | `click` import, `click.command`, `click.group` calls                                                          |
 | Python                | Typer        | `typer` import, `typer.Typer` call                                                                            |
+| Python                | SQLAlchemy   | `sqlalchemy` import, `create_engine`, `sessionmaker`, `Base`                                                  |
+| Python                | Pydantic     | `pydantic` import, `BaseModel`                                                                                |
+| Python                | Celery       | `celery` import, `Celery`, `@task`/`@shared_task`                                                            |
 | Go                    | Cobra        | `github.com/spf13/cobra` import, `cobra.Command` call                                                         |
 | Go                    | Gin          | `gin-gonic/gin` import, `gin.Default()`, `router.GET`                                                         |
 | Go                    | Echo         | `labstack/echo` import, `echo.New()`, `router.GET`                                                            |

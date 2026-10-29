@@ -1,11 +1,16 @@
+mod c;
+mod cpp;
 mod csharp;
+mod dart;
 mod go;
 mod java;
 mod kotlin;
 mod php;
 mod python;
+mod r;
 mod ruby;
 mod rust;
+mod scala;
 mod swift;
 mod typescript;
 
@@ -29,5 +34,10 @@ pub fn parse(language: Language, path: &str, source: &str, tree: &Tree) -> Parse
         Language::CSharp => csharp::parse(language, path, source, tree),
         Language::Php => php::parse(language, path, source, tree),
         Language::Ruby => ruby::parse(language, path, source, tree),
+        Language::C => c::parse(language, path, source, tree),
+        Language::Cpp => cpp::parse(language, path, source, tree),
+        Language::Dart => dart::parse(language, path, source, tree),
+        Language::Scala => scala::parse(language, path, source, tree),
+        Language::R => r::parse(language, path, source, tree),
     }
 }

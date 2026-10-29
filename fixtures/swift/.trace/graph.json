@@ -6,7 +6,7 @@
     "name": "swift",
     "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-cli/../../fixtures/swift",
     "fileCount": 5,
-    "languageCount": 13
+    "languageCount": 18
   },
   "analysis": {
     "format": "json",
@@ -66,6 +66,26 @@
     {
       "language": "ruby",
       "grammar": "tree-sitter-ruby 0.23.1"
+    },
+    {
+      "language": "c",
+      "grammar": "tree-sitter-c 0.23.6"
+    },
+    {
+      "language": "cpp",
+      "grammar": "tree-sitter-cpp 0.23.4"
+    },
+    {
+      "language": "dart",
+      "grammar": "tree-sitter-dart 0.0.4"
+    },
+    {
+      "language": "scala",
+      "grammar": "tree-sitter-scala 0.24.0"
+    },
+    {
+      "language": "r",
+      "grammar": "tree-sitter-r 1.2.0"
     }
   ],
   "frameworks": [],
