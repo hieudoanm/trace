@@ -19,5 +19,5 @@ tracing = { workspace = true }
 
 [dev-dependencies]
 insta = { workspace = true }
-tempfile = "3"
+tempfile = "=3.27.0"
 trace-export = { path = "../trace-export" }

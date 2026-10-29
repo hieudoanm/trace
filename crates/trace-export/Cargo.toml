@@ -13,5 +13,5 @@ serde_json = { workspace = true }
 thiserror = { workspace = true }
 
 [dev-dependencies]
-jsonschema = "0.33"
-tempfile = "3"
+jsonschema = "=0.33.0"
+tempfile = "=3.27.0"
