@@ -12,9 +12,10 @@ use std::path::Path;
 use trace_core::Language;
 use trace_parser::ParsedFile;
 
-use crate::framework::registry::{
+use crate::framework::lookup::{
     signatures_for_base_class, signatures_for_call, signatures_for_decorator, signatures_for_import,
 };
+use crate::framework::signatures::FRAMEWORK_SIGNATURES;
 use crate::framework::types::{
     Framework, FrameworkConfidence, FrameworkFamily, FrameworkSignal, FrameworkSignalKind,
     FrameworkSignature,
@@ -61,7 +62,7 @@ pub struct FrameworkDetector {
 impl FrameworkDetector {
     pub fn new() -> Self {
         Self {
-            signatures: crate::framework::registry::FRAMEWORK_SIGNATURES.to_vec(),
+            signatures: FRAMEWORK_SIGNATURES.to_vec(),
         }
     }
 
@@ -284,7 +285,7 @@ fn extract_version(
 }
 
 /// Naive version extraction: look for `name@version`, `"name": "version"`,
-/// or `"name", "version"` patterns.
+/// or `name==version` patterns.
 fn version_from_text(text: &str, deps: &[&'static str]) -> Option<String> {
     for dep in deps {
         // Handle `name@version` (yarn/pnpm style).
@@ -316,6 +317,24 @@ fn version_from_text(text: &str, deps: &[&'static str]) -> Option<String> {
                 }
             }
         }
+        // Handle `name==version` / `name>=version` (requirements.txt style).
+        if let Some(start) = text.find(dep) {
+            let after = &text[start + dep.len()..];
+            let after = after.trim_start_matches(|c: char| c.is_whitespace());
+            for sep in ["==", ">=", "<=", "~=", "!==", "!= ", "> ", "< "] {
+                if let Some(rest) = after.strip_prefix(sep) {
+                    let end = rest
+                        .find(|c: char| {
+                            !c.is_ascii_alphanumeric() && c != '.' && c != '-' && c != '_'
+                        })
+                        .unwrap_or(rest.len());
+                    let version = &rest[..end];
+                    if !version.is_empty() {
+                        return Some(version.to_string());
+                    }
+                }
+            }
+        }
     }
     None
 }
@@ -323,14 +342,17 @@ fn version_from_text(text: &str, deps: &[&'static str]) -> Option<String> {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use trace_core::{language::Language, location::Position};
+    use trace_core::language::Language;
     use trace_parser::{
         CallData, CallKind, HeritageData, HeritageRelation, ImportData, ImportItem, ImportKind,
         ParsedFile,
     };
 
     fn range(line: u32) -> trace_core::SourceRange {
-        trace_core::SourceRange::new(Position::new(line, 1, 0), Position::new(line, 10, 9))
+        trace_core::SourceRange::new(
+            trace_core::location::Position::new(line, 1, 0),
+            trace_core::location::Position::new(line, 10, 9),
+        )
     }
 
     fn parsed_ts(path: &str) -> ParsedFile {

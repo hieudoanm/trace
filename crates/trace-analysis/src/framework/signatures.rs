@@ -88,6 +88,29 @@ pub const FRAMEWORK_SIGNATURES: &[FrameworkSignature] = &[
         manifest_confidence: FrameworkConfidence::Medium,
     },
     FrameworkSignature {
+        name: "nestjs",
+        display_name: "NestJS",
+        family: FrameworkFamily::EcmaScript,
+        import_prefixes: &["@nestjs/"],
+        decorators: &[
+            "Controller",
+            "Get",
+            "Post",
+            "Put",
+            "Delete",
+            "Patch",
+            "Injectable",
+            "Module",
+        ],
+        base_classes: &[],
+        calls: &[],
+        manifest_files: &["package.json"],
+        manifest_deps: &["@nestjs/core", "@nestjs/common"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
         name: "django",
         display_name: "Django",
         family: FrameworkFamily::Python,
@@ -145,6 +168,49 @@ pub const FRAMEWORK_SIGNATURES: &[FrameworkSignature] = &[
         manifest_confidence: FrameworkConfidence::Medium,
     },
     FrameworkSignature {
+        name: "typer",
+        display_name: "Typer",
+        family: FrameworkFamily::Python,
+        import_prefixes: &["typer"],
+        decorators: &[],
+        base_classes: &[],
+        calls: &["typer.Typer"],
+        manifest_files: &[
+            "requirements.txt",
+            "pyproject.toml",
+            "setup.py",
+            "setup.cfg",
+        ],
+        manifest_deps: &["typer"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
+        name: "click",
+        display_name: "Click",
+        family: FrameworkFamily::Python,
+        import_prefixes: &["click"],
+        decorators: &[],
+        base_classes: &[],
+        calls: &[
+            "click.command",
+            "click.group",
+            "click.option",
+            "click.argument",
+        ],
+        manifest_files: &[
+            "requirements.txt",
+            "pyproject.toml",
+            "setup.py",
+            "setup.cfg",
+        ],
+        manifest_deps: &["click"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
         name: "gin",
         display_name: "Gin",
         family: FrameworkFamily::Go,
@@ -173,6 +239,20 @@ pub const FRAMEWORK_SIGNATURES: &[FrameworkSignature] = &[
         manifest_confidence: FrameworkConfidence::Medium,
     },
     FrameworkSignature {
+        name: "cobra",
+        display_name: "Cobra",
+        family: FrameworkFamily::Go,
+        import_prefixes: &["github.com/spf13/cobra"],
+        decorators: &[],
+        base_classes: &[],
+        calls: &["cobra.Command"],
+        manifest_files: &["go.mod"],
+        manifest_deps: &["github.com/spf13/cobra"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
         name: "actix-web",
         display_name: "Actix Web",
         family: FrameworkFamily::Rust,
@@ -196,6 +276,39 @@ pub const FRAMEWORK_SIGNATURES: &[FrameworkSignature] = &[
         calls: &["Router", "routing"],
         manifest_files: &["Cargo.toml"],
         manifest_deps: &["axum"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
+        name: "clap.rs",
+        display_name: "clap.rs",
+        family: FrameworkFamily::Rust,
+        import_prefixes: &["clap"],
+        decorators: &[],
+        base_classes: &[],
+        calls: &["Command"],
+        manifest_files: &["Cargo.toml"],
+        manifest_deps: &["clap"],
+        import_confidence: FrameworkConfidence::Medium,
+        pattern_confidence: FrameworkConfidence::High,
+        manifest_confidence: FrameworkConfidence::Medium,
+    },
+    FrameworkSignature {
+        name: "ktor",
+        display_name: "Ktor",
+        family: FrameworkFamily::Kotlin,
+        import_prefixes: &["io.ktor"],
+        decorators: &[],
+        base_classes: &[],
+        calls: &["embeddedServer"],
+        manifest_files: &[
+            "build.gradle",
+            "build.gradle.kts",
+            "pom.xml",
+            "settings.gradle.kts",
+        ],
+        manifest_deps: &["ktor-server-core", "ktor-server-netty"],
         import_confidence: FrameworkConfidence::Medium,
         pattern_confidence: FrameworkConfidence::High,
         manifest_confidence: FrameworkConfidence::Medium,
@@ -308,110 +421,3 @@ pub const FRAMEWORK_SIGNATURES: &[FrameworkSignature] = &[
         manifest_confidence: FrameworkConfidence::Medium,
     },
 ];
-
-/// Look up all signatures whose import prefixes match a given import path.
-///
-/// A prefix matches only at a package boundary: the import path must equal
-/// the prefix, or be followed by `/` (a subpath import). Prefixes ending in
-/// `/` (scoped package scopes like `@angular/`) also match any package within
-/// that scope. This prevents `react-native` from matching the `react` prefix.
-pub fn signatures_for_import(import_path: &str) -> Vec<&'static FrameworkSignature> {
-    FRAMEWORK_SIGNATURES
-        .iter()
-        .filter(|sig| {
-            sig.import_prefixes.iter().any(|prefix| {
-                if import_path == *prefix {
-                    return true;
-                }
-                let Some(rest) = import_path.strip_prefix(prefix) else {
-                    return false;
-                };
-                rest.is_empty() || rest.starts_with('/') || prefix.ends_with('/')
-            })
-        })
-        .collect()
-}
-
-/// Look up all signatures whose decorators contain a given name.
-pub fn signatures_for_decorator(decorator: &str) -> Vec<&'static FrameworkSignature> {
-    FRAMEWORK_SIGNATURES
-        .iter()
-        .filter(|sig| sig.decorators.iter().any(|d| d == &decorator))
-        .collect()
-}
-
-/// Look up all signatures whose base classes contain a given name.
-pub fn signatures_for_base_class(base: &str) -> Vec<&'static FrameworkSignature> {
-    FRAMEWORK_SIGNATURES
-        .iter()
-        .filter(|sig| sig.base_classes.iter().any(|b| b == &base))
-        .collect()
-}
-
-/// Look up all signatures whose calls contain a given name.
-pub fn signatures_for_call(call: &str) -> Vec<&'static FrameworkSignature> {
-    FRAMEWORK_SIGNATURES
-        .iter()
-        .filter(|sig| sig.calls.iter().any(|c| c == &call))
-        .collect()
-}
-
-/// Look up all signatures whose manifest dependencies contain a given dep.
-pub fn signatures_for_manifest_dep(dep: &str) -> Vec<&'static FrameworkSignature> {
-    FRAMEWORK_SIGNATURES
-        .iter()
-        .filter(|sig| sig.manifest_deps.iter().any(|d| dep.contains(*d)))
-        .collect()
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn import_matches_react() {
-        let sigs = signatures_for_import("react");
-        assert_eq!(sigs.len(), 1);
-        assert_eq!(sigs[0].name, "react");
-    }
-
-    #[test]
-    fn import_matches_angular() {
-        let sigs = signatures_for_import("@angular/core");
-        assert_eq!(sigs.len(), 1);
-        assert_eq!(sigs[0].name, "angular");
-    }
-
-    #[test]
-    fn decorator_matches_spring() {
-        let sigs = signatures_for_decorator("RestController");
-        assert_eq!(sigs.len(), 1);
-        assert_eq!(sigs[0].name, "spring-boot");
-    }
-
-    #[test]
-    fn base_class_matches_django() {
-        let sigs = signatures_for_base_class("Model");
-        assert!(sigs.iter().any(|s| s.name == "django"));
-        assert!(sigs.iter().any(|s| s.name == "laravel"));
-    }
-
-    #[test]
-    fn manifest_dep_matches_rails() {
-        let sigs = signatures_for_manifest_dep("rails 7.1");
-        assert_eq!(sigs.len(), 1);
-        assert_eq!(sigs[0].name, "rails");
-    }
-
-    #[test]
-    fn no_false_positive_for_similar_imports() {
-        let sigs = signatures_for_import("react-native");
-        assert_eq!(sigs.len(), 0);
-        let sigs = signatures_for_import("react-query");
-        assert_eq!(sigs.len(), 0);
-        // Subpath imports still match.
-        let sigs = signatures_for_import("react/jsx-runtime");
-        assert_eq!(sigs.len(), 1);
-        assert_eq!(sigs[0].name, "react");
-    }
-}

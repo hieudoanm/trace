@@ -2,7 +2,8 @@
 //! decorators, base classes, calls, and package manifests.
 
 pub mod detector;
-pub mod registry;
+pub mod lookup;
+pub mod signatures;
 pub mod types;
 
 pub use detector::{FrameworkDetectionResult, FrameworkDetector, ManifestContents};
