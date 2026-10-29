@@ -1,0 +1,2749 @@
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "rust",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-cli/../../fixtures/rust",
+    "fileCount": 4,
+    "languageCount": 13
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": true,
+    "semanticMode": "off",
+    "languages": []
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "tsx",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "javascript",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "jsx",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "python",
+      "grammar": "tree-sitter-python 0.25.0"
+    },
+    {
+      "language": "go",
+      "grammar": "tree-sitter-go 0.25.0"
+    },
+    {
+      "language": "rust",
+      "grammar": "tree-sitter-rust 0.24.2"
+    },
+    {
+      "language": "kotlin",
+      "grammar": "tree-sitter-kt 0.1.0"
+    },
+    {
+      "language": "swift",
+      "grammar": "tree-sitter-swift 0.7.4"
+    },
+    {
+      "language": "java",
+      "grammar": "tree-sitter-java 0.23.5"
+    },
+    {
+      "language": "csharp",
+      "grammar": "tree-sitter-c-sharp 0.23.1"
+    },
+    {
+      "language": "php",
+      "grammar": "tree-sitter-php 0.23.11"
+    },
+    {
+      "language": "ruby",
+      "grammar": "tree-sitter-ruby 0.23.1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "external:rust:Self",
+      "kind": "external_symbol",
+      "name": "Self",
+      "language": "rust"
+    },
+    {
+      "id": "external:rust:std::collections::HashMap.new",
+      "kind": "external_symbol",
+      "name": "new",
+      "language": "rust"
+    },
+    {
+      "id": "external:unknown:shapes",
+      "kind": "external_symbol",
+      "name": "shapes",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/complex.rs",
+      "kind": "file",
+      "name": "src/complex.rs",
+      "file": "src/complex.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/lib.rs",
+      "kind": "file",
+      "name": "src/lib.rs",
+      "file": "src/lib.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/main.rs",
+      "kind": "file",
+      "name": "src/main.rs",
+      "file": "src/main.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/service.rs",
+      "kind": "file",
+      "name": "src/service.rs",
+      "file": "src/service.rs",
+      "language": "rust"
+    },
+    {
+      "id": "function:src/complex.rs::total",
+      "kind": "function",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 167
+        },
+        "end": {
+          "line": 4,
+          "column": 89,
+          "byte": 255
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/complex.rs",
+      "exported": true
+    },
+    {
+      "id": "function:src/lib.rs::total_area",
+      "kind": "function",
+      "name": "total_area",
+      "qualifiedName": "total_area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "byte": 742
+        },
+        "end": {
+          "line": 41,
+          "column": 2,
+          "byte": 835
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "function:src/main.rs::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "byte": 66
+        },
+        "end": {
+          "line": 11,
+          "column": 2,
+          "byte": 263
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/main.rs",
+      "exported": false
+    },
+    {
+      "id": "method:src/complex.rs::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 25,
+          "byte": 100
+        },
+        "end": {
+          "line": 3,
+          "column": 89,
+          "byte": 164
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/complex.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/complex.rs::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 19,
+          "byte": 18
+        },
+        "end": {
+          "line": 1,
+          "column": 41,
+          "byte": 40
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/complex.rs::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 234
+        },
+        "end": {
+          "line": 15,
+          "column": 6,
+          "byte": 320
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Circle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Circle.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 5,
+          "byte": 326
+        },
+        "end": {
+          "line": 19,
+          "column": 6,
+          "byte": 409
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Rectangle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Rectangle.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 5,
+          "byte": 550
+        },
+        "end": {
+          "line": 31,
+          "column": 6,
+          "byte": 612
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Rectangle.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 33,
+          "column": 5,
+          "byte": 618
+        },
+        "end": {
+          "line": 35,
+          "column": 6,
+          "byte": 693
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 70
+        },
+        "end": {
+          "line": 3,
+          "column": 27,
+          "byte": 92
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/lib.rs::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/lib.rs::Shape.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Shape.perimeter",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 97
+        },
+        "end": {
+          "line": 4,
+          "column": 32,
+          "byte": 124
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/lib.rs::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 5,
+          "byte": 450
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 531
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "method",
+      "name": "new",
+      "qualifiedName": "InMemoryRepository.new",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 279
+        },
+        "end": {
+          "line": 17,
+          "column": 6,
+          "byte": 385
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 537
+        },
+        "end": {
+          "line": 27,
+          "column": 6,
+          "byte": 625
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::Repository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "Repository.find",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 67
+        },
+        "end": {
+          "line": 4,
+          "column": 43,
+          "byte": 105
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/service.rs::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::Repository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "Repository.save",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 110
+        },
+        "end": {
+          "line": 5,
+          "column": 47,
+          "byte": 152
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/service.rs::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.add",
+      "kind": "method",
+      "name": "add",
+      "qualifiedName": "ShapeService.add",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 41,
+          "column": 5,
+          "byte": 846
+        },
+        "end": {
+          "line": 43,
+          "column": 6,
+          "byte": 941
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 45,
+          "column": 5,
+          "byte": 947
+        },
+        "end": {
+          "line": 48,
+          "column": 6,
+          "byte": 1072
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.new",
+      "kind": "method",
+      "name": "new",
+      "qualifiedName": "ShapeService.new",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 5,
+          "byte": 735
+        },
+        "end": {
+          "line": 39,
+          "column": 6,
+          "byte": 840
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "module:src/complex.rs",
+      "kind": "module",
+      "name": "crate::complex",
+      "file": "src/complex.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:src/lib.rs",
+      "kind": "module",
+      "name": "crate",
+      "file": "src/lib.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:src/main.rs",
+      "kind": "module",
+      "name": "crate",
+      "file": "src/main.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:src/main.rs::shapes",
+      "kind": "module",
+      "name": "shapes",
+      "qualifiedName": "shapes",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12,
+          "byte": 11
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/main.rs",
+      "exported": false
+    },
+    {
+      "id": "module:src/service.rs",
+      "kind": "module",
+      "name": "crate::service",
+      "file": "src/service.rs",
+      "language": "rust"
+    },
+    {
+      "id": "property:src/complex.rs::Circle.r",
+      "kind": "property",
+      "name": "r",
+      "qualifiedName": "Circle.r",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 21,
+          "byte": 63
+        },
+        "end": {
+          "line": 2,
+          "column": 31,
+          "byte": 73
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/complex.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Circle.radius",
+      "kind": "property",
+      "name": "radius",
+      "qualifiedName": "Circle.radius",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 186
+        },
+        "end": {
+          "line": 9,
+          "column": 20,
+          "byte": 201
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Rectangle.height",
+      "kind": "property",
+      "name": "height",
+      "qualifiedName": "Rectangle.height",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 499
+        },
+        "end": {
+          "line": 25,
+          "column": 20,
+          "byte": 514
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/lib.rs::Rectangle.width",
+      "kind": "property",
+      "name": "width",
+      "qualifiedName": "Rectangle.width",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 24,
+          "column": 5,
+          "byte": 479
+        },
+        "end": {
+          "line": 24,
+          "column": 19,
+          "byte": 493
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/lib.rs::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 195
+        },
+        "end": {
+          "line": 9,
+          "column": 48,
+          "byte": 238
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/service.rs::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 5,
+          "byte": 659
+        },
+        "end": {
+          "line": 31,
+          "column": 52,
+          "byte": 706
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "struct:src/complex.rs::Circle",
+      "kind": "struct",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 43
+        },
+        "end": {
+          "line": 2,
+          "column": 33,
+          "byte": 75
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/complex.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/lib.rs::Circle",
+      "kind": "struct",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 162
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 204
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/lib.rs::Rectangle",
+      "kind": "struct",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "byte": 452
+        },
+        "end": {
+          "line": 26,
+          "column": 2,
+          "byte": 517
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/service.rs::InMemoryRepository",
+      "kind": "struct",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 156
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 241
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/service.rs::ShapeService",
+      "kind": "struct",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 30,
+          "column": 1,
+          "byte": 629
+        },
+        "end": {
+          "line": 32,
+          "column": 2,
+          "byte": 709
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
+      "id": "trait:src/complex.rs::Shape",
+      "kind": "trait",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/complex.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 43,
+          "byte": 42
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/complex.rs",
+      "exported": true
+    },
+    {
+      "id": "trait:src/lib.rs::Shape",
+      "kind": "trait",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/lib.rs",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 48
+        },
+        "end": {
+          "line": 5,
+          "column": 2,
+          "byte": 126
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/lib.rs",
+      "exported": true
+    },
+    {
+      "id": "trait:src/service.rs::Repository",
+      "kind": "trait",
+      "name": "Repository",
+      "qualifiedName": "Repository",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 37
+        },
+        "end": {
+          "line": 6,
+          "column": 2,
+          "byte": 154
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:cloned",
+      "kind": "unknown",
+      "name": "cloned",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:expect",
+      "kind": "unknown",
+      "name": "expect",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:get",
+      "kind": "unknown",
+      "name": "get",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:insert",
+      "kind": "unknown",
+      "name": "insert",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:iter",
+      "kind": "unknown",
+      "name": "iter",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:map",
+      "kind": "unknown",
+      "name": "map",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:println",
+      "kind": "unknown",
+      "name": "println",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:sum",
+      "kind": "unknown",
+      "name": "sum",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:vec",
+      "kind": "unknown",
+      "name": "vec",
+      "language": "rust"
+    },
+    {
+      "id": "variable:src/main.rs::main.shapes",
+      "kind": "variable",
+      "name": "shapes",
+      "qualifiedName": "main.shapes",
+      "file": "src/main.rs",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 82
+        },
+        "end": {
+          "line": 9,
+          "column": 7,
+          "byte": 205
+        }
+      },
+      "language": "rust",
+      "parent": "function:src/main.rs::main",
+      "exported": false
+    },
+    {
+      "id": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "variable",
+      "name": "circle",
+      "qualifiedName": "ShapeService.area.circle",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 46,
+          "column": 9,
+          "byte": 993
+        },
+        "end": {
+          "line": 46,
+          "column": 60,
+          "byte": 1044
+        }
+      },
+      "language": "rust",
+      "parent": "method:src/service.rs::ShapeService.area",
+      "exported": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:src/complex.rs",
+      "target": "function:src/complex.rs::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "method:src/complex.rs::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "method:src/complex.rs::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "module:src/complex.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "property:src/complex.rs::Circle.r",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "struct:src/complex.rs::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "function:src/complex.rs::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "function:src/complex.rs::total",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "struct:src/complex.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "struct:src/complex.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/complex.rs",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "module:src/lib.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Circle.radius",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.height",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.width",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "function:src/main.rs::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "module:src/main.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "module:src/main.rs::shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "variable:src/main.rs::main.shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.rs",
+      "target": "external:unknown:shapes",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 1,
+            "byte": 13
+          },
+          "end": {
+            "line": 3,
+            "column": 52,
+            "byte": 64
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::Repository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::Repository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "module:src/service.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "property:src/service.rs::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "function:src/complex.rs::total",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 72,
+            "byte": 238
+          },
+          "end": {
+            "line": 4,
+            "column": 80,
+            "byte": 246
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.rs::total",
+      "target": "unresolved:iter",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 50,
+            "byte": 216
+          },
+          "end": {
+            "line": 4,
+            "column": 63,
+            "byte": 229
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.rs::total",
+      "target": "unresolved:map",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 50,
+            "byte": 216
+          },
+          "end": {
+            "line": 4,
+            "column": 81,
+            "byte": 247
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.rs::total",
+      "target": "unresolved:sum",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 50,
+            "byte": 216
+          },
+          "end": {
+            "line": 4,
+            "column": 87,
+            "byte": 253
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/complex.rs::total",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 32,
+            "byte": 198
+          },
+          "end": {
+            "line": 4,
+            "column": 37,
+            "byte": 203
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 27,
+            "byte": 818
+          },
+          "end": {
+            "line": 40,
+            "column": 35,
+            "byte": 826
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:iter",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 18,
+            "byte": 809
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:map",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 36,
+            "byte": 827
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "unresolved:sum",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 40,
+            "column": 5,
+            "byte": 796
+          },
+          "end": {
+            "line": 40,
+            "column": 42,
+            "byte": 833
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/lib.rs::total_area",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 39,
+            "column": 34,
+            "byte": 775
+          },
+          "end": {
+            "line": 39,
+            "column": 39,
+            "byte": 780
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:println",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 5,
+            "byte": 210
+          },
+          "end": {
+            "line": 10,
+            "column": 55,
+            "byte": 260
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 35,
+            "byte": 112
+          },
+          "end": {
+            "line": 9,
+            "column": 6,
+            "byte": 204
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/main.rs::main",
+      "target": "unresolved:Shape",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 26,
+            "byte": 103
+          },
+          "end": {
+            "line": 6,
+            "column": 31,
+            "byte": 108
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:cloned",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 9,
+            "byte": 498
+          },
+          "end": {
+            "line": 22,
+            "column": 36,
+            "byte": 525
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 9,
+            "byte": 498
+          },
+          "end": {
+            "line": 22,
+            "column": 27,
+            "byte": 516
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 40,
+            "byte": 485
+          },
+          "end": {
+            "line": 21,
+            "column": 41,
+            "byte": 486
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.new",
+      "target": "external:rust:Self",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 9,
+            "byte": 310
+          },
+          "end": {
+            "line": 16,
+            "column": 10,
+            "byte": 379
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.new",
+      "target": "external:rust:std::collections::HashMap.new",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 20,
+            "byte": 336
+          },
+          "end": {
+            "line": 15,
+            "column": 52,
+            "byte": 368
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.save",
+      "target": "unresolved:insert",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 9,
+            "byte": 589
+          },
+          "end": {
+            "line": 26,
+            "column": 38,
+            "byte": 618
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 44,
+            "byte": 576
+          },
+          "end": {
+            "line": 25,
+            "column": 45,
+            "byte": 577
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::Repository.find",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 40,
+            "byte": 102
+          },
+          "end": {
+            "line": 4,
+            "column": 41,
+            "byte": 103
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::Repository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 44,
+            "byte": 149
+          },
+          "end": {
+            "line": 5,
+            "column": 45,
+            "byte": 150
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.add",
+      "target": "unresolved:insert",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 42,
+            "column": 9,
+            "byte": 906
+          },
+          "end": {
+            "line": 42,
+            "column": 37,
+            "byte": 934
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.add",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 47,
+            "byte": 888
+          },
+          "end": {
+            "line": 41,
+            "column": 53,
+            "byte": 894
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 47,
+            "column": 9,
+            "byte": 1053
+          },
+          "end": {
+            "line": 47,
+            "column": 22,
+            "byte": 1066
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:expect",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 22,
+            "byte": 1006
+          },
+          "end": {
+            "line": 46,
+            "column": 59,
+            "byte": 1043
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 22,
+            "byte": 1006
+          },
+          "end": {
+            "line": 46,
+            "column": 39,
+            "byte": 1023
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.new",
+      "target": "external:rust:Self",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 36,
+            "column": 9,
+            "byte": 766
+          },
+          "end": {
+            "line": 38,
+            "column": 10,
+            "byte": 834
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.new",
+      "target": "external:rust:std::collections::HashMap.new",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 37,
+            "column": 19,
+            "byte": 791
+          },
+          "end": {
+            "line": 37,
+            "column": 51,
+            "byte": 823
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "struct:src/complex.rs::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 16,
+            "byte": 91
+          },
+          "end": {
+            "line": 3,
+            "column": 22,
+            "byte": 97
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "function:src/complex.rs::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "method:src/complex.rs::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "method:src/complex.rs::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "property:src/complex.rs::Circle.r",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "struct:src/complex.rs::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/complex.rs",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 221
+          },
+          "end": {
+            "line": 12,
+            "column": 22,
+            "byte": 227
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 16,
+            "byte": 534
+          },
+          "end": {
+            "line": 28,
+            "column": 25,
+            "byte": 543
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "function:src/lib.rs::total_area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Circle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Rectangle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "method:src/lib.rs::Shape.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Circle.radius",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.height",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "property:src/lib.rs::Rectangle.width",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "struct:src/lib.rs::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/lib.rs",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "function:src/main.rs::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "module:src/main.rs::shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.rs",
+      "target": "variable:src/main.rs::main.shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 9,
+            "byte": 251
+          },
+          "end": {
+            "line": 12,
+            "column": 27,
+            "byte": 269
+          }
+        },
+        {
+          "start": {
+            "line": 20,
+            "column": 34,
+            "byte": 422
+          },
+          "end": {
+            "line": 20,
+            "column": 52,
+            "byte": 440
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 34,
+            "column": 6,
+            "byte": 716
+          },
+          "end": {
+            "line": 34,
+            "column": 18,
+            "byte": 728
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 28,
+            "byte": 270
+          },
+          "end": {
+            "line": 12,
+            "column": 29,
+            "byte": 271
+          }
+        },
+        {
+          "start": {
+            "line": 20,
+            "column": 53,
+            "byte": 441
+          },
+          "end": {
+            "line": 20,
+            "column": 54,
+            "byte": 442
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::Repository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::Repository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "property:src/service.rs::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/complex.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/lib.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/main.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/service.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "struct:src/complex.rs::Circle",
+      "target": "trait:src/complex.rs::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 6,
+            "byte": 81
+          },
+          "end": {
+            "line": 3,
+            "column": 11,
+            "byte": 86
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/lib.rs::Circle",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 6,
+            "byte": 211
+          },
+          "end": {
+            "line": 12,
+            "column": 11,
+            "byte": 216
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/lib.rs::Rectangle",
+      "target": "trait:src/lib.rs::Shape",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 28,
+            "column": 6,
+            "byte": 524
+          },
+          "end": {
+            "line": 28,
+            "column": 11,
+            "byte": 529
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/service.rs::InMemoryRepository",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 16,
+            "byte": 404
+          },
+          "end": {
+            "line": 20,
+            "column": 29,
+            "byte": 417
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/service.rs::InMemoryRepository",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 31,
+            "byte": 186
+          },
+          "end": {
+            "line": 8,
+            "column": 32,
+            "byte": 187
+          }
+        },
+        {
+          "start": {
+            "line": 9,
+            "column": 46,
+            "byte": 236
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "byte": 237
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/service.rs::ShapeService",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 45,
+            "byte": 699
+          },
+          "end": {
+            "line": 31,
+            "column": 51,
+            "byte": 705
+          }
+        }
+      ]
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `crate::shapes::Circle`",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "byte": 35
+        }
+      },
+      "language": "rust"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `crate::shapes::Shape`",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "byte": 35
+        }
+      },
+      "language": "rust"
+    }
+  ],
+  "statistics": {
+    "files": 4,
+    "packages": 0,
+    "nodes": 61,
+    "edges": 146,
+    "symbols": 48,
+    "unresolvedEdges": 26,
+    "diagnostics": 2,
+    "byNodeKind": {
+      "external_symbol": 3,
+      "file": 4,
+      "function": 3,
+      "method": 16,
+      "module": 5,
+      "property": 6,
+      "repository": 1,
+      "struct": 5,
+      "trait": 3,
+      "unknown": 13,
+      "variable": 2
+    },
+    "byEdgeKind": {
+      "calls": 21,
+      "contains": 44,
+      "defines": 36,
+      "exports": 24,
+      "implements": 4,
+      "imports": 1,
+      "uses_type": 16
+    },
+    "byLanguage": {
+      "rust": 60
+    },
+    "byStatus": {
+      "resolved_external": 5,
+      "resolved_internal": 115,
+      "unresolved": 26
+    }
+  }
+}

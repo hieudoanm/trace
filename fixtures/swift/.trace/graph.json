@@ -1,0 +1,2386 @@
+{
+  "schemaVersion": "1.0",
+  "traceVersion": "0.1.0",
+  "repository": {
+    "id": "repository:.",
+    "name": "swift",
+    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-cli/../../fixtures/swift",
+    "fileCount": 5,
+    "languageCount": 13
+  },
+  "analysis": {
+    "format": "json",
+    "cacheEnabled": true,
+    "semanticMode": "off",
+    "languages": []
+  },
+  "languages": [
+    {
+      "language": "typescript",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "tsx",
+      "grammar": "tree-sitter-typescript 0.23.2"
+    },
+    {
+      "language": "javascript",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "jsx",
+      "grammar": "tree-sitter-javascript 0.25.0"
+    },
+    {
+      "language": "python",
+      "grammar": "tree-sitter-python 0.25.0"
+    },
+    {
+      "language": "go",
+      "grammar": "tree-sitter-go 0.25.0"
+    },
+    {
+      "language": "rust",
+      "grammar": "tree-sitter-rust 0.24.2"
+    },
+    {
+      "language": "kotlin",
+      "grammar": "tree-sitter-kt 0.1.0"
+    },
+    {
+      "language": "swift",
+      "grammar": "tree-sitter-swift 0.7.4"
+    },
+    {
+      "language": "java",
+      "grammar": "tree-sitter-java 0.23.5"
+    },
+    {
+      "language": "csharp",
+      "grammar": "tree-sitter-c-sharp 0.23.1"
+    },
+    {
+      "language": "php",
+      "grammar": "tree-sitter-php 0.23.11"
+    },
+    {
+      "language": "ruby",
+      "grammar": "tree-sitter-ruby 0.23.1"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "class:src/Complex.swift::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "byte": 41
+        },
+        "end": {
+          "line": 2,
+          "column": 78,
+          "byte": 118
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Complex.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.swift::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 2,
+          "byte": 201
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.swift::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "byte": 203
+        },
+        "end": {
+          "line": 24,
+          "column": 2,
+          "byte": 513
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/shapes.swift::Circle",
+      "kind": "class",
+      "name": "Circle",
+      "qualifiedName": "Circle",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 1,
+          "byte": 189
+        },
+        "end": {
+          "line": 24,
+          "column": 2,
+          "byte": 443
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/shapes.swift::Rectangle",
+      "kind": "class",
+      "name": "Rectangle",
+      "qualifiedName": "Rectangle",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "byte": 504
+        },
+        "end": {
+          "line": 43,
+          "column": 2,
+          "byte": 822
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/shapes.swift::Square",
+      "kind": "class",
+      "name": "Square",
+      "qualifiedName": "Square",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 46,
+          "column": 1,
+          "byte": 867
+        },
+        "end": {
+          "line": 60,
+          "column": 2,
+          "byte": 1095
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "constant:src/main.swift::shapes",
+      "kind": "constant",
+      "name": "shapes",
+      "qualifiedName": "shapes",
+      "file": "src/main.swift",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 19
+        },
+        "end": {
+          "line": 6,
+          "column": 2,
+          "byte": 113
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/main.swift",
+      "exported": false
+    },
+    {
+      "id": "constant:src/main.swift::total",
+      "kind": "constant",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "src/main.swift",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 115
+        },
+        "end": {
+          "line": 8,
+          "column": 50,
+          "byte": 164
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/main.swift",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "constructor",
+      "name": "init",
+      "qualifiedName": "ShapeService.init",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 5,
+          "byte": 270
+        },
+        "end": {
+          "line": 16,
+          "column": 6,
+          "byte": 341
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.swift::Circle.init",
+      "kind": "constructor",
+      "name": "init",
+      "qualifiedName": "Circle.init",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 240
+        },
+        "end": {
+          "line": 15,
+          "column": 6,
+          "byte": 297
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.swift::Rectangle.init",
+      "kind": "constructor",
+      "name": "init",
+      "qualifiedName": "Rectangle.init",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 5,
+          "byte": 580
+        },
+        "end": {
+          "line": 34,
+          "column": 6,
+          "byte": 679
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "constructor:src/shapes.swift::Square.init",
+      "kind": "constructor",
+      "name": "init",
+      "qualifiedName": "Square.init",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 49,
+          "column": 5,
+          "byte": 916
+        },
+        "end": {
+          "line": 51,
+          "column": 6,
+          "byte": 967
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Square",
+      "exported": false
+    },
+    {
+      "id": "external:swift:ShapeService",
+      "kind": "external_symbol",
+      "name": "ShapeService",
+      "language": "swift"
+    },
+    {
+      "id": "external:swift:String",
+      "kind": "external_symbol",
+      "name": "String",
+      "language": "swift"
+    },
+    {
+      "id": "external:unknown:Foundation",
+      "kind": "external_symbol",
+      "name": "Foundation",
+      "language": "swift"
+    },
+    {
+      "id": "file:src/Complex.swift",
+      "kind": "file",
+      "name": "src/Complex.swift",
+      "file": "src/Complex.swift",
+      "language": "swift"
+    },
+    {
+      "id": "file:src/Service.swift",
+      "kind": "file",
+      "name": "src/Service.swift",
+      "file": "src/Service.swift",
+      "language": "swift"
+    },
+    {
+      "id": "file:src/main.swift",
+      "kind": "file",
+      "name": "src/main.swift",
+      "file": "src/main.swift",
+      "language": "swift"
+    },
+    {
+      "id": "file:src/shapes.swift",
+      "kind": "file",
+      "name": "src/shapes.swift",
+      "file": "src/shapes.swift",
+      "language": "swift"
+    },
+    {
+      "id": "file:src/utils.swift",
+      "kind": "file",
+      "name": "src/utils.swift",
+      "file": "src/utils.swift",
+      "language": "swift"
+    },
+    {
+      "id": "function:src/Complex.swift::total",
+      "kind": "function",
+      "name": "total",
+      "qualifiedName": "total",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 119
+        },
+        "end": {
+          "line": 3,
+          "column": 80,
+          "byte": 198
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Complex.swift",
+      "exported": false
+    },
+    {
+      "id": "function:src/Service.swift::createService",
+      "kind": "function",
+      "name": "createService",
+      "qualifiedName": "createService",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 1,
+          "byte": 515
+        },
+        "end": {
+          "line": 28,
+          "column": 2,
+          "byte": 615
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
+    },
+    {
+      "id": "function:src/shapes.swift::totalArea",
+      "kind": "function",
+      "name": "totalArea",
+      "qualifiedName": "totalArea",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 63,
+          "column": 1,
+          "byte": 1151
+        },
+        "end": {
+          "line": 65,
+          "column": 2,
+          "byte": 1245
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "function:src/utils.swift::circleArea",
+      "kind": "function",
+      "name": "circleArea",
+      "qualifiedName": "circleArea",
+      "file": "src/utils.swift",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 142
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 220
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/utils.swift",
+      "exported": false
+    },
+    {
+      "id": "function:src/utils.swift::formatFloat",
+      "kind": "function",
+      "name": "formatFloat",
+      "qualifiedName": "formatFloat",
+      "file": "src/utils.swift",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 52
+        },
+        "end": {
+          "line": 6,
+          "column": 2,
+          "byte": 140
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/utils.swift",
+      "exported": false
+    },
+    {
+      "id": "interface:src/Complex.swift::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 41,
+          "byte": 40
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Complex.swift",
+      "exported": false
+    },
+    {
+      "id": "interface:src/shapes.swift::Shape",
+      "kind": "interface",
+      "name": "Shape",
+      "qualifiedName": "Shape",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 1,
+          "byte": 61
+        },
+        "end": {
+          "line": 7,
+          "column": 2,
+          "byte": 136
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "method:src/Complex.swift::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 39,
+          "byte": 79
+        },
+        "end": {
+          "line": 2,
+          "column": 76,
+          "byte": 116
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Complex.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/Complex.swift::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 18,
+          "byte": 17
+        },
+        "end": {
+          "line": 1,
+          "column": 39,
+          "byte": 38
+        }
+      },
+      "language": "swift",
+      "parent": "interface:src/Complex.swift::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 67
+        },
+        "end": {
+          "line": 5,
+          "column": 6,
+          "byte": 127
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 132
+        },
+        "end": {
+          "line": 8,
+          "column": 6,
+          "byte": 199
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 5,
+          "byte": 347
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 511
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Circle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Circle.area",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 17,
+          "column": 5,
+          "byte": 303
+        },
+        "end": {
+          "line": 19,
+          "column": 6,
+          "byte": 369
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Circle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Circle.perimeter",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 5,
+          "byte": 375
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 441
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Rectangle.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Rectangle.area",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 36,
+          "column": 5,
+          "byte": 685
+        },
+        "end": {
+          "line": 38,
+          "column": 6,
+          "byte": 744
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Rectangle.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Rectangle.perimeter",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 40,
+          "column": 5,
+          "byte": 750
+        },
+        "end": {
+          "line": 42,
+          "column": 6,
+          "byte": 820
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Shape.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Shape.area",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 82
+        },
+        "end": {
+          "line": 5,
+          "column": 26,
+          "byte": 103
+        }
+      },
+      "language": "swift",
+      "parent": "interface:src/shapes.swift::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Shape.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Shape.perimeter",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 108
+        },
+        "end": {
+          "line": 6,
+          "column": 31,
+          "byte": 134
+        }
+      },
+      "language": "swift",
+      "parent": "interface:src/shapes.swift::Shape",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Square.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "Square.area",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 53,
+          "column": 5,
+          "byte": 973
+        },
+        "end": {
+          "line": 55,
+          "column": 6,
+          "byte": 1029
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Square",
+      "exported": false
+    },
+    {
+      "id": "method:src/shapes.swift::Square.perimeter",
+      "kind": "method",
+      "name": "perimeter",
+      "qualifiedName": "Square.perimeter",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 57,
+          "column": 5,
+          "byte": 1035
+        },
+        "end": {
+          "line": 59,
+          "column": 6,
+          "byte": 1093
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Square",
+      "exported": false
+    },
+    {
+      "id": "module:src/Complex.swift",
+      "kind": "module",
+      "name": "Complex",
+      "file": "src/Complex.swift",
+      "language": "swift"
+    },
+    {
+      "id": "module:src/Service.swift",
+      "kind": "module",
+      "name": "Service",
+      "file": "src/Service.swift",
+      "language": "swift"
+    },
+    {
+      "id": "module:src/main.swift",
+      "kind": "module",
+      "name": "main",
+      "file": "src/main.swift",
+      "language": "swift"
+    },
+    {
+      "id": "module:src/shapes.swift",
+      "kind": "module",
+      "name": "shapes",
+      "file": "src/shapes.swift",
+      "language": "swift"
+    },
+    {
+      "id": "module:src/utils.swift",
+      "kind": "module",
+      "name": "utils",
+      "file": "src/utils.swift",
+      "language": "swift"
+    },
+    {
+      "id": "property:src/Complex.swift::Circle.r",
+      "kind": "property",
+      "name": "r",
+      "qualifiedName": "Circle.r",
+      "file": "src/Complex.swift",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 24,
+          "byte": 64
+        },
+        "end": {
+          "line": 2,
+          "column": 37,
+          "byte": 77
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Complex.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 5,
+          "byte": 34
+        },
+        "end": {
+          "line": 2,
+          "column": 33,
+          "byte": 62
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.swift::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 5,
+          "byte": 228
+        },
+        "end": {
+          "line": 12,
+          "column": 41,
+          "byte": 264
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.swift::Circle.radius",
+      "kind": "property",
+      "name": "radius",
+      "qualifiedName": "Circle.radius",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 5,
+          "byte": 216
+        },
+        "end": {
+          "line": 11,
+          "column": 23,
+          "byte": 234
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Circle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.swift::Rectangle.height",
+      "kind": "property",
+      "name": "height",
+      "qualifiedName": "Rectangle.height",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 5,
+          "byte": 556
+        },
+        "end": {
+          "line": 29,
+          "column": 23,
+          "byte": 574
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.swift::Rectangle.width",
+      "kind": "property",
+      "name": "width",
+      "qualifiedName": "Rectangle.width",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 28,
+          "column": 5,
+          "byte": 534
+        },
+        "end": {
+          "line": 28,
+          "column": 22,
+          "byte": 551
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Rectangle",
+      "exported": false
+    },
+    {
+      "id": "property:src/shapes.swift::Square.side",
+      "kind": "property",
+      "name": "side",
+      "qualifiedName": "Square.side",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 47,
+          "column": 5,
+          "byte": 894
+        },
+        "end": {
+          "line": 47,
+          "column": 21,
+          "byte": 910
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/shapes.swift::Square",
+      "exported": false
+    },
+    {
+      "id": "repository:.",
+      "kind": "repository",
+      "name": "repository"
+    },
+    {
+      "id": "unresolved:Circle",
+      "kind": "unknown",
+      "name": "Circle",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:Shape",
+      "kind": "unknown",
+      "name": "Shape",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:T",
+      "kind": "unknown",
+      "name": "T",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:area",
+      "kind": "unknown",
+      "name": "area",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:fatalError",
+      "kind": "unknown",
+      "name": "fatalError",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:find",
+      "kind": "unknown",
+      "name": "find",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:print",
+      "kind": "unknown",
+      "name": "print",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:reduce",
+      "kind": "unknown",
+      "name": "reduce",
+      "language": "swift"
+    },
+    {
+      "id": "unresolved:store",
+      "kind": "unknown",
+      "name": "store",
+      "language": "swift"
+    }
+  ],
+  "edges": [
+    {
+      "source": "class:src/Complex.swift::Circle",
+      "target": "interface:src/Complex.swift::Shape",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 16,
+            "byte": 56
+          },
+          "end": {
+            "line": 2,
+            "column": 21,
+            "byte": 61
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Complex.swift::Circle",
+      "target": "interface:src/Complex.swift::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 16,
+            "byte": 56
+          },
+          "end": {
+            "line": 2,
+            "column": 21,
+            "byte": 61
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.swift::InMemoryRepository",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 25,
+            "byte": 54
+          },
+          "end": {
+            "line": 2,
+            "column": 26,
+            "byte": 55
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.swift::ShapeService",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 15,
+            "byte": 238
+          },
+          "end": {
+            "line": 12,
+            "column": 33,
+            "byte": 256
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.swift::ShapeService",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 34,
+            "byte": 257
+          },
+          "end": {
+            "line": 12,
+            "column": 40,
+            "byte": 263
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Circle",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 16,
+            "byte": 204
+          },
+          "end": {
+            "line": 10,
+            "column": 21,
+            "byte": 209
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Circle",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 10,
+            "column": 16,
+            "byte": 204
+          },
+          "end": {
+            "line": 10,
+            "column": 21,
+            "byte": 209
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Rectangle",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 19,
+            "byte": 522
+          },
+          "end": {
+            "line": 27,
+            "column": 24,
+            "byte": 527
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Rectangle",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 19,
+            "byte": 522
+          },
+          "end": {
+            "line": 27,
+            "column": 24,
+            "byte": 527
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Square",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "inherits",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 16,
+            "byte": 882
+          },
+          "end": {
+            "line": 46,
+            "column": 21,
+            "byte": 887
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/shapes.swift::Square",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 16,
+            "byte": 882
+          },
+          "end": {
+            "line": 46,
+            "column": 21,
+            "byte": 887
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/Service.swift::ShapeService.init",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 16,
+            "byte": 281
+          },
+          "end": {
+            "line": 14,
+            "column": 34,
+            "byte": 299
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/Service.swift::ShapeService.init",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 35,
+            "byte": 300
+          },
+          "end": {
+            "line": 14,
+            "column": 41,
+            "byte": 306
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "class:src/Complex.swift::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "function:src/Complex.swift::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "interface:src/Complex.swift::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "method:src/Complex.swift::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "method:src/Complex.swift::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "module:src/Complex.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Complex.swift",
+      "target": "property:src/Complex.swift::Circle.r",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "function:src/Service.swift::createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "module:src/Service.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "property:src/Service.swift::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.swift",
+      "target": "constant:src/main.swift::shapes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.swift",
+      "target": "constant:src/main.swift::total",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.swift",
+      "target": "module:src/main.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/main.swift",
+      "target": "external:unknown:Foundation",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 18,
+            "byte": 17
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "class:src/shapes.swift::Circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "class:src/shapes.swift::Rectangle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "class:src/shapes.swift::Square",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Circle.init",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Rectangle.init",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Square.init",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "function:src/shapes.swift::totalArea",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Circle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Circle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Rectangle.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Rectangle.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Shape.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Shape.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Square.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "method:src/shapes.swift::Square.perimeter",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "module:src/shapes.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "property:src/shapes.swift::Circle.radius",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "property:src/shapes.swift::Rectangle.height",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "property:src/shapes.swift::Rectangle.width",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/shapes.swift",
+      "target": "property:src/shapes.swift::Square.side",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.swift",
+      "target": "function:src/utils.swift::circleArea",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.swift",
+      "target": "function:src/utils.swift::formatFloat",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.swift",
+      "target": "module:src/utils.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/utils.swift",
+      "target": "external:unknown:Foundation",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 1,
+            "column": 1,
+            "byte": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 18,
+            "byte": 17
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Complex.swift::total",
+      "target": "unresolved:reduce",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 43,
+            "byte": 161
+          },
+          "end": {
+            "line": 3,
+            "column": 78,
+            "byte": 196
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Service.swift::createService",
+      "target": "external:swift:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 12,
+            "byte": 565
+          },
+          "end": {
+            "line": 27,
+            "column": 60,
+            "byte": 613
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Service.swift::createService",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 25,
+            "byte": 539
+          },
+          "end": {
+            "line": 26,
+            "column": 37,
+            "byte": 551
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/shapes.swift::totalArea",
+      "target": "unresolved:reduce",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 64,
+            "column": 12,
+            "byte": 1206
+          },
+          "end": {
+            "line": 64,
+            "column": 49,
+            "byte": 1243
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/utils.swift::formatFloat",
+      "target": "external:swift:String",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 12,
+            "byte": 109
+          },
+          "end": {
+            "line": 5,
+            "column": 41,
+            "byte": 138
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.find",
+      "target": "unresolved:store",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 16,
+            "byte": 112
+          },
+          "end": {
+            "line": 4,
+            "column": 25,
+            "byte": 121
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.save",
+      "target": "unresolved:store",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 9,
+            "byte": 175
+          },
+          "end": {
+            "line": 7,
+            "column": 18,
+            "byte": 184
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 35,
+            "byte": 162
+          },
+          "end": {
+            "line": 6,
+            "column": 36,
+            "byte": 163
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 16,
+            "byte": 493
+          },
+          "end": {
+            "line": 22,
+            "column": 28,
+            "byte": 505
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:fatalError",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 13,
+            "byte": 444
+          },
+          "end": {
+            "line": 20,
+            "column": 36,
+            "byte": 467
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 19,
+            "column": 27,
+            "byte": 407
+          },
+          "end": {
+            "line": 19,
+            "column": 44,
+            "byte": 424
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "class:src/Complex.swift::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "function:src/Complex.swift::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "interface:src/Complex.swift::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "method:src/Complex.swift::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "method:src/Complex.swift::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Complex.swift",
+      "target": "property:src/Complex.swift::Circle.r",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "function:src/Service.swift::createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "property:src/Service.swift::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "function:src/utils.swift::formatFloat",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 22,
+            "byte": 186
+          },
+          "end": {
+            "line": 9,
+            "column": 40,
+            "byte": 204
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "unresolved:print",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 1,
+            "byte": 165
+          },
+          "end": {
+            "line": 9,
+            "column": 43,
+            "byte": 207
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "unresolved:reduce",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 13,
+            "byte": 127
+          },
+          "end": {
+            "line": 8,
+            "column": 31,
+            "byte": 145
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "unresolved:Shape",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 3,
+            "column": 18,
+            "byte": 36
+          },
+          "end": {
+            "line": 3,
+            "column": 23,
+            "byte": 41
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "constant:src/main.swift::shapes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/main.swift",
+      "target": "constant:src/main.swift::total",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "class:src/shapes.swift::Circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "class:src/shapes.swift::Rectangle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "class:src/shapes.swift::Square",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Circle.init",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Rectangle.init",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "constructor:src/shapes.swift::Square.init",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "function:src/shapes.swift::totalArea",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "interface:src/shapes.swift::Shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Circle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Circle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Rectangle.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Rectangle.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Shape.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Shape.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Square.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "method:src/shapes.swift::Square.perimeter",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "property:src/shapes.swift::Circle.radius",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "property:src/shapes.swift::Rectangle.height",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "property:src/shapes.swift::Rectangle.width",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/shapes.swift",
+      "target": "property:src/shapes.swift::Square.side",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/utils.swift",
+      "target": "function:src/utils.swift::circleArea",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/utils.swift",
+      "target": "function:src/utils.swift::formatFloat",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Complex.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/Service.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/main.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/shapes.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/utils.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    }
+  ],
+  "diagnostics": [
+    {
+      "severity": "error",
+      "kind": "parse_error",
+      "message": "syntax error; file was partially analysed",
+      "file": "src/shapes.swift",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 9,
+          "byte": 8
+        },
+        "end": {
+          "line": 1,
+          "column": 15,
+          "byte": 14
+        }
+      },
+      "language": "swift"
+    }
+  ],
+  "statistics": {
+    "files": 5,
+    "packages": 0,
+    "nodes": 62,
+    "edges": 118,
+    "symbols": 48,
+    "unresolvedEdges": 14,
+    "diagnostics": 1,
+    "byNodeKind": {
+      "class": 6,
+      "constant": 2,
+      "constructor": 4,
+      "external_symbol": 3,
+      "file": 5,
+      "function": 5,
+      "interface": 2,
+      "method": 13,
+      "module": 5,
+      "property": 7,
+      "repository": 1,
+      "unknown": 9
+    },
+    "byEdgeKind": {
+      "calls": 12,
+      "contains": 49,
+      "defines": 39,
+      "imports": 2,
+      "inherits": 4,
+      "uses_type": 12
+    },
+    "byLanguage": {
+      "swift": 61
+    },
+    "byStatus": {
+      "resolved_external": 4,
+      "resolved_internal": 100,
+      "unresolved": 14
+    }
+  }
+}
