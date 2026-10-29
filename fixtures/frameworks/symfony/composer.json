@@ -2,6 +2,6 @@
     "name": "symfony-app",
     "version": "1.0.0",
     "require": {
-        "symfony/framework-bundle": "^8.0"
+        "symfony/framework-bundle": "8.1.10"
     }
 }
