@@ -9,12 +9,15 @@ fn fixtures_dir() -> PathBuf {
 
 fn portable_root(path: &std::path::Path) -> String {
     // Make the repository root portable by stripping the CARGO_MANIFEST_DIR
-    // This ensures snapshots are deterministic across different environments
+    // This ensures snapshots are deterministic across different environments.
+    // Normalize path separators to forward slashes so snapshots match on
+    // Windows (backslash) and Unix (forward slash).
     let manifest_dir = std::path::Path::new(env!("CARGO_MANIFEST_DIR"));
     path.strip_prefix(manifest_dir)
         .unwrap_or(path)
         .to_str()
         .unwrap()
+        .replace('\\', "/")
         .to_string()
 }
 

@@ -10720,9 +10720,9 @@
           "byte": 218
         },
         "end": {
-          "line": 19,
+          "line": 22,
           "column": 2,
-          "byte": 618
+          "byte": 774
         }
       },
       "language": "rust",
@@ -10737,14 +10737,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 211,
+          "line": 214,
           "column": 1,
-          "byte": 5289
+          "byte": 5445
         },
         "end": {
-          "line": 235,
+          "line": 238,
           "column": 2,
-          "byte": 5951
+          "byte": 6107
         }
       },
       "language": "rust",
@@ -10759,14 +10759,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 76,
+          "line": 79,
           "column": 1,
-          "byte": 1994
+          "byte": 2150
         },
         "end": {
-          "line": 100,
+          "line": 103,
           "column": 2,
-          "byte": 2631
+          "byte": 2787
         }
       },
       "language": "rust",
@@ -10781,14 +10781,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 184,
+          "line": 187,
           "column": 1,
-          "byte": 4630
+          "byte": 4786
         },
         "end": {
-          "line": 208,
+          "line": 211,
           "column": 2,
-          "byte": 5279
+          "byte": 5435
         }
       },
       "language": "rust",
@@ -10803,14 +10803,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 130,
+          "line": 133,
           "column": 1,
-          "byte": 3300
+          "byte": 3456
         },
         "end": {
-          "line": 154,
+          "line": 157,
           "column": 2,
-          "byte": 3956
+          "byte": 4112
         }
       },
       "language": "rust",
@@ -10825,14 +10825,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 238,
+          "line": 241,
           "column": 1,
-          "byte": 5961
+          "byte": 6117
         },
         "end": {
-          "line": 262,
+          "line": 265,
           "column": 2,
-          "byte": 6605
+          "byte": 6761
         }
       },
       "language": "rust",
@@ -10847,14 +10847,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 49,
+          "line": 52,
           "column": 1,
-          "byte": 1323
+          "byte": 1479
         },
         "end": {
-          "line": 73,
+          "line": 76,
           "column": 2,
-          "byte": 1984
+          "byte": 2140
         }
       },
       "language": "rust",
@@ -10869,14 +10869,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 265,
+          "line": 268,
           "column": 1,
-          "byte": 6615
+          "byte": 6771
         },
         "end": {
-          "line": 289,
+          "line": 292,
           "column": 2,
-          "byte": 7264
+          "byte": 7420
         }
       },
       "language": "rust",
@@ -10891,14 +10891,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 103,
+          "line": 106,
           "column": 1,
-          "byte": 2641
+          "byte": 2797
         },
         "end": {
-          "line": 127,
+          "line": 130,
           "column": 2,
-          "byte": 3290
+          "byte": 3446
         }
       },
       "language": "rust",
@@ -10913,14 +10913,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 157,
+          "line": 160,
           "column": 1,
-          "byte": 3966
+          "byte": 4122
         },
         "end": {
-          "line": 181,
+          "line": 184,
           "column": 2,
-          "byte": 4620
+          "byte": 4776
         }
       },
       "language": "rust",
@@ -10935,14 +10935,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 22,
+          "line": 25,
           "column": 1,
-          "byte": 628
+          "byte": 784
         },
         "end": {
-          "line": 46,
+          "line": 49,
           "column": 2,
-          "byte": 1313
+          "byte": 1469
         }
       },
       "language": "rust",
@@ -48644,14 +48644,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 5,
-          "byte": 430
+          "byte": 558
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 73,
-          "byte": 498
+          "byte": 626
         }
       },
       "language": "rust",
@@ -48666,14 +48666,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 213,
+          "line": 216,
           "column": 5,
-          "byte": 5370
+          "byte": 5526
         },
         "end": {
-          "line": 213,
+          "line": 216,
           "column": 39,
-          "byte": 5404
+          "byte": 5560
         }
       },
       "language": "rust",
@@ -48688,14 +48688,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 221,
+          "line": 224,
           "column": 5,
-          "byte": 5617
+          "byte": 5773
         },
         "end": {
-          "line": 232,
+          "line": 235,
           "column": 7,
-          "byte": 5904
+          "byte": 6060
         }
       },
       "language": "rust",
@@ -48710,14 +48710,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 216,
+          "line": 219,
           "column": 5,
-          "byte": 5469
+          "byte": 5625
         },
         "end": {
-          "line": 219,
+          "line": 222,
           "column": 8,
-          "byte": 5611
+          "byte": 5767
         }
       },
       "language": "rust",
@@ -48732,14 +48732,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 212,
+          "line": 215,
           "column": 5,
-          "byte": 5324
+          "byte": 5480
         },
         "end": {
-          "line": 212,
+          "line": 215,
           "column": 46,
-          "byte": 5365
+          "byte": 5521
         }
       },
       "language": "rust",
@@ -48754,14 +48754,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 214,
+          "line": 217,
           "column": 5,
-          "byte": 5409
+          "byte": 5565
         },
         "end": {
-          "line": 214,
+          "line": 217,
           "column": 59,
-          "byte": 5463
+          "byte": 5619
         }
       },
       "language": "rust",
@@ -48776,14 +48776,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 78,
+          "line": 81,
           "column": 5,
-          "byte": 2067
+          "byte": 2223
         },
         "end": {
-          "line": 78,
+          "line": 81,
           "column": 39,
-          "byte": 2101
+          "byte": 2257
         }
       },
       "language": "rust",
@@ -48798,14 +48798,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 86,
+          "line": 89,
           "column": 5,
-          "byte": 2305
+          "byte": 2461
         },
         "end": {
-          "line": 97,
+          "line": 100,
           "column": 7,
-          "byte": 2584
+          "byte": 2740
         }
       },
       "language": "rust",
@@ -48820,14 +48820,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 81,
+          "line": 84,
           "column": 5,
-          "byte": 2166
+          "byte": 2322
         },
         "end": {
-          "line": 84,
+          "line": 87,
           "column": 8,
-          "byte": 2299
+          "byte": 2455
         }
       },
       "language": "rust",
@@ -48842,14 +48842,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 77,
+          "line": 80,
           "column": 5,
-          "byte": 2025
+          "byte": 2181
         },
         "end": {
-          "line": 77,
+          "line": 80,
           "column": 42,
-          "byte": 2062
+          "byte": 2218
         }
       },
       "language": "rust",
@@ -48864,14 +48864,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 79,
+          "line": 82,
           "column": 5,
-          "byte": 2106
+          "byte": 2262
         },
         "end": {
-          "line": 79,
+          "line": 82,
           "column": 59,
-          "byte": 2160
+          "byte": 2316
         }
       },
       "language": "rust",
@@ -48886,14 +48886,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 186,
+          "line": 189,
           "column": 5,
-          "byte": 4707
+          "byte": 4863
         },
         "end": {
-          "line": 186,
+          "line": 189,
           "column": 39,
-          "byte": 4741
+          "byte": 4897
         }
       },
       "language": "rust",
@@ -48908,14 +48908,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 194,
+          "line": 197,
           "column": 5,
-          "byte": 4949
+          "byte": 5105
         },
         "end": {
-          "line": 205,
+          "line": 208,
           "column": 7,
-          "byte": 5232
+          "byte": 5388
         }
       },
       "language": "rust",
@@ -48930,14 +48930,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 189,
+          "line": 192,
           "column": 5,
-          "byte": 4806
+          "byte": 4962
         },
         "end": {
-          "line": 192,
+          "line": 195,
           "column": 8,
-          "byte": 4943
+          "byte": 5099
         }
       },
       "language": "rust",
@@ -48952,14 +48952,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 185,
+          "line": 188,
           "column": 5,
-          "byte": 4663
+          "byte": 4819
         },
         "end": {
-          "line": 185,
+          "line": 188,
           "column": 44,
-          "byte": 4702
+          "byte": 4858
         }
       },
       "language": "rust",
@@ -48974,14 +48974,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 187,
+          "line": 190,
           "column": 5,
-          "byte": 4746
+          "byte": 4902
         },
         "end": {
-          "line": 187,
+          "line": 190,
           "column": 59,
-          "byte": 4800
+          "byte": 4956
         }
       },
       "language": "rust",
@@ -48996,14 +48996,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 132,
+          "line": 135,
           "column": 5,
-          "byte": 3381
+          "byte": 3537
         },
         "end": {
-          "line": 132,
+          "line": 135,
           "column": 39,
-          "byte": 3415
+          "byte": 3571
         }
       },
       "language": "rust",
@@ -49018,14 +49018,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 140,
+          "line": 143,
           "column": 5,
-          "byte": 3622
+          "byte": 3778
         },
         "end": {
-          "line": 151,
+          "line": 154,
           "column": 7,
-          "byte": 3909
+          "byte": 4065
         }
       },
       "language": "rust",
@@ -49040,14 +49040,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 135,
+          "line": 138,
           "column": 5,
-          "byte": 3480
+          "byte": 3636
         },
         "end": {
-          "line": 138,
+          "line": 141,
           "column": 8,
-          "byte": 3616
+          "byte": 3772
         }
       },
       "language": "rust",
@@ -49062,14 +49062,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 131,
+          "line": 134,
           "column": 5,
-          "byte": 3335
+          "byte": 3491
         },
         "end": {
-          "line": 131,
+          "line": 134,
           "column": 46,
-          "byte": 3376
+          "byte": 3532
         }
       },
       "language": "rust",
@@ -49084,14 +49084,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 133,
+          "line": 136,
           "column": 5,
-          "byte": 3420
+          "byte": 3576
         },
         "end": {
-          "line": 133,
+          "line": 136,
           "column": 59,
-          "byte": 3474
+          "byte": 3630
         }
       },
       "language": "rust",
@@ -49106,14 +49106,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 240,
+          "line": 243,
           "column": 5,
-          "byte": 6036
+          "byte": 6192
         },
         "end": {
-          "line": 240,
+          "line": 243,
           "column": 39,
-          "byte": 6070
+          "byte": 6226
         }
       },
       "language": "rust",
@@ -49128,14 +49128,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 248,
+          "line": 251,
           "column": 5,
-          "byte": 6277
+          "byte": 6433
         },
         "end": {
-          "line": 259,
+          "line": 262,
           "column": 7,
-          "byte": 6558
+          "byte": 6714
         }
       },
       "language": "rust",
@@ -49150,14 +49150,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 243,
+          "line": 246,
           "column": 5,
-          "byte": 6135
+          "byte": 6291
         },
         "end": {
-          "line": 246,
+          "line": 249,
           "column": 8,
-          "byte": 6271
+          "byte": 6427
         }
       },
       "language": "rust",
@@ -49172,14 +49172,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 239,
+          "line": 242,
           "column": 5,
-          "byte": 5993
+          "byte": 6149
         },
         "end": {
-          "line": 239,
+          "line": 242,
           "column": 43,
-          "byte": 6031
+          "byte": 6187
         }
       },
       "language": "rust",
@@ -49194,14 +49194,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 241,
+          "line": 244,
           "column": 5,
-          "byte": 6075
+          "byte": 6231
         },
         "end": {
-          "line": 241,
+          "line": 244,
           "column": 59,
-          "byte": 6129
+          "byte": 6285
         }
       },
       "language": "rust",
@@ -49216,14 +49216,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 51,
+          "line": 54,
           "column": 5,
-          "byte": 1404
+          "byte": 1560
         },
         "end": {
-          "line": 51,
+          "line": 54,
           "column": 39,
-          "byte": 1438
+          "byte": 1594
         }
       },
       "language": "rust",
@@ -49238,14 +49238,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 59,
+          "line": 62,
           "column": 5,
-          "byte": 1650
+          "byte": 1806
         },
         "end": {
-          "line": 70,
+          "line": 73,
           "column": 7,
-          "byte": 1937
+          "byte": 2093
         }
       },
       "language": "rust",
@@ -49260,14 +49260,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 54,
+          "line": 57,
           "column": 5,
-          "byte": 1503
+          "byte": 1659
         },
         "end": {
-          "line": 57,
+          "line": 60,
           "column": 8,
-          "byte": 1644
+          "byte": 1800
         }
       },
       "language": "rust",
@@ -49282,14 +49282,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 50,
+          "line": 53,
           "column": 5,
-          "byte": 1358
+          "byte": 1514
         },
         "end": {
-          "line": 50,
+          "line": 53,
           "column": 46,
-          "byte": 1399
+          "byte": 1555
         }
       },
       "language": "rust",
@@ -49304,14 +49304,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 52,
+          "line": 55,
           "column": 5,
-          "byte": 1443
+          "byte": 1599
         },
         "end": {
-          "line": 52,
+          "line": 55,
           "column": 59,
-          "byte": 1497
+          "byte": 1653
         }
       },
       "language": "rust",
@@ -49326,14 +49326,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 267,
+          "line": 270,
           "column": 5,
-          "byte": 6692
+          "byte": 6848
         },
         "end": {
-          "line": 267,
+          "line": 270,
           "column": 39,
-          "byte": 6726
+          "byte": 6882
         }
       },
       "language": "rust",
@@ -49348,14 +49348,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 275,
+          "line": 278,
           "column": 5,
-          "byte": 6934
+          "byte": 7090
         },
         "end": {
-          "line": 286,
+          "line": 289,
           "column": 7,
-          "byte": 7217
+          "byte": 7373
         }
       },
       "language": "rust",
@@ -49370,14 +49370,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 270,
+          "line": 273,
           "column": 5,
-          "byte": 6791
+          "byte": 6947
         },
         "end": {
-          "line": 273,
+          "line": 276,
           "column": 8,
-          "byte": 6928
+          "byte": 7084
         }
       },
       "language": "rust",
@@ -49392,14 +49392,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 266,
+          "line": 269,
           "column": 5,
-          "byte": 6648
+          "byte": 6804
         },
         "end": {
-          "line": 266,
+          "line": 269,
           "column": 44,
-          "byte": 6687
+          "byte": 6843
         }
       },
       "language": "rust",
@@ -49414,14 +49414,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 268,
+          "line": 271,
           "column": 5,
-          "byte": 6731
+          "byte": 6887
         },
         "end": {
-          "line": 268,
+          "line": 271,
           "column": 59,
-          "byte": 6785
+          "byte": 6941
         }
       },
       "language": "rust",
@@ -49436,14 +49436,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 105,
+          "line": 108,
           "column": 5,
-          "byte": 2718
+          "byte": 2874
         },
         "end": {
-          "line": 105,
+          "line": 108,
           "column": 39,
-          "byte": 2752
+          "byte": 2908
         }
       },
       "language": "rust",
@@ -49458,14 +49458,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 113,
+          "line": 116,
           "column": 5,
-          "byte": 2960
+          "byte": 3116
         },
         "end": {
-          "line": 124,
+          "line": 127,
           "column": 7,
-          "byte": 3243
+          "byte": 3399
         }
       },
       "language": "rust",
@@ -49480,14 +49480,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 108,
+          "line": 111,
           "column": 5,
-          "byte": 2817
+          "byte": 2973
         },
         "end": {
-          "line": 111,
+          "line": 114,
           "column": 8,
-          "byte": 2954
+          "byte": 3110
         }
       },
       "language": "rust",
@@ -49502,14 +49502,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 104,
+          "line": 107,
           "column": 5,
-          "byte": 2674
+          "byte": 2830
         },
         "end": {
-          "line": 104,
+          "line": 107,
           "column": 44,
-          "byte": 2713
+          "byte": 2869
         }
       },
       "language": "rust",
@@ -49524,14 +49524,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 106,
+          "line": 109,
           "column": 5,
-          "byte": 2757
+          "byte": 2913
         },
         "end": {
-          "line": 106,
+          "line": 109,
           "column": 59,
-          "byte": 2811
+          "byte": 2967
         }
       },
       "language": "rust",
@@ -49546,14 +49546,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 159,
+          "line": 162,
           "column": 5,
-          "byte": 4045
+          "byte": 4201
         },
         "end": {
-          "line": 159,
+          "line": 162,
           "column": 39,
-          "byte": 4079
+          "byte": 4235
         }
       },
       "language": "rust",
@@ -49568,14 +49568,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 167,
+          "line": 170,
           "column": 5,
-          "byte": 4288
+          "byte": 4444
         },
         "end": {
-          "line": 178,
+          "line": 181,
           "column": 7,
-          "byte": 4573
+          "byte": 4729
         }
       },
       "language": "rust",
@@ -49590,14 +49590,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 162,
+          "line": 165,
           "column": 5,
-          "byte": 4144
+          "byte": 4300
         },
         "end": {
-          "line": 165,
+          "line": 168,
           "column": 8,
-          "byte": 4282
+          "byte": 4438
         }
       },
       "language": "rust",
@@ -49612,14 +49612,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 158,
+          "line": 161,
           "column": 5,
-          "byte": 4000
+          "byte": 4156
         },
         "end": {
-          "line": 158,
+          "line": 161,
           "column": 45,
-          "byte": 4040
+          "byte": 4196
         }
       },
       "language": "rust",
@@ -49634,14 +49634,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 160,
+          "line": 163,
           "column": 5,
-          "byte": 4084
+          "byte": 4240
         },
         "end": {
-          "line": 160,
+          "line": 163,
           "column": 59,
-          "byte": 4138
+          "byte": 4294
         }
       },
       "language": "rust",
@@ -49656,14 +49656,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 24,
+          "line": 27,
           "column": 5,
-          "byte": 717
+          "byte": 873
         },
         "end": {
-          "line": 24,
+          "line": 27,
           "column": 39,
-          "byte": 751
+          "byte": 907
         }
       },
       "language": "rust",
@@ -49678,14 +49678,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 32,
+          "line": 35,
           "column": 5,
-          "byte": 971
+          "byte": 1127
         },
         "end": {
-          "line": 43,
+          "line": 46,
           "column": 7,
-          "byte": 1266
+          "byte": 1422
         }
       },
       "language": "rust",
@@ -49700,14 +49700,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 27,
+          "line": 30,
           "column": 5,
-          "byte": 816
+          "byte": 972
         },
         "end": {
-          "line": 30,
+          "line": 33,
           "column": 8,
-          "byte": 965
+          "byte": 1121
         }
       },
       "language": "rust",
@@ -49722,14 +49722,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 23,
+          "line": 26,
           "column": 5,
-          "byte": 667
+          "byte": 823
         },
         "end": {
-          "line": 23,
+          "line": 26,
           "column": 50,
-          "byte": 712
+          "byte": 868
         }
       },
       "language": "rust",
@@ -49744,14 +49744,14 @@
       "file": "crates/trace-analysis/tests/snapshots.rs",
       "range": {
         "start": {
-          "line": 25,
+          "line": 28,
           "column": 5,
-          "byte": 756
+          "byte": 912
         },
         "end": {
-          "line": 25,
+          "line": 28,
           "column": 59,
-          "byte": 810
+          "byte": 966
         }
       },
       "language": "rust",
@@ -119415,14 +119415,14 @@
       "sites": [
         {
           "start": {
-            "line": 13,
+            "line": 15,
             "column": 24,
-            "byte": 449
+            "byte": 577
           },
           "end": {
-            "line": 13,
+            "line": 15,
             "column": 72,
-            "byte": 497
+            "byte": 625
           }
         }
       ]
@@ -119436,14 +119436,35 @@
       "sites": [
         {
           "start": {
-            "line": 13,
+            "line": 15,
             "column": 45,
-            "byte": 470
+            "byte": 598
           },
           "end": {
-            "line": 13,
+            "line": 15,
             "column": 71,
-            "byte": 496
+            "byte": 624
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "target": "unresolved:replace",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 16,
+            "column": 5,
+            "byte": 631
+          },
+          "end": {
+            "line": 20,
+            "column": 28,
+            "byte": 751
           }
         }
       ]
@@ -119457,14 +119478,14 @@
       "sites": [
         {
           "start": {
-            "line": 14,
+            "line": 16,
             "column": 5,
-            "byte": 503
+            "byte": 631
           },
           "end": {
-            "line": 14,
+            "line": 16,
             "column": 36,
-            "byte": 534
+            "byte": 662
           }
         }
       ]
@@ -119478,14 +119499,14 @@
       "sites": [
         {
           "start": {
-            "line": 14,
+            "line": 16,
             "column": 5,
-            "byte": 503
+            "byte": 631
           },
           "end": {
-            "line": 16,
+            "line": 18,
             "column": 18,
-            "byte": 577
+            "byte": 705
           }
         }
       ]
@@ -119499,14 +119520,14 @@
       "sites": [
         {
           "start": {
-            "line": 14,
+            "line": 16,
             "column": 5,
-            "byte": 503
+            "byte": 631
           },
           "end": {
-            "line": 18,
+            "line": 21,
             "column": 21,
-            "byte": 616
+            "byte": 772
           }
         }
       ]
@@ -119520,14 +119541,14 @@
       "sites": [
         {
           "start": {
-            "line": 14,
+            "line": 16,
             "column": 5,
-            "byte": 503
+            "byte": 631
           },
           "end": {
-            "line": 17,
+            "line": 19,
             "column": 18,
-            "byte": 595
+            "byte": 723
           }
         }
       ]
@@ -119541,14 +119562,14 @@
       "sites": [
         {
           "start": {
-            "line": 14,
+            "line": 16,
             "column": 5,
-            "byte": 503
+            "byte": 631
           },
           "end": {
-            "line": 15,
+            "line": 17,
             "column": 25,
-            "byte": 559
+            "byte": 687
           }
         }
       ]
@@ -119583,14 +119604,14 @@
       "sites": [
         {
           "start": {
-            "line": 213,
+            "line": 216,
             "column": 19,
-            "byte": 5384
+            "byte": 5540
           },
           "end": {
-            "line": 213,
+            "line": 216,
             "column": 38,
-            "byte": 5403
+            "byte": 5559
           }
         }
       ]
@@ -119604,14 +119625,14 @@
       "sites": [
         {
           "start": {
-            "line": 221,
+            "line": 224,
             "column": 20,
-            "byte": 5632
+            "byte": 5788
           },
           "end": {
-            "line": 232,
+            "line": 235,
             "column": 6,
-            "byte": 5903
+            "byte": 6059
           }
         }
       ]
@@ -119625,14 +119646,14 @@
       "sites": [
         {
           "start": {
-            "line": 212,
+            "line": 215,
             "column": 16,
-            "byte": 5335
+            "byte": 5491
           },
           "end": {
-            "line": 212,
+            "line": 215,
             "column": 30,
-            "byte": 5349
+            "byte": 5505
           }
         }
       ]
@@ -119646,14 +119667,14 @@
       "sites": [
         {
           "start": {
-            "line": 224,
+            "line": 227,
             "column": 10,
-            "byte": 5696
+            "byte": 5852
           },
           "end": {
-            "line": 224,
+            "line": 227,
             "column": 30,
-            "byte": 5716
+            "byte": 5872
           }
         }
       ]
@@ -119667,14 +119688,14 @@
       "sites": [
         {
           "start": {
-            "line": 226,
+            "line": 229,
             "column": 9,
-            "byte": 5755
+            "byte": 5911
           },
           "end": {
-            "line": 226,
+            "line": 229,
             "column": 54,
-            "byte": 5800
+            "byte": 5956
           }
         }
       ]
@@ -119688,14 +119709,14 @@
       "sites": [
         {
           "start": {
-            "line": 214,
+            "line": 217,
             "column": 18,
-            "byte": 5422
+            "byte": 5578
           },
           "end": {
-            "line": 214,
+            "line": 217,
             "column": 49,
-            "byte": 5453
+            "byte": 5609
           }
         }
       ]
@@ -119709,14 +119730,14 @@
       "sites": [
         {
           "start": {
-            "line": 234,
+            "line": 237,
             "column": 5,
-            "byte": 5910
+            "byte": 6066
           },
           "end": {
-            "line": 234,
+            "line": 237,
             "column": 43,
-            "byte": 5948
+            "byte": 6104
           }
         }
       ]
@@ -119730,14 +119751,14 @@
       "sites": [
         {
           "start": {
-            "line": 212,
+            "line": 215,
             "column": 16,
-            "byte": 5335
+            "byte": 5491
           },
           "end": {
-            "line": 212,
+            "line": 215,
             "column": 45,
-            "byte": 5364
+            "byte": 5520
           }
         }
       ]
@@ -119751,14 +119772,14 @@
       "sites": [
         {
           "start": {
-            "line": 226,
+            "line": 229,
             "column": 14,
-            "byte": 5760
+            "byte": 5916
           },
           "end": {
-            "line": 226,
+            "line": 229,
             "column": 53,
-            "byte": 5799
+            "byte": 5955
           }
         }
       ]
@@ -119772,14 +119793,14 @@
       "sites": [
         {
           "start": {
-            "line": 231,
+            "line": 234,
             "column": 11,
-            "byte": 5875
+            "byte": 6031
           },
           "end": {
-            "line": 231,
+            "line": 234,
             "column": 31,
-            "byte": 5895
+            "byte": 6051
           }
         }
       ]
@@ -119793,14 +119814,14 @@
       "sites": [
         {
           "start": {
-            "line": 214,
+            "line": 217,
             "column": 18,
-            "byte": 5422
+            "byte": 5578
           },
           "end": {
-            "line": 214,
+            "line": 217,
             "column": 58,
-            "byte": 5462
+            "byte": 5618
           }
         }
       ]
@@ -119814,14 +119835,14 @@
       "sites": [
         {
           "start": {
-            "line": 216,
+            "line": 219,
             "column": 21,
-            "byte": 5485
+            "byte": 5641
           },
           "end": {
-            "line": 219,
+            "line": 222,
             "column": 7,
-            "byte": 5610
+            "byte": 5766
           }
         }
       ]
@@ -119832,248 +119853,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 78,
-            "column": 19,
-            "byte": 2081
-          },
-          "end": {
-            "line": 78,
-            "column": 38,
-            "byte": 2100
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 86,
-            "column": 20,
-            "byte": 2320
-          },
-          "end": {
-            "line": 97,
-            "column": 6,
-            "byte": 2583
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 77,
-            "column": 16,
-            "byte": 2036
-          },
-          "end": {
-            "line": 77,
-            "column": 30,
-            "byte": 2050
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 89,
-            "column": 10,
-            "byte": 2380
-          },
-          "end": {
-            "line": 89,
-            "column": 30,
-            "byte": 2400
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 91,
-            "column": 9,
-            "byte": 2439
-          },
-          "end": {
-            "line": 91,
-            "column": 54,
-            "byte": 2484
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 79,
-            "column": 18,
-            "byte": 2119
-          },
-          "end": {
-            "line": 79,
-            "column": 49,
-            "byte": 2150
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 99,
-            "column": 5,
-            "byte": 2590
-          },
-          "end": {
-            "line": 99,
-            "column": 43,
-            "byte": 2628
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 77,
-            "column": 16,
-            "byte": 2036
-          },
-          "end": {
-            "line": 77,
-            "column": 41,
-            "byte": 2061
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 91,
-            "column": 14,
-            "byte": 2444
-          },
-          "end": {
-            "line": 91,
-            "column": 53,
-            "byte": 2483
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 96,
-            "column": 11,
-            "byte": 2559
-          },
-          "end": {
-            "line": 96,
-            "column": 27,
-            "byte": 2575
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 79,
-            "column": 18,
-            "byte": 2119
-          },
-          "end": {
-            "line": 79,
-            "column": 58,
-            "byte": 2159
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 81,
-            "column": 21,
-            "byte": 2182
+            "column": 19,
+            "byte": 2237
           },
           "end": {
+            "line": 81,
+            "column": 38,
+            "byte": 2256
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 89,
+            "column": 20,
+            "byte": 2476
+          },
+          "end": {
+            "line": 100,
+            "column": 6,
+            "byte": 2739
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 80,
+            "column": 16,
+            "byte": 2192
+          },
+          "end": {
+            "line": 80,
+            "column": 30,
+            "byte": 2206
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 92,
+            "column": 10,
+            "byte": 2536
+          },
+          "end": {
+            "line": 92,
+            "column": 30,
+            "byte": 2556
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 94,
+            "column": 9,
+            "byte": 2595
+          },
+          "end": {
+            "line": 94,
+            "column": 54,
+            "byte": 2640
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 82,
+            "column": 18,
+            "byte": 2275
+          },
+          "end": {
+            "line": 82,
+            "column": 49,
+            "byte": 2306
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 102,
+            "column": 5,
+            "byte": 2746
+          },
+          "end": {
+            "line": 102,
+            "column": 43,
+            "byte": 2784
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 80,
+            "column": 16,
+            "byte": 2192
+          },
+          "end": {
+            "line": 80,
+            "column": 41,
+            "byte": 2217
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 94,
+            "column": 14,
+            "byte": 2600
+          },
+          "end": {
+            "line": 94,
+            "column": 53,
+            "byte": 2639
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 99,
+            "column": 11,
+            "byte": 2715
+          },
+          "end": {
+            "line": 99,
+            "column": 27,
+            "byte": 2731
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 82,
+            "column": 18,
+            "byte": 2275
+          },
+          "end": {
+            "line": 82,
+            "column": 58,
+            "byte": 2315
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_go_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 84,
+            "column": 21,
+            "byte": 2338
+          },
+          "end": {
+            "line": 87,
             "column": 7,
-            "byte": 2298
+            "byte": 2454
           }
         }
       ]
@@ -120084,248 +120105,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 186,
-            "column": 19,
-            "byte": 4721
-          },
-          "end": {
-            "line": 186,
-            "column": 38,
-            "byte": 4740
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 194,
-            "column": 20,
-            "byte": 4964
-          },
-          "end": {
-            "line": 205,
-            "column": 6,
-            "byte": 5231
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 185,
-            "column": 16,
-            "byte": 4674
-          },
-          "end": {
-            "line": 185,
-            "column": 30,
-            "byte": 4688
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 197,
-            "column": 10,
-            "byte": 5026
-          },
-          "end": {
-            "line": 197,
-            "column": 30,
-            "byte": 5046
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 199,
-            "column": 9,
-            "byte": 5085
-          },
-          "end": {
-            "line": 199,
-            "column": 54,
-            "byte": 5130
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 187,
-            "column": 18,
-            "byte": 4759
-          },
-          "end": {
-            "line": 187,
-            "column": 49,
-            "byte": 4790
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 207,
-            "column": 5,
-            "byte": 5238
-          },
-          "end": {
-            "line": 207,
-            "column": 43,
-            "byte": 5276
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 185,
-            "column": 16,
-            "byte": 4674
-          },
-          "end": {
-            "line": 185,
-            "column": 43,
-            "byte": 4701
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 199,
-            "column": 14,
-            "byte": 5090
-          },
-          "end": {
-            "line": 199,
-            "column": 53,
-            "byte": 5129
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 204,
-            "column": 11,
-            "byte": 5205
-          },
-          "end": {
-            "line": 204,
-            "column": 29,
-            "byte": 5223
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 187,
-            "column": 18,
-            "byte": 4759
-          },
-          "end": {
-            "line": 187,
-            "column": 58,
-            "byte": 4799
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 189,
-            "column": 21,
-            "byte": 4822
+            "column": 19,
+            "byte": 4877
           },
           "end": {
+            "line": 189,
+            "column": 38,
+            "byte": 4896
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 197,
+            "column": 20,
+            "byte": 5120
+          },
+          "end": {
+            "line": 208,
+            "column": 6,
+            "byte": 5387
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 188,
+            "column": 16,
+            "byte": 4830
+          },
+          "end": {
+            "line": 188,
+            "column": 30,
+            "byte": 4844
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 200,
+            "column": 10,
+            "byte": 5182
+          },
+          "end": {
+            "line": 200,
+            "column": 30,
+            "byte": 5202
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 202,
+            "column": 9,
+            "byte": 5241
+          },
+          "end": {
+            "line": 202,
+            "column": 54,
+            "byte": 5286
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 190,
+            "column": 18,
+            "byte": 4915
+          },
+          "end": {
+            "line": 190,
+            "column": 49,
+            "byte": 4946
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 210,
+            "column": 5,
+            "byte": 5394
+          },
+          "end": {
+            "line": 210,
+            "column": 43,
+            "byte": 5432
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 188,
+            "column": 16,
+            "byte": 4830
+          },
+          "end": {
+            "line": 188,
+            "column": 43,
+            "byte": 4857
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 202,
+            "column": 14,
+            "byte": 5246
+          },
+          "end": {
+            "line": 202,
+            "column": 53,
+            "byte": 5285
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 207,
+            "column": 11,
+            "byte": 5361
+          },
+          "end": {
+            "line": 207,
+            "column": 29,
+            "byte": 5379
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 190,
+            "column": 18,
+            "byte": 4915
+          },
+          "end": {
+            "line": 190,
+            "column": 58,
+            "byte": 4955
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_java_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 192,
+            "column": 21,
+            "byte": 4978
+          },
+          "end": {
+            "line": 195,
             "column": 7,
-            "byte": 4942
+            "byte": 5098
           }
         }
       ]
@@ -120336,248 +120357,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 132,
-            "column": 19,
-            "byte": 3395
-          },
-          "end": {
-            "line": 132,
-            "column": 38,
-            "byte": 3414
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 140,
-            "column": 20,
-            "byte": 3637
-          },
-          "end": {
-            "line": 151,
-            "column": 6,
-            "byte": 3908
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 131,
-            "column": 16,
-            "byte": 3346
-          },
-          "end": {
-            "line": 131,
-            "column": 30,
-            "byte": 3360
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 143,
-            "column": 10,
-            "byte": 3701
-          },
-          "end": {
-            "line": 143,
-            "column": 30,
-            "byte": 3721
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 145,
-            "column": 9,
-            "byte": 3760
-          },
-          "end": {
-            "line": 145,
-            "column": 54,
-            "byte": 3805
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 133,
-            "column": 18,
-            "byte": 3433
-          },
-          "end": {
-            "line": 133,
-            "column": 49,
-            "byte": 3464
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 153,
-            "column": 5,
-            "byte": 3915
-          },
-          "end": {
-            "line": 153,
-            "column": 43,
-            "byte": 3953
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 131,
-            "column": 16,
-            "byte": 3346
-          },
-          "end": {
-            "line": 131,
-            "column": 45,
-            "byte": 3375
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 145,
-            "column": 14,
-            "byte": 3765
-          },
-          "end": {
-            "line": 145,
-            "column": 53,
-            "byte": 3804
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 150,
-            "column": 11,
-            "byte": 3880
-          },
-          "end": {
-            "line": 150,
-            "column": 31,
-            "byte": 3900
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 133,
-            "column": 18,
-            "byte": 3433
-          },
-          "end": {
-            "line": 133,
-            "column": 58,
-            "byte": 3473
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 135,
-            "column": 21,
-            "byte": 3496
+            "column": 19,
+            "byte": 3551
           },
           "end": {
+            "line": 135,
+            "column": 38,
+            "byte": 3570
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 143,
+            "column": 20,
+            "byte": 3793
+          },
+          "end": {
+            "line": 154,
+            "column": 6,
+            "byte": 4064
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 16,
+            "byte": 3502
+          },
+          "end": {
+            "line": 134,
+            "column": 30,
+            "byte": 3516
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 146,
+            "column": 10,
+            "byte": 3857
+          },
+          "end": {
+            "line": 146,
+            "column": 30,
+            "byte": 3877
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 148,
+            "column": 9,
+            "byte": 3916
+          },
+          "end": {
+            "line": 148,
+            "column": 54,
+            "byte": 3961
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 136,
+            "column": 18,
+            "byte": 3589
+          },
+          "end": {
+            "line": 136,
+            "column": 49,
+            "byte": 3620
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 156,
+            "column": 5,
+            "byte": 4071
+          },
+          "end": {
+            "line": 156,
+            "column": 43,
+            "byte": 4109
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 16,
+            "byte": 3502
+          },
+          "end": {
+            "line": 134,
+            "column": 45,
+            "byte": 3531
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 148,
+            "column": 14,
+            "byte": 3921
+          },
+          "end": {
+            "line": 148,
+            "column": 53,
+            "byte": 3960
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 153,
+            "column": 11,
+            "byte": 4036
+          },
+          "end": {
+            "line": 153,
+            "column": 31,
+            "byte": 4056
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 136,
+            "column": 18,
+            "byte": 3589
+          },
+          "end": {
+            "line": 136,
+            "column": 58,
+            "byte": 3629
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_kotlin_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 138,
+            "column": 21,
+            "byte": 3652
+          },
+          "end": {
+            "line": 141,
             "column": 7,
-            "byte": 3615
+            "byte": 3771
           }
         }
       ]
@@ -120588,248 +120609,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 240,
-            "column": 19,
-            "byte": 6050
-          },
-          "end": {
-            "line": 240,
-            "column": 38,
-            "byte": 6069
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 248,
-            "column": 20,
-            "byte": 6292
-          },
-          "end": {
-            "line": 259,
-            "column": 6,
-            "byte": 6557
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 239,
-            "column": 16,
-            "byte": 6004
-          },
-          "end": {
-            "line": 239,
-            "column": 30,
-            "byte": 6018
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 251,
-            "column": 10,
-            "byte": 6353
-          },
-          "end": {
-            "line": 251,
-            "column": 30,
-            "byte": 6373
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 253,
-            "column": 9,
-            "byte": 6412
-          },
-          "end": {
-            "line": 253,
-            "column": 54,
-            "byte": 6457
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 241,
-            "column": 18,
-            "byte": 6088
-          },
-          "end": {
-            "line": 241,
-            "column": 49,
-            "byte": 6119
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 261,
-            "column": 5,
-            "byte": 6564
-          },
-          "end": {
-            "line": 261,
-            "column": 43,
-            "byte": 6602
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 239,
-            "column": 16,
-            "byte": 6004
-          },
-          "end": {
-            "line": 239,
-            "column": 42,
-            "byte": 6030
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 253,
-            "column": 14,
-            "byte": 6417
-          },
-          "end": {
-            "line": 253,
-            "column": 53,
-            "byte": 6456
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 258,
-            "column": 11,
-            "byte": 6532
-          },
-          "end": {
-            "line": 258,
-            "column": 28,
-            "byte": 6549
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 241,
-            "column": 18,
-            "byte": 6088
-          },
-          "end": {
-            "line": 241,
-            "column": 58,
-            "byte": 6128
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 243,
-            "column": 21,
-            "byte": 6151
+            "column": 19,
+            "byte": 6206
           },
           "end": {
+            "line": 243,
+            "column": 38,
+            "byte": 6225
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 251,
+            "column": 20,
+            "byte": 6448
+          },
+          "end": {
+            "line": 262,
+            "column": 6,
+            "byte": 6713
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 242,
+            "column": 16,
+            "byte": 6160
+          },
+          "end": {
+            "line": 242,
+            "column": 30,
+            "byte": 6174
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 254,
+            "column": 10,
+            "byte": 6509
+          },
+          "end": {
+            "line": 254,
+            "column": 30,
+            "byte": 6529
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 256,
+            "column": 9,
+            "byte": 6568
+          },
+          "end": {
+            "line": 256,
+            "column": 54,
+            "byte": 6613
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 244,
+            "column": 18,
+            "byte": 6244
+          },
+          "end": {
+            "line": 244,
+            "column": 49,
+            "byte": 6275
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 264,
+            "column": 5,
+            "byte": 6720
+          },
+          "end": {
+            "line": 264,
+            "column": 43,
+            "byte": 6758
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 242,
+            "column": 16,
+            "byte": 6160
+          },
+          "end": {
+            "line": 242,
+            "column": 42,
+            "byte": 6186
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 256,
+            "column": 14,
+            "byte": 6573
+          },
+          "end": {
+            "line": 256,
+            "column": 53,
+            "byte": 6612
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 261,
+            "column": 11,
+            "byte": 6688
+          },
+          "end": {
+            "line": 261,
+            "column": 28,
+            "byte": 6705
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 244,
+            "column": 18,
+            "byte": 6244
+          },
+          "end": {
+            "line": 244,
+            "column": 58,
+            "byte": 6284
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_php_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 246,
+            "column": 21,
+            "byte": 6307
+          },
+          "end": {
+            "line": 249,
             "column": 7,
-            "byte": 6270
+            "byte": 6426
           }
         }
       ]
@@ -120843,14 +120864,14 @@
       "sites": [
         {
           "start": {
-            "line": 51,
+            "line": 54,
             "column": 19,
-            "byte": 1418
+            "byte": 1574
           },
           "end": {
-            "line": 51,
+            "line": 54,
             "column": 38,
-            "byte": 1437
+            "byte": 1593
           }
         }
       ]
@@ -120864,14 +120885,14 @@
       "sites": [
         {
           "start": {
-            "line": 59,
+            "line": 62,
             "column": 20,
-            "byte": 1665
+            "byte": 1821
           },
           "end": {
-            "line": 70,
+            "line": 73,
             "column": 6,
-            "byte": 1936
+            "byte": 2092
           }
         }
       ]
@@ -120885,14 +120906,14 @@
       "sites": [
         {
           "start": {
-            "line": 50,
+            "line": 53,
             "column": 16,
-            "byte": 1369
+            "byte": 1525
           },
           "end": {
-            "line": 50,
+            "line": 53,
             "column": 30,
-            "byte": 1383
+            "byte": 1539
           }
         }
       ]
@@ -120906,14 +120927,14 @@
       "sites": [
         {
           "start": {
-            "line": 62,
+            "line": 65,
             "column": 10,
-            "byte": 1729
+            "byte": 1885
           },
           "end": {
-            "line": 62,
+            "line": 65,
             "column": 30,
-            "byte": 1749
+            "byte": 1905
           }
         }
       ]
@@ -120927,14 +120948,14 @@
       "sites": [
         {
           "start": {
-            "line": 64,
+            "line": 67,
             "column": 9,
-            "byte": 1788
+            "byte": 1944
           },
           "end": {
-            "line": 64,
+            "line": 67,
             "column": 54,
-            "byte": 1833
+            "byte": 1989
           }
         }
       ]
@@ -120948,272 +120969,20 @@
       "sites": [
         {
           "start": {
-            "line": 52,
+            "line": 55,
             "column": 18,
-            "byte": 1456
+            "byte": 1612
           },
           "end": {
-            "line": 52,
+            "line": 55,
             "column": 49,
-            "byte": 1487
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 72,
-            "column": 5,
-            "byte": 1943
-          },
-          "end": {
-            "line": 72,
-            "column": 43,
-            "byte": 1981
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 50,
-            "column": 16,
-            "byte": 1369
-          },
-          "end": {
-            "line": 50,
-            "column": 45,
-            "byte": 1398
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 64,
-            "column": 14,
-            "byte": 1793
-          },
-          "end": {
-            "line": 64,
-            "column": 53,
-            "byte": 1832
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 69,
-            "column": 11,
-            "byte": 1908
-          },
-          "end": {
-            "line": 69,
-            "column": 31,
-            "byte": 1928
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 52,
-            "column": 18,
-            "byte": 1456
-          },
-          "end": {
-            "line": 52,
-            "column": 58,
-            "byte": 1496
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 54,
-            "column": 21,
-            "byte": 1519
-          },
-          "end": {
-            "line": 57,
-            "column": 7,
             "byte": 1643
           }
         }
       ]
     },
     {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "external:rust:GraphBuilder.new",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 267,
-            "column": 19,
-            "byte": 6706
-          },
-          "end": {
-            "line": 267,
-            "column": 38,
-            "byte": 6725
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 275,
-            "column": 20,
-            "byte": 6949
-          },
-          "end": {
-            "line": 286,
-            "column": 6,
-            "byte": 7216
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 266,
-            "column": 16,
-            "byte": 6659
-          },
-          "end": {
-            "line": 266,
-            "column": 30,
-            "byte": 6673
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 278,
-            "column": 10,
-            "byte": 7011
-          },
-          "end": {
-            "line": 278,
-            "column": 30,
-            "byte": 7031
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 280,
-            "column": 9,
-            "byte": 7070
-          },
-          "end": {
-            "line": 280,
-            "column": 54,
-            "byte": 7115
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 268,
-            "column": 18,
-            "byte": 6744
-          },
-          "end": {
-            "line": 268,
-            "column": 49,
-            "byte": 6775
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
       "target": "unresolved:insta::assert_json_snapshot",
       "kind": "calls",
       "status": "unresolved",
@@ -121221,20 +120990,20 @@
       "sites": [
         {
           "start": {
-            "line": 288,
+            "line": 75,
             "column": 5,
-            "byte": 7223
+            "byte": 2099
           },
           "end": {
-            "line": 288,
+            "line": 75,
             "column": 43,
-            "byte": 7261
+            "byte": 2137
           }
         }
       ]
     },
     {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
       "target": "unresolved:join",
       "kind": "calls",
       "status": "unresolved",
@@ -121242,20 +121011,20 @@
       "sites": [
         {
           "start": {
-            "line": 266,
+            "line": 53,
             "column": 16,
-            "byte": 6659
+            "byte": 1525
           },
           "end": {
-            "line": 266,
-            "column": 43,
-            "byte": 6686
+            "line": 53,
+            "column": 45,
+            "byte": 1554
           }
         }
       ]
     },
     {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
       "target": "unresolved:stats",
       "kind": "calls",
       "status": "unresolved",
@@ -121263,20 +121032,20 @@
       "sites": [
         {
           "start": {
-            "line": 280,
+            "line": 67,
             "column": 14,
-            "byte": 7075
+            "byte": 1949
           },
           "end": {
-            "line": 280,
+            "line": 67,
             "column": 53,
-            "byte": 7114
+            "byte": 1988
           }
         }
       ]
     },
     {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
       "target": "unresolved:to_string",
       "kind": "calls",
       "status": "unresolved",
@@ -121284,20 +121053,20 @@
       "sites": [
         {
           "start": {
-            "line": 285,
+            "line": 72,
             "column": 11,
-            "byte": 7190
+            "byte": 2064
           },
           "end": {
-            "line": 285,
-            "column": 29,
-            "byte": 7208
+            "line": 72,
+            "column": 31,
+            "byte": 2084
           }
         }
       ]
     },
     {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
       "target": "unresolved:unwrap",
       "kind": "calls",
       "status": "unresolved",
@@ -121305,35 +121074,287 @@
       "sites": [
         {
           "start": {
-            "line": 268,
+            "line": 55,
             "column": 18,
-            "byte": 6744
+            "byte": 1612
           },
           "end": {
-            "line": 268,
+            "line": 55,
             "column": 58,
-            "byte": 6784
+            "byte": 1652
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_python_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 57,
+            "column": 21,
+            "byte": 1675
+          },
+          "end": {
+            "line": 60,
+            "column": 7,
+            "byte": 1799
           }
         }
       ]
     },
     {
       "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
-      "target": "unresolved:vec",
+      "target": "external:rust:GraphBuilder.new",
       "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
+      "status": "resolved_external",
+      "origin": "lexical",
       "sites": [
         {
           "start": {
             "line": 270,
-            "column": 21,
-            "byte": 6807
+            "column": 19,
+            "byte": 6862
           },
           "end": {
+            "line": 270,
+            "column": 38,
+            "byte": 6881
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 278,
+            "column": 20,
+            "byte": 7105
+          },
+          "end": {
+            "line": 289,
+            "column": 6,
+            "byte": 7372
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 269,
+            "column": 16,
+            "byte": 6815
+          },
+          "end": {
+            "line": 269,
+            "column": 30,
+            "byte": 6829
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 281,
+            "column": 10,
+            "byte": 7167
+          },
+          "end": {
+            "line": 281,
+            "column": 30,
+            "byte": 7187
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 283,
+            "column": 9,
+            "byte": 7226
+          },
+          "end": {
+            "line": 283,
+            "column": 54,
+            "byte": 7271
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 271,
+            "column": 18,
+            "byte": 6900
+          },
+          "end": {
+            "line": 271,
+            "column": 49,
+            "byte": 6931
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 291,
+            "column": 5,
+            "byte": 7379
+          },
+          "end": {
+            "line": 291,
+            "column": 43,
+            "byte": 7417
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 269,
+            "column": 16,
+            "byte": 6815
+          },
+          "end": {
+            "line": 269,
+            "column": 43,
+            "byte": 6842
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 283,
+            "column": 14,
+            "byte": 7231
+          },
+          "end": {
+            "line": 283,
+            "column": 53,
+            "byte": 7270
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 288,
+            "column": 11,
+            "byte": 7346
+          },
+          "end": {
+            "line": 288,
+            "column": 29,
+            "byte": 7364
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 271,
+            "column": 18,
+            "byte": 6900
+          },
+          "end": {
+            "line": 271,
+            "column": 58,
+            "byte": 6940
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_ruby_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 273,
+            "column": 21,
+            "byte": 6963
+          },
+          "end": {
+            "line": 276,
             "column": 7,
-            "byte": 6927
+            "byte": 7083
           }
         }
       ]
@@ -121344,248 +121365,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 105,
-            "column": 19,
-            "byte": 2732
-          },
-          "end": {
-            "line": 105,
-            "column": 38,
-            "byte": 2751
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 113,
-            "column": 20,
-            "byte": 2975
-          },
-          "end": {
-            "line": 124,
-            "column": 6,
-            "byte": 3242
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 104,
-            "column": 16,
-            "byte": 2685
-          },
-          "end": {
-            "line": 104,
-            "column": 30,
-            "byte": 2699
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 116,
-            "column": 10,
-            "byte": 3037
-          },
-          "end": {
-            "line": 116,
-            "column": 30,
-            "byte": 3057
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 118,
-            "column": 9,
-            "byte": 3096
-          },
-          "end": {
-            "line": 118,
-            "column": 54,
-            "byte": 3141
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 106,
-            "column": 18,
-            "byte": 2770
-          },
-          "end": {
-            "line": 106,
-            "column": 49,
-            "byte": 2801
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 126,
-            "column": 5,
-            "byte": 3249
-          },
-          "end": {
-            "line": 126,
-            "column": 43,
-            "byte": 3287
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 104,
-            "column": 16,
-            "byte": 2685
-          },
-          "end": {
-            "line": 104,
-            "column": 43,
-            "byte": 2712
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 118,
-            "column": 14,
-            "byte": 3101
-          },
-          "end": {
-            "line": 118,
-            "column": 53,
-            "byte": 3140
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 123,
-            "column": 11,
-            "byte": 3216
-          },
-          "end": {
-            "line": 123,
-            "column": 29,
-            "byte": 3234
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 106,
-            "column": 18,
-            "byte": 2770
-          },
-          "end": {
-            "line": 106,
-            "column": 58,
-            "byte": 2810
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 108,
-            "column": 21,
-            "byte": 2833
+            "column": 19,
+            "byte": 2888
           },
           "end": {
+            "line": 108,
+            "column": 38,
+            "byte": 2907
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 116,
+            "column": 20,
+            "byte": 3131
+          },
+          "end": {
+            "line": 127,
+            "column": 6,
+            "byte": 3398
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 107,
+            "column": 16,
+            "byte": 2841
+          },
+          "end": {
+            "line": 107,
+            "column": 30,
+            "byte": 2855
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 119,
+            "column": 10,
+            "byte": 3193
+          },
+          "end": {
+            "line": 119,
+            "column": 30,
+            "byte": 3213
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 121,
+            "column": 9,
+            "byte": 3252
+          },
+          "end": {
+            "line": 121,
+            "column": 54,
+            "byte": 3297
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 109,
+            "column": 18,
+            "byte": 2926
+          },
+          "end": {
+            "line": 109,
+            "column": 49,
+            "byte": 2957
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 129,
+            "column": 5,
+            "byte": 3405
+          },
+          "end": {
+            "line": 129,
+            "column": 43,
+            "byte": 3443
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 107,
+            "column": 16,
+            "byte": 2841
+          },
+          "end": {
+            "line": 107,
+            "column": 43,
+            "byte": 2868
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 121,
+            "column": 14,
+            "byte": 3257
+          },
+          "end": {
+            "line": 121,
+            "column": 53,
+            "byte": 3296
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 126,
+            "column": 11,
+            "byte": 3372
+          },
+          "end": {
+            "line": 126,
+            "column": 29,
+            "byte": 3390
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 109,
+            "column": 18,
+            "byte": 2926
+          },
+          "end": {
+            "line": 109,
+            "column": 58,
+            "byte": 2966
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_rust_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 111,
+            "column": 21,
+            "byte": 2989
+          },
+          "end": {
+            "line": 114,
             "column": 7,
-            "byte": 2953
+            "byte": 3109
           }
         }
       ]
@@ -121596,248 +121617,248 @@
       "kind": "calls",
       "status": "resolved_external",
       "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 159,
-            "column": 19,
-            "byte": 4059
-          },
-          "end": {
-            "line": 159,
-            "column": 38,
-            "byte": 4078
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "external:unresolved:trace_export::export_graph",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 167,
-            "column": 20,
-            "byte": 4303
-          },
-          "end": {
-            "line": 178,
-            "column": 6,
-            "byte": 4572
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 158,
-            "column": 16,
-            "byte": 4011
-          },
-          "end": {
-            "line": 158,
-            "column": 30,
-            "byte": 4025
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
-      "kind": "calls",
-      "status": "resolved_internal",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 170,
-            "column": 10,
-            "byte": 4366
-          },
-          "end": {
-            "line": 170,
-            "column": 30,
-            "byte": 4386
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:Some",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 172,
-            "column": 9,
-            "byte": 4425
-          },
-          "end": {
-            "line": 172,
-            "column": 54,
-            "byte": 4470
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:build_repository",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 160,
-            "column": 18,
-            "byte": 4097
-          },
-          "end": {
-            "line": 160,
-            "column": 49,
-            "byte": 4128
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:insta::assert_json_snapshot",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 180,
-            "column": 5,
-            "byte": 4579
-          },
-          "end": {
-            "line": 180,
-            "column": 43,
-            "byte": 4617
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:join",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 158,
-            "column": 16,
-            "byte": 4011
-          },
-          "end": {
-            "line": 158,
-            "column": 44,
-            "byte": 4039
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:stats",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 172,
-            "column": 14,
-            "byte": 4430
-          },
-          "end": {
-            "line": 172,
-            "column": 53,
-            "byte": 4469
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:to_string",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 177,
-            "column": 11,
-            "byte": 4545
-          },
-          "end": {
-            "line": 177,
-            "column": 30,
-            "byte": 4564
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:unwrap",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
-      "sites": [
-        {
-          "start": {
-            "line": 160,
-            "column": 18,
-            "byte": 4097
-          },
-          "end": {
-            "line": 160,
-            "column": 58,
-            "byte": 4137
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
-      "target": "unresolved:vec",
-      "kind": "calls",
-      "status": "unresolved",
-      "origin": "syntax",
       "sites": [
         {
           "start": {
             "line": 162,
-            "column": 21,
-            "byte": 4160
+            "column": 19,
+            "byte": 4215
           },
           "end": {
+            "line": 162,
+            "column": 38,
+            "byte": 4234
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "external:unresolved:trace_export::export_graph",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 170,
+            "column": 20,
+            "byte": 4459
+          },
+          "end": {
+            "line": 181,
+            "column": 6,
+            "byte": 4728
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::fixtures_dir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 161,
+            "column": 16,
+            "byte": 4167
+          },
+          "end": {
+            "line": 161,
+            "column": 30,
+            "byte": 4181
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "function:crates/trace-analysis/tests/snapshots.rs::portable_root",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 173,
+            "column": 10,
+            "byte": 4522
+          },
+          "end": {
+            "line": 173,
+            "column": 30,
+            "byte": 4542
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:Some",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 175,
+            "column": 9,
+            "byte": 4581
+          },
+          "end": {
+            "line": 175,
+            "column": 54,
+            "byte": 4626
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:build_repository",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 163,
+            "column": 18,
+            "byte": 4253
+          },
+          "end": {
+            "line": 163,
+            "column": 49,
+            "byte": 4284
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:insta::assert_json_snapshot",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 183,
+            "column": 5,
+            "byte": 4735
+          },
+          "end": {
+            "line": 183,
+            "column": 43,
+            "byte": 4773
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:join",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 161,
+            "column": 16,
+            "byte": 4167
+          },
+          "end": {
+            "line": 161,
+            "column": 44,
+            "byte": 4195
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:stats",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 175,
+            "column": 14,
+            "byte": 4586
+          },
+          "end": {
+            "line": 175,
+            "column": 53,
+            "byte": 4625
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:to_string",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 180,
+            "column": 11,
+            "byte": 4701
+          },
+          "end": {
+            "line": 180,
+            "column": 30,
+            "byte": 4720
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 163,
+            "column": 18,
+            "byte": 4253
+          },
+          "end": {
+            "line": 163,
+            "column": 58,
+            "byte": 4293
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/trace-analysis/tests/snapshots.rs::snapshot_swift_fixture",
+      "target": "unresolved:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
             "line": 165,
+            "column": 21,
+            "byte": 4316
+          },
+          "end": {
+            "line": 168,
             "column": 7,
-            "byte": 4281
+            "byte": 4437
           }
         }
       ]
@@ -121851,14 +121872,14 @@
       "sites": [
         {
           "start": {
-            "line": 24,
+            "line": 27,
             "column": 19,
-            "byte": 731
+            "byte": 887
           },
           "end": {
-            "line": 24,
+            "line": 27,
             "column": 38,
-            "byte": 750
+            "byte": 906
           }
         }
       ]
@@ -121872,14 +121893,14 @@
       "sites": [
         {
           "start": {
-            "line": 32,
+            "line": 35,
             "column": 20,
-            "byte": 986
+            "byte": 1142
           },
           "end": {
-            "line": 43,
+            "line": 46,
             "column": 6,
-            "byte": 1265
+            "byte": 1421
           }
         }
       ]
@@ -121893,14 +121914,14 @@
       "sites": [
         {
           "start": {
-            "line": 23,
+            "line": 26,
             "column": 16,
-            "byte": 678
+            "byte": 834
           },
           "end": {
-            "line": 23,
+            "line": 26,
             "column": 30,
-            "byte": 692
+            "byte": 848
           }
         }
       ]
@@ -121914,14 +121935,14 @@
       "sites": [
         {
           "start": {
-            "line": 35,
+            "line": 38,
             "column": 10,
-            "byte": 1054
+            "byte": 1210
           },
           "end": {
-            "line": 35,
+            "line": 38,
             "column": 30,
-            "byte": 1074
+            "byte": 1230
           }
         }
       ]
@@ -121935,14 +121956,14 @@
       "sites": [
         {
           "start": {
-            "line": 37,
+            "line": 40,
             "column": 9,
-            "byte": 1113
+            "byte": 1269
           },
           "end": {
-            "line": 37,
+            "line": 40,
             "column": 54,
-            "byte": 1158
+            "byte": 1314
           }
         }
       ]
@@ -121956,14 +121977,14 @@
       "sites": [
         {
           "start": {
-            "line": 25,
+            "line": 28,
             "column": 18,
-            "byte": 769
+            "byte": 925
           },
           "end": {
-            "line": 25,
+            "line": 28,
             "column": 49,
-            "byte": 800
+            "byte": 956
           }
         }
       ]
@@ -121977,14 +121998,14 @@
       "sites": [
         {
           "start": {
-            "line": 45,
+            "line": 48,
             "column": 5,
-            "byte": 1272
+            "byte": 1428
           },
           "end": {
-            "line": 45,
+            "line": 48,
             "column": 43,
-            "byte": 1310
+            "byte": 1466
           }
         }
       ]
@@ -121998,14 +122019,14 @@
       "sites": [
         {
           "start": {
-            "line": 23,
+            "line": 26,
             "column": 16,
-            "byte": 678
+            "byte": 834
           },
           "end": {
-            "line": 23,
+            "line": 26,
             "column": 49,
-            "byte": 711
+            "byte": 867
           }
         }
       ]
@@ -122019,14 +122040,14 @@
       "sites": [
         {
           "start": {
-            "line": 37,
+            "line": 40,
             "column": 14,
-            "byte": 1118
+            "byte": 1274
           },
           "end": {
-            "line": 37,
+            "line": 40,
             "column": 53,
-            "byte": 1157
+            "byte": 1313
           }
         }
       ]
@@ -122040,14 +122061,14 @@
       "sites": [
         {
           "start": {
-            "line": 42,
+            "line": 45,
             "column": 11,
-            "byte": 1233
+            "byte": 1389
           },
           "end": {
-            "line": 42,
+            "line": 45,
             "column": 35,
-            "byte": 1257
+            "byte": 1413
           }
         }
       ]
@@ -122061,14 +122082,14 @@
       "sites": [
         {
           "start": {
-            "line": 25,
+            "line": 28,
             "column": 18,
-            "byte": 769
+            "byte": 925
           },
           "end": {
-            "line": 25,
+            "line": 28,
             "column": 58,
-            "byte": 809
+            "byte": 965
           }
         }
       ]
@@ -122082,14 +122103,14 @@
       "sites": [
         {
           "start": {
-            "line": 27,
+            "line": 30,
             "column": 21,
-            "byte": 832
+            "byte": 988
           },
           "end": {
-            "line": 30,
+            "line": 33,
             "column": 7,
-            "byte": 964
+            "byte": 1120
           }
         }
       ]
@@ -267848,9 +267869,9 @@
     "files": 110,
     "packages": 6,
     "nodes": 3623,
-    "edges": 12601,
+    "edges": 12602,
     "symbols": 3129,
-    "unresolvedEdges": 3677,
+    "unresolvedEdges": 3678,
     "diagnostics": 14,
     "byNodeKind": {
       "class": 48,
@@ -267874,7 +267895,7 @@
       "variable": 1197
     },
     "byEdgeKind": {
-      "calls": 4417,
+      "calls": 4418,
       "contains": 2992,
       "defines": 2760,
       "exports": 998,
@@ -267901,7 +267922,7 @@
       "ambiguous": 2,
       "resolved_external": 560,
       "resolved_internal": 8364,
-      "unresolved": 3675
+      "unresolved": 3676
     }
   }
 }
