@@ -58,8 +58,6 @@ impl GraphBuilder {
 
     /// Build a graph from a repository root using default discovery options.
     pub fn build_repository(&self, root: &Path) -> Result<GraphBuildResult> {
-        use trace_parser::discovery::discover;
-
         let options = trace_parser::discovery::DiscoveryOptions::default();
         self.build_repository_with_options(root, &options)
     }

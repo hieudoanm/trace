@@ -56,13 +56,16 @@
                 document.getElementById('fileCount').textContent = data.repository.fileCount;
                 
                 const elements = [];
+                const nodeIds = new Set();
                 data.nodes.slice(0, 2000).forEach(node => {
                     elements.push({
                         data: { id: node.id, label: node.name, kind: node.kind, path: node.path },
                         classes: node.kind
                     });
+                    nodeIds.add(node.id);
                 });
                 data.edges.slice(0, 4000).forEach(edge => {
+                    if (!nodeIds.has(edge.source) || !nodeIds.has(edge.target)) return;
                     elements.push({
                         data: { id: edge.source + '->' + edge.target + edge.kind, source: edge.source, target: edge.target, kind: edge.kind },
                         classes: edge.kind

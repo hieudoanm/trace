@@ -1,5 +1,6 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
+assertion_line: 111
 expression: document
 ---
 {
@@ -9,7 +10,7 @@ expression: document
     "id": "repository:.",
     "name": "rust",
     "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/rust",
-    "fileCount": 2,
+    "fileCount": 3,
     "languageCount": 1
   },
   "analysis": {
@@ -39,6 +40,13 @@ expression: document
       "kind": "file",
       "name": "src/main.rs",
       "file": "src/main.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:src/service.rs",
+      "kind": "file",
+      "name": "src/service.rs",
+      "file": "src/service.rs",
       "language": "rust"
     },
     {
@@ -218,6 +226,182 @@ expression: document
       "exported": false
     },
     {
+      "id": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 21,
+          "column": 5,
+          "byte": 450
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 531
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "method",
+      "name": "new",
+      "qualifiedName": "InMemoryRepository.new",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 13,
+          "column": 5,
+          "byte": 279
+        },
+        "end": {
+          "line": 17,
+          "column": 6,
+          "byte": 385
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 25,
+          "column": 5,
+          "byte": 537
+        },
+        "end": {
+          "line": 27,
+          "column": 6,
+          "byte": 625
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::Repository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "Repository.find",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 67
+        },
+        "end": {
+          "line": 4,
+          "column": 43,
+          "byte": 105
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/service.rs::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::Repository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "Repository.save",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 110
+        },
+        "end": {
+          "line": 5,
+          "column": 47,
+          "byte": 152
+        }
+      },
+      "language": "rust",
+      "parent": "trait:src/service.rs::Repository",
+      "exported": false
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.add",
+      "kind": "method",
+      "name": "add",
+      "qualifiedName": "ShapeService.add",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 41,
+          "column": 5,
+          "byte": 846
+        },
+        "end": {
+          "line": 43,
+          "column": 6,
+          "byte": 941
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 45,
+          "column": 5,
+          "byte": 947
+        },
+        "end": {
+          "line": 48,
+          "column": 6,
+          "byte": 1072
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
+      "id": "method:src/service.rs::ShapeService.new",
+      "kind": "method",
+      "name": "new",
+      "qualifiedName": "ShapeService.new",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 5,
+          "byte": 735
+        },
+        "end": {
+          "line": 39,
+          "column": 6,
+          "byte": 840
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": true
+    },
+    {
       "id": "module:src/lib.rs",
       "kind": "module",
       "name": "crate",
@@ -252,6 +436,13 @@ expression: document
       "language": "rust",
       "parent": "module:src/main.rs",
       "exported": false
+    },
+    {
+      "id": "module:src/service.rs",
+      "kind": "module",
+      "name": "crate::service",
+      "file": "src/service.rs",
+      "language": "rust"
     },
     {
       "id": "property:src/lib.rs::Circle.radius",
@@ -320,6 +511,50 @@ expression: document
       "exported": false
     },
     {
+      "id": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 5,
+          "byte": 195
+        },
+        "end": {
+          "line": 9,
+          "column": 48,
+          "byte": 238
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/service.rs::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 5,
+          "byte": 659
+        },
+        "end": {
+          "line": 31,
+          "column": 52,
+          "byte": 706
+        }
+      },
+      "language": "rust",
+      "parent": "struct:src/service.rs::ShapeService",
+      "exported": false
+    },
+    {
       "id": "repository:.",
       "kind": "repository",
       "name": "repository"
@@ -369,6 +604,50 @@ expression: document
       "exported": true
     },
     {
+      "id": "struct:src/service.rs::InMemoryRepository",
+      "kind": "struct",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 8,
+          "column": 1,
+          "byte": 156
+        },
+        "end": {
+          "line": 10,
+          "column": 2,
+          "byte": 241
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
+      "id": "struct:src/service.rs::ShapeService",
+      "kind": "struct",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 30,
+          "column": 1,
+          "byte": 629
+        },
+        "end": {
+          "line": 32,
+          "column": 2,
+          "byte": 709
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
       "id": "trait:src/lib.rs::Shape",
       "kind": "trait",
       "name": "Shape",
@@ -391,6 +670,28 @@ expression: document
       "exported": true
     },
     {
+      "id": "trait:src/service.rs::Repository",
+      "kind": "trait",
+      "name": "Repository",
+      "qualifiedName": "Repository",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 37
+        },
+        "end": {
+          "line": 6,
+          "column": 2,
+          "byte": 154
+        }
+      },
+      "language": "rust",
+      "parent": "module:src/service.rs",
+      "exported": true
+    },
+    {
       "id": "variable:src/main.rs::main.shapes",
       "kind": "variable",
       "name": "shapes",
@@ -410,6 +711,28 @@ expression: document
       },
       "language": "rust",
       "parent": "function:src/main.rs::main",
+      "exported": false
+    },
+    {
+      "id": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "variable",
+      "name": "circle",
+      "qualifiedName": "ShapeService.area.circle",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 46,
+          "column": 9,
+          "byte": 993
+        },
+        "end": {
+          "line": 46,
+          "column": 60,
+          "byte": 1044
+        }
+      },
+      "language": "rust",
+      "parent": "method:src/service.rs::ShapeService.area",
       "exported": false
     }
   ],
@@ -618,6 +941,181 @@ expression: document
       ]
     },
     {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::Repository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::Repository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "module:src/service.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "property:src/service.rs::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
       "source": "function:src/lib.rs::total_area",
       "target": "unresolved:area",
       "kind": "calls",
@@ -786,6 +1284,342 @@ expression: document
       ]
     },
     {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:cloned",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 9,
+            "byte": 498
+          },
+          "end": {
+            "line": 22,
+            "column": 36,
+            "byte": 525
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 9,
+            "byte": 498
+          },
+          "end": {
+            "line": 22,
+            "column": 27,
+            "byte": 516
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.find",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 21,
+            "column": 40,
+            "byte": 485
+          },
+          "end": {
+            "line": 21,
+            "column": 41,
+            "byte": 486
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.new",
+      "target": "external:rust:Self",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 9,
+            "byte": 310
+          },
+          "end": {
+            "line": 16,
+            "column": 10,
+            "byte": 379
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.new",
+      "target": "external:rust:std::collections::HashMap.new",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 15,
+            "column": 20,
+            "byte": 336
+          },
+          "end": {
+            "line": 15,
+            "column": 52,
+            "byte": 368
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.save",
+      "target": "unresolved:insert",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 9,
+            "byte": 589
+          },
+          "end": {
+            "line": 26,
+            "column": 38,
+            "byte": 618
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 25,
+            "column": 44,
+            "byte": 576
+          },
+          "end": {
+            "line": 25,
+            "column": 45,
+            "byte": 577
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::Repository.find",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 40,
+            "byte": 102
+          },
+          "end": {
+            "line": 4,
+            "column": 41,
+            "byte": 103
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::Repository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 5,
+            "column": 44,
+            "byte": 149
+          },
+          "end": {
+            "line": 5,
+            "column": 45,
+            "byte": 150
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.add",
+      "target": "unresolved:insert",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 42,
+            "column": 9,
+            "byte": 906
+          },
+          "end": {
+            "line": 42,
+            "column": 37,
+            "byte": 934
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.add",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 41,
+            "column": 47,
+            "byte": 888
+          },
+          "end": {
+            "line": 41,
+            "column": 53,
+            "byte": 894
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 47,
+            "column": 9,
+            "byte": 1053
+          },
+          "end": {
+            "line": 47,
+            "column": 22,
+            "byte": 1066
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:expect",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 22,
+            "byte": 1006
+          },
+          "end": {
+            "line": 46,
+            "column": 59,
+            "byte": 1043
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.area",
+      "target": "unresolved:get",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 46,
+            "column": 22,
+            "byte": 1006
+          },
+          "end": {
+            "line": 46,
+            "column": 39,
+            "byte": 1023
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.new",
+      "target": "external:rust:Self",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 36,
+            "column": 9,
+            "byte": 766
+          },
+          "end": {
+            "line": 38,
+            "column": 10,
+            "byte": 834
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/service.rs::ShapeService.new",
+      "target": "external:rust:std::collections::HashMap.new",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 37,
+            "column": 19,
+            "byte": 791
+          },
+          "end": {
+            "line": 37,
+            "column": 51,
+            "byte": 823
+          }
+        }
+      ]
+    },
+    {
       "source": "module:src/lib.rs",
       "target": "struct:src/lib.rs::Circle",
       "kind": "uses_type",
@@ -940,6 +1774,191 @@ expression: document
       "origin": "syntax"
     },
     {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 9,
+            "byte": 251
+          },
+          "end": {
+            "line": 12,
+            "column": 27,
+            "byte": 269
+          }
+        },
+        {
+          "start": {
+            "line": 20,
+            "column": 34,
+            "byte": 422
+          },
+          "end": {
+            "line": 20,
+            "column": 52,
+            "byte": 440
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 34,
+            "column": 6,
+            "byte": 716
+          },
+          "end": {
+            "line": 34,
+            "column": 18,
+            "byte": 728
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 28,
+            "byte": 270
+          },
+          "end": {
+            "line": 12,
+            "column": 29,
+            "byte": 271
+          }
+        },
+        {
+          "start": {
+            "line": 20,
+            "column": 53,
+            "byte": 441
+          },
+          "end": {
+            "line": 20,
+            "column": 54,
+            "byte": 442
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.new",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::Repository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::Repository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.add",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "method:src/service.rs::ShapeService.new",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "property:src/service.rs::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "property:src/service.rs::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "struct:src/service.rs::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/service.rs",
+      "target": "variable:src/service.rs::ShapeService.area.circle",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
       "source": "repository:.",
       "target": "file:src/lib.rs",
       "kind": "contains",
@@ -949,6 +1968,13 @@ expression: document
     {
       "source": "repository:.",
       "target": "file:src/main.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "file:src/service.rs",
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -994,44 +2020,158 @@ expression: document
           }
         }
       ]
+    },
+    {
+      "source": "struct:src/service.rs::InMemoryRepository",
+      "target": "trait:src/service.rs::Repository",
+      "kind": "implements",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 16,
+            "byte": 404
+          },
+          "end": {
+            "line": 20,
+            "column": 29,
+            "byte": 417
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/service.rs::InMemoryRepository",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 8,
+            "column": 31,
+            "byte": 186
+          },
+          "end": {
+            "line": 8,
+            "column": 32,
+            "byte": 187
+          }
+        },
+        {
+          "start": {
+            "line": 9,
+            "column": 46,
+            "byte": 236
+          },
+          "end": {
+            "line": 9,
+            "column": 47,
+            "byte": 237
+          }
+        }
+      ]
+    },
+    {
+      "source": "struct:src/service.rs::ShapeService",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 31,
+            "column": 45,
+            "byte": 699
+          },
+          "end": {
+            "line": 31,
+            "column": 51,
+            "byte": 705
+          }
+        }
+      ]
     }
   ],
-  "diagnostics": [],
+  "diagnostics": [
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `crate::shapes::Circle`",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "byte": 35
+        }
+      },
+      "language": "rust"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
+      "message": "cannot resolve import `crate::shapes::Shape`",
+      "file": "src/service.rs",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 36,
+          "byte": 35
+        }
+      },
+      "language": "rust"
+    }
+  ],
   "statistics": {
-    "files": 2,
+    "files": 3,
     "packages": 0,
-    "nodes": 21,
-    "edges": 57,
-    "symbols": 15,
-    "unresolvedEdges": 7,
-    "diagnostics": 0,
+    "nodes": 37,
+    "edges": 119,
+    "symbols": 29,
+    "unresolvedEdges": 22,
+    "diagnostics": 2,
     "byNodeKind": {
-      "file": 2,
+      "file": 3,
       "function": 2,
-      "method": 6,
-      "module": 3,
-      "property": 3,
+      "method": 14,
+      "module": 4,
+      "property": 5,
       "repository": 1,
-      "struct": 2,
-      "trait": 1,
-      "variable": 1
+      "struct": 4,
+      "trait": 2,
+      "variable": 2
     },
     "byEdgeKind": {
-      "calls": 6,
-      "contains": 20,
-      "defines": 16,
-      "exports": 8,
-      "implements": 2,
+      "calls": 17,
+      "contains": 36,
+      "defines": 30,
+      "exports": 18,
+      "implements": 3,
       "imports": 1,
-      "uses_type": 4
+      "uses_type": 14
     },
     "byLanguage": {
-      "rust": 20
+      "rust": 36
     },
     "byStatus": {
-      "resolved_external": 1,
-      "resolved_internal": 49,
-      "unresolved": 7
+      "resolved_external": 5,
+      "resolved_internal": 92,
+      "unresolved": 22
     }
   }
 }

@@ -1,5 +1,6 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
+assertion_line: 137
 expression: document
 ---
 {
@@ -9,7 +10,7 @@ expression: document
     "id": "repository:.",
     "name": "kotlin",
     "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/kotlin",
-    "fileCount": 2,
+    "fileCount": 3,
     "languageCount": 1
   },
   "analysis": {
@@ -27,6 +28,50 @@ expression: document
     }
   ],
   "nodes": [
+    {
+      "id": "class:src/Service.kt::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "byte": 21
+        },
+        "end": {
+          "line": 7,
+          "column": 2,
+          "byte": 202
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/Service.kt",
+      "exported": true
+    },
+    {
+      "id": "class:src/Service.kt::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "byte": 204
+        },
+        "end": {
+          "line": 14,
+          "column": 2,
+          "byte": 422
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/Service.kt",
+      "exported": true
+    },
     {
       "id": "class:src/shapes.kt::Circle",
       "kind": "class",
@@ -138,6 +183,50 @@ expression: document
       "exported": true
     },
     {
+      "id": "constant:src/Service.kt::ShapeService.area.shape",
+      "kind": "constant",
+      "name": "shape",
+      "qualifiedName": "ShapeService.area.shape",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 9,
+          "byte": 314
+        },
+        "end": {
+          "line": 11,
+          "column": 81,
+          "byte": 386
+        }
+      },
+      "language": "kotlin",
+      "parent": "method:src/Service.kt::ShapeService.area",
+      "exported": true
+    },
+    {
+      "id": "constructor:src/Service.kt::ShapeService.constructor",
+      "kind": "constructor",
+      "name": "constructor",
+      "qualifiedName": "ShapeService.constructor",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 19,
+          "byte": 222
+        },
+        "end": {
+          "line": 9,
+          "column": 65,
+          "byte": 268
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::ShapeService",
+      "exported": false
+    },
+    {
       "id": "constructor:src/shapes.kt::Circle.constructor",
       "kind": "constructor",
       "name": "constructor",
@@ -211,6 +300,13 @@ expression: document
       "language": "kotlin"
     },
     {
+      "id": "file:src/Service.kt",
+      "kind": "file",
+      "name": "src/Service.kt",
+      "file": "src/Service.kt",
+      "language": "kotlin"
+    },
+    {
       "id": "file:src/shapes.kt",
       "kind": "file",
       "name": "src/shapes.kt",
@@ -240,6 +336,28 @@ expression: document
       "exported": true
     },
     {
+      "id": "function:src/Service.kt::createService",
+      "kind": "function",
+      "name": "createService",
+      "qualifiedName": "createService",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 16,
+          "column": 1,
+          "byte": 424
+        },
+        "end": {
+          "line": 18,
+          "column": 2,
+          "byte": 507
+        }
+      },
+      "language": "kotlin",
+      "parent": "module:src/Service.kt",
+      "exported": true
+    },
+    {
       "id": "function:src/shapes.kt::totalArea",
       "kind": "function",
       "name": "totalArea",
@@ -259,6 +377,72 @@ expression: document
       },
       "language": "kotlin",
       "parent": "module:src/shapes.kt",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.kt::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 5,
+          "column": 5,
+          "byte": 105
+        },
+        "end": {
+          "line": 5,
+          "column": 41,
+          "byte": 141
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.kt::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 146
+        },
+        "end": {
+          "line": 6,
+          "column": 59,
+          "byte": 200
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::InMemoryRepository",
+      "exported": true
+    },
+    {
+      "id": "method:src/Service.kt::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 10,
+          "column": 5,
+          "byte": 275
+        },
+        "end": {
+          "line": 13,
+          "column": 6,
+          "byte": 420
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::ShapeService",
       "exported": true
     },
     {
@@ -401,10 +585,24 @@ expression: document
       "language": "kotlin"
     },
     {
+      "id": "module:src/Service.kt",
+      "kind": "module",
+      "name": "com.example",
+      "file": "src/Service.kt",
+      "language": "kotlin"
+    },
+    {
       "id": "module:src/shapes.kt",
       "kind": "module",
       "name": "shapes",
       "file": "src/shapes.kt",
+      "language": "kotlin"
+    },
+    {
+      "id": "package:kotlin/com/example",
+      "kind": "package",
+      "name": "package:kotlin/com/example",
+      "file": "src/Service.kt",
       "language": "kotlin"
     },
     {
@@ -413,6 +611,50 @@ expression: document
       "name": "package:kotlin/shapes",
       "file": "src/shapes.kt",
       "language": "kotlin"
+    },
+    {
+      "id": "property:src/Service.kt::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 4,
+          "column": 5,
+          "byte": 55
+        },
+        "end": {
+          "line": 4,
+          "column": 50,
+          "byte": 100
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.kt::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/Service.kt",
+      "range": {
+        "start": {
+          "line": 9,
+          "column": 20,
+          "byte": 223
+        },
+        "end": {
+          "line": 9,
+          "column": 64,
+          "byte": 267
+        }
+      },
+      "language": "kotlin",
+      "parent": "class:src/Service.kt::ShapeService",
+      "exported": false
     },
     {
       "id": "property:src/shapes.kt::Circle.radius",
@@ -509,6 +751,69 @@ expression: document
     }
   ],
   "edges": [
+    {
+      "source": "class:src/Service.kt::InMemoryRepository",
+      "target": "unresolved:mutableMapOf",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 25,
+            "byte": 75
+          },
+          "end": {
+            "line": 4,
+            "column": 50,
+            "byte": 100
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.kt::ShapeService",
+      "target": "class:src/Service.kt::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 38,
+            "byte": 241
+          },
+          "end": {
+            "line": 9,
+            "column": 56,
+            "byte": 259
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.kt::ShapeService",
+      "target": "unresolved:Circle",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 57,
+            "byte": 260
+          },
+          "end": {
+            "line": 9,
+            "column": 63,
+            "byte": 266
+          }
+        }
+      ]
+    },
     {
       "source": "class:src/shapes.kt::Circle",
       "target": "class:src/shapes.kt::Shape",
@@ -697,6 +1002,153 @@ expression: document
       "kind": "exports",
       "status": "resolved_internal",
       "origin": "import"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "constant:src/Service.kt::ShapeService.area.shape",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "constructor:src/Service.kt::ShapeService.constructor",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "function:src/Service.kt::createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "module:src/Service.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "property:src/Service.kt::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "property:src/Service.kt::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::InMemoryRepository",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "class:src/Service.kt::ShapeService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "constant:src/Service.kt::ShapeService.area.shape",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "function:src/Service.kt::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "function:src/Service.kt::createService",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "import"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.find",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.save",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.kt",
+      "target": "method:src/Service.kt::ShapeService.area",
+      "kind": "exports",
+      "status": "resolved_internal",
+      "origin": "syntax"
     },
     {
       "source": "file:src/shapes.kt",
@@ -1091,6 +1543,69 @@ expression: document
       ]
     },
     {
+      "source": "function:src/Service.kt::createService",
+      "target": "external:kotlin:InMemoryRepository",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 17,
+            "column": 25,
+            "byte": 484
+          },
+          "end": {
+            "line": 17,
+            "column": 45,
+            "byte": 504
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Service.kt::createService",
+      "target": "external:kotlin:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 17,
+            "column": 12,
+            "byte": 471
+          },
+          "end": {
+            "line": 17,
+            "column": 46,
+            "byte": 505
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Service.kt::createService",
+      "target": "class:src/Service.kt::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 16,
+            "column": 22,
+            "byte": 445
+          },
+          "end": {
+            "line": 16,
+            "column": 34,
+            "byte": 457
+          }
+        }
+      ]
+    },
+    {
       "source": "function:src/shapes.kt::totalArea",
       "target": "unresolved:area",
       "kind": "calls",
@@ -1154,6 +1669,48 @@ expression: document
       ]
     },
     {
+      "source": "method:src/Service.kt::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 34,
+            "byte": 175
+          },
+          "end": {
+            "line": 6,
+            "column": 35,
+            "byte": 176
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.kt::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 16,
+            "byte": 402
+          },
+          "end": {
+            "line": 12,
+            "column": 28,
+            "byte": 414
+          }
+        }
+      ]
+    },
+    {
       "source": "module:src/Main.kt",
       "target": "constant:src/Main.kt::main.shapes",
       "kind": "defines",
@@ -1163,6 +1720,76 @@ expression: document
     {
       "source": "module:src/Main.kt",
       "target": "function:src/Main.kt::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "class:src/Service.kt::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "class:src/Service.kt::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "constant:src/Service.kt::ShapeService.area.shape",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "constructor:src/Service.kt::ShapeService.constructor",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "function:src/Service.kt::createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "method:src/Service.kt::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "method:src/Service.kt::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "property:src/Service.kt::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.kt",
+      "target": "property:src/Service.kt::ShapeService.repo",
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -1294,6 +1921,13 @@ expression: document
       "origin": "syntax"
     },
     {
+      "source": "package:kotlin/com/example",
+      "target": "file:src/Service.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
       "source": "package:kotlin/shapes",
       "target": "file:src/shapes.kt",
       "kind": "contains",
@@ -1309,7 +1943,21 @@ expression: document
     },
     {
       "source": "repository:.",
+      "target": "file:src/Service.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
       "target": "file:src/shapes.kt",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
+      "target": "package:kotlin/com/example",
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -1324,42 +1972,42 @@ expression: document
   ],
   "diagnostics": [],
   "statistics": {
-    "files": 2,
-    "packages": 1,
-    "nodes": 26,
-    "edges": 82,
-    "symbols": 20,
-    "unresolvedEdges": 6,
+    "files": 3,
+    "packages": 2,
+    "nodes": 39,
+    "edges": 124,
+    "symbols": 30,
+    "unresolvedEdges": 10,
     "diagnostics": 0,
     "byNodeKind": {
-      "class": 4,
-      "constant": 1,
-      "constructor": 3,
-      "file": 2,
-      "function": 2,
-      "method": 6,
-      "module": 2,
-      "package": 1,
-      "property": 4,
+      "class": 6,
+      "constant": 2,
+      "constructor": 4,
+      "file": 3,
+      "function": 3,
+      "method": 9,
+      "module": 3,
+      "package": 2,
+      "property": 6,
       "repository": 1
     },
     "byEdgeKind": {
-      "calls": 9,
-      "contains": 26,
-      "defines": 20,
-      "exports": 19,
+      "calls": 13,
+      "contains": 40,
+      "defines": 30,
+      "exports": 29,
       "implements": 2,
       "imports": 1,
       "inherits": 1,
-      "uses_type": 4
+      "uses_type": 8
     },
     "byLanguage": {
-      "kotlin": 25
+      "kotlin": 38
     },
     "byStatus": {
-      "resolved_external": 4,
-      "resolved_internal": 72,
-      "unresolved": 6
+      "resolved_external": 6,
+      "resolved_internal": 108,
+      "unresolved": 10
     }
   }
 }

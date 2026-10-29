@@ -3,8 +3,8 @@
   "traceVersion": "0.1.0",
   "repository": {
     "id": "repository:.",
-    "name": "trace",
-    "root": "/Users/hieudoan/git/github.com/hieudoanm/trace",
+    "name": "repository",
+    "root": ".",
     "fileCount": 68,
     "languageCount": 13
   },

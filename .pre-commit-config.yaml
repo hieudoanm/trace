@@ -3,13 +3,13 @@ repos:
     rev: v1.0
     hooks:
       - id: fmt
-      - id: cargo-check
+      - id: cargo-scan
       - id: clippy
 
   - repo: local
     hooks:
-      - id: trace-check
-        name: trace check
-        entry: bash -c 'cd "$(git rev-parse --show-toplevel)" && (./target/release/trace check . || ./target/debug/trace check .)'
+      - id: trace-scan
+        name: trace scan
+        entry: bash -c 'cd "$(git rev-parse --show-toplevel)" && (./target/release/trace scan . || ./target/debug/trace scan .)'
         language: system
         pass_filenames: false

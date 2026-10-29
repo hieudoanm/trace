@@ -409,18 +409,7 @@ fn cmd_scan(
                 .with_context(|| format!("failed to write output to {:?}", output_path))?;
         }
         None => {
-            let trace_dir = path.join(".trace");
-            std::fs::create_dir_all(&trace_dir)?;
-            let ext = if output_format == "dot" { "dot" } else { "json" };
-            let output_path = trace_dir.join(format!("graph.{ext}"));
-            std::fs::write(&output_path, &content)
-                .with_context(|| format!("failed to write output to {:?}", output_path))?;
-            println!("Graph written to {}", output_path.display());
-            if output_format != "dot" {
-                let html_path = trace_dir.join("graph.html");
-                let html = include_str!("graph_template.html");
-                std::fs::write(&html_path, html).ok();
-            }
+            println!("{content}");
         }
     }
 

@@ -65,13 +65,7 @@ fn parse_class(builder: &mut SyntaxBuilder<'_>, node: TsNode<'_>, _exported: boo
         return;
     };
     let name = builder.text(name_node).to_string();
-    let id = builder.add_symbol(
-        NodeKind::Class,
-        name,
-        node,
-        Some(Visibility::Public),
-        true,
-    );
+    let id = builder.add_symbol(NodeKind::Class, name, node, Some(Visibility::Public), true);
     builder.push(id);
     if let Some(base) = child_field(node, "base_clause") {
         for child in named_children(base) {
@@ -119,13 +113,7 @@ fn parse_trait(builder: &mut SyntaxBuilder<'_>, node: TsNode<'_>, _exported: boo
         return;
     };
     let name = builder.text(name_node).to_string();
-    let id = builder.add_symbol(
-        NodeKind::Trait,
-        name,
-        node,
-        Some(Visibility::Public),
-        true,
-    );
+    let id = builder.add_symbol(NodeKind::Trait, name, node, Some(Visibility::Public), true);
     builder.push(id);
     if let Some(body) = child_field(node, "body") {
         parse_item(builder, body, false);

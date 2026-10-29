@@ -87,13 +87,7 @@ fn parse_class(builder: &mut SyntaxBuilder<'_>, node: TsNode<'_>, _exported: boo
         return;
     };
     let name = builder.text(name_node).to_string();
-    let id = builder.add_symbol(
-        NodeKind::Class,
-        name,
-        node,
-        Some(Visibility::Public),
-        true,
-    );
+    let id = builder.add_symbol(NodeKind::Class, name, node, Some(Visibility::Public), true);
     builder.push(id);
     if let Some(body) = child_field(node, "body") {
         parse_item(builder, body, false);
@@ -106,13 +100,7 @@ fn parse_module(builder: &mut SyntaxBuilder<'_>, node: TsNode<'_>, _exported: bo
         return;
     };
     let name = builder.text(name_node).to_string();
-    let id = builder.add_symbol(
-        NodeKind::Module,
-        name,
-        node,
-        Some(Visibility::Public),
-        true,
-    );
+    let id = builder.add_symbol(NodeKind::Module, name, node, Some(Visibility::Public), true);
     builder.push(id);
     if let Some(body) = child_field(node, "body") {
         parse_item(builder, body, false);

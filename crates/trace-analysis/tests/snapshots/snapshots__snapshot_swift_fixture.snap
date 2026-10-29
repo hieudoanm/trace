@@ -1,5 +1,6 @@
 ---
 source: crates/trace-analysis/tests/snapshots.rs
+assertion_line: 163
 expression: document
 ---
 {
@@ -9,7 +10,7 @@ expression: document
     "id": "repository:.",
     "name": "swift",
     "root": "/Users/hieudoan/git/github.com/hieudoanm/trace/crates/trace-analysis/../../fixtures/swift",
-    "fileCount": 3,
+    "fileCount": 4,
     "languageCount": 1
   },
   "analysis": {
@@ -27,6 +28,50 @@ expression: document
     }
   ],
   "nodes": [
+    {
+      "id": "class:src/Service.swift::InMemoryRepository",
+      "kind": "class",
+      "name": "InMemoryRepository",
+      "qualifiedName": "InMemoryRepository",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "byte": 0
+        },
+        "end": {
+          "line": 9,
+          "column": 2,
+          "byte": 201
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
+    },
+    {
+      "id": "class:src/Service.swift::ShapeService",
+      "kind": "class",
+      "name": "ShapeService",
+      "qualifiedName": "ShapeService",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "byte": 203
+        },
+        "end": {
+          "line": 24,
+          "column": 2,
+          "byte": 513
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
+    },
     {
       "id": "class:src/shapes.swift::Circle",
       "kind": "class",
@@ -138,6 +183,28 @@ expression: document
       "exported": false
     },
     {
+      "id": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "constructor",
+      "name": "init",
+      "qualifiedName": "ShapeService.init",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 14,
+          "column": 5,
+          "byte": 270
+        },
+        "end": {
+          "line": 16,
+          "column": 6,
+          "byte": 341
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
+      "exported": false
+    },
+    {
       "id": "constructor:src/shapes.swift::Circle.init",
       "kind": "constructor",
       "name": "init",
@@ -204,6 +271,13 @@ expression: document
       "exported": false
     },
     {
+      "id": "file:src/Service.swift",
+      "kind": "file",
+      "name": "src/Service.swift",
+      "file": "src/Service.swift",
+      "language": "swift"
+    },
+    {
       "id": "file:src/main.swift",
       "kind": "file",
       "name": "src/main.swift",
@@ -223,6 +297,28 @@ expression: document
       "name": "src/utils.swift",
       "file": "src/utils.swift",
       "language": "swift"
+    },
+    {
+      "id": "function:src/Service.swift::createService",
+      "kind": "function",
+      "name": "createService",
+      "qualifiedName": "createService",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 1,
+          "byte": 515
+        },
+        "end": {
+          "line": 28,
+          "column": 2,
+          "byte": 615
+        }
+      },
+      "language": "swift",
+      "parent": "module:src/Service.swift",
+      "exported": false
     },
     {
       "id": "function:src/shapes.swift::totalArea",
@@ -310,6 +406,72 @@ expression: document
       },
       "language": "swift",
       "parent": "module:src/shapes.swift",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "method",
+      "name": "find",
+      "qualifiedName": "InMemoryRepository.find",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 3,
+          "column": 5,
+          "byte": 67
+        },
+        "end": {
+          "line": 5,
+          "column": 6,
+          "byte": 127
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "method",
+      "name": "save",
+      "qualifiedName": "InMemoryRepository.save",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 5,
+          "byte": 132
+        },
+        "end": {
+          "line": 8,
+          "column": 6,
+          "byte": 199
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "method:src/Service.swift::ShapeService.area",
+      "kind": "method",
+      "name": "area",
+      "qualifiedName": "ShapeService.area",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 18,
+          "column": 5,
+          "byte": 347
+        },
+        "end": {
+          "line": 23,
+          "column": 6,
+          "byte": 511
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
       "exported": false
     },
     {
@@ -489,6 +651,13 @@ expression: document
       "exported": false
     },
     {
+      "id": "module:src/Service.swift",
+      "kind": "module",
+      "name": "Service",
+      "file": "src/Service.swift",
+      "language": "swift"
+    },
+    {
       "id": "module:src/main.swift",
       "kind": "module",
       "name": "main",
@@ -508,6 +677,50 @@ expression: document
       "name": "utils",
       "file": "src/utils.swift",
       "language": "swift"
+    },
+    {
+      "id": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "property",
+      "name": "store",
+      "qualifiedName": "InMemoryRepository.store",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 2,
+          "column": 5,
+          "byte": 34
+        },
+        "end": {
+          "line": 2,
+          "column": 33,
+          "byte": 62
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::InMemoryRepository",
+      "exported": false
+    },
+    {
+      "id": "property:src/Service.swift::ShapeService.repo",
+      "kind": "property",
+      "name": "repo",
+      "qualifiedName": "ShapeService.repo",
+      "file": "src/Service.swift",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 5,
+          "byte": 228
+        },
+        "end": {
+          "line": 12,
+          "column": 41,
+          "byte": 264
+        }
+      },
+      "language": "swift",
+      "parent": "class:src/Service.swift::ShapeService",
+      "exported": false
     },
     {
       "id": "property:src/shapes.swift::Circle.radius",
@@ -605,6 +818,69 @@ expression: document
   ],
   "edges": [
     {
+      "source": "class:src/Service.swift::InMemoryRepository",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 2,
+            "column": 25,
+            "byte": 54
+          },
+          "end": {
+            "line": 2,
+            "column": 26,
+            "byte": 55
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.swift::ShapeService",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 15,
+            "byte": 238
+          },
+          "end": {
+            "line": 12,
+            "column": 33,
+            "byte": 256
+          }
+        }
+      ]
+    },
+    {
+      "source": "class:src/Service.swift::ShapeService",
+      "target": "class:src/shapes.swift::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 12,
+            "column": 34,
+            "byte": 257
+          },
+          "end": {
+            "line": 12,
+            "column": 40,
+            "byte": 263
+          }
+        }
+      ]
+    },
+    {
       "source": "class:src/shapes.swift::Circle",
       "target": "interface:src/shapes.swift::Shape",
       "kind": "inherits",
@@ -729,6 +1005,118 @@ expression: document
           }
         }
       ]
+    },
+    {
+      "source": "constructor:src/Service.swift::ShapeService.init",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 16,
+            "byte": 281
+          },
+          "end": {
+            "line": 14,
+            "column": 34,
+            "byte": 299
+          }
+        }
+      ]
+    },
+    {
+      "source": "constructor:src/Service.swift::ShapeService.init",
+      "target": "class:src/shapes.swift::Circle",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 35,
+            "byte": 300
+          },
+          "end": {
+            "line": 14,
+            "column": 41,
+            "byte": 306
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "function:src/Service.swift::createService",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "method:src/Service.swift::ShapeService.area",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "module:src/Service.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:src/Service.swift",
+      "target": "property:src/Service.swift::ShapeService.repo",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
     },
     {
       "source": "file:src/main.swift",
@@ -962,6 +1350,48 @@ expression: document
       ]
     },
     {
+      "source": "function:src/Service.swift::createService",
+      "target": "external:swift:ShapeService",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 27,
+            "column": 12,
+            "byte": 565
+          },
+          "end": {
+            "line": 27,
+            "column": 60,
+            "byte": 613
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:src/Service.swift::createService",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "uses_type",
+      "status": "resolved_internal",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 26,
+            "column": 25,
+            "byte": 539
+          },
+          "end": {
+            "line": 26,
+            "column": 37,
+            "byte": 551
+          }
+        }
+      ]
+    },
+    {
       "source": "function:src/shapes.swift::totalArea",
       "target": "unresolved:reduce",
       "kind": "calls",
@@ -1002,6 +1432,195 @@ expression: document
           }
         }
       ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.find",
+      "target": "unresolved:store",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 16,
+            "byte": 112
+          },
+          "end": {
+            "line": 4,
+            "column": 25,
+            "byte": 121
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.save",
+      "target": "unresolved:store",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 9,
+            "byte": 175
+          },
+          "end": {
+            "line": 7,
+            "column": 18,
+            "byte": 184
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::InMemoryRepository.save",
+      "target": "unresolved:T",
+      "kind": "uses_type",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 6,
+            "column": 35,
+            "byte": 162
+          },
+          "end": {
+            "line": 6,
+            "column": 36,
+            "byte": 163
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:area",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 22,
+            "column": 16,
+            "byte": 493
+          },
+          "end": {
+            "line": 22,
+            "column": 28,
+            "byte": 505
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:fatalError",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 20,
+            "column": 13,
+            "byte": 444
+          },
+          "end": {
+            "line": 20,
+            "column": 36,
+            "byte": 467
+          }
+        }
+      ]
+    },
+    {
+      "source": "method:src/Service.swift::ShapeService.area",
+      "target": "unresolved:find",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 19,
+            "column": 27,
+            "byte": 407
+          },
+          "end": {
+            "line": 19,
+            "column": 44,
+            "byte": 424
+          }
+        }
+      ]
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "class:src/Service.swift::InMemoryRepository",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "class:src/Service.swift::ShapeService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "constructor:src/Service.swift::ShapeService.init",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "function:src/Service.swift::createService",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.find",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::InMemoryRepository.save",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "method:src/Service.swift::ShapeService.area",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "property:src/Service.swift::InMemoryRepository.store",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:src/Service.swift",
+      "target": "property:src/Service.swift::ShapeService.repo",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
     },
     {
       "source": "module:src/main.swift",
@@ -1257,6 +1876,13 @@ expression: document
     },
     {
       "source": "repository:.",
+      "target": "file:src/Service.swift",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
       "target": "file:src/main.swift",
       "kind": "contains",
       "status": "resolved_internal",
@@ -1299,40 +1925,40 @@ expression: document
     }
   ],
   "statistics": {
-    "files": 3,
+    "files": 4,
     "packages": 0,
-    "nodes": 31,
-    "edges": 68,
-    "symbols": 24,
-    "unresolvedEdges": 3,
+    "nodes": 42,
+    "edges": 101,
+    "symbols": 33,
+    "unresolvedEdges": 10,
     "diagnostics": 1,
     "byNodeKind": {
-      "class": 3,
+      "class": 5,
       "constant": 2,
-      "constructor": 3,
-      "file": 3,
-      "function": 3,
+      "constructor": 4,
+      "file": 4,
+      "function": 4,
       "interface": 1,
-      "method": 8,
-      "module": 3,
-      "property": 4,
+      "method": 11,
+      "module": 4,
+      "property": 6,
       "repository": 1
     },
     "byEdgeKind": {
-      "calls": 5,
-      "contains": 30,
-      "defines": 24,
+      "calls": 11,
+      "contains": 41,
+      "defines": 33,
       "imports": 2,
       "inherits": 3,
-      "uses_type": 4
+      "uses_type": 11
     },
     "byLanguage": {
-      "swift": 30
+      "swift": 41
     },
     "byStatus": {
-      "resolved_external": 3,
-      "resolved_internal": 62,
-      "unresolved": 3
+      "resolved_external": 4,
+      "resolved_internal": 87,
+      "unresolved": 10
     }
   }
 }
