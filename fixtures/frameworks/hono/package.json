@@ -2,6 +2,6 @@
   "name": "hono-app",
   "version": "1.0.0",
   "dependencies": {
-    "hono": "4.0.0"
+    "hono": "4.13.7"
   }
 }
