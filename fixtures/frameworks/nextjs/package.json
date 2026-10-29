@@ -2,6 +2,6 @@
   "name": "nextjs-app",
   "version": "1.0.0",
   "dependencies": {
-    "next": "15.5.28"
+    "next": "16.4.3"
   }
 }
