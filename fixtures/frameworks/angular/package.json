@@ -2,7 +2,7 @@
   "name": "angular-app",
   "version": "1.0.0",
   "dependencies": {
-    "@angular/core": "17.0.0",
+    "@angular/core": "17.3.12",
     "@angular/common": "20.3.34"
   }
 }
