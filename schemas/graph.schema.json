@@ -1,0 +1,506 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hieudoanm/trace/schemas/graph.schema.json",
+  "title": "Trace Graph Document",
+  "description": "Versioned JSON graph document produced by the Trace code intelligence tool.",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "traceVersion",
+    "repository",
+    "analysis",
+    "languages",
+    "frameworks",
+    "nodes",
+    "edges",
+    "diagnostics"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schemaVersion": {
+      "type": "string",
+      "const": "1.0",
+      "description": "JSON schema version for the exported graph document."
+    },
+    "traceVersion": {
+      "type": "string",
+      "description": "Trace crate version, injected at compile time."
+    },
+    "repository": {
+      "$ref": "#/$defs/repositoryMetadata"
+    },
+    "analysis": {
+      "$ref": "#/$defs/analysisMetadata"
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/languageInfo"
+      }
+    },
+    "frameworks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/frameworkInfo"
+      }
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/node"
+      }
+    },
+    "edges": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/edge"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    },
+    "statistics": {
+      "$ref": "#/$defs/stats"
+    }
+  },
+  "$defs": {
+    "repositoryMetadata": {
+      "type": "object",
+      "required": ["id", "name", "root", "fileCount", "languageCount"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Stable repository identifier."
+        },
+        "name": {
+          "type": "string",
+          "description": "Repository name (typically the directory name)."
+        },
+        "root": {
+          "type": "string",
+          "description": "Repository root path (repository-relative, e.g. \".\")."
+        },
+        "fileCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of file nodes in the graph."
+        },
+        "languageCount": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of supported languages detected."
+        }
+      }
+    },
+    "analysisMetadata": {
+      "type": "object",
+      "required": ["format", "cacheEnabled", "semanticMode", "languages"],
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "type": "string",
+          "description": "Export format (e.g. \"json\")."
+        },
+        "cacheEnabled": {
+          "type": "boolean",
+          "description": "Whether analysis caching was enabled."
+        },
+        "semanticMode": {
+          "type": "string",
+          "description": "Semantic analysis mode (e.g. \"off\")."
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of enabled language names."
+        }
+      }
+    },
+    "languageInfo": {
+      "type": "object",
+      "required": ["language", "grammar"],
+      "additionalProperties": false,
+      "properties": {
+        "language": {
+          "type": "string",
+          "description": "Supported language name (lowercase)."
+        },
+        "grammar": {
+          "type": "string",
+          "description": "Parser/grammar identifier and version."
+        }
+      }
+    },
+    "frameworkInfo": {
+      "type": "object",
+      "required": ["name", "displayName", "family", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Canonical framework name (e.g. \"react\", \"django\")."
+        },
+        "displayName": {
+          "type": "string",
+          "description": "Human-readable framework name."
+        },
+        "family": {
+          "type": "string",
+          "description": "Language family the framework belongs to."
+        },
+        "version": {
+          "type": "string",
+          "description": "Optional version hint from package manifest."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low"],
+          "description": "Confidence in the framework detection."
+        }
+      }
+    },
+    "node": {
+      "type": "object",
+      "required": ["id", "kind", "name"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Canonical, stable identifier. Never an array index."
+        },
+        "kind": {
+          "$ref": "#/$defs/nodeKind",
+          "description": "Source-code entity kind."
+        },
+        "name": {
+          "type": "string",
+          "description": "Short display name."
+        },
+        "qualifiedName": {
+          "type": "string",
+          "description": "Language-aware qualified name when derivable."
+        },
+        "file": {
+          "type": "string",
+          "description": "Repository-relative path using '/' separators."
+        },
+        "range": {
+          "$ref": "#/$defs/sourceRange",
+          "description": "Source location of the node definition."
+        },
+        "language": {
+          "$ref": "#/$defs/language",
+          "description": "Programming language of the node."
+        },
+        "parent": {
+          "type": "string",
+          "description": "Canonical ID of the lexical or structural parent."
+        },
+        "signature": {
+          "type": "string",
+          "description": "Optional signature or type metadata."
+        },
+        "visibility": {
+          "$ref": "#/$defs/visibility",
+          "description": "Export or visibility information."
+        },
+        "exported": {
+          "type": "boolean",
+          "description": "Whether the symbol is exported."
+        },
+        "metadata": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Small, serializable language-specific facts."
+        }
+      }
+    },
+    "nodeKind": {
+      "type": "string",
+      "enum": [
+        "repository",
+        "file",
+        "module",
+        "package",
+        "namespace",
+        "class",
+        "struct",
+        "interface",
+        "trait",
+        "enum",
+        "function",
+        "method",
+        "constructor",
+        "variable",
+        "constant",
+        "type",
+        "property",
+        "parameter",
+        "external_symbol",
+        "framework",
+        "unknown"
+      ]
+    },
+    "edge": {
+      "type": "object",
+      "required": ["source", "target", "kind", "status", "origin"],
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Canonical ID of the source node."
+        },
+        "target": {
+          "type": "string",
+          "description": "Canonical ID of the target node."
+        },
+        "kind": {
+          "$ref": "#/$defs/edgeKind",
+          "description": "Relationship kind."
+        },
+        "status": {
+          "$ref": "#/$defs/resolutionStatus",
+          "description": "Resolution confidence of the target."
+        },
+        "origin": {
+          "$ref": "#/$defs/resolutionOrigin",
+          "description": "Source of the relationship."
+        },
+        "sites": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/sourceRange"
+          },
+          "description": "Sorted, de-duplicated source locations for this relationship."
+        }
+      }
+    },
+    "edgeKind": {
+      "type": "string",
+      "enum": [
+        "contains",
+        "imports",
+        "exports",
+        "calls",
+        "references",
+        "inherits",
+        "implements",
+        "uses_type",
+        "defines",
+        "overrides",
+        "depends_on",
+        "uses_framework",
+        "implements_pattern",
+        "extends_framework",
+        "routes_to",
+        "injects"
+      ]
+    },
+    "resolutionStatus": {
+      "type": "string",
+      "enum": [
+        "resolved_internal",
+        "resolved_external",
+        "unresolved",
+        "ambiguous",
+        "syntax_only"
+      ]
+    },
+    "resolutionOrigin": {
+      "type": "string",
+      "enum": [
+        "syntax",
+        "import",
+        "lexical",
+        "type_inference",
+        "heuristic",
+        "compiler"
+      ]
+    },
+    "diagnostic": {
+      "type": "object",
+      "required": ["severity", "kind", "message"],
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "$ref": "#/$defs/diagnosticSeverity",
+          "description": "Diagnostic severity level."
+        },
+        "kind": {
+          "$ref": "#/$defs/diagnosticKind",
+          "description": "Diagnostic category."
+        },
+        "message": {
+          "type": "string",
+          "description": "Human-readable diagnostic message."
+        },
+        "file": {
+          "type": "string",
+          "description": "Repository-relative path when available."
+        },
+        "range": {
+          "$ref": "#/$defs/sourceRange",
+          "description": "Source location when available."
+        },
+        "language": {
+          "$ref": "#/$defs/language",
+          "description": "Language context when available."
+        }
+      }
+    },
+    "diagnosticSeverity": {
+      "type": "string",
+      "enum": ["error", "warning", "info"]
+    },
+    "diagnosticKind": {
+      "type": "string",
+      "enum": [
+        "parse_error",
+        "unsupported_syntax",
+        "missing_tooling",
+        "unresolved_import",
+        "ambiguous_symbol",
+        "tool_failure",
+        "invalid_configuration",
+        "unreadable_file",
+        "partial_analysis",
+        "cache",
+        "internal"
+      ]
+    },
+    "language": {
+      "type": "string",
+      "enum": [
+        "typescript",
+        "tsx",
+        "javascript",
+        "jsx",
+        "python",
+        "go",
+        "rust",
+        "kotlin",
+        "swift"
+      ]
+    },
+    "visibility": {
+      "type": "string",
+      "enum": ["public", "protected", "private", "internal", "package", "unknown"]
+    },
+    "sourceRange": {
+      "type": "object",
+      "required": ["start", "end"],
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "$ref": "#/$defs/position"
+        },
+        "end": {
+          "$ref": "#/$defs/position"
+        }
+      }
+    },
+    "position": {
+      "type": "object",
+      "required": ["line", "column", "byte"],
+      "additionalProperties": false,
+      "properties": {
+        "line": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "1-based line number."
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "1-based UTF-8 byte column from the start of the line."
+        },
+        "byte": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "0-based byte offset from the start of the file."
+        }
+      }
+    },
+    "stats": {
+      "type": "object",
+      "required": [
+        "files", "packages", "nodes", "edges", "symbols",
+        "unresolvedEdges", "diagnostics"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "files": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "packages": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nodes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "symbols": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unresolvedEdges": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "diagnostics": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "byNodeKind": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byEdgeKind": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byLanguage": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byStatus": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "byFramework": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 0
+          }
+        }
+      }
+    }
+  }
+}
