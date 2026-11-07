@@ -1977,8 +1977,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8df9b6e13f2d32c91b9bd719c00d1958837bc7dec474d94952798cc8e69eeec3"
 
 [[package]]
-name = "trace-analysis"
-version = "0.1.0"
+name = "tracers-analysis"
+version = "0.0.1"
 dependencies = [
  "blake3",
  "insta",
@@ -1988,31 +1988,31 @@ dependencies = [
  "tempfile",
  "thiserror",
  "toml",
- "trace-core",
- "trace-export",
- "trace-parser",
+ "tracers-core",
+ "tracers-export",
+ "tracers-parser",
  "tracing",
 ]
 
 [[package]]
-name = "trace-cli"
-version = "0.1.0"
+name = "tracers-cli"
+version = "0.0.1"
 dependencies = [
  "anyhow",
  "clap",
  "serde_json",
  "tempfile",
- "trace-analysis",
- "trace-core",
- "trace-export",
- "trace-parser",
+ "tracers-analysis",
+ "tracers-core",
+ "tracers-export",
+ "tracers-parser",
  "tracing",
  "tracing-subscriber",
 ]
 
 [[package]]
-name = "trace-core"
-version = "0.1.0"
+name = "tracers-core"
+version = "0.0.1"
 dependencies = [
  "petgraph",
  "serde",
@@ -2021,20 +2021,20 @@ dependencies = [
 ]
 
 [[package]]
-name = "trace-export"
-version = "0.1.0"
+name = "tracers-export"
+version = "0.0.1"
 dependencies = [
  "jsonschema",
  "serde",
  "serde_json",
  "tempfile",
  "thiserror",
- "trace-core",
+ "tracers-core",
 ]
 
 [[package]]
-name = "trace-parser"
-version = "0.1.0"
+name = "tracers-parser"
+version = "0.0.1"
 dependencies = [
  "blake3",
  "globset",
@@ -2043,7 +2043,7 @@ dependencies = [
  "serde_json",
  "tempfile",
  "thiserror",
- "trace-core",
+ "tracers-core",
  "tree-sitter",
  "tree-sitter-bash",
  "tree-sitter-c",

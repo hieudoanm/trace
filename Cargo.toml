@@ -1,19 +1,19 @@
 [workspace]
 resolver = "2"
 members = [
-    "crates/trace-core",
-    "crates/trace-parser",
-    "crates/trace-analysis",
-    "crates/trace-export",
-    "crates/trace-cli",
+    "crates/tracers-core",
+    "crates/tracers-parser",
+    "crates/tracers-analysis",
+    "crates/tracers-export",
+    "crates/tracers-cli",
 ]
 
 [workspace.package]
-version = "0.1.0"
+version = "0.0.1"
 edition = "2021"
 rust-version = "1.85"
 license = "MIT"
-repository = "https://github.com/hieudoanm/trace"
+repository = "https://github.com/hieudoanm/tracers"
 
 [workspace.dependencies]
 anyhow = "=1.0.104"

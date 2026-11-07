@@ -1,10 +1,10 @@
-# Trace — Complete Project Implementation Specification
+# Tracers — Complete Project Implementation Specification
 
 ## 1. Project Overview
 
-Build **Trace**, a high-performance, multi-language code intelligence and graph analysis tool.
+Build **Tracers**, a high-performance, multi-language code intelligence and graph analysis tool.
 
-Trace analyses source code repositories and builds a unified graph of their internal structure and relationships. Developers should be able to understand how a codebase is organised, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
+Tracers analyses source code repositories and builds a unified graph of their internal structure and relationships. Developers should be able to understand how a codebase is organised, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
 
 The target programming languages are:
 
@@ -28,7 +28,7 @@ The primary implementation language is **Rust**.
 
 The project must be production-oriented, modular, deterministic, testable, efficient, and suitable for open-source distribution.
 
-Do not build a generic graph editor. Trace is specifically a source-code analysis tool.
+Do not build a generic graph editor. Tracers is specifically a source-code analysis tool.
 
 ## 2. Implementation Principles
 
@@ -118,7 +118,7 @@ Do not bundle large language toolchains into the initial distribution unless the
 
 The core engine remains focused on the Rust CLI and machine-readable graph output, while providing an embedded, standalone visual explorer:
 
-- Embedded `graph_template.html` bundled into `trace-cli` and emitted to `.trace/graph.html` on `trace scan --write-trace-dir`.
+- Embedded `graph_template.html` bundled into `tracers-cli` and emitted to `.tracers/graph.html` on `tracers scan --write-tracers-dir`.
 - Powered by D3.js (`d3-force`) and HTML5 Canvas 2D for high performance (60 FPS on 2,700+ nodes, 7,600+ edges) and an Obsidian-style aesthetic.
 - Interactive ego-network hover/selection, degree-based node scaling, live search, node/edge type filtering, and physics tuning.
 - Decoupled from the core engine: the core produces standard deterministic JSON (`graph.json`).
@@ -129,7 +129,7 @@ Start with a maintainable Rust workspace. Use a single crate for closely related
 
 Suggested structure:
 
-    trace/
+    tracers/
     ├── Cargo.toml
     ├── Cargo.lock
     ├── rust-toolchain.toml
@@ -142,19 +142,19 @@ Suggested structure:
     │   └── workflows/
     │       └── ci.yml
     ├── crates/
-    │   ├── trace-cli/
+    │   ├── tracers-cli/
     │   │   ├── src/
     │   │   │   ├── cli/             # Modular subcommands (scan, graph, queries, validate)
     │   │   │   ├── graph_template.html # Embedded D3-force Canvas visualizer
     │   │   │   └── main.rs
-    │   ├── trace-core/
-    │   ├── trace-parser/
+    │   ├── tracers-core/
+    │   ├── tracers-parser/
     │   │   └── src/adapters/        # 10 Tree-sitter language adapters
-    │   ├── trace-analysis/
+    │   ├── tracers-analysis/
     │   │   └── src/
     │   │       ├── graph/           # Modular graph construction & edge extraction
     │   │       └── resolve/         # Modular symbol, module & import resolution
-    │   └── trace-export/
+    │   └── tracers-export/
     ├── schemas/
     │   └── graph.schema.json
     ├── fixtures/
@@ -175,7 +175,7 @@ This is the repository structure. Every crate contains implemented functionality
 
 ### Module responsibilities
 
-**trace-cli**
+**tracers-cli**
 
 - CLI arguments and commands (partitioned in `src/cli/` into `scan`, `graph`, `queries`, and `validate`).
 - Configuration loading.
@@ -184,7 +184,7 @@ This is the repository structure. Every crate contains implemented functionality
 - Invoking the analysis pipeline.
 - Standalone D3-force Canvas visual explorer (`graph_template.html`).
 
-**trace-core**
+**tracers-core**
 
 - Stable node and edge types.
 - Canonical IDs.
@@ -194,7 +194,7 @@ This is the repository structure. Every crate contains implemented functionality
 - Graph query interfaces.
 - Analysis capability and confidence metadata.
 
-**trace-parser**
+**tracers-parser**
 
 - File discovery integration.
 - Language detection.
@@ -203,7 +203,7 @@ This is the repository structure. Every crate contains implemented functionality
 - Source location mapping.
 - Parser diagnostics.
 
-**trace-analysis**
+**tracers-analysis**
 
 - Language adapters.
 - Symbol indexing.
@@ -215,7 +215,7 @@ This is the repository structure. Every crate contains implemented functionality
 - Cross-file and cross-language relationships.
 - Incremental analysis orchestration (syntax cache).
 
-**trace-export**
+**tracers-export**
 
 - JSON export.
 - JSON schema compatibility.
@@ -226,7 +226,7 @@ This is the repository structure. Every crate contains implemented functionality
 
 ### 5.1 Repository discovery
 
-Trace must accept a repository path and discover supported source files.
+Tracers must accept a repository path and discover supported source files.
 
 Requirements:
 
@@ -714,27 +714,27 @@ Use Tree-sitter for syntax-level analysis and Prism / Ruby AST facilities where 
 
 ## 7. CLI Specification
 
-Create a CLI named `trace`.
+Create a CLI named `tracers`.
 
 Implement the following command structure:
 
-    trace scan [PATH]
-    trace graph [PATH]
-    trace callers <SYMBOL>
-    trace callees <SYMBOL>
-    trace refs <SYMBOL>
-    trace deps <TARGET>
-    trace impact <TARGET>
-    trace path <SOURCE> <TARGET>
-    trace cycles [PATH]
-    trace stats [PATH]
-    trace languages
-    trace check [PATH]
-    trace validate [PATH]
+    tracers scan [PATH]
+    tracers graph [PATH]
+    tracers callers <SYMBOL>
+    tracers callees <SYMBOL>
+    tracers refs <SYMBOL>
+    tracers deps <TARGET>
+    tracers impact <TARGET>
+    tracers path <SOURCE> <TARGET>
+    tracers cycles [PATH]
+    tracers stats [PATH]
+    tracers languages
+    tracers check [PATH]
+    tracers validate [PATH]
 
 Exact syntax can be adjusted to avoid ambiguity, but equivalent functionality must exist.
 
-### `trace scan`
+### `tracers scan`
 
 Analyse a repository and generate a graph.
 
@@ -750,56 +750,56 @@ Support options such as:
 - `--verbose`
 - `--quiet`
 - `--config PATH`
-- `--write-trace-dir` (generate `.trace/graph.json`, `.trace/graph.dot`, and `.trace/graph.html`; enabled by default)
-- `--no-trace-dir` (disable writing the `.trace` directory)
+- `--write-tracers-dir` (generate `.tracers/graph.json`, `.tracers/graph.dot`, and `.tracers/graph.html`; enabled by default)
+- `--no-tracers-dir` (disable writing the `.tracers` directory)
 
 Default to a useful, predictable output format. Do not flood standard output with progress messages when JSON is being written to standard output.
 
-### `trace graph`
+### `tracers graph`
 
 Load or construct a graph and provide filtered graph output.
 
-### `trace callers` and `trace callees`
+### `tracers callers` and `tracers callees`
 
 Display relationships with source locations and resolution status.
 
 Support depth and result limits.
 
-### `trace refs`
+### `tracers refs`
 
 List references to a symbol.
 
-### `trace deps`
+### `tracers deps`
 
 Display direct or transitive dependencies.
 
-### `trace impact`
+### `tracers impact`
 
 Display affected nodes and the dependency or call paths explaining their inclusion.
 
-### `trace path`
+### `tracers path`
 
 Find a path between two symbols or graph nodes.
 
 Clearly report when no path exists or when the query is ambiguous.
 
-### `trace cycles`
+### `tracers cycles`
 
 Detect dependency cycles and report the involved nodes.
 
-### `trace stats`
+### `tracers stats`
 
 Report counts for files, languages, symbols, edges, relationship types, unresolved references, and analysis diagnostics.
 
-### `trace languages`
+### `tracers languages`
 
 Report supported languages, detected parser versions, and available semantic-analysis capabilities.
 
-### `trace check`
+### `tracers check`
 
 Validate configuration, source discovery, parser availability, and optional semantic-analysis tools without performing unnecessary work.
 
-### `trace validate`
+### `tracers validate`
 
 Validate graph integrity: every edge must reference an existing node. Fails if any dangling edge targets are found.
 
@@ -812,7 +812,7 @@ Define a versioned JSON graph schema.
 Include:
 
 - Schema version.
-- Trace version.
+- Tracers version.
 - Repository metadata.
 - Analysis configuration metadata.
 - Supported language and analyzer information.
@@ -959,7 +959,7 @@ Any optional semantic-analysis helper must follow the same security constraints.
 
 ## 12. Configuration
 
-Support an optional project-level configuration file, for example `trace.toml`.
+Support an optional project-level configuration file, for example `tracers.toml`.
 
 Allow configuration of:
 
@@ -1038,7 +1038,7 @@ Implement in the following order.
 - Implement JSON export.
 - Add unit tests and CI.
 
-Deliverable: Trace scans a repository and emits a valid, deterministic graph containing files.
+Deliverable: Tracers scans a repository and emits a valid, deterministic graph containing files.
 
 ### Milestone 2: Syntax extraction across all fifteen languages
 
@@ -1048,7 +1048,7 @@ Deliverable: Trace scans a repository and emits a valid, deterministic graph con
 - Record syntax-level relationships and diagnostics.
 - Add realistic fixtures for all languages.
 
-Deliverable: Trace produces useful syntax-level graphs for TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, and R.
+Deliverable: Tracers produces useful syntax-level graphs for TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, and R.
 
 ### Milestone 3: Dependency analysis
 
@@ -1057,7 +1057,7 @@ Deliverable: Trace produces useful syntax-level graphs for TypeScript, Python, G
 - Add dependency traversal and cycle detection.
 - Implement graph statistics and query APIs.
 
-Deliverable: Trace can answer basic repository dependency questions.
+Deliverable: Tracers can answer basic repository dependency questions.
 
 ### Milestone 4: Semantic analysis
 
@@ -1068,7 +1068,7 @@ Deliverable: Trace can answer basic repository dependency questions.
 - Investigate Kotlin and Swift semantic integrations.
 - Add explicit resolution status and confidence metadata.
 
-Deliverable: Trace resolves a documented subset of cross-file calls and references accurately for each language.
+Deliverable: Tracers resolves a documented subset of cross-file calls and references accurately for each language.
 
 ### Milestone 5: Call graphs and impact analysis
 
@@ -1095,11 +1095,11 @@ Deliverable: Repeated scans avoid unnecessary work while preserving correctness.
 - Finalise the graph schema.
 - Implement the standalone Obsidian-style visual graph explorer using D3.js and HTML5 Canvas (`graph_template.html`).
 - Add interactive navigation, ego-network highlighting, search, and filtering.
-- Implement graph validation (`trace validate`) to enforce edge-node referential integrity.
+- Implement graph validation (`tracers validate`) to enforce edge-node referential integrity.
 - Improve packaging and release automation.
 - Complete documentation and performance testing.
 
-Deliverable: Trace is usable as a high-performance CLI with full query capabilities and an integrated, standalone visual code-graph explorer.
+Deliverable: Tracers is usable as a high-performance CLI with full query capabilities and an integrated, standalone visual code-graph explorer.
 
 ## 16. Acceptance Criteria
 
@@ -1107,7 +1107,7 @@ The project is not complete merely because it compiles.
 
 The implementation must satisfy these criteria:
 
-1. Trace builds successfully using the documented stable Rust toolchain.
+1. Tracers builds successfully using the documented stable Rust toolchain.
 2. A user can scan a repository without a mandatory external service.
 3. All ten target languages have functioning syntax adapters.
 4. Supported declarations, imports, and call expressions are represented in the common graph.
@@ -1158,7 +1158,7 @@ Do not claim to have executed tests or benchmarks unless they were actually run.
 
 ## 18. Framework Awareness
 
-Trace is framework aware: it detects which application frameworks are used in a repository and models framework-specific constructs (components, controllers, services, models, routes, hooks, views, middleware, etc.) as first-class graph nodes and edges.
+Tracers is framework aware: it detects which application frameworks are used in a repository and models framework-specific constructs (components, controllers, services, models, routes, hooks, views, middleware, etc.) as first-class graph nodes and edges.
 
 ### 18.1 Design goals
 
@@ -1206,15 +1206,15 @@ Trace is framework aware: it detects which application frameworks are used in a 
 | PHP                   | Symfony      | `symfony` import, `@Route`, `extends AbstractController`                  |
 | Ruby                  | Rails        | `rails` import, `ApplicationController`, `ActiveRecord::Base`             |
 
-Framework fixtures exist for all frameworks above in `fixtures/frameworks/` and are verified detectable by `trace scan`.
+Framework fixtures exist for all frameworks above in `fixtures/frameworks/` and are verified detectable by `tracers scan`.
 
 ### 18.3 Graph model additions
 
-**Node kind:** `Framework` (`trace-core/src/node.rs`).
+**Node kind:** `Framework` (`tracers-core/src/node.rs`).
 
 **Node metadata:** `framework`, `family`, `version`, `confidence`, `detection_signal`.
 
-**Edge kinds** (`trace-core/src/edge.rs`):
+**Edge kinds** (`tracers-core/src/edge.rs`):
 
 - `UsesFramework` — file/module/symbol depends on a framework package.
 - `ImplementsPattern` — symbol implements a framework pattern (component, controller, route, model, etc.).
@@ -1222,16 +1222,16 @@ Framework fixtures exist for all frameworks above in `fixtures/frameworks/` and 
 - `RoutesTo` — symbol declares a framework route/endpoint.
 - `Injects` — dependency injection into a framework-managed symbol.
 
-**ID format** (`trace-core/src/id.rs`): `framework:<name>[:<version>]`.
+**ID format** (`tracers-core/src/id.rs`): `framework:<name>[:<version>]`.
 
 ### 18.4 Implementation milestones
 
 #### Milestone A: Core types and detection engine — COMPLETE
 
-- Add `NodeKind::Framework` to `trace-core/src/node.rs`.
-- Add framework edge kinds to `trace-core/src/edge.rs`.
-- Add `framework_id()` to `trace-core/src/id.rs`.
-- Create `trace-analysis/src/framework/` with `types.rs`, `detector.rs`, `lookup.rs`, `signatures.rs`.
+- Add `NodeKind::Framework` to `tracers-core/src/node.rs`.
+- Add framework edge kinds to `tracers-core/src/edge.rs`.
+- Add `framework_id()` to `tracers-core/src/id.rs`.
+- Create `tracers-analysis/src/framework/` with `types.rs`, `detector.rs`, `lookup.rs`, `signatures.rs`.
 - Define framework signature database (import prefixes, decorator names, base class names, manifest files).
 - Detect frameworks from parsed imports, decorators, heritage clauses, and discovered manifest files.
 - Unit tests for each detector (detector.rs tests).
@@ -1245,26 +1245,26 @@ Framework fixtures exist for all frameworks above in `fixtures/frameworks/` and 
 
 #### Milestone C: Stats, export, and CLI — COMPLETE
 
-- Add framework counts to `trace-core/src/graph.rs` `Stats` (`by_framework`).
-- Add framework information to `trace-export` `GraphDocument`/`AnalysisMetadata` and DOT export colors.
-- Add `trace frameworks` CLI command reporting detected frameworks with signals and confidence (`crates/trace-cli/src/cli/validate.rs:cmd_frameworks`, registered in `commands.rs`, wired in `main.rs`).
-- Add framework breakdown to `trace stats` and `trace languages`.
+- Add framework counts to `tracers-core/src/graph.rs` `Stats` (`by_framework`).
+- Add framework information to `tracers-export` `GraphDocument`/`AnalysisMetadata` and DOT export colors.
+- Add `tracers frameworks` CLI command reporting detected frameworks with signals and confidence (`crates/tracers-cli/src/cli/validate.rs:cmd_frameworks`, registered in `commands.rs`, wired in `main.rs`).
+- Add framework breakdown to `tracers stats` and `tracers languages`.
 
 #### Milestone D: Tests and fixtures — COMPLETE
 
 - Added framework fixtures for all 24 frameworks across 10 languages in `fixtures/frameworks/`.
-- Added integration tests in `crates/trace-analysis/tests/framework_tests.rs` (5 tests, all passing).
-- All framework fixtures verified detectable via `trace scan`.
+- Added integration tests in `crates/tracers-analysis/tests/framework_tests.rs` (5 tests, all passing).
+- All framework fixtures verified detectable via `tracers scan`.
 - Integration test verifying framework nodes appear in exported JSON (pending).
 - Schema validation for framework nodes and edges (pending).
 
 ### 18.5 Acceptance criteria — STATUS
 
-1. `cargo build` succeeds and `trace frameworks <path>` runs without error. — PASS
+1. `cargo build` succeeds and `tracers frameworks <path>` runs without error. — PASS
 2. Detected frameworks appear as `Framework` nodes in exported JSON with name, family, and confidence. — PASS (via scan.rs FrameworkInfo mapping)
 3. Framework-specific symbols linked via `ImplementsPattern`/`ExtendsFramework` edges. — PARTIAL (edges added to model, not yet populated from symbol detection)
 4. No framework node is created without an import, decorator, inheritance, or manifest signal. — PASS (detector is signal-driven)
-5. `trace stats` reports per-framework node and edge counts. — PARTIAL (`by_framework` stat exists; CLI output not yet extended)
+5. `tracers stats` reports per-framework node and edge counts. — PARTIAL (`by_framework` stat exists; CLI output not yet extended)
 6. Unit and integration tests pass; `cargo fmt --check` and `cargo clippy` are clean. — PASS
 
 ### 18.6 Implementation progress
@@ -1273,18 +1273,18 @@ Framework fixtures exist for all frameworks above in `fixtures/frameworks/` and 
 
 All Rust source files exceeding ~200 lines have been split into focused submodule directories (max ~200 lines per file):
 
-- `trace-analysis/src/resolve/resolve_bindings.rs` → `resolve/bindings/{mod,go,kotlin,rust,wildcard}.rs`
-- `trace-core/src/language.rs` → `language/{types,methods,tests}.rs`
-- `trace-core/src/graph/storage/mod.rs` → `graph/storage/{edge_key,graph_add,graph_finalize,graph_query,graph_struct,mod}.rs`
-- `trace-analysis/src/resolve/resolve_resolver/mod.rs` → `resolve/resolve_resolver/{clean_name,navigate_methods,resolve_binding_path}.rs`
-- `trace-parser/src/adapters/rust/items.rs` → `rust/items/{enum_def,impl_def,module,struct_def,trait_def}.rs`
-- `trace-parser/src/adapters/go/declarations.rs` → `go/declarations/{function,interface,method,struct_}.rs`
-- `trace-parser/src/adapters/swift/declarations.rs` → `swift/declarations/{function,inheritance,initializer,property}.rs`
-- `trace-analysis/src/graph/graph_symbol_edges.rs` → `graph/graph_symbol_edges/{calls,heritage,type_refs}.rs`
+- `tracers-analysis/src/resolve/resolve_bindings.rs` → `resolve/bindings/{mod,go,kotlin,rust,wildcard}.rs`
+- `tracers-core/src/language.rs` → `language/{types,methods,tests}.rs`
+- `tracers-core/src/graph/storage/mod.rs` → `graph/storage/{edge_key,graph_add,graph_finalize,graph_query,graph_struct,mod}.rs`
+- `tracers-analysis/src/resolve/resolve_resolver/mod.rs` → `resolve/resolve_resolver/{clean_name,navigate_methods,resolve_binding_path}.rs`
+- `tracers-parser/src/adapters/rust/items.rs` → `rust/items/{enum_def,impl_def,module,struct_def,trait_def}.rs`
+- `tracers-parser/src/adapters/go/declarations.rs` → `go/declarations/{function,interface,method,struct_}.rs`
+- `tracers-parser/src/adapters/swift/declarations.rs` → `swift/declarations/{function,inheritance,initializer,property}.rs`
+- `tracers-analysis/src/graph/graph_symbol_edges.rs` → `graph/graph_symbol_edges/{calls,heritage,type_refs}.rs`
 
 #### CLI scan output (changed)
 
-`trace scan` now prints a human-readable summary to stdout instead of full graph JSON:
+`tracers scan` now prints a human-readable summary to stdout instead of full graph JSON:
 
 - Files scanned, packages, nodes, edges, symbols
 - Unresolved edges, diagnostics count
@@ -1292,17 +1292,17 @@ All Rust source files exceeding ~200 lines have been split into focused submodul
 - Frameworks detected (with family, confidence, version)
 - Nodes/edges by kind, resolution status, nodes by framework
 - Supported languages list
-File output (`--output`, `--write-trace-dir`) still writes `graph.json`, `graph.dot`, `graph.html`.
+File output (`--output`, `--write-tracers-dir`) still writes `graph.json`, `graph.dot`, `graph.html`.
 
 Removed the `--format`/`--f` flag from the `scan` command.
 
 #### Asset pipeline (complete)
 
 - `scripts/svg-to-png.sh` — Converts SVG files to PNG using rsvg-convert (preferred) or ImageMagick.
-- `assets/svg/og.svg` — OpenGraph image (1280×640) with Trace branding, text vertically centered.
+- `assets/svg/og.svg` — OpenGraph image (1280×640) with Tracers branding, text vertically centered.
 - `assets/images/logo.png` and `assets/images/og.png` — Generated PNG assets.
-- `scripts/docsify.sh` — Copies `.trace/graph.html` → `docs/index.html`, `.trace/graph.json` → `docs/graph.json`, creates `.nojekyll`.
-- `.pre-commit-config.yaml` — Added `docsify` local hook running after `trace-scan`.
+- `scripts/docsify.sh` — Copies `.tracers/graph.html` → `docs/index.html`, `.tracers/graph.json` → `docs/graph.json`, creates `.nojekyll`.
+- `.pre-commit-config.yaml` — Added `docsify` local hook running after `tracers-scan`.
 - `README.md` — Added OG hero banner and logo.
 
 #### CI (updated)
@@ -1318,7 +1318,7 @@ Removed the `--format`/`--f` flag from the `scan` command.
 
 ## Final Instruction
 
-Implement Trace as a real, extensible, multi-language code intelligence engine, prioritising correctness, clear architectural boundaries, and a useful CLI.
+Implement Tracers as a real, extensible, multi-language code intelligence engine, prioritising correctness, clear architectural boundaries, and a useful CLI.
 
 Start with repository inspection, then implement the smallest complete vertical slice. Continue through the milestones in order, validating each stage before moving on.
 

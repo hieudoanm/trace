@@ -1,12 +1,12 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/hieudoanm/trace/schemas/graph.schema.json",
-  "title": "Trace Graph Document",
-  "description": "Versioned JSON graph document produced by the Trace code intelligence tool.",
+  "$id": "https://github.com/hieudoanm/tracers/schemas/graph.schema.json",
+  "title": "Tracers Graph Document",
+  "description": "Versioned JSON graph document produced by the Tracers code intelligence tool.",
   "type": "object",
   "required": [
     "schemaVersion",
-    "traceVersion",
+    "tracersVersion",
     "repository",
     "analysis",
     "languages",
@@ -22,9 +22,9 @@
       "const": "1.0",
       "description": "JSON schema version for the exported graph document."
     },
-    "traceVersion": {
+    "tracersVersion": {
       "type": "string",
-      "description": "Trace crate version, injected at compile time."
+      "description": "Tracers crate version, injected at compile time."
     },
     "repository": {
       "$ref": "#/$defs/repositoryMetadata"

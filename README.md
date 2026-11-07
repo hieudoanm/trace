@@ -1,8 +1,8 @@
-# Trace
+# Tracers
 
-<img src="assets/images/og.png" alt="Trace — Code Intelligence Graph Analysis" width="1280" height="640" style="max-width: 100%; height: auto;">
+<img src="assets/images/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="1280" height="640" style="max-width: 100%; height: auto;">
 
-Trace is a high-performance, multi-language code intelligence and graph analysis tool. It analyses source code repositories and builds a unified graph of their internal structure and relationships, enabling developers to understand codebase organization, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
+Tracers is a high-performance, multi-language code intelligence and graph analysis tool. It analyses source code repositories and builds a unified graph of their internal structure and relationships, enabling developers to understand codebase organization, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
 
 ## Features
 
@@ -16,7 +16,7 @@ Trace is a high-performance, multi-language code intelligence and graph analysis
 - **Incremental caching**: Fast repeated scans with content-addressed caching
 - **Deterministic output**: Reproducible results for identical source trees
 - **Machine-readable export**: JSON output with schema validation
-- **Graph validation**: `trace validate` checks every edge references an existing node
+- **Graph validation**: `tracers validate` checks every edge references an existing node
 - **Local analysis**: No cloud services or external APIs required
 
 ## Installation
@@ -25,13 +25,13 @@ Trace is a high-performance, multi-language code intelligence and graph analysis
 
 ```bash
 # Clone the repository
-git clone https://github.com/hieudoanm/trace.git
-cd trace
+git clone https://github.com/hieudoanm/tracers.git tracers
+cd tracers
 
 # Build with Cargo
 cargo build --release
 
-# The binary will be at target/release/trace
+# The binary will be at target/release/tracers
 ```
 
 ### Requirements
@@ -45,74 +45,74 @@ cargo build --release
 
 ```bash
 # Scan the current directory
-trace scan
+tracers scan
 
-# Scan and generate the interactive visual explorer (.trace/graph.html)
-trace scan . --write-trace-dir
+# Scan and generate the interactive visual explorer (.tracers/graph.html)
+tracers scan . --write-tracers-dir
 
 # Scan a specific path
-trace scan /path/to/repository
+tracers scan /path/to/repository
 
 # Write output to a file
-trace scan . -o graph.json
+tracers scan . -o graph.json
 
 # Filter by language
-trace scan . --language typescript
+tracers scan . --language typescript
 
 # Exclude files matching a pattern
-trace scan . --exclude "node_modules/**"
+tracers scan . --exclude "node_modules/**"
 ```
 
 ### Query a graph
 
 ```bash
 # Get statistics
-trace stats
+tracers stats
 
 # Find callers of a function
-trace callers myFunction
+tracers callers myFunction
 
 # Find callees of a function
-trace callees myFunction
+tracers callees myFunction
 
 # List references to a symbol
-trace refs MyClass
+tracers refs MyClass
 
 # Show dependencies
-trace deps src/main.ts
+tracers deps src/main.ts
 
 # Show transitive dependencies
-trace deps src/main.ts --transitive
+tracers deps src/main.ts --transitive
 
 # Impact analysis
-trace impact src/utils.ts
+tracers impact src/utils.ts
 
 # Find a path between two symbols
-trace path mainFunction helperFunction
+tracers path mainFunction helperFunction
 
 # Detect dependency cycles
-trace cycles
+tracers cycles
 
 # Check configuration and parser availability
-trace check
+tracers check
 
 # Validate graph integrity (every edge references an existing node)
-trace validate
+tracers validate
 
 # List supported languages
-trace languages
+tracers languages
 ```
 
 ## Interactive Visual Graph Explorer
 
-Trace includes a built-in, standalone visual graph explorer inspired by Obsidian's graph view. It runs locally in any web browser without needing a backend server or node build step.
+Tracers includes a built-in, standalone visual graph explorer inspired by Obsidian's graph view. It runs locally in any web browser without needing a backend server or node build step.
 
 ```bash
-# Generate the explorer files in .trace/
-trace scan . --write-trace-dir
+# Generate the explorer files in .tracers/
+tracers scan . --write-tracers-dir
 
 # Open the explorer in your browser (e.g. on macOS)
-open .trace/graph.html
+open .tracers/graph.html
 # Or serve with any static web server (VS Code Live Server, python3 -m http.server, etc.)
 ```
 
@@ -139,7 +139,7 @@ open .trace/graph.html
 
 ### Commands
 
-#### `trace scan [PATH]`
+#### `tracers scan [PATH]`
 
 Analyse a repository and generate a graph.
 
@@ -151,22 +151,22 @@ Analyse a repository and generate a graph.
 - `--language <LANGUAGE>`: Only analyse the given language(s)
 - `--no-cache`: Disable the syntax cache
 - `--jobs <N>`: Number of parallel jobs
-- `--write-trace-dir`: Write .trace/ directory with graph.json, graph.dot, and graph.html (enabled by default)
-- `--no-trace-dir`: Disable writing the .trace directory
-- `--config <PATH>`: Path to a trace.toml configuration file
+- `--write-tracers-dir`: Write .tracers/ directory with graph.json, graph.dot, and graph.html (enabled by default)
+- `--no-tracers-dir`: Disable writing the .tracers directory
+- `--config <PATH>`: Path to a tracers.toml configuration file
 
-#### `trace graph [PATH]`
+#### `tracers graph [PATH]`
 
 Load or construct a graph and provide filtered graph output.
 
 **Options:**
 
-- `--format <FORMAT>`: Output format: json or dot (default: `output.format` from trace.toml, then json)
+- `--format <FORMAT>`: Output format: json or dot (default: `output.format` from tracers.toml, then json)
 - `-o, --output <PATH>`: Write output to PATH instead of stdout
 - `--language <LANGUAGE>`: Filter by language
 - `--kind <KIND>`: Filter by node kind
 
-#### `trace callers <SYMBOL> [PATH]`
+#### `tracers callers <SYMBOL> [PATH]`
 
 Display callers of a symbol.
 
@@ -175,7 +175,7 @@ Display callers of a symbol.
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
 
-#### `trace callees <SYMBOL> [PATH]`
+#### `tracers callees <SYMBOL> [PATH]`
 
 Display callees of a symbol.
 
@@ -184,7 +184,7 @@ Display callees of a symbol.
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
 
-#### `trace refs <SYMBOL> [PATH]`
+#### `tracers refs <SYMBOL> [PATH]`
 
 List references to a symbol.
 
@@ -193,7 +193,7 @@ List references to a symbol.
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
 
-#### `trace deps <TARGET> [PATH]`
+#### `tracers deps <TARGET> [PATH]`
 
 Display direct or transitive dependencies of a target.
 
@@ -202,7 +202,7 @@ Display direct or transitive dependencies of a target.
 - `--transitive`: Follow transitive dependencies
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 
-#### `trace impact <TARGET> [PATH]`
+#### `tracers impact <TARGET> [PATH]`
 
 Display static impact analysis for a target.
 
@@ -211,7 +211,7 @@ Display static impact analysis for a target.
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
 
-#### `trace path <SOURCE> <TARGET> [PATH]`
+#### `tracers path <SOURCE> <TARGET> [PATH]`
 
 Find a path between two symbols or nodes.
 
@@ -219,7 +219,7 @@ Find a path between two symbols or nodes.
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 
-#### `trace roots [PATH]`
+#### `tracers roots [PATH]`
 
 List callable symbols with no incoming `calls` edges (entry-point candidates). This is not a dead-code report: dynamic dispatch, reflection, exported entry points, tests and callbacks can all legitimately have no statically visible caller.
 
@@ -227,43 +227,43 @@ List callable symbols with no incoming `calls` edges (entry-point candidates). T
 
 - `--max-results <N>`: Maximum number of results (default: 1000)
 
-#### `trace cycles [PATH]`
+#### `tracers cycles [PATH]`
 
 Detect dependency cycles.
 
-#### `trace stats [PATH]`
+#### `tracers stats [PATH]`
 
 Report graph statistics.
 
-#### `trace languages`
+#### `tracers languages`
 
 Report supported languages and analysis capabilities.
 
-#### `trace check [PATH]`
+#### `tracers check [PATH]`
 
 Validate configuration, discovery, and parser availability.
 
-#### `trace validate [PATH]`
+#### `tracers validate [PATH]`
 
 Validate graph integrity: every edge must reference an existing node. Fails if any dangling edge targets are found.
 
 ## Architecture
 
-<img src="assets/images/logo.png" alt="Trace logo" width="120" height="120" align="right" style="margin: 0 0 1em 1em;">
+<img src="assets/images/logo.png" alt="Tracers logo" width="120" height="120" align="right" style="margin: 0 0 1em 1em;">
 
-Trace is organized as a Rust workspace with the following crates:
+Tracers is organized as a Rust workspace with the following crates:
 
-- **trace-core**: Core graph model, stable identities, graph validation, and query engine
-- **trace-parser**: Repository discovery and Tree-sitter syntax extraction across all 10 supported languages
-- **trace-analysis**: Symbol resolution (`resolve/`), graph construction (`graph/`), and incremental caching
-- **trace-export**: Deterministic JSON and DOT export with schema validation
-- **trace-cli**: Command-line interface (`cli/`) and embedded Obsidian-style D3 graph template
+- **tracers-core**: Core graph model, stable identities, graph validation, and query engine
+- **tracers-parser**: Repository discovery and Tree-sitter syntax extraction across all 10 supported languages
+- **tracers-analysis**: Symbol resolution (`resolve/`), graph construction (`graph/`), and incremental caching
+- **tracers-export**: Deterministic JSON and DOT export with schema validation
+- **tracers-cli**: Command-line interface (`cli/`) and embedded Obsidian-style D3 graph template
 
 The core engine is independent of the visualization layer and does not execute or upload source code.
 
 ## Language Support
 
-Trace supports the following languages with syntax-level analysis:
+Tracers supports the following languages with syntax-level analysis:
 
 | Language   | Extensions | Syntax | Symbols | Imports | Calls | Cross-file | Semantic |
 | ---------- | ---------- | ------ | ------- | ------- | ----- | ---------- | -------- |
@@ -293,7 +293,7 @@ Trace supports the following languages with syntax-level analysis:
 
 ## Configuration
 
-Trace supports an optional project-level configuration file `trace.toml`.
+Tracers supports an optional project-level configuration file `tracers.toml`.
 
 ### Example Configuration
 
@@ -315,8 +315,8 @@ languages = ["typescript", "python", "go", "rust", "kotlin", "swift"]
 # Enable caching (default: true)
 enabled = true
 
-# Cache directory (default: ".trace-cache")
-directory = ".trace-cache"
+# Cache directory (default: ".tracers-cache")
+directory = ".tracers-cache"
 
 [output]
 # Default output format (default: "json")
@@ -332,7 +332,7 @@ Command-line arguments override configuration file values, which override defaul
 
 ## Graph Schema
 
-Trace outputs a versioned JSON graph schema containing:
+Tracers outputs a versioned JSON graph schema containing:
 
 - **Repository metadata**: ID, name, root path, file count, language count
 - **Analysis metadata**: Format, cache status, semantic mode, enabled languages
@@ -392,11 +392,11 @@ cargo clippy --workspace --all-targets --all-features -- -D warnings
 cargo test --workspace
 
 # Run tests for a specific crate
-cargo test -p trace-core
-cargo test -p trace-parser
-cargo test -p trace-analysis
-cargo test -p trace-export
-cargo test -p trace-cli
+cargo test -p tracers-core
+cargo test -p tracers-parser
+cargo test -p tracers-analysis
+cargo test -p tracers-export
+cargo test -p tracers-cli
 ```
 
 ### Running the CLI
@@ -406,7 +406,7 @@ cargo test -p trace-cli
 cargo run -- scan /path/to/repo
 
 # Or use the built binary
-./target/debug/trace scan /path/to/repo
+./target/debug/tracers scan /path/to/repo
 ```
 
 ## Contributing
@@ -419,7 +419,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ## Acknowledgments
 
-Trace uses:
+Tracers uses:
 
 - [tree-sitter](https://tree-sitter.github.io/) for incremental syntax parsing
 - [petgraph](https://github.com/petgraph/petgraph) for graph algorithms

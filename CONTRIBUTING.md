@@ -1,6 +1,6 @@
-# Contributing to Trace
+# Contributing to Tracers
 
-Thank you for your interest in contributing to Trace! This document provides guidelines and instructions for contributing to the project.
+Thank you for your interest in contributing to Tracers! This document provides guidelines and instructions for contributing to the project.
 
 ## Development Setup
 
@@ -15,8 +15,8 @@ Thank you for your interest in contributing to Trace! This document provides gui
 1. Fork the repository on GitHub
 2. Clone your fork locally:
    ```bash
-   git clone https://github.com/your-username/trace.git
-   cd trace
+   git clone https://github.com/your-username/tracers.git
+   cd tracers
    ```
 3. Create a new branch for your feature or bugfix:
    ```bash
@@ -39,7 +39,7 @@ cargo build --workspace
 cargo build --release
 
 # Build a specific crate
-cargo build -p trace-core
+cargo build -p tracers-core
 ```
 
 ### Testing
@@ -49,11 +49,11 @@ cargo build -p trace-core
 cargo test --workspace
 
 # Run tests for a specific crate
-cargo test -p trace-core
-cargo test -p trace-parser
-cargo test -p trace-analysis
-cargo test -p trace-export
-cargo test -p trace-cli
+cargo test -p tracers-core
+cargo test -p tracers-parser
+cargo test -p tracers-analysis
+cargo test -p tracers-export
+cargo test -p tracers-cli
 
 # Run tests with output
 cargo test --workspace -- --nocapture
@@ -85,16 +85,16 @@ cargo clippy --workspace --all-targets --all-features --fix
 cargo run -- scan /path/to/repo
 
 # Or use the debug binary
-./target/debug/trace scan /path/to/repo
+./target/debug/tracers scan /path/to/repo
 
 # Use the release binary
-./target/release/trace scan /path/to/repo
+./target/release/tracers scan /path/to/repo
 ```
 
 ## Project Structure
 
 ```
-trace/
+tracers/
 ├── Cargo.toml              # Workspace configuration
 ├── Cargo.lock              # Dependency lock file
 ├── rust-toolchain.toml     # Rust toolchain specification
@@ -105,11 +105,11 @@ trace/
 ├── Makefile                # Build automation
 ├── .github/                # GitHub workflows
 ├── crates/                 # Workspace crates
-│   ├── trace-cli/          # Command-line interface
-│   ├── trace-core/         # Core graph model
-│   ├── trace-parser/       # Repository discovery and parsing
-│   ├── trace-analysis/     # Symbol resolution and graph construction
-│   └── trace-export/       # Graph export formats
+│   ├── tracers-cli/          # Command-line interface
+│   ├── tracers-core/         # Core graph model
+│   ├── tracers-parser/       # Repository discovery and parsing
+│   ├── tracers-analysis/     # Symbol resolution and graph construction
+│   └── tracers-export/       # Graph export formats
 ├── fixtures/               # Test fixtures for each language
 │   ├── typescript/
 │   ├── python/
@@ -124,7 +124,7 @@ trace/
 
 ## Crate Responsibilities
 
-### trace-cli
+### tracers-cli
 
 - CLI argument parsing and command handling
 - Configuration loading
@@ -132,7 +132,7 @@ trace/
 - Exit codes and user-facing diagnostics
 - Invoking the analysis pipeline
 
-### trace-core
+### tracers-core
 
 - Stable node and edge types
 - Canonical IDs
@@ -142,7 +142,7 @@ trace/
 - Graph query interfaces
 - Analysis capability and confidence metadata
 
-### trace-parser
+### tracers-parser
 
 - File discovery integration
 - Language detection
@@ -151,7 +151,7 @@ trace/
 - Source location mapping
 - Parser diagnostics
 
-### trace-analysis
+### tracers-analysis
 
 - Language adapters
 - Symbol indexing
@@ -162,7 +162,7 @@ trace/
 - Cross-file and cross-language relationships
 - Incremental analysis orchestration
 
-### trace-export
+### tracers-export
 
 - JSON export
 - JSON schema compatibility
@@ -233,16 +233,16 @@ mod tests {
 
 When adding support for a new language:
 
-1. Add the language to `trace-core/src/language.rs`
+1. Add the language to `tracers-core/src/language.rs`
 2. Add the tree-sitter grammar to `Cargo.toml`
-3. Create an adapter in `trace-parser/src/adapters/`
+3. Create an adapter in `tracers-parser/src/adapters/`
 4. Add tests in `fixtures/` for the new language
 5. Update the language support matrix in `README.md`
 6. Document any language-specific limitations
 
 ## Adding a New CLI Command
 
-1. Add the command to the `Commands` enum in `trace-cli/src/main.rs`
+1. Add the command to the `Commands` enum in `tracers-cli/src/main.rs`
 2. Implement the command handler function
 3. Add help text and argument descriptions
 4. Test the command manually and with fixtures
@@ -291,4 +291,4 @@ Releases are managed by the maintainers. The process includes:
 
 ## License
 
-By contributing to Trace, you agree that your contributions will be licensed under the MIT License.
+By contributing to Tracers, you agree that your contributions will be licensed under the MIT License.

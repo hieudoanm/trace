@@ -2,12 +2,12 @@
 
 # Default target
 help:
-	@echo "Trace - Build and Development Commands"
+	@echo "Tracers - Build and Development Commands"
 	@echo ""
 	@echo "Build:"
 	@echo "  make build          - Build the project in debug mode"
 	@echo "  make build-release  - Build the project in release mode"
-	@echo "  make install        - Install the trace binary"
+	@echo "  make install        - Install the tracers binary"
 	@echo ""
 	@echo "Test:"
 	@echo "  make test           - Run all tests"
@@ -23,7 +23,7 @@ help:
 	@echo "  make clean          - Clean build artifacts"
 	@echo ""
 	@echo "Run:"
-	@echo "  make run            - Build and run trace on current directory"
+	@echo "  make run            - Build and run tracers on current directory"
 	@echo "  make run-<cmd>      - Build and run a specific command"
 
 # Build in debug mode
@@ -36,7 +36,7 @@ build-release:
 
 # Install the binary
 install:
-	cargo install --path crates/trace-cli
+	cargo install --path crates/tracers-cli
 
 # Run tests
 test:
@@ -65,34 +65,34 @@ clean:
 # Run all checks
 check: fmt-check clippy test
 
-# Build and run trace on current directory
+# Build and run tracers on current directory
 run: build
-	./target/debug/trace scan .
+	./target/debug/tracers scan .
 
-# Build and run trace with a specific command
+# Build and run tracers with a specific command
 run-scan: build
-	./target/debug/trace scan $(ARGS)
+	./target/debug/tracers scan $(ARGS)
 
 run-stats: build
-	./target/debug/trace stats $(ARGS)
+	./target/debug/tracers stats $(ARGS)
 
 run-callers: build
-	./target/debug/trace callers $(ARGS)
+	./target/debug/tracers callers $(ARGS)
 
 run-callees: build
-	./target/debug/trace callees $(ARGS)
+	./target/debug/tracers callees $(ARGS)
 
 run-deps: build
-	./target/debug/trace deps $(ARGS)
+	./target/debug/tracers deps $(ARGS)
 
 run-impact: build
-	./target/debug/trace impact $(ARGS)
+	./target/debug/tracers impact $(ARGS)
 
 run-cycles: build
-	./target/debug/trace cycles $(ARGS)
+	./target/debug/tracers cycles $(ARGS)
 
 run-check: build
-	./target/debug/trace check $(ARGS)
+	./target/debug/tracers check $(ARGS)
 
 run-languages: build
-	./target/debug/trace languages
+	./target/debug/tracers languages

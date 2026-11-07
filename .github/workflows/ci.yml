@@ -122,7 +122,7 @@ jobs:
           key: ${{ runner.os }}-cargo-build-target-${{ hashFiles('**/Cargo.lock') }}
 
       - name: Run schema validation test
-        run: cargo test -p trace-export exported_document_conforms_to_schema
+        run: cargo test -p tracers-export exported_document_conforms_to_schema
 
   build-release:
     name: Build Release
@@ -163,5 +163,5 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v7.0.2
         with:
-          name: trace-${{ matrix.os }}
-          path: target/release/trace*
+          name: tracers-${{ matrix.os }}
+          path: target/release/tracers*
