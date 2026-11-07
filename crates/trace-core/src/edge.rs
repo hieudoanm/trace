@@ -125,6 +125,19 @@ pub enum ResolutionOrigin {
     Compiler,
 }
 
+impl ResolutionOrigin {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            ResolutionOrigin::Syntax => "syntax",
+            ResolutionOrigin::Import => "import",
+            ResolutionOrigin::Lexical => "lexical",
+            ResolutionOrigin::TypeInference => "type_inference",
+            ResolutionOrigin::Heuristic => "heuristic",
+            ResolutionOrigin::Compiler => "compiler",
+        }
+    }
+}
+
 /// An aggregated directed relationship.
 ///
 /// Call sites between the same pair of symbols are aggregated into one edge
@@ -197,5 +210,20 @@ mod tests {
     fn dependency_classification() {
         assert!(EdgeKind::Imports.is_dependency());
         assert!(!EdgeKind::Calls.is_dependency());
+    }
+
+    #[test]
+    fn origin_names_are_stable() {
+        for origin in [
+            ResolutionOrigin::Syntax,
+            ResolutionOrigin::Import,
+            ResolutionOrigin::Lexical,
+            ResolutionOrigin::TypeInference,
+            ResolutionOrigin::Heuristic,
+            ResolutionOrigin::Compiler,
+        ] {
+            assert!(!origin.as_str().is_empty());
+        }
+        assert_eq!(ResolutionOrigin::TypeInference.as_str(), "type_inference");
     }
 }

@@ -3,9 +3,10 @@
 use std::path::Path;
 
 use anyhow::{Context, Result};
+use trace_analysis::framework::Framework;
 use trace_analysis::{cache::SyntaxCache, config::TraceConfig, graph::GraphBuilder};
-use trace_core::Language;
-use trace_export::{to_dot, to_json_string, FrameworkInfo, LanguageInfo};
+use trace_core::{Diagnostic, Graph, Language};
+use trace_export::{FrameworkInfo, GraphDocument, LanguageInfo};
 use trace_parser::discovery::DiscoveryOptions;
 
 /// Build a graph from a repository path with discovery and parsing options.
@@ -29,9 +30,19 @@ pub(crate) fn build_graph_for_path(
         options.excludes = vec![exclude.to_string()];
     }
     if let Some(language) = language {
-        let lang = Language::parse_name(language)
-            .with_context(|| format!("unsupported language: {language}"))?;
-        options.languages = vec![lang];
+        let mut languages = Vec::new();
+        for name in language.split(',') {
+            let name = name.trim();
+            if name.is_empty() {
+                continue;
+            }
+            let lang = Language::parse_name(name)
+                .with_context(|| format!("unsupported language: {name}"))?;
+            if !languages.contains(&lang) {
+                languages.push(lang);
+            }
+        }
+        options.languages = languages;
     }
     options.max_file_size = config.analysis.max_file_size;
     options.follow_symlinks = config.analysis.follow_symlinks;
@@ -51,6 +62,79 @@ pub(crate) fn build_graph_for_path(
         .context("failed to build graph")?;
 
     Ok((result, config))
+}
+
+/// Whether the syntax cache will actually be used for this run.
+pub(crate) fn cache_enabled(config: &TraceConfig, no_cache: bool) -> bool {
+    config.cache.enabled && !no_cache
+}
+
+fn framework_info(framework: &Framework) -> FrameworkInfo {
+    FrameworkInfo {
+        name: framework.name.clone(),
+        display_name: framework.display_name.clone(),
+        family: framework.family.as_str().to_string(),
+        version: framework.version.clone(),
+        confidence: framework.confidence.as_str().to_string(),
+    }
+}
+
+fn supported_languages() -> Vec<LanguageInfo> {
+    trace_analysis::capabilities::all_capabilities()
+        .iter()
+        .map(|cap| LanguageInfo {
+            language: cap.language.as_str().to_string(),
+            grammar: cap.grammar.clone(),
+        })
+        .collect()
+}
+
+/// Repository root as stored in exports. Absolute paths under the current
+/// working directory are relativized so exports stay portable; anything else
+/// is kept verbatim.
+fn repository_root(path: &Path) -> String {
+    if path.is_absolute() {
+        if let (Ok(cwd), Ok(absolute)) = (std::env::current_dir(), path.canonicalize()) {
+            let cwd = cwd.canonicalize().unwrap_or(cwd);
+            if let Ok(relative) = absolute.strip_prefix(&cwd) {
+                let relative = relative.to_string_lossy().replace('\\', "/");
+                return if relative.is_empty() {
+                    ".".to_string()
+                } else {
+                    relative
+                };
+            }
+        }
+    }
+    path.to_string_lossy().replace('\\', "/")
+}
+
+/// Build the versioned export document shared by `scan` and `graph`.
+#[allow(clippy::too_many_arguments)]
+pub(crate) fn build_document(
+    graph: &Graph,
+    diagnostics: &[Diagnostic],
+    frameworks: &[Framework],
+    config: &TraceConfig,
+    path: &Path,
+    cache_enabled: bool,
+) -> GraphDocument {
+    let languages = supported_languages();
+    let framework_infos: Vec<FrameworkInfo> = frameworks.iter().map(framework_info).collect();
+    trace_export::export_graph(
+        graph,
+        path.file_name()
+            .and_then(|n| n.to_str())
+            .unwrap_or("repository"),
+        &repository_root(path),
+        diagnostics,
+        Some(graph.stats(diagnostics)),
+        &languages,
+        &framework_infos,
+        cache_enabled,
+        config.analysis.semantic.as_str(),
+        &config.analysis.languages,
+    )
 }
 
 /// Print a human-readable scan summary to stdout.
@@ -144,55 +228,23 @@ pub(crate) fn cmd_scan(
     let (result, config) =
         build_graph_for_path(path, include, exclude, language, no_cache, jobs, config)?;
 
-    let languages = trace_analysis::capabilities::all_capabilities()
-        .iter()
-        .map(|cap| LanguageInfo {
-            language: cap.language.as_str().to_string(),
-            grammar: cap.grammar.clone(),
-        })
-        .collect::<Vec<_>>();
-
-    let document = trace_export::export_graph(
-        &result.graph,
-        path.file_name()
-            .and_then(|n| n.to_str())
-            .unwrap_or("repository"),
-        path.to_str().unwrap_or("."),
-        &result.diagnostics,
-        Some(result.graph.stats(&result.diagnostics)),
-        &languages,
-        &result
-            .frameworks
-            .iter()
-            .map(|fw| FrameworkInfo {
-                name: fw.name.clone(),
-                display_name: fw.display_name.clone(),
-                family: fw.family.as_str().to_string(),
-                version: fw.version.clone(),
-                confidence: fw.confidence.as_str().to_string(),
-            })
-            .collect::<Vec<_>>(),
-        !no_cache,
-        "off",
-        &config.analysis.languages,
-    );
-
-    let json_content = to_json_string(&document);
-    let dot_content = to_dot(&result.graph);
-    let html_content = include_str!("../graph_template.html");
+    let languages = supported_languages();
+    let framework_infos: Vec<FrameworkInfo> =
+        result.frameworks.iter().map(framework_info).collect();
     let stats = result.graph.stats(&result.diagnostics);
 
-    let framework_infos: Vec<trace_export::FrameworkInfo> = result
-        .frameworks
-        .iter()
-        .map(|fw| trace_export::FrameworkInfo {
-            name: fw.name.clone(),
-            display_name: fw.display_name.clone(),
-            family: fw.family.as_str().to_string(),
-            version: fw.version.clone(),
-            confidence: fw.confidence.as_str().to_string(),
-        })
-        .collect();
+    let document = build_document(
+        &result.graph,
+        &result.diagnostics,
+        &result.frameworks,
+        &config,
+        path,
+        cache_enabled(&config, no_cache),
+    );
+
+    let json_content = trace_export::to_json_string(&document);
+    let dot_content = trace_export::to_dot(&result.graph);
+    let html_content = include_str!("../graph_template.html");
 
     // Output summary to stdout if output path is not provided
     if output.is_none() {

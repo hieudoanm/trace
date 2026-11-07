@@ -44,7 +44,10 @@ impl<'a> Query<'a> {
         visited.insert(target.to_string());
         queue.push_back((target.to_string(), 0usize));
         while let Some((current, depth)) = queue.pop_front() {
-            if depth >= options.max_depth || results.len() >= options.max_results {
+            if results.len() >= options.max_results {
+                break;
+            }
+            if depth >= options.max_depth {
                 continue;
             }
             let mut edges: Vec<&crate::edge::Edge> = self

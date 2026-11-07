@@ -9,15 +9,29 @@ use trace_parser::parser::{read_source, SyntaxParser};
 pub(crate) fn cmd_frameworks(path: &Path) -> Result<()> {
     let options = DiscoveryOptions::default();
     let report = discover(path, &options).map_err(anyhow::Error::msg)?;
+
+    let mut parser = SyntaxParser::new().map_err(|e| anyhow!("parser error: {e}"))?;
     let mut parsed_files = Vec::new();
+    let mut skipped = 0usize;
     for file in &report.files {
-        let source = read_source(&file.absolute, u64::MAX)
-            .map_err(|e| anyhow!("cannot read {}: {e}", file.absolute.display()))?;
-        let mut parser = SyntaxParser::new().map_err(|e| anyhow!("parser error: {e}"))?;
-        let parsed = parser
-            .parse(&file.path, file.language, &source)
-            .map_err(|e| anyhow!("parse error: {e}"))?;
-        parsed_files.push(parsed);
+        let source = match read_source(&file.absolute, options.max_file_size) {
+            Ok(source) => source,
+            Err(error) => {
+                eprintln!("warning: skipping {}: {error}", file.path);
+                skipped += 1;
+                continue;
+            }
+        };
+        match parser.parse(&file.path, file.language, &source) {
+            Ok(parsed) => parsed_files.push(parsed),
+            Err(error) => {
+                eprintln!("warning: skipping {}: {error}", file.path);
+                skipped += 1;
+            }
+        }
+    }
+    if skipped > 0 {
+        eprintln!("warning: {skipped} file(s) could not be analysed");
     }
     parsed_files.sort_by(|a, b| a.path.cmp(&b.path));
 

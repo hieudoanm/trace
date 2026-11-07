@@ -223,3 +223,103 @@ fn scan_outputs_all_files_to_trace_dir() {
     let html = std::fs::read_to_string(&html_file).unwrap();
     assert!(html.contains("Trace Graph Explorer"));
 }
+
+#[test]
+fn callers_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["callers", "twice", path.to_str().unwrap()]);
+
+    assert!(output.contains("Callers of `twice`:"));
+    assert!(output.contains("run"));
+    assert!(output.contains("via calls"));
+}
+
+#[test]
+fn callees_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["callees", "run", path.to_str().unwrap()]);
+
+    assert!(output.contains("Callees of `run`:"));
+    assert!(output.contains("twice"));
+}
+
+#[test]
+fn refs_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["refs", "twice", path.to_str().unwrap()]);
+
+    assert!(output.contains("References of `twice`:"));
+    assert!(output.contains("run"));
+}
+
+#[test]
+fn deps_command_accepts_file_target() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["deps", "src/math.ts", path.to_str().unwrap()]);
+
+    assert!(output.contains("Dependencies of `src/math.ts`"));
+}
+
+#[test]
+fn impact_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["impact", "twice", path.to_str().unwrap()]);
+
+    assert!(output.contains("Impact of `twice`"));
+    assert!(output.contains("run"));
+}
+
+#[test]
+fn path_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["path", "run", "twice", path.to_str().unwrap()]);
+
+    assert!(output.contains("Path from `run` to `twice`:"));
+    assert!(output.contains("--calls"));
+}
+
+#[test]
+fn roots_command() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["roots", path.to_str().unwrap()]);
+
+    assert!(output.contains("entry-point candidates"));
+    assert!(output.contains("run"));
+    assert!(output.contains("not a dead-code report"));
+}
+
+#[test]
+fn query_unknown_symbol_errors() {
+    let path = fixtures_dir().join("typescript");
+    let output = Command::new(trace_bin())
+        .args(["callers", "definitely_not_a_symbol", path.to_str().unwrap()])
+        .output()
+        .expect("Failed to execute trace");
+
+    assert!(!output.status.success());
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(stderr.contains("no symbol matches"));
+}
+
+#[test]
+fn graph_kind_filter() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_trace(&["graph", path.to_str().unwrap(), "--kind", "function"]);
+    let json: serde_json::Value = serde_json::from_str(&output).expect("Invalid JSON");
+    let nodes = json["nodes"].as_array().expect("nodes array");
+    assert!(!nodes.is_empty());
+    assert!(nodes.iter().all(|n| n["kind"] == "function"));
+}
+
+#[test]
+fn graph_rejects_unknown_format() {
+    let path = fixtures_dir().join("typescript");
+    let output = Command::new(trace_bin())
+        .args(["graph", path.to_str().unwrap(), "-f", "xml"])
+        .output()
+        .expect("Failed to execute trace");
+
+    assert!(!output.status.success());
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(stderr.contains("unsupported graph format"));
+}

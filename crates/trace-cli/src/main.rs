@@ -77,7 +77,7 @@ fn run() -> Result<()> {
             kind,
         } => crate::cli::graph::cmd_graph(
             &path,
-            &format,
+            format.as_deref(),
             output.as_deref(),
             language.as_deref(),
             kind.as_deref(),
@@ -118,6 +118,7 @@ fn run() -> Result<()> {
             path,
             max_depth,
         } => crate::cli::queries::cmd_path(&source, &target, &path, max_depth),
+        Commands::Roots { path, max_results } => crate::cli::queries::cmd_roots(&path, max_results),
         Commands::Cycles { path } => crate::cli::validate::cmd_cycles(&path),
         Commands::Stats { path } => crate::cli::validate::cmd_stats(&path),
         Commands::Languages => crate::cli::validate::cmd_languages(),

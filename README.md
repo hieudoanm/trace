@@ -145,7 +145,6 @@ Analyse a repository and generate a graph.
 
 **Options:**
 
-- `--format <FORMAT>`: Output format for stdout: json or dot (default: json)
 - `-o, --output <PATH>`: Write output files (.json, .dot, .html) to PATH (file or directory) instead of stdout
 - `--include <GLOB>`: Include only files matching this glob pattern
 - `--exclude <GLOB>`: Exclude files matching this glob pattern
@@ -162,7 +161,7 @@ Load or construct a graph and provide filtered graph output.
 
 **Options:**
 
-- `--format <FORMAT>`: Output format: json or dot (default: json)
+- `--format <FORMAT>`: Output format: json or dot (default: `output.format` from trace.toml, then json)
 - `-o, --output <PATH>`: Write output to PATH instead of stdout
 - `--language <LANGUAGE>`: Filter by language
 - `--kind <KIND>`: Filter by node kind
@@ -219,6 +218,14 @@ Find a path between two symbols or nodes.
 **Options:**
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
+
+#### `trace roots [PATH]`
+
+List callable symbols with no incoming `calls` edges (entry-point candidates). This is not a dead-code report: dynamic dispatch, reflection, exported entry points, tests and callbacks can all legitimately have no statically visible caller.
+
+**Options:**
+
+- `--max-results <N>`: Maximum number of results (default: 1000)
 
 #### `trace cycles [PATH]`
 

@@ -42,11 +42,11 @@ pub enum Commands {
         config: Option<PathBuf>,
 
         /// Write .trace/ directory with graph.json, graph.dot, and graph.html (enabled by default).
-        #[arg(long, default_value_t = true, action = clap::ArgAction::Set)]
+        #[arg(long, action = clap::ArgAction::SetTrue, default_value_t = true, overrides_with = "no_trace_dir")]
         write_trace_dir: bool,
 
         /// Disable writing the .trace directory.
-        #[arg(long)]
+        #[arg(long, overrides_with = "write_trace_dir")]
         no_trace_dir: bool,
     },
     /// Load or construct a graph and provide filtered graph output.
@@ -55,9 +55,9 @@ pub enum Commands {
         #[arg(default_value = ".")]
         path: PathBuf,
 
-        /// Output format: json or dot.
-        #[arg(short = 'f', long, default_value = "json")]
-        format: String,
+        /// Output format: json or dot (defaults to trace.toml output.format, then json).
+        #[arg(short = 'f', long)]
+        format: Option<String>,
 
         /// Write output to PATH instead of stdout.
         #[arg(short = 'o', long)]
@@ -171,6 +171,16 @@ pub enum Commands {
         /// Maximum traversal depth.
         #[arg(long, default_value = "32")]
         max_depth: usize,
+    },
+    /// List callable symbols with no incoming call edges.
+    Roots {
+        /// Repository path to scan (defaults to current directory).
+        #[arg(default_value = ".")]
+        path: PathBuf,
+
+        /// Maximum number of results.
+        #[arg(long, default_value = "1000")]
+        max_results: usize,
     },
     /// Detect dependency cycles.
     Cycles {
