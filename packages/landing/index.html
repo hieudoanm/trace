@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tracers — code intelligence graphs for any repository</title>
+  <meta name="description" content="Tracers parses 20+ languages with Tree-sitter and builds a unified graph of symbols, calls, imports, and dependencies — query callers, callees, impact, and cycles locally, with no cloud." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="logo.svg" />
+  <meta property="og:title" content="tracers — code intelligence graphs for any repository" />
+  <meta property="og:description" content="Multi-language code intelligence and graph analysis — callers, callees, dependencies, impact analysis, and an interactive explorer. Local-first, deterministic, one Rust binary." />
+  <meta property="og:url" content="https://hieudoanm.github.io/tracers/" />
+  <meta property="og:image" content="https://hieudoanm.github.io/tracers/og-image.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top">
+        <img src="logo.svg" alt="" width="28" height="28" />
+        <span>tracers</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#install">Install</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="https://github.com/hieudoanm/tracers" target="_blank" rel="noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>See your codebase as a graph.</h1>
+        <p class="lede">
+          tracers parses 20+ languages with Tree-sitter and builds a unified
+          graph of symbols, calls, imports, and dependencies. Ask who calls a
+          function, what breaks if it changes, or where the cycles are — all
+          locally, in one Rust binary.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="#install">Get started</a>
+          <a class="btn btn-ghost btn-lg" href="#demo">See it in action</a>
+        </div>
+        <dl class="stats">
+          <div><dt>20+</dt><dd>languages parsed</dd></div>
+          <div><dt>0</dt><dd>cloud calls</dd></div>
+          <div><dt>deterministic</dt><dd>reproducible exports</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Features</h2>
+          <p>A layered analysis pipeline that turns source code into a queryable
+          graph — and is honest about what it cannot resolve.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <h3>20+ languages</h3>
+            <p>TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, R, Zig, and more — all through maintained Tree-sitter grammars.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
+            <h3>Honest resolution</h3>
+            <p>Every relationship is marked resolved_internal, resolved_external, unresolved, or ambiguous — tracers never pretends a guess is a fact.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Call &amp; dependency graphs</h3>
+            <p>Direct and transitive dependencies, callers and callees, references, inheritance — bounded, deterministic traversals over indexed graph data.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+            </div>
+            <h3>Impact analysis</h3>
+            <p>See exactly which symbols depend on a target, with the path that connects them — static reachability, not runtime guesswork.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3>Interactive explorer</h3>
+            <p>Every scan emits a standalone graph.html — a D3-force canvas explorer with search, filtering, and ego-network inspection. Works from file://.</p>
+          </article>
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>Fast &amp; incremental</h3>
+            <p>Parallel parsing with per-worker parsers and a content-addressed syntax cache — rescans only re-parse what changed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <h2>See it in action</h2>
+          <p>One scan builds the graph; every query command runs against it —
+          or against an exported <code>graph.json</code> without rescanning.</p>
+        </div>
+        <div class="grid grid-demo">
+          <figure class="terminal terminal-wide">
+            <figcaption>Scan a repository</figcaption>
+            <pre><code><span class="prompt">$</span> tracers scan fixtures/languages/typescript
+<span class="out">=== Tracers scan summary ===</span>
+<span class="out">Files scanned: 4</span>
+<span class="out">Nodes: 59</span>
+<span class="out">Edges: 142</span>
+<span class="out">Symbols: 44</span>
+<span class="out">Unresolved edges: 12</span>
+<span class="out">Wrote graph export to .tracers</span></code></pre>
+          </figure>
+          <figure class="terminal">
+            <figcaption>Who calls this function?</figcaption>
+            <pre><code><span class="prompt">$</span> tracers callers twice
+<span class="out">Callers of `twice`:</span>
+<span class="out">  - run [function] via calls</span>
+<span class="out">    (resolved_internal), lexical</span>
+<span class="out">    depth 1 — src/math.ts:11</span></code></pre>
+          </figure>
+          <figure class="terminal">
+            <figcaption>What depends on it?</figcaption>
+            <pre><code><span class="prompt">$</span> tracers impact twice
+<span class="out">Impact of `twice`:</span>
+<span class="out">  - run [function] depth 1</span>
+<span class="out">    path: run -&gt; twice</span>
+<span class="out">    via: calls</span></code></pre>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>How it works</h2>
+          <p>Discover, parse, resolve, query — a deterministic pipeline with
+          explicit uncertainty at every step.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card step">
+            <span class="step-num">01</span>
+            <h3>Scan</h3>
+            <p>tracers discovers source files (respecting .gitignore and your tracers.toml), parses them with Tree-sitter in parallel, and caches syntax trees by content hash.</p>
+            <code class="snippet">tracers scan .</code>
+          </article>
+          <article class="card step">
+            <span class="step-num">02</span>
+            <h3>Resolve &amp; build</h3>
+            <p>A layered resolver matches symbols through lexical scope, imports, qualified names, and package boundaries — recording exactly how confident each edge is.</p>
+            <code class="snippet">.tracers/graph.json</code>
+          </article>
+          <article class="card step">
+            <span class="step-num">03</span>
+            <h3>Query &amp; explore</h3>
+            <p>Ask callers, callees, refs, deps, dependents, reach, impact, path, roots, cycles — or open the interactive explorer. All queries accept --graph to skip rescanning.</p>
+            <code class="snippet">tracers callers myFunc</code>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="install" class="section section-alt">
+      <div class="container container-narrow">
+        <div class="section-head">
+          <h2>Get started</h2>
+          <p>Grab a prebuilt binary from GitHub Releases, or build from source
+          with Cargo. No runtime dependencies, no daemon, no account.</p>
+        </div>
+        <figure class="terminal">
+          <figcaption>Install</figcaption>
+          <pre><code><span class="prompt">$</span> curl -fsSL https://raw.githubusercontent.com/hieudoanm/tracers/main/scripts/install.sh | sh
+<span class="out">Installed tracers to ~/.local/bin/tracers</span>
+<span class="prompt">$</span> tracers scan .
+<span class="out">Wrote graph export to .tracers</span>
+<span class="prompt">$</span> tracers --version
+<span class="out">tracers 0.0.1 (build 2026.11.08.13.12.56)</span></code></pre>
+        </figure>
+        <p class="install-note">Or build from source: <code>./scripts/install-local.sh</code> — see the <a href="https://github.com/hieudoanm/tracers/blob/master/README.md" target="_blank" rel="noreferrer">README</a> for details.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary btn-lg" href="https://github.com/hieudoanm/tracers" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year">2026</span> tracers</span>
+      <span>Local code intelligence · MIT licensed</span>
+      <nav>
+        <a href="https://github.com/hieudoanm/tracers" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://github.com/hieudoanm/tracers/blob/master/README.md" target="_blank" rel="noreferrer">README</a>
+        <a href="https://github.com/hieudoanm/tracers/blob/master/AGENTS.md" target="_blank" rel="noreferrer">Spec</a>
+        <a href="https://github.com/hieudoanm/tracers/blob/master/LICENSE" target="_blank" rel="noreferrer">License</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

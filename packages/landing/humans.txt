@@ -1,0 +1,8 @@
+/* TEAM */
+Project: tracers — code intelligence graph analysis
+Role: Multi-language repository analysis with a unified symbol/call/dependency graph
+Repository: https://github.com/hieudoanm/tracers
+
+/* THANKS */
+Built with HTML, CSS, and Rust.
+Powered by Tree-sitter, D3.js, and Rayon.
