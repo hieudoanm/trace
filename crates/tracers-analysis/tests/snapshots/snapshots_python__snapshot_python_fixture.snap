@@ -764,49 +764,49 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:Protocol",
+      "id": "unresolved:python:Protocol",
       "kind": "unknown",
       "name": "Protocol",
       "language": "python"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:python:area",
       "kind": "unknown",
       "name": "area",
       "language": "python"
     },
     {
-      "id": "unresolved:find",
+      "id": "unresolved:python:find",
       "kind": "unknown",
       "name": "find",
       "language": "python"
     },
     {
-      "id": "unresolved:get",
+      "id": "unresolved:python:get",
       "kind": "unknown",
       "name": "get",
       "language": "python"
     },
     {
-      "id": "unresolved:list",
+      "id": "unresolved:python:list",
       "kind": "unknown",
       "name": "list",
       "language": "python"
     },
     {
-      "id": "unresolved:print",
+      "id": "unresolved:python:print",
       "kind": "unknown",
       "name": "print",
       "language": "python"
     },
     {
-      "id": "unresolved:sum",
+      "id": "unresolved:python:sum",
       "kind": "unknown",
       "name": "sum",
       "language": "python"
     },
     {
-      "id": "unresolved:super",
+      "id": "unresolved:python:super",
       "kind": "unknown",
       "name": "super",
       "language": "python"
@@ -923,7 +923,7 @@ expression: document
     },
     {
       "source": "class:src/complex.py::Shape",
-      "target": "unresolved:Protocol",
+      "target": "unresolved:python:Protocol",
       "kind": "inherits",
       "status": "unresolved",
       "origin": "syntax",
@@ -944,7 +944,7 @@ expression: document
     },
     {
       "source": "class:src/complex.py::Shape",
-      "target": "unresolved:Protocol",
+      "target": "unresolved:python:Protocol",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -965,7 +965,7 @@ expression: document
     },
     {
       "source": "class:src/main.py::Shape",
-      "target": "unresolved:Protocol",
+      "target": "unresolved:python:Protocol",
       "kind": "inherits",
       "status": "unresolved",
       "origin": "syntax",
@@ -986,7 +986,7 @@ expression: document
     },
     {
       "source": "class:src/main.py::Shape",
-      "target": "unresolved:Protocol",
+      "target": "unresolved:python:Protocol",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1049,28 +1049,7 @@ expression: document
     },
     {
       "source": "constructor:src/shapes.py::Square.__init__",
-      "target": "external:python:super().__init__",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 41,
-            "column": 9,
-            "byte": 996
-          },
-          "end": {
-            "line": 41,
-            "column": 37,
-            "byte": 1024
-          }
-        }
-      ]
-    },
-    {
-      "source": "constructor:src/shapes.py::Square.__init__",
-      "target": "unresolved:super",
+      "target": "unresolved:python:super",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1665,7 +1644,7 @@ expression: document
     },
     {
       "source": "function:src/complex.py::total",
-      "target": "unresolved:area",
+      "target": "unresolved:python:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1686,7 +1665,7 @@ expression: document
     },
     {
       "source": "function:src/complex.py::total",
-      "target": "unresolved:sum",
+      "target": "unresolved:python:sum",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1701,48 +1680,6 @@ expression: document
             "line": 7,
             "column": 56,
             "byte": 267
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/main.py::main",
-      "target": "external:python:Circle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 25,
-            "column": 28,
-            "byte": 514
-          },
-          "end": {
-            "line": 25,
-            "column": 39,
-            "byte": 525
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/main.py::main",
-      "target": "external:python:Rectangle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 25,
-            "column": 41,
-            "byte": 527
-          },
-          "end": {
-            "line": 25,
-            "column": 60,
-            "byte": 546
           }
         }
       ]
@@ -1791,7 +1728,7 @@ expression: document
     },
     {
       "source": "function:src/main.py::main",
-      "target": "unresolved:print",
+      "target": "unresolved:python:print",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1833,7 +1770,7 @@ expression: document
     },
     {
       "source": "function:src/main.py::main",
-      "target": "unresolved:list",
+      "target": "unresolved:python:list",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1854,7 +1791,7 @@ expression: document
     },
     {
       "source": "function:src/main.py::total_area",
-      "target": "unresolved:area",
+      "target": "unresolved:python:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1875,7 +1812,7 @@ expression: document
     },
     {
       "source": "function:src/main.py::total_area",
-      "target": "unresolved:sum",
+      "target": "unresolved:python:sum",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1917,7 +1854,7 @@ expression: document
     },
     {
       "source": "function:src/main.py::total_area",
-      "target": "unresolved:list",
+      "target": "unresolved:python:list",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1937,50 +1874,8 @@ expression: document
       ]
     },
     {
-      "source": "function:src/service.py::create_service",
-      "target": "external:python:Repository",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 27,
-            "column": 12,
-            "byte": 514
-          },
-          "end": {
-            "line": 27,
-            "column": 24,
-            "byte": 526
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/service.py::create_service",
-      "target": "external:python:ShapeService",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 28,
-            "column": 12,
-            "byte": 538
-          },
-          "end": {
-            "line": 28,
-            "column": 30,
-            "byte": 556
-          }
-        }
-      ]
-    },
-    {
       "source": "method:src/service.py::Repository.find",
-      "target": "unresolved:get",
+      "target": "unresolved:python:get",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2001,28 +1896,7 @@ expression: document
     },
     {
       "source": "method:src/service.py::ShapeService.area",
-      "target": "external:python:ValueError",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 22,
-            "column": 19,
-            "byte": 427
-          },
-          "end": {
-            "line": 22,
-            "column": 42,
-            "byte": 450
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:src/service.py::ShapeService.area",
-      "target": "unresolved:area",
+      "target": "unresolved:python:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2043,7 +1917,7 @@ expression: document
     },
     {
       "source": "method:src/service.py::ShapeService.area",
-      "target": "unresolved:find",
+      "target": "unresolved:python:find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2470,7 +2344,7 @@ expression: document
     "files": 5,
     "packages": 0,
     "nodes": 52,
-    "edges": 146,
+    "edges": 140,
     "symbols": 41,
     "unresolvedEdges": 15,
     "diagnostics": 6,
@@ -2486,7 +2360,7 @@ expression: document
       "variable": 3
     },
     "byEdgeKind": {
-      "calls": 18,
+      "calls": 12,
       "contains": 43,
       "defines": 33,
       "exports": 38,
@@ -2498,7 +2372,6 @@ expression: document
       "python": 51
     },
     "byStatus": {
-      "resolved_external": 6,
       "resolved_internal": 125,
       "unresolved": 15
     },

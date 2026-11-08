@@ -44,6 +44,19 @@ pub enum SkipReason {
     Unreadable,
 }
 
+impl SkipReason {
+    pub fn as_str(self) -> &'static str {
+        match self {
+            SkipReason::Excluded => "excluded",
+            SkipReason::Generated => "generated",
+            SkipReason::Unsupported => "unsupported",
+            SkipReason::TooLarge => "too_large",
+            SkipReason::Binary => "binary",
+            SkipReason::Unreadable => "unreadable",
+        }
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct SkippedFile {
     pub path: String,
@@ -66,7 +79,7 @@ impl DiscoveryReport {
         let mut counts = std::collections::BTreeMap::new();
         for skipped in &self.skipped {
             *counts
-                .entry(format!("{:?}", skipped.reason).to_lowercase())
+                .entry(skipped.reason.as_str().to_string())
                 .or_insert(0) += 1;
         }
         counts

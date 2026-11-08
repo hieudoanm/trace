@@ -968,55 +968,55 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:Circle",
+      "id": "unresolved:swift:Circle",
       "kind": "unknown",
       "name": "Circle",
       "language": "swift"
     },
     {
-      "id": "unresolved:Shape",
+      "id": "unresolved:swift:Shape",
       "kind": "unknown",
       "name": "Shape",
       "language": "swift"
     },
     {
-      "id": "unresolved:T",
+      "id": "unresolved:swift:T",
       "kind": "unknown",
       "name": "T",
       "language": "swift"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:swift:area",
       "kind": "unknown",
       "name": "area",
       "language": "swift"
     },
     {
-      "id": "unresolved:fatalError",
+      "id": "unresolved:swift:fatalError",
       "kind": "unknown",
       "name": "fatalError",
       "language": "swift"
     },
     {
-      "id": "unresolved:find",
+      "id": "unresolved:swift:find",
       "kind": "unknown",
       "name": "find",
       "language": "swift"
     },
     {
-      "id": "unresolved:print",
+      "id": "unresolved:swift:print",
       "kind": "unknown",
       "name": "print",
       "language": "swift"
     },
     {
-      "id": "unresolved:reduce",
+      "id": "unresolved:swift:reduce",
       "kind": "unknown",
       "name": "reduce",
       "language": "swift"
     },
     {
-      "id": "unresolved:store",
+      "id": "unresolved:swift:store",
       "kind": "unknown",
       "name": "store",
       "language": "swift"
@@ -1067,7 +1067,7 @@ expression: document
     },
     {
       "source": "class:src/Service.swift::InMemoryRepository",
-      "target": "unresolved:T",
+      "target": "unresolved:swift:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1109,7 +1109,7 @@ expression: document
     },
     {
       "source": "class:src/Service.swift::ShapeService",
-      "target": "unresolved:Circle",
+      "target": "unresolved:swift:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1277,7 +1277,7 @@ expression: document
     },
     {
       "source": "constructor:src/Service.swift::ShapeService.init",
-      "target": "unresolved:Circle",
+      "target": "unresolved:swift:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1648,7 +1648,7 @@ expression: document
     },
     {
       "source": "function:src/Complex.swift::total",
-      "target": "unresolved:reduce",
+      "target": "unresolved:swift:reduce",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1663,27 +1663,6 @@ expression: document
             "line": 3,
             "column": 78,
             "byte": 196
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Service.swift::createService",
-      "target": "external:swift:ShapeService",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 27,
-            "column": 12,
-            "byte": 565
-          },
-          "end": {
-            "line": 27,
-            "column": 60,
-            "byte": 613
           }
         }
       ]
@@ -1711,7 +1690,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.swift::totalArea",
-      "target": "unresolved:reduce",
+      "target": "unresolved:swift:reduce",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1731,29 +1710,8 @@ expression: document
       ]
     },
     {
-      "source": "function:src/utils.swift::formatFloat",
-      "target": "external:swift:String",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 5,
-            "column": 12,
-            "byte": 109
-          },
-          "end": {
-            "line": 5,
-            "column": 41,
-            "byte": 138
-          }
-        }
-      ]
-    },
-    {
       "source": "method:src/Service.swift::InMemoryRepository.find",
-      "target": "unresolved:store",
+      "target": "unresolved:swift:store",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1774,7 +1732,7 @@ expression: document
     },
     {
       "source": "method:src/Service.swift::InMemoryRepository.save",
-      "target": "unresolved:store",
+      "target": "unresolved:swift:store",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1795,7 +1753,7 @@ expression: document
     },
     {
       "source": "method:src/Service.swift::InMemoryRepository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:swift:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1816,7 +1774,7 @@ expression: document
     },
     {
       "source": "method:src/Service.swift::ShapeService.area",
-      "target": "unresolved:area",
+      "target": "unresolved:swift:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1837,7 +1795,7 @@ expression: document
     },
     {
       "source": "method:src/Service.swift::ShapeService.area",
-      "target": "unresolved:fatalError",
+      "target": "unresolved:swift:fatalError",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1858,7 +1816,7 @@ expression: document
     },
     {
       "source": "method:src/Service.swift::ShapeService.area",
-      "target": "unresolved:find",
+      "target": "unresolved:swift:find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2005,7 +1963,7 @@ expression: document
     },
     {
       "source": "module:src/main.swift",
-      "target": "unresolved:print",
+      "target": "unresolved:swift:print",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2026,7 +1984,7 @@ expression: document
     },
     {
       "source": "module:src/main.swift",
-      "target": "unresolved:reduce",
+      "target": "unresolved:swift:reduce",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2047,7 +2005,7 @@ expression: document
     },
     {
       "source": "module:src/main.swift",
-      "target": "unresolved:Shape",
+      "target": "unresolved:swift:Shape",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2295,7 +2253,7 @@ expression: document
     "files": 5,
     "packages": 0,
     "nodes": 60,
-    "edges": 118,
+    "edges": 116,
     "symbols": 48,
     "unresolvedEdges": 14,
     "diagnostics": 1,
@@ -2314,7 +2272,7 @@ expression: document
       "unknown": 9
     },
     "byEdgeKind": {
-      "calls": 12,
+      "calls": 10,
       "contains": 49,
       "defines": 39,
       "imports": 2,
@@ -2325,7 +2283,7 @@ expression: document
       "swift": 59
     },
     "byStatus": {
-      "resolved_external": 4,
+      "resolved_external": 2,
       "resolved_internal": 100,
       "unresolved": 14
     },

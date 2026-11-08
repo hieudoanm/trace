@@ -141,5 +141,6 @@ pub(crate) fn build_from_index(
         frameworks: frameworks.to_vec(),
         languages: Vec::new(),
         cache_counts: None,
+        discovery: None,
     })
 }

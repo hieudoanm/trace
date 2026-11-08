@@ -1138,67 +1138,67 @@ expression: document
       "exported": true
     },
     {
-      "id": "unresolved:T",
+      "id": "unresolved:rust:T",
       "kind": "unknown",
       "name": "T",
       "language": "rust"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:rust:area",
       "kind": "unknown",
       "name": "area",
       "language": "rust"
     },
     {
-      "id": "unresolved:cloned",
+      "id": "unresolved:rust:cloned",
       "kind": "unknown",
       "name": "cloned",
       "language": "rust"
     },
     {
-      "id": "unresolved:expect",
+      "id": "unresolved:rust:expect",
       "kind": "unknown",
       "name": "expect",
       "language": "rust"
     },
     {
-      "id": "unresolved:get",
+      "id": "unresolved:rust:get",
       "kind": "unknown",
       "name": "get",
       "language": "rust"
     },
     {
-      "id": "unresolved:insert",
+      "id": "unresolved:rust:insert",
       "kind": "unknown",
       "name": "insert",
       "language": "rust"
     },
     {
-      "id": "unresolved:iter",
+      "id": "unresolved:rust:iter",
       "kind": "unknown",
       "name": "iter",
       "language": "rust"
     },
     {
-      "id": "unresolved:map",
+      "id": "unresolved:rust:map",
       "kind": "unknown",
       "name": "map",
       "language": "rust"
     },
     {
-      "id": "unresolved:println",
+      "id": "unresolved:rust:println",
       "kind": "unknown",
       "name": "println",
       "language": "rust"
     },
     {
-      "id": "unresolved:sum",
+      "id": "unresolved:rust:sum",
       "kind": "unknown",
       "name": "sum",
       "language": "rust"
     },
     {
-      "id": "unresolved:vec",
+      "id": "unresolved:rust:vec",
       "kind": "unknown",
       "name": "vec",
       "language": "rust"
@@ -1895,7 +1895,7 @@ expression: document
     },
     {
       "source": "function:src/complex.rs::total",
-      "target": "unresolved:area",
+      "target": "unresolved:rust:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1916,7 +1916,7 @@ expression: document
     },
     {
       "source": "function:src/complex.rs::total",
-      "target": "unresolved:iter",
+      "target": "unresolved:rust:iter",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1937,7 +1937,7 @@ expression: document
     },
     {
       "source": "function:src/complex.rs::total",
-      "target": "unresolved:map",
+      "target": "unresolved:rust:map",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1958,7 +1958,7 @@ expression: document
     },
     {
       "source": "function:src/complex.rs::total",
-      "target": "unresolved:sum",
+      "target": "unresolved:rust:sum",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2000,7 +2000,7 @@ expression: document
     },
     {
       "source": "function:src/lib.rs::total_area",
-      "target": "unresolved:area",
+      "target": "unresolved:rust:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2021,7 +2021,7 @@ expression: document
     },
     {
       "source": "function:src/lib.rs::total_area",
-      "target": "unresolved:iter",
+      "target": "unresolved:rust:iter",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2042,7 +2042,7 @@ expression: document
     },
     {
       "source": "function:src/lib.rs::total_area",
-      "target": "unresolved:map",
+      "target": "unresolved:rust:map",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2063,7 +2063,7 @@ expression: document
     },
     {
       "source": "function:src/lib.rs::total_area",
-      "target": "unresolved:sum",
+      "target": "unresolved:rust:sum",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2105,7 +2105,7 @@ expression: document
     },
     {
       "source": "function:src/main.rs::main",
-      "target": "unresolved:println",
+      "target": "unresolved:rust:println",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2126,7 +2126,7 @@ expression: document
     },
     {
       "source": "function:src/main.rs::main",
-      "target": "unresolved:vec",
+      "target": "unresolved:rust:vec",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2168,7 +2168,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.rs::total_area",
-      "target": "unresolved:area",
+      "target": "unresolved:rust:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2189,7 +2189,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.rs::total_area",
-      "target": "unresolved:iter",
+      "target": "unresolved:rust:iter",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2210,7 +2210,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.rs::total_area",
-      "target": "unresolved:map",
+      "target": "unresolved:rust:map",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2231,7 +2231,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.rs::total_area",
-      "target": "unresolved:sum",
+      "target": "unresolved:rust:sum",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2273,7 +2273,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::InMemoryRepository.find",
-      "target": "unresolved:cloned",
+      "target": "unresolved:rust:cloned",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2294,7 +2294,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::InMemoryRepository.find",
-      "target": "unresolved:get",
+      "target": "unresolved:rust:get",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2315,7 +2315,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::InMemoryRepository.find",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2335,50 +2335,8 @@ expression: document
       ]
     },
     {
-      "source": "method:src/service.rs::InMemoryRepository.new",
-      "target": "external:rust:Self",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 14,
-            "column": 9,
-            "byte": 310
-          },
-          "end": {
-            "line": 16,
-            "column": 10,
-            "byte": 379
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:src/service.rs::InMemoryRepository.new",
-      "target": "external:rust:std::collections::HashMap.new",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 15,
-            "column": 20,
-            "byte": 336
-          },
-          "end": {
-            "line": 15,
-            "column": 52,
-            "byte": 368
-          }
-        }
-      ]
-    },
-    {
       "source": "method:src/service.rs::InMemoryRepository.save",
-      "target": "unresolved:insert",
+      "target": "unresolved:rust:insert",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2399,7 +2357,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::InMemoryRepository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2420,7 +2378,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::Repository.find",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2441,7 +2399,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::Repository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2462,7 +2420,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::ShapeService.add",
-      "target": "unresolved:insert",
+      "target": "unresolved:rust:insert",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2504,7 +2462,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::ShapeService.area",
-      "target": "unresolved:area",
+      "target": "unresolved:rust:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2525,7 +2483,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::ShapeService.area",
-      "target": "unresolved:expect",
+      "target": "unresolved:rust:expect",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2546,7 +2504,7 @@ expression: document
     },
     {
       "source": "method:src/service.rs::ShapeService.area",
-      "target": "unresolved:get",
+      "target": "unresolved:rust:get",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2561,48 +2519,6 @@ expression: document
             "line": 46,
             "column": 39,
             "byte": 1023
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:src/service.rs::ShapeService.new",
-      "target": "external:rust:Self",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 36,
-            "column": 9,
-            "byte": 766
-          },
-          "end": {
-            "line": 38,
-            "column": 10,
-            "byte": 834
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:src/service.rs::ShapeService.new",
-      "target": "external:rust:std::collections::HashMap.new",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 37,
-            "column": 19,
-            "byte": 791
-          },
-          "end": {
-            "line": 37,
-            "column": 51,
-            "byte": 823
           }
         }
       ]
@@ -2880,7 +2796,7 @@ expression: document
     },
     {
       "source": "module:src/service.rs",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -3263,7 +3179,7 @@ expression: document
     },
     {
       "source": "struct:src/service.rs::InMemoryRepository",
-      "target": "unresolved:T",
+      "target": "unresolved:rust:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -3363,7 +3279,7 @@ expression: document
     "files": 5,
     "packages": 0,
     "nodes": 71,
-    "edges": 192,
+    "edges": 188,
     "symbols": 59,
     "unresolvedEdges": 27,
     "diagnostics": 0,
@@ -3380,7 +3296,7 @@ expression: document
       "variable": 2
     },
     "byEdgeKind": {
-      "calls": 25,
+      "calls": 21,
       "contains": 59,
       "defines": 49,
       "exports": 32,
@@ -3392,7 +3308,6 @@ expression: document
       "rust": 70
     },
     "byStatus": {
-      "resolved_external": 4,
       "resolved_internal": 161,
       "unresolved": 27
     },

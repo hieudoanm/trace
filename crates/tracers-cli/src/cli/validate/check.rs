@@ -4,9 +4,16 @@ use anyhow::{Context, Result};
 use tracers_core::Language;
 
 use tracers_analysis::config::TracersConfig;
-use tracers_parser::discovery::{discover, DiscoveryOptions};
+use tracers_parser::discovery::discover;
 
-pub(crate) fn cmd_check(path: &Path) -> Result<()> {
+use crate::cli::scan::discovery_options;
+
+pub(crate) fn cmd_check(
+    path: &Path,
+    include: &[String],
+    exclude: &[String],
+    language: Option<&str>,
+) -> Result<()> {
     let (config, config_source) =
         TracersConfig::load(path, None).context("failed to load configuration")?;
 
@@ -16,19 +23,14 @@ pub(crate) fn cmd_check(path: &Path) -> Result<()> {
     }
 
     println!("\nDiscovery:");
-    let options = DiscoveryOptions {
-        includes: config.analysis.include.clone(),
-        excludes: config.analysis.exclude.clone(),
-        max_file_size: config.analysis.max_file_size,
-        follow_symlinks: config.analysis.follow_symlinks,
-        include_generated: config.analysis.include_generated,
-        languages: config.languages(),
-    };
+    let options = discovery_options(&config, include, exclude, language)
+        .context("invalid discovery options")?;
     let report = discover(path, &options).map_err(anyhow::Error::msg)?;
     println!("  root:        {}", report.root.display());
     println!("  files:       {}", report.files.len());
     println!("  skipped:     {}", report.skipped.len());
     println!("  unsupported: {}", report.unsupported_files);
+    println!("  gitignored:  {}", report.ignored_files);
     let skip_counts = report.skip_counts();
     if !skip_counts.is_empty() {
         let breakdown = skip_counts

@@ -4,6 +4,7 @@ use crate::index::{FileState, RepositoryIndex};
 use crate::resolve::{resolve_resolver::Resolver, Resolution};
 use tracers_core::{external_id, Edge, EdgeKind, ResolutionOrigin, ResolutionStatus};
 
+use super::super::graph_helpers::unresolved_id;
 use super::super::graph_types::GraphBuilder;
 
 pub(crate) fn add_heritage_edges(
@@ -41,24 +42,24 @@ pub(crate) fn add_heritage_edges(
                 let node_id = external_id(state.language, &qualified);
                 if builder.include_external {
                     builder.add_external_node(graph, state.language, &qualified);
+                    graph.add_edge(
+                        Edge::new(
+                            from_symbol.node_id.clone(),
+                            node_id,
+                            relation,
+                            ResolutionStatus::ResolvedExternal,
+                            ResolutionOrigin::Syntax,
+                        )
+                        .at(heritage.range),
+                    )?;
                 }
-                graph.add_edge(
-                    Edge::new(
-                        from_symbol.node_id.clone(),
-                        node_id,
-                        relation,
-                        ResolutionStatus::ResolvedExternal,
-                        ResolutionOrigin::Syntax,
-                    )
-                    .at(heritage.range),
-                )?;
             }
             _ => {
                 builder.add_unresolved_node(graph, state.language, &heritage.name);
                 graph.add_edge(
                     Edge::new(
                         from_symbol.node_id.clone(),
-                        format!("unresolved:{}", heritage.name),
+                        unresolved_id(state.language, &heritage.name),
                         relation,
                         ResolutionStatus::Unresolved,
                         ResolutionOrigin::Syntax,

@@ -840,55 +840,55 @@ expression: document
       "exported": true
     },
     {
-      "id": "unresolved:Area",
+      "id": "unresolved:go:Area",
       "kind": "unknown",
       "name": "Area",
       "language": "go"
     },
     {
-      "id": "unresolved:Circle",
+      "id": "unresolved:go:Circle",
       "kind": "unknown",
       "name": "Circle",
       "language": "go"
     },
     {
-      "id": "unresolved:Find",
+      "id": "unresolved:go:Find",
       "kind": "unknown",
       "name": "Find",
       "language": "go"
     },
     {
-      "id": "unresolved:Printf",
+      "id": "unresolved:go:Printf",
       "kind": "unknown",
       "name": "Printf",
       "language": "go"
     },
     {
-      "id": "unresolved:Rectangle",
+      "id": "unresolved:go:Rectangle",
       "kind": "unknown",
       "name": "Rectangle",
       "language": "go"
     },
     {
-      "id": "unresolved:Shape",
+      "id": "unresolved:go:Shape",
       "kind": "unknown",
       "name": "Shape",
       "language": "go"
     },
     {
-      "id": "unresolved:TotalArea",
+      "id": "unresolved:go:TotalArea",
       "kind": "unknown",
       "name": "TotalArea",
       "language": "go"
     },
     {
-      "id": "unresolved:make",
+      "id": "unresolved:go:make",
       "kind": "unknown",
       "name": "make",
       "language": "go"
     },
     {
-      "id": "unresolved:panic",
+      "id": "unresolved:go:panic",
       "kind": "unknown",
       "name": "panic",
       "language": "go"
@@ -1665,28 +1665,7 @@ expression: document
     },
     {
       "source": "function:pkg/service/service.go::NewMemoryRepository",
-      "target": "external:go:MemoryRepository",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 15,
-            "column": 10,
-            "byte": 296
-          },
-          "end": {
-            "line": 15,
-            "column": 64,
-            "byte": 350
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:pkg/service/service.go::NewMemoryRepository",
-      "target": "unresolved:make",
+      "target": "unresolved:go:make",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1734,27 +1713,6 @@ expression: document
             "line": 15,
             "column": 26,
             "byte": 312
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:pkg/service/service.go::NewShapeService",
-      "target": "external:go:ShapeService",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 32,
-            "column": 10,
-            "byte": 650
-          },
-          "end": {
-            "line": 32,
-            "column": 34,
-            "byte": 674
           }
         }
       ]
@@ -1815,7 +1773,7 @@ expression: document
     },
     {
       "source": "function:src/complex/complex.go::Total",
-      "target": "unresolved:Area",
+      "target": "unresolved:go:Area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1857,7 +1815,7 @@ expression: document
     },
     {
       "source": "function:src/geometry/geometry.go::TotalArea",
-      "target": "unresolved:Area",
+      "target": "unresolved:go:Area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1899,70 +1857,7 @@ expression: document
     },
     {
       "source": "function:src/main.go::main",
-      "target": "external:go:Circle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 11,
-            "column": 3,
-            "byte": 101
-          },
-          "end": {
-            "line": 11,
-            "column": 31,
-            "byte": 129
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/main.go::main",
-      "target": "external:go:Rectangle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 12,
-            "column": 3,
-            "byte": 133
-          },
-          "end": {
-            "line": 12,
-            "column": 46,
-            "byte": 176
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/main.go::main",
-      "target": "external:go:[]geometry.Shape",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 10,
-            "column": 12,
-            "byte": 81
-          },
-          "end": {
-            "line": 13,
-            "column": 3,
-            "byte": 180
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/main.go::main",
-      "target": "unresolved:Printf",
+      "target": "unresolved:go:Printf",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1983,7 +1878,7 @@ expression: document
     },
     {
       "source": "function:src/main.go::main",
-      "target": "unresolved:TotalArea",
+      "target": "unresolved:go:TotalArea",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2004,7 +1899,7 @@ expression: document
     },
     {
       "source": "function:src/main.go::main",
-      "target": "unresolved:Circle",
+      "target": "unresolved:go:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2025,7 +1920,7 @@ expression: document
     },
     {
       "source": "function:src/main.go::main",
-      "target": "unresolved:Rectangle",
+      "target": "unresolved:go:Rectangle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2046,7 +1941,7 @@ expression: document
     },
     {
       "source": "function:src/main.go::main",
-      "target": "unresolved:Shape",
+      "target": "unresolved:go:Shape",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2067,7 +1962,7 @@ expression: document
     },
     {
       "source": "interface:pkg/service/service.go::Repository",
-      "target": "unresolved:Circle",
+      "target": "unresolved:go:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2100,7 +1995,7 @@ expression: document
     },
     {
       "source": "method:pkg/service/service.go::*MemoryRepository.Find",
-      "target": "unresolved:Circle",
+      "target": "unresolved:go:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2121,7 +2016,7 @@ expression: document
     },
     {
       "source": "method:pkg/service/service.go::*MemoryRepository.Save",
-      "target": "unresolved:Circle",
+      "target": "unresolved:go:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2142,7 +2037,7 @@ expression: document
     },
     {
       "source": "method:pkg/service/service.go::*ShapeService.Area",
-      "target": "unresolved:Area",
+      "target": "unresolved:go:Area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2163,7 +2058,7 @@ expression: document
     },
     {
       "source": "method:pkg/service/service.go::*ShapeService.Area",
-      "target": "unresolved:Find",
+      "target": "unresolved:go:Find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2184,7 +2079,7 @@ expression: document
     },
     {
       "source": "method:pkg/service/service.go::*ShapeService.Area",
-      "target": "unresolved:panic",
+      "target": "unresolved:go:panic",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2548,7 +2443,7 @@ expression: document
     },
     {
       "source": "struct:pkg/service/service.go::MemoryRepository",
-      "target": "unresolved:Circle",
+      "target": "unresolved:go:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2614,7 +2509,7 @@ expression: document
     "files": 4,
     "packages": 4,
     "nodes": 62,
-    "edges": 163,
+    "edges": 158,
     "symbols": 46,
     "unresolvedEdges": 15,
     "diagnostics": 1,
@@ -2633,7 +2528,7 @@ expression: document
       "variable": 5
     },
     "byEdgeKind": {
-      "calls": 13,
+      "calls": 8,
       "contains": 53,
       "defines": 37,
       "exports": 44,
@@ -2644,7 +2539,7 @@ expression: document
       "go": 61
     },
     "byStatus": {
-      "resolved_external": 8,
+      "resolved_external": 3,
       "resolved_internal": 140,
       "unresolved": 15
     },

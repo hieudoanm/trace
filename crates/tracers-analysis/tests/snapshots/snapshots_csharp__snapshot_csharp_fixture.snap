@@ -462,19 +462,19 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:Area",
+      "id": "unresolved:csharp:Area",
       "kind": "unknown",
       "name": "Area",
       "language": "csharp"
     },
     {
-      "id": "unresolved:Find",
+      "id": "unresolved:csharp:Find",
       "kind": "unknown",
       "name": "Find",
       "language": "csharp"
     },
     {
-      "id": "unresolved:TryGetValue",
+      "id": "unresolved:csharp:TryGetValue",
       "kind": "unknown",
       "name": "TryGetValue",
       "language": "csharp"
@@ -665,7 +665,7 @@ expression: document
     },
     {
       "source": "method:Complex.cs::Complex.Total",
-      "target": "unresolved:Area",
+      "target": "unresolved:csharp:Area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -707,7 +707,7 @@ expression: document
     },
     {
       "source": "method:src/Service.cs::InMemoryRepository.Find",
-      "target": "unresolved:TryGetValue",
+      "target": "unresolved:csharp:TryGetValue",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -749,7 +749,7 @@ expression: document
     },
     {
       "source": "method:src/Service.cs::ShapeService.Area",
-      "target": "unresolved:Find",
+      "target": "unresolved:csharp:Find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",

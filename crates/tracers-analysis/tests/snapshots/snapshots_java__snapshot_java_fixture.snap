@@ -550,43 +550,43 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:Map<String, T>",
+      "id": "unresolved:java:Map<String, T>",
       "kind": "unknown",
       "name": "Map<String, T>",
       "language": "java"
     },
     {
-      "id": "unresolved:T",
+      "id": "unresolved:java:T",
       "kind": "unknown",
       "name": "T",
       "language": "java"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:java:area",
       "kind": "unknown",
       "name": "area",
       "language": "java"
     },
     {
-      "id": "unresolved:double",
+      "id": "unresolved:java:double",
       "kind": "unknown",
       "name": "double",
       "language": "java"
     },
     {
-      "id": "unresolved:find",
+      "id": "unresolved:java:find",
       "kind": "unknown",
       "name": "find",
       "language": "java"
     },
     {
-      "id": "unresolved:get",
+      "id": "unresolved:java:get",
       "kind": "unknown",
       "name": "get",
       "language": "java"
     },
     {
-      "id": "unresolved:put",
+      "id": "unresolved:java:put",
       "kind": "unknown",
       "name": "put",
       "language": "java"
@@ -616,7 +616,7 @@ expression: document
     },
     {
       "source": "class:Complex.java::Circle",
-      "target": "unresolved:double",
+      "target": "unresolved:java:double",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -637,7 +637,7 @@ expression: document
     },
     {
       "source": "class:src/Service.java::Service.InMemoryRepository",
-      "target": "unresolved:Map<String, T>",
+      "target": "unresolved:java:Map<String, T>",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -889,7 +889,7 @@ expression: document
     },
     {
       "source": "method:Complex.java::Complex.total",
-      "target": "unresolved:area",
+      "target": "unresolved:java:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -952,7 +952,7 @@ expression: document
     },
     {
       "source": "method:src/Service.java::Service.InMemoryRepository.find",
-      "target": "unresolved:get",
+      "target": "unresolved:java:get",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -973,7 +973,7 @@ expression: document
     },
     {
       "source": "method:src/Service.java::Service.InMemoryRepository.save",
-      "target": "unresolved:put",
+      "target": "unresolved:java:put",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -994,7 +994,7 @@ expression: document
     },
     {
       "source": "method:src/Service.java::Service.InMemoryRepository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:java:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1036,7 +1036,7 @@ expression: document
     },
     {
       "source": "method:src/Service.java::Service.ShapeService.area",
-      "target": "unresolved:find",
+      "target": "unresolved:java:find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",

@@ -3,6 +3,7 @@ use crate::resolve::{resolve_resolver::Resolver, Resolution};
 use crate::index::{FileState, RepositoryIndex};
 use tracers_core::{external_id, Edge, EdgeKind, ResolutionOrigin, ResolutionStatus};
 
+use super::super::graph_helpers::unresolved_id;
 use super::super::graph_types::GraphBuilder;
 
 pub(crate) fn add_type_ref_edges(
@@ -38,17 +39,17 @@ pub(crate) fn add_type_ref_edges(
                 let node_id = external_id(state.language, &qualified);
                 if builder.include_external {
                     builder.add_external_node(graph, state.language, &qualified);
+                    graph.add_edge(
+                        Edge::new(
+                            from_id.clone(),
+                            node_id,
+                            EdgeKind::UsesType,
+                            ResolutionStatus::ResolvedExternal,
+                            ResolutionOrigin::Syntax,
+                        )
+                        .at(type_ref.range),
+                    )?;
                 }
-                graph.add_edge(
-                    Edge::new(
-                        from_id.clone(),
-                        node_id,
-                        EdgeKind::UsesType,
-                        ResolutionStatus::ResolvedExternal,
-                        ResolutionOrigin::Syntax,
-                    )
-                    .at(type_ref.range),
-                )?;
             }
             Resolution::Module(module) => {
                 let target = builder.module_target_node(
@@ -71,7 +72,7 @@ pub(crate) fn add_type_ref_edges(
                 graph.add_edge(
                     Edge::new(
                         from_id.clone(),
-                        format!("unresolved:{}", type_ref.name),
+                        unresolved_id(state.language, &type_ref.name),
                         EdgeKind::UsesType,
                         ResolutionStatus::Unresolved,
                         ResolutionOrigin::Syntax,

@@ -113,7 +113,7 @@ pub(crate) fn cmd_graph(
         return graph_from_file(file, &format, output, &filter);
     }
 
-    let (result, config) = build_graph_for_path(path, None, None, language, false, None, None)?;
+    let (result, config) = build_graph_for_path(path, &[], &[], language, false, None, None)?;
     let filtered = apply_filter(&result.graph, &filter)?;
     let graph = filtered.as_ref().unwrap_or(&result.graph);
 

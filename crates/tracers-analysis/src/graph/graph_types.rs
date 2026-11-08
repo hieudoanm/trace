@@ -17,6 +17,19 @@ pub struct GraphBuildResult {
     pub languages: Vec<tracers_core::Language>,
     /// Syntax-cache activity for this build, when a cache was used.
     pub cache_counts: Option<crate::cache::CacheCounts>,
+    /// File-discovery statistics for the build, when discovery ran.
+    pub discovery: Option<DiscoveryStats>,
+}
+
+/// Counts reported by repository file discovery.
+#[derive(Debug, Clone, Default, PartialEq, Eq)]
+pub struct DiscoveryStats {
+    pub files: usize,
+    pub skipped: usize,
+    /// Skipped files grouped by reason (e.g. `excluded`, `generated`).
+    pub skip_reasons: Vec<(String, usize)>,
+    pub unsupported_files: usize,
+    pub ignored_files: usize,
 }
 
 /// Builds a [`Graph`] from discovered, parsed, and resolved source files.

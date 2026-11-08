@@ -3,6 +3,7 @@ use tracers_core::{external_id, Edge, EdgeKind, ResolutionOrigin, ResolutionStat
 use crate::index::{FileState, RepositoryIndex};
 use crate::resolve::resolve_resolver::Resolver;
 
+use super::super::graph_helpers::unresolved_id;
 use super::super::graph_types::{CallTarget, GraphBuilder};
 
 pub(crate) fn add_call_edges(
@@ -38,24 +39,24 @@ pub(crate) fn add_call_edges(
                 let node_id = external_id(state.language, &qualified);
                 if builder.include_external {
                     builder.add_external_node(graph, state.language, &qualified);
+                    graph.add_edge(
+                        Edge::new(
+                            caller_id.clone(),
+                            node_id,
+                            EdgeKind::Calls,
+                            ResolutionStatus::ResolvedExternal,
+                            ResolutionOrigin::Lexical,
+                        )
+                        .at(call.range),
+                    )?;
                 }
-                graph.add_edge(
-                    Edge::new(
-                        caller_id.clone(),
-                        node_id,
-                        EdgeKind::Calls,
-                        ResolutionStatus::ResolvedExternal,
-                        ResolutionOrigin::Lexical,
-                    )
-                    .at(call.range),
-                )?;
             }
             CallTarget::Unresolved => {
                 builder.add_unresolved_node(graph, state.language, &call.name);
                 graph.add_edge(
                     Edge::new(
                         caller_id.clone(),
-                        format!("unresolved:{}", call.name),
+                        unresolved_id(state.language, &call.name),
                         EdgeKind::Calls,
                         ResolutionStatus::Unresolved,
                         ResolutionOrigin::Syntax,

@@ -472,13 +472,13 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:isset",
+      "id": "unresolved:php:isset",
       "kind": "unknown",
       "name": "isset",
       "language": "php"
     },
     {
-      "id": "unresolved:pi",
+      "id": "unresolved:php:pi",
       "kind": "unknown",
       "name": "pi",
       "language": "php"
@@ -809,7 +809,7 @@ expression: document
     },
     {
       "source": "method:Complex.php::Circle.area",
-      "target": "unresolved:pi",
+      "target": "unresolved:php:pi",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -830,7 +830,7 @@ expression: document
     },
     {
       "source": "method:src/Service.php::InMemoryRepository.find",
-      "target": "unresolved:isset",
+      "target": "unresolved:php:isset",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",

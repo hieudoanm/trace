@@ -164,10 +164,8 @@ impl GraphBuilder {
             return module_id_str.to_string();
         }
         // Resolve a module id back to a file node when possible.
-        for (path, state) in &index.files {
-            if state.module_id == *module_id_str {
-                return tracers_core::file_id(path);
-            }
+        if let Some(path) = index.module_files.get(module_id_str) {
+            return tracers_core::file_id(path);
         }
         // Check package id.
         if index.packages.contains_key(module_id_str) {
@@ -184,13 +182,19 @@ impl GraphBuilder {
         let _ = graph.add_node(node);
     }
 
-    /// Ensure a placeholder `unresolved:<name>` node exists so unresolved edges
-    /// always have a valid target.
+    /// Ensure a placeholder `unresolved:<language>:<name>` node exists so
+    /// unresolved edges always have a valid target. The language qualifier
+    /// keeps same-named unresolved symbols in different languages distinct.
     pub(crate) fn add_unresolved_node(&self, graph: &mut Graph, language: Language, name: &str) {
-        let node_id = format!("unresolved:{name}");
+        let node_id = unresolved_id(language, name);
         let node = Node::new(node_id, NodeKind::Unknown, name.to_string()).with_language(language);
         let _ = graph.add_node(node);
     }
+}
+
+/// Canonical placeholder id for an unresolved symbol reference.
+pub(crate) fn unresolved_id(language: Language, name: &str) -> String {
+    format!("unresolved:{}:{name}", language.as_str())
 }
 
 /// Return the source range for a symbol.

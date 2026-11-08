@@ -558,3 +558,43 @@ fn graph_html_embeds_graph_data() {
     assert!(html.contains("window.__TRACERS_DATA__"));
     assert!(html.contains("function:main.ts::add") || html.contains("main.ts"));
 }
+
+#[test]
+fn scan_accepts_repeated_include_and_exclude() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(temp_repo.path().join("a.ts"), "export const a = 1;").unwrap();
+    std::fs::write(temp_repo.path().join("b.ts"), "export const b = 2;").unwrap();
+    std::fs::write(temp_repo.path().join("c.py"), "x = 1").unwrap();
+
+    let output = run_tracers(&[
+        "scan",
+        temp_repo.path().to_str().unwrap(),
+        "--no-tracers-dir",
+        "--include",
+        "*.ts",
+        "--exclude",
+        "b.ts",
+    ]);
+
+    assert!(output.contains("Files scanned: 1"));
+    assert!(output.contains("typescript"));
+    assert!(!output.contains("python:"));
+}
+
+#[test]
+fn check_honours_language_filter() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(temp_repo.path().join("a.ts"), "export const a = 1;").unwrap();
+    std::fs::write(temp_repo.path().join("b.py"), "x = 1").unwrap();
+
+    let output = run_tracers(&[
+        "check",
+        temp_repo.path().to_str().unwrap(),
+        "--language",
+        "python",
+    ]);
+
+    assert!(output.contains("files:       1"));
+    assert!(output.contains("Python: 1 file(s)"));
+    assert!(!output.contains("TypeScript"));
+}

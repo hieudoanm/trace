@@ -74,8 +74,10 @@ pub(crate) fn discover_directory(
         if is_dir {
             continue;
         }
+        // Files without an extension (LICENSE, Makefile, Dockerfile, ...) are
+        // not language candidates, so they are skipped without counting as
+        // unsupported.
         let Some(extension) = path.extension().and_then(|ext| ext.to_str()) else {
-            unsupported_files += 1;
             continue;
         };
         let Some(language) = Language::from_extension(extension) else {

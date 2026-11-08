@@ -924,55 +924,55 @@ expression: document
       "name": "repository"
     },
     {
-      "id": "unresolved:Circle",
+      "id": "unresolved:kotlin:Circle",
       "kind": "unknown",
       "name": "Circle",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:T",
+      "id": "unresolved:kotlin:T",
       "kind": "unknown",
       "name": "T",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:kotlin:area",
       "kind": "unknown",
       "name": "area",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:format",
+      "id": "unresolved:kotlin:format",
       "kind": "unknown",
       "name": "format",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:listOf",
+      "id": "unresolved:kotlin:listOf",
       "kind": "unknown",
       "name": "listOf",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:mutableMapOf",
+      "id": "unresolved:kotlin:mutableMapOf",
       "kind": "unknown",
       "name": "mutableMapOf",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:println",
+      "id": "unresolved:kotlin:println",
       "kind": "unknown",
       "name": "println",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:sumOf",
+      "id": "unresolved:kotlin:sumOf",
       "kind": "unknown",
       "name": "sumOf",
       "language": "kotlin"
     },
     {
-      "id": "unresolved:totalArea",
+      "id": "unresolved:kotlin:totalArea",
       "kind": "unknown",
       "name": "totalArea",
       "language": "kotlin"
@@ -1023,7 +1023,7 @@ expression: document
     },
     {
       "source": "class:src/Service.kt::InMemoryRepository",
-      "target": "unresolved:mutableMapOf",
+      "target": "unresolved:kotlin:mutableMapOf",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1065,7 +1065,7 @@ expression: document
     },
     {
       "source": "class:src/Service.kt::ShapeService",
-      "target": "unresolved:Circle",
+      "target": "unresolved:kotlin:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1779,7 +1779,7 @@ expression: document
     },
     {
       "source": "function:src/Complex.kt::total",
-      "target": "unresolved:area",
+      "target": "unresolved:kotlin:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1800,7 +1800,7 @@ expression: document
     },
     {
       "source": "function:src/Complex.kt::total",
-      "target": "unresolved:sumOf",
+      "target": "unresolved:kotlin:sumOf",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1842,70 +1842,7 @@ expression: document
     },
     {
       "source": "function:src/Main.kt::main",
-      "target": "external:kotlin:Circle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 5,
-            "column": 9,
-            "byte": 76
-          },
-          "end": {
-            "line": 5,
-            "column": 20,
-            "byte": 87
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Main.kt::main",
-      "target": "external:kotlin:Rectangle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 6,
-            "column": 9,
-            "byte": 97
-          },
-          "end": {
-            "line": 6,
-            "column": 28,
-            "byte": 116
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Main.kt::main",
-      "target": "external:kotlin:Square",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 7,
-            "column": 9,
-            "byte": 126
-          },
-          "end": {
-            "line": 7,
-            "column": 20,
-            "byte": 137
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Main.kt::main",
-      "target": "unresolved:format",
+      "target": "unresolved:kotlin:format",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1926,7 +1863,7 @@ expression: document
     },
     {
       "source": "function:src/Main.kt::main",
-      "target": "unresolved:listOf",
+      "target": "unresolved:kotlin:listOf",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1947,7 +1884,7 @@ expression: document
     },
     {
       "source": "function:src/Main.kt::main",
-      "target": "unresolved:println",
+      "target": "unresolved:kotlin:println",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1968,7 +1905,7 @@ expression: document
     },
     {
       "source": "function:src/Main.kt::main",
-      "target": "unresolved:totalArea",
+      "target": "unresolved:kotlin:totalArea",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1983,48 +1920,6 @@ expression: document
             "line": 9,
             "column": 59,
             "byte": 202
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Service.kt::createService",
-      "target": "external:kotlin:InMemoryRepository",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 17,
-            "column": 25,
-            "byte": 484
-          },
-          "end": {
-            "line": 17,
-            "column": 45,
-            "byte": 504
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/Service.kt::createService",
-      "target": "external:kotlin:ShapeService",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 17,
-            "column": 12,
-            "byte": 471
-          },
-          "end": {
-            "line": 17,
-            "column": 46,
-            "byte": 505
           }
         }
       ]
@@ -2052,7 +1947,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.kt::totalArea",
-      "target": "unresolved:area",
+      "target": "unresolved:kotlin:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2073,7 +1968,7 @@ expression: document
     },
     {
       "source": "function:src/shapes.kt::totalArea",
-      "target": "unresolved:sumOf",
+      "target": "unresolved:kotlin:sumOf",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2115,7 +2010,7 @@ expression: document
     },
     {
       "source": "method:src/Service.kt::InMemoryRepository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:kotlin:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2136,7 +2031,7 @@ expression: document
     },
     {
       "source": "method:src/Service.kt::ShapeService.area",
-      "target": "unresolved:area",
+      "target": "unresolved:kotlin:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2476,7 +2371,7 @@ expression: document
     "files": 4,
     "packages": 2,
     "nodes": 58,
-    "edges": 153,
+    "edges": 148,
     "symbols": 46,
     "unresolvedEdges": 12,
     "diagnostics": 0,
@@ -2495,7 +2390,7 @@ expression: document
       "unknown": 9
     },
     "byEdgeKind": {
-      "calls": 15,
+      "calls": 10,
       "contains": 49,
       "defines": 37,
       "exports": 37,
@@ -2508,7 +2403,7 @@ expression: document
       "kotlin": 57
     },
     "byStatus": {
-      "resolved_external": 6,
+      "resolved_external": 1,
       "resolved_internal": 135,
       "unresolved": 12
     },

@@ -41,6 +41,11 @@ impl<'a> Query<'a> {
         let mut results = Vec::new();
         let mut queue = VecDeque::new();
         let mut visited: HashSet<String> = HashSet::new();
+        // BFS tree parent pointers: each discovered node records the next hop
+        // toward the target, so explanatory paths are reconstructed in O(depth)
+        // instead of running a separate path search per result.
+        let mut parent_of: std::collections::HashMap<String, String> =
+            std::collections::HashMap::new();
         visited.insert(target.to_string());
         queue.push_back((target.to_string(), 0usize));
         while let Some((current, depth)) = queue.pop_front() {
@@ -69,9 +74,24 @@ impl<'a> Query<'a> {
                 let Some(node) = self.graph.node(&edge.source) else {
                     continue;
                 };
-                // Build the explanatory path from the dependent to the target.
-                let mut path = vec![node.clone()];
-                path.extend(self.path_to_target(&edge.target, target, options, depth + 1));
+                parent_of.insert(edge.source.clone(), current.clone());
+                // Reconstruct the path from the dependent to the target by
+                // walking the BFS parent chain.
+                let mut path_ids = vec![edge.source.clone()];
+                let mut cursor = edge.source.clone();
+                while cursor != target {
+                    match parent_of.get(&cursor) {
+                        Some(next) => {
+                            path_ids.push(next.clone());
+                            cursor = next.clone();
+                        }
+                        None => break,
+                    }
+                }
+                let path: Vec<Node> = path_ids
+                    .iter()
+                    .filter_map(|id| self.graph.node(id).cloned())
+                    .collect();
                 results.push(ImpactNode {
                     node: node.clone(),
                     depth: depth + 1,
@@ -86,30 +106,5 @@ impl<'a> Query<'a> {
         }
         results.sort_by(|a, b| a.depth.cmp(&b.depth).then(a.node.id.cmp(&b.node.id)));
         results
-    }
-
-    fn path_to_target(
-        &self,
-        from: &str,
-        target: &str,
-        options: &QueryOptions,
-        remaining: usize,
-    ) -> Vec<Node> {
-        if remaining == 0 {
-            return Vec::new();
-        }
-        let path = self.path(
-            from,
-            target,
-            &QueryOptions {
-                max_depth: remaining,
-                ..options.clone()
-            },
-        );
-        if path.found {
-            path.nodes
-        } else {
-            Vec::new()
-        }
     }
 }

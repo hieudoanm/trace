@@ -888,43 +888,43 @@ expression: document
       "exported": true
     },
     {
-      "id": "unresolved:Circle",
+      "id": "unresolved:typescript:Circle",
       "kind": "unknown",
       "name": "Circle",
       "language": "typescript"
     },
     {
-      "id": "unresolved:T",
+      "id": "unresolved:typescript:T",
       "kind": "unknown",
       "name": "T",
       "language": "typescript"
     },
     {
-      "id": "unresolved:area",
+      "id": "unresolved:typescript:area",
       "kind": "unknown",
       "name": "area",
       "language": "typescript"
     },
     {
-      "id": "unresolved:find",
+      "id": "unresolved:typescript:find",
       "kind": "unknown",
       "name": "find",
       "language": "typescript"
     },
     {
-      "id": "unresolved:get",
+      "id": "unresolved:typescript:get",
       "kind": "unknown",
       "name": "get",
       "language": "typescript"
     },
     {
-      "id": "unresolved:reduce",
+      "id": "unresolved:typescript:reduce",
       "kind": "unknown",
       "name": "reduce",
       "language": "typescript"
     },
     {
-      "id": "unresolved:set",
+      "id": "unresolved:typescript:set",
       "kind": "unknown",
       "name": "set",
       "language": "typescript"
@@ -997,27 +997,6 @@ expression: document
     },
     {
       "source": "class:src/service.ts::InMemoryRepository",
-      "target": "external:typescript:Map",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 9,
-            "column": 19,
-            "byte": 210
-          },
-          "end": {
-            "line": 9,
-            "column": 39,
-            "byte": 230
-          }
-        }
-      ]
-    },
-    {
-      "source": "class:src/service.ts::InMemoryRepository",
       "target": "interface:src/service.ts::Repository",
       "kind": "implements",
       "status": "resolved_internal",
@@ -1039,7 +1018,7 @@ expression: document
     },
     {
       "source": "class:src/service.ts::InMemoryRepository",
-      "target": "unresolved:T",
+      "target": "unresolved:typescript:T",
       "kind": "implements",
       "status": "unresolved",
       "origin": "syntax",
@@ -1669,7 +1648,7 @@ expression: document
     },
     {
       "source": "function:src/complex.ts::total",
-      "target": "unresolved:area",
+      "target": "unresolved:typescript:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1690,7 +1669,7 @@ expression: document
     },
     {
       "source": "function:src/complex.ts::total",
-      "target": "unresolved:reduce",
+      "target": "unresolved:typescript:reduce",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1732,27 +1711,6 @@ expression: document
     },
     {
       "source": "function:src/math.ts::run",
-      "target": "external:typescript:Circle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 12,
-            "column": 13,
-            "byte": 426
-          },
-          "end": {
-            "line": 12,
-            "column": 26,
-            "byte": 439
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/math.ts::run",
       "target": "function:src/math.ts::twice",
       "kind": "calls",
       "status": "resolved_internal",
@@ -1774,7 +1732,7 @@ expression: document
     },
     {
       "source": "function:src/math.ts::run",
-      "target": "unresolved:area",
+      "target": "unresolved:typescript:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1789,48 +1747,6 @@ expression: document
             "line": 13,
             "column": 24,
             "byte": 464
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/service.ts::createService",
-      "target": "external:typescript:InMemoryRepository",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 31,
-            "column": 16,
-            "byte": 682
-          },
-          "end": {
-            "line": 31,
-            "column": 48,
-            "byte": 714
-          }
-        }
-      ]
-    },
-    {
-      "source": "function:src/service.ts::createService",
-      "target": "external:typescript:ShapeService",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 32,
-            "column": 10,
-            "byte": 725
-          },
-          "end": {
-            "line": 32,
-            "column": 32,
-            "byte": 747
           }
         }
       ]
@@ -1858,7 +1774,7 @@ expression: document
     },
     {
       "source": "interface:src/service.ts::Repository",
-      "target": "unresolved:T",
+      "target": "unresolved:typescript:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1891,7 +1807,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::InMemoryRepository.find",
-      "target": "unresolved:get",
+      "target": "unresolved:typescript:get",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1912,7 +1828,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::InMemoryRepository.find",
-      "target": "unresolved:T",
+      "target": "unresolved:typescript:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1933,7 +1849,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::InMemoryRepository.save",
-      "target": "unresolved:set",
+      "target": "unresolved:typescript:set",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -1954,7 +1870,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::InMemoryRepository.save",
-      "target": "unresolved:T",
+      "target": "unresolved:typescript:T",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -1975,28 +1891,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::ShapeService.area",
-      "target": "external:typescript:Error",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 25,
-            "column": 23,
-            "byte": 563
-          },
-          "end": {
-            "line": 25,
-            "column": 45,
-            "byte": 585
-          }
-        }
-      ]
-    },
-    {
-      "source": "method:src/service.ts::ShapeService.area",
-      "target": "unresolved:area",
+      "target": "unresolved:typescript:area",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2017,7 +1912,7 @@ expression: document
     },
     {
       "source": "method:src/service.ts::ShapeService.area",
-      "target": "unresolved:find",
+      "target": "unresolved:typescript:find",
       "kind": "calls",
       "status": "unresolved",
       "origin": "syntax",
@@ -2080,28 +1975,7 @@ expression: document
     },
     {
       "source": "module:src/extra.ts",
-      "target": "external:typescript:Circle",
-      "kind": "calls",
-      "status": "resolved_external",
-      "origin": "lexical",
-      "sites": [
-        {
-          "start": {
-            "line": 9,
-            "column": 21,
-            "byte": 342
-          },
-          "end": {
-            "line": 9,
-            "column": 33,
-            "byte": 354
-          }
-        }
-      ]
-    },
-    {
-      "source": "module:src/extra.ts",
-      "target": "unresolved:Circle",
+      "target": "unresolved:typescript:Circle",
       "kind": "uses_type",
       "status": "unresolved",
       "origin": "syntax",
@@ -2429,7 +2303,7 @@ expression: document
     "files": 4,
     "packages": 0,
     "nodes": 54,
-    "edges": 142,
+    "edges": 136,
     "symbols": 44,
     "unresolvedEdges": 12,
     "diagnostics": 3,
@@ -2452,7 +2326,7 @@ expression: document
       "variable": 1
     },
     "byEdgeKind": {
-      "calls": 14,
+      "calls": 8,
       "contains": 45,
       "defines": 37,
       "exports": 31,
@@ -2464,7 +2338,7 @@ expression: document
       "typescript": 53
     },
     "byStatus": {
-      "resolved_external": 7,
+      "resolved_external": 1,
       "resolved_internal": 123,
       "unresolved": 12
     },

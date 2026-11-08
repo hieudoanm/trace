@@ -17,13 +17,13 @@ pub enum Commands {
         #[arg(short = 'o', long)]
         output: Option<PathBuf>,
 
-        /// Include only files matching this glob pattern.
+        /// Include only files matching this glob pattern (repeatable).
         #[arg(long)]
-        include: Option<String>,
+        include: Vec<String>,
 
-        /// Exclude files matching this glob pattern.
+        /// Exclude files matching this glob pattern (repeatable).
         #[arg(long)]
-        exclude: Option<String>,
+        exclude: Vec<String>,
 
         /// Only analyse the given language(s).
         #[arg(long)]
@@ -301,12 +301,36 @@ pub enum Commands {
         /// Repository path to scan (defaults to current directory).
         #[arg(default_value = ".")]
         path: PathBuf,
+
+        /// Include only files matching this glob pattern (repeatable).
+        #[arg(long)]
+        include: Vec<String>,
+
+        /// Exclude files matching this glob pattern (repeatable).
+        #[arg(long)]
+        exclude: Vec<String>,
+
+        /// Only analyse the given language(s).
+        #[arg(long)]
+        language: Option<String>,
     },
     /// Validate configuration and parser availability.
     Check {
         /// Repository path to check (defaults to current directory).
         #[arg(default_value = ".")]
         path: PathBuf,
+
+        /// Include only files matching this glob pattern (repeatable).
+        #[arg(long)]
+        include: Vec<String>,
+
+        /// Exclude files matching this glob pattern (repeatable).
+        #[arg(long)]
+        exclude: Vec<String>,
+
+        /// Only analyse the given language(s).
+        #[arg(long)]
+        language: Option<String>,
     },
     /// Validate graph integrity: every edge target exists as a node.
     Validate {

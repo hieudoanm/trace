@@ -10,28 +10,21 @@ use tracers_export::{FrameworkInfo, GraphDocument, LanguageInfo};
 use tracers_parser::discovery::DiscoveryOptions;
 
 /// Build a graph from a repository path with discovery and parsing options.
-pub(crate) fn build_graph_for_path(
-    path: &Path,
-    include: Option<&str>,
-    exclude: Option<&str>,
+/// Merge `tracers.toml` discovery defaults with CLI filters.
+///
+/// Config `include`/`exclude` patterns are defaults that CLI flags extend.
+/// For languages the CLI flag wins outright so `--language` always narrows
+/// the scan.
+pub(crate) fn discovery_options(
+    config: &TracersConfig,
+    include: &[String],
+    exclude: &[String],
     language: Option<&str>,
-    no_cache: bool,
-    jobs: Option<usize>,
-    config: Option<&std::path::Path>,
-) -> Result<(tracers_analysis::graph::GraphBuildResult, TracersConfig)> {
-    let (config, _config_source) =
-        TracersConfig::load(path, config).context("failed to load configuration")?;
-
-    // Config patterns are defaults; CLI flags extend them. For languages the
-    // CLI flag wins outright so `--language` always narrows the scan.
+) -> Result<DiscoveryOptions> {
     let mut includes = config.analysis.include.clone();
-    if let Some(include) = include {
-        includes.push(include.to_string());
-    }
+    includes.extend(include.iter().cloned());
     let mut excludes = config.analysis.exclude.clone();
-    if let Some(exclude) = exclude {
-        excludes.push(exclude.to_string());
-    }
+    excludes.extend(exclude.iter().cloned());
     let languages = if let Some(language) = language {
         let mut languages = Vec::new();
         for name in language.split(',') {
@@ -49,14 +42,30 @@ pub(crate) fn build_graph_for_path(
     } else {
         config.languages()
     };
-    let options = DiscoveryOptions {
+    Ok(DiscoveryOptions {
         includes,
         excludes,
         languages,
         max_file_size: config.analysis.max_file_size,
         follow_symlinks: config.analysis.follow_symlinks,
         include_generated: config.analysis.include_generated,
-    };
+    })
+}
+
+/// Build a graph from a repository path with discovery and parsing options.
+pub(crate) fn build_graph_for_path(
+    path: &Path,
+    include: &[String],
+    exclude: &[String],
+    language: Option<&str>,
+    no_cache: bool,
+    jobs: Option<usize>,
+    config: Option<&std::path::Path>,
+) -> Result<(tracers_analysis::graph::GraphBuildResult, TracersConfig)> {
+    let (config, _config_source) =
+        TracersConfig::load(path, config).context("failed to load configuration")?;
+
+    let options = discovery_options(&config, include, exclude, language)?;
 
     let cache = SyntaxCache::from_config(path, &config, no_cache);
     // CLI --jobs wins over analysis.jobs; absent means the default pool.
@@ -90,7 +99,7 @@ pub(crate) fn load_or_build_graph(
         let graph = tracers_export::graph_from_document(&document)?;
         return Ok((graph, document.diagnostics));
     }
-    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
+    let (result, _config) = build_graph_for_path(path, &[], &[], None, false, None, None)?;
     Ok((result.graph, result.diagnostics))
 }
 
@@ -282,8 +291,8 @@ fn print_summary(
 pub(crate) fn cmd_scan(
     path: &Path,
     output: Option<&std::path::Path>,
-    include: Option<&str>,
-    exclude: Option<&str>,
+    include: &[String],
+    exclude: &[String],
     language: Option<&str>,
     no_cache: bool,
     jobs: Option<usize>,
@@ -320,6 +329,24 @@ pub(crate) fn cmd_scan(
                 "Cache: {} hits, {} misses, {} writes",
                 counts.hits, counts.misses, counts.writes
             );
+        }
+        if let Some(discovery) = &result.discovery {
+            if discovery.skipped > 0 || discovery.unsupported_files > 0 {
+                let reasons = discovery
+                    .skip_reasons
+                    .iter()
+                    .map(|(reason, count)| format!("{reason}={count}"))
+                    .collect::<Vec<_>>()
+                    .join(", ");
+                println!(
+                    "Discovery: {} files, {} skipped ({}), {} unsupported, {} gitignored",
+                    discovery.files,
+                    discovery.skipped,
+                    reasons,
+                    discovery.unsupported_files,
+                    discovery.ignored_files,
+                );
+            }
         }
     }
 

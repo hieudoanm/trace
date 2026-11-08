@@ -21,6 +21,22 @@ Tracers is a high-performance, multi-language code intelligence and graph analys
 
 ## Installation
 
+### From a release binary
+
+Prebuilt binaries for Linux and macOS (x86_64 and aarch64) are attached to
+GitHub releases:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/hieudoanm/tracers/main/scripts/install.sh | sh
+```
+
+The script detects your platform, downloads `tracers-<os>-<arch>`, and installs
+it to `~/.local/bin`. To install from your local working tree instead:
+
+```bash
+./scripts/install-local.sh
+```
+
 ### From source
 
 ```bash
@@ -146,8 +162,8 @@ Analyse a repository and generate a graph.
 **Options:**
 
 - `-o, --output <PATH>`: Write output files (.json, .dot, .html) to PATH (file or directory) instead of stdout
-- `--include <GLOB>`: Include only files matching this glob pattern
-- `--exclude <GLOB>`: Exclude files matching this glob pattern
+- `--include <GLOB>`: Include only files matching this glob pattern (repeatable)
+- `--exclude <GLOB>`: Exclude files matching this glob pattern (repeatable)
 - `--language <LANGUAGE>`: Only analyse the given language(s)
 - `--no-cache`: Disable the syntax cache
 - `--jobs <N>`: Number of parallel jobs
@@ -285,9 +301,25 @@ List analysis diagnostics collected during the scan: parse errors, unresolved im
 
 Report supported languages and analysis capabilities.
 
+#### `tracers frameworks [PATH]`
+
+Report frameworks detected from manifests and source conventions.
+
+**Options:**
+
+- `--include <GLOB>` / `--exclude <GLOB>`: Filter discovered files (repeatable)
+- `--language <LANGUAGE>`: Only analyse the given language(s)
+
 #### `tracers check [PATH]`
 
-Validate configuration, discovery, and parser availability.
+Validate configuration, discovery, and parser availability. Reports file
+counts (including gitignored and unsupported files), skip-reason breakdown,
+cache status, detected languages, and configured external tools.
+
+**Options:**
+
+- `--include <GLOB>` / `--exclude <GLOB>`: Filter discovered files (repeatable)
+- `--language <LANGUAGE>`: Only analyse the given language(s)
 
 #### `tracers validate [PATH]`
 

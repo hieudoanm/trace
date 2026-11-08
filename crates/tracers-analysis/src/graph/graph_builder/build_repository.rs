@@ -72,6 +72,13 @@ pub(crate) fn build_repository_with_options(
         options.languages.clone()
     };
     result.cache_counts = cache.map(|cache| cache.counts());
+    result.discovery = Some(crate::graph::graph_types::DiscoveryStats {
+        files: report.files.len(),
+        skipped: report.skipped.len(),
+        skip_reasons: report.skip_counts().into_iter().collect(),
+        unsupported_files: report.unsupported_files,
+        ignored_files: report.ignored_files,
+    });
     diagnostics.extend(import_pass.diagnostics);
     diagnostics.extend(report.diagnostics.clone());
     diagnostics.sort_by_key(|d| d.sort_key());

@@ -61,8 +61,8 @@ fn run() -> Result<()> {
         } => crate::cli::scan::cmd_scan(
             &path,
             output.as_deref(),
-            include.as_deref(),
-            exclude.as_deref(),
+            &include,
+            &exclude,
             language.as_deref(),
             no_cache,
             jobs,
@@ -191,8 +191,18 @@ fn run() -> Result<()> {
         }
         Commands::Stats { path, graph } => crate::cli::validate::cmd_stats(&path, graph.as_deref()),
         Commands::Languages => crate::cli::validate::cmd_languages(),
-        Commands::Frameworks { path } => crate::cli::validate::cmd_frameworks(&path),
-        Commands::Check { path } => crate::cli::validate::cmd_check(&path),
+        Commands::Frameworks {
+            path,
+            include,
+            exclude,
+            language,
+        } => crate::cli::validate::cmd_frameworks(&path, &include, &exclude, language.as_deref()),
+        Commands::Check {
+            path,
+            include,
+            exclude,
+            language,
+        } => crate::cli::validate::cmd_check(&path, &include, &exclude, language.as_deref()),
         Commands::Validate { path, graph } => {
             crate::cli::validate::cmd_validate(&path, graph.as_deref())
         }

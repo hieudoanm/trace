@@ -36,6 +36,8 @@ pub struct RepositoryIndex {
     pub by_declared_module: BTreeMap<String, Vec<String>>,
     pub packages: BTreeMap<String, PackageState>,
     pub go_modules: Vec<GoModule>,
+    /// Reverse lookup from module id to the file that declares it.
+    pub module_files: BTreeMap<String, String>,
 }
 
 impl RepositoryIndex {
@@ -113,6 +115,10 @@ impl RepositoryIndex {
                         });
                 entry.files.push(state.path.clone());
             }
+            index
+                .module_files
+                .entry(state.module_id.clone())
+                .or_insert_with(|| state.path.clone());
             index.files.insert(state.path.clone(), state);
         }
 

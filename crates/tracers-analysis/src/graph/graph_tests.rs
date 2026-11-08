@@ -91,5 +91,29 @@ fn records_unresolved_call() {
         "expected an unresolved call edge"
     );
     // The unresolved target must exist as a node so the graph is target-complete.
-    assert!(graph.node("unresolved:missing").is_some());
+    assert!(graph.node("unresolved:typescript:missing").is_some());
+}
+
+#[test]
+fn unresolved_nodes_are_scoped_by_language() {
+    let dir = tempdir().unwrap();
+    let parsed = vec![
+        parse(
+            "a.ts",
+            Language::TypeScript,
+            "export function run() { return missing(); }\n",
+        ),
+        parse(
+            "b.py",
+            Language::Python,
+            "def run():\n    return missing()\n",
+        ),
+    ];
+    let mut index = RepositoryIndex::build(dir.path(), parsed).unwrap();
+    let import_pass = resolve_imports(&mut index);
+    let builder = GraphBuilder::new();
+    let result = builder.build_from_index(&index, &import_pass, &[]).unwrap();
+    let graph = &result.graph;
+    assert!(graph.node("unresolved:typescript:missing").is_some());
+    assert!(graph.node("unresolved:python:missing").is_some());
 }
