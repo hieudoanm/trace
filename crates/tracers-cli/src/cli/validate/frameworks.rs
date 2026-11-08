@@ -2,12 +2,14 @@ use std::path::Path;
 
 use anyhow::{anyhow, Result};
 
+use tracers_analysis::cache::SyntaxCache;
 use tracers_analysis::config::TracersConfig;
-use tracers_analysis::framework::{FrameworkDetector, ManifestContents};
+use tracers_analysis::framework::FrameworkDetector;
+use tracers_analysis::graph::graph_builder::discovery::discover_manifests;
+use tracers_analysis::graph::graph_builder::parsing::parse_files;
 use tracers_parser::discovery::discover;
 
 use crate::cli::scan::discovery_options;
-use tracers_parser::parser::{read_source, SyntaxParser};
 
 pub(crate) fn cmd_frameworks(
     path: &Path,
@@ -21,63 +23,34 @@ pub(crate) fn cmd_frameworks(
         discovery_options(&config, include, exclude, language).map_err(anyhow::Error::msg)?;
     let report = discover(path, &options).map_err(anyhow::Error::msg)?;
 
-    let mut parser = SyntaxParser::new().map_err(|e| anyhow!("parser error: {e}"))?;
-    let mut parsed_files = Vec::new();
-    let mut skipped = 0usize;
-    for file in &report.files {
-        let source = match read_source(&file.absolute, options.max_file_size) {
-            Ok(source) => source,
-            Err(error) => {
-                eprintln!("warning: skipping {}: {error}", file.path);
-                skipped += 1;
-                continue;
-            }
-        };
-        match parser.parse(&file.path, file.language, &source) {
-            Ok(parsed) => parsed_files.push(parsed),
-            Err(error) => {
-                eprintln!("warning: skipping {}: {error}", file.path);
-                skipped += 1;
-            }
-        }
+    let cache = SyntaxCache::from_config(path, &config, false);
+    let jobs = config.analysis.jobs;
+    if jobs == Some(0) {
+        anyhow::bail!("analysis.jobs must be at least 1");
     }
-    if skipped > 0 {
-        eprintln!("warning: {skipped} file(s) could not be analysed");
+    let (mut parsed_files, parse_diagnostics) = parse_files(
+        &report.files,
+        jobs,
+        cache.enabled().then_some(&cache),
+        options.max_file_size,
+    )
+    .map_err(|e| anyhow!("parser error: {e}"))?;
+    for diagnostic in &parse_diagnostics {
+        eprintln!(
+            "warning: skipping {}: {}",
+            diagnostic.file.as_deref().unwrap_or("?"),
+            diagnostic.message
+        );
+    }
+    if !parse_diagnostics.is_empty() {
+        eprintln!(
+            "warning: {} file(s) could not be analysed",
+            parse_diagnostics.len()
+        );
     }
     parsed_files.sort_by(|a, b| a.path.cmp(&b.path));
 
-    let manifest_names = [
-        "package.json",
-        "Cargo.toml",
-        "go.mod",
-        "requirements.txt",
-        "pyproject.toml",
-        "setup.py",
-        "setup.cfg",
-        "Gemfile",
-        "composer.json",
-        "pom.xml",
-        "build.gradle",
-        "build.gradle.kts",
-        "settings.gradle",
-        "angular.json",
-        "next.config.js",
-        "next.config.mjs",
-        "config/application.rb",
-    ];
-    let mut manifest_files = ManifestContents::empty();
-    for name in &manifest_names {
-        let manifest_path = path.join(name);
-        if manifest_path.is_file() {
-            if let Ok(text) = std::fs::read_to_string(&manifest_path) {
-                let relative = manifest_path
-                    .strip_prefix(path)
-                    .map(|p| p.to_string_lossy().to_string())
-                    .unwrap_or_else(|_| name.to_string());
-                manifest_files.files.insert(relative, text);
-            }
-        }
-    }
+    let manifest_files = discover_manifests(path);
 
     let detector = FrameworkDetector::new();
     let detection = detector.detect(path, &parsed_files, &manifest_files);

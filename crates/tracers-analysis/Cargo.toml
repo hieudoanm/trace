@@ -10,6 +10,7 @@ description = "Symbol resolution, graph construction and caching for Tracers"
 tracers-core = { path = "../tracers-core" }
 tracers-parser = { path = "../tracers-parser" }
 blake3 = { workspace = true }
+ignore = { workspace = true }
 rayon = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }

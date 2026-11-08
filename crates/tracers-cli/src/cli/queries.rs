@@ -9,8 +9,7 @@ use tracers_core::{file_id, module_id, package_id, EdgeKind, Graph, Node, Query,
 use crate::cli::scan::load_or_build_graph;
 
 fn build_graph(path: &Path, graph_file: Option<&Path>) -> Result<Graph> {
-    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
-    Ok(graph)
+    Ok(load_or_build_graph(path, graph_file)?.graph)
 }
 
 /// Resolve a user-supplied selector to a node.

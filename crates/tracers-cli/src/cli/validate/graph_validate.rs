@@ -5,7 +5,7 @@ use anyhow::Result;
 use crate::cli::scan::load_or_build_graph;
 
 pub(crate) fn cmd_validate(path: &Path, graph_file: Option<&Path>) -> Result<()> {
-    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
+    let graph = load_or_build_graph(path, graph_file)?.graph;
     let graph = &graph;
     let mut dangling = Vec::new();
 

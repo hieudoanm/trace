@@ -6,7 +6,7 @@ use tracers_core::Query;
 use crate::cli::scan::load_or_build_graph;
 
 pub(crate) fn cmd_cycles(path: &Path, graph_file: Option<&Path>) -> Result<()> {
-    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
+    let graph = load_or_build_graph(path, graph_file)?.graph;
     let graph = &graph;
     let query = Query::new(graph);
     let cycles = query.cycles(&[]);

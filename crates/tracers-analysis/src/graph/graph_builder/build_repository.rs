@@ -43,11 +43,12 @@ pub(crate) fn build_repository_with_options(
 
     let files: Vec<_> = report.files.to_vec();
 
-    let parsed_files = parse_files(&files, builder.jobs, cache)?;
+    let (parsed_files, parse_diagnostics) =
+        parse_files(&files, builder.jobs, cache, options.max_file_size)?;
 
     tracing::debug!(parsed = parsed_files.len(), "parsing complete");
 
-    let mut diagnostics = Vec::new();
+    let mut diagnostics = parse_diagnostics;
     let mut parsed_files_ok = Vec::new();
     for parsed in parsed_files {
         diagnostics.extend(parsed.diagnostics.clone());

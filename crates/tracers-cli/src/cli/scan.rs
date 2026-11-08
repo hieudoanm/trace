@@ -87,20 +87,33 @@ pub(crate) fn build_graph_for_path(
     Ok((result, config))
 }
 
-/// Load a graph from an exported JSON file, or build it from source.
-/// Returns the graph and its diagnostics (empty frameworks are not
-/// reconstructible from the document, so callers must not rely on them).
-pub(crate) fn load_or_build_graph(
-    path: &Path,
-    graph_file: Option<&Path>,
-) -> Result<(tracers_core::Graph, Vec<tracers_core::Diagnostic>)> {
+/// A graph loaded either from an export file or a fresh scan, with the
+/// diagnostics and discovery statistics that produced it. Frameworks are
+/// not reconstructible from an exported document, so callers must not rely
+/// on them for `--graph` input.
+pub(crate) struct LoadedGraph {
+    pub graph: tracers_core::Graph,
+    pub diagnostics: Vec<tracers_core::Diagnostic>,
+    pub discovery: Option<tracers_analysis::graph::graph_types::DiscoveryStats>,
+}
+
+pub(crate) fn load_or_build_graph(path: &Path, graph_file: Option<&Path>) -> Result<LoadedGraph> {
     if let Some(file) = graph_file {
         let document = tracers_export::load_document(file)?;
         let graph = tracers_export::graph_from_document(&document)?;
-        return Ok((graph, document.diagnostics));
+        return Ok(LoadedGraph {
+            graph,
+            diagnostics: document.diagnostics,
+            discovery: None,
+        });
     }
     let (result, _config) = build_graph_for_path(path, &[], &[], None, false, None, None)?;
-    Ok((result.graph, result.diagnostics))
+    let discovery = result.discovery;
+    Ok(LoadedGraph {
+        graph: result.graph,
+        diagnostics: result.diagnostics,
+        discovery,
+    })
 }
 
 /// Embed the graph document into the HTML explorer so `graph.html` works
@@ -299,6 +312,7 @@ pub(crate) fn cmd_scan(
     config: Option<&std::path::Path>,
     write_tracers_dir: bool,
 ) -> Result<()> {
+    let started = std::time::Instant::now();
     let (result, config) =
         build_graph_for_path(path, include, exclude, language, no_cache, jobs, config)?;
 
@@ -404,5 +418,6 @@ pub(crate) fn cmd_scan(
         println!("Wrote graph export to {}", tracers_dir.display());
     }
 
+    println!("Completed in {:.1?}", started.elapsed());
     Ok(())
 }

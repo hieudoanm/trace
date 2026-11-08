@@ -456,6 +456,17 @@ Tracers outputs a versioned JSON graph schema containing:
 - `unresolved`: Could not be resolved
 - `ambiguous`: Multiple possible targets
 
+### Identity Notes
+
+- Unresolved references materialise as `unresolved:<language>:<name>`
+  placeholder nodes so the graph stays target-complete; the language
+  qualifier keeps same-named unresolved symbols in different languages
+  distinct.
+- External dependencies materialise as `external:<language>:<qualified>`
+  nodes when `include_external` is enabled.
+- Multiple call sites between the same pair of symbols are aggregated into
+  a single edge whose `sites` array records every source location.
+
 ## Development
 
 ### Building

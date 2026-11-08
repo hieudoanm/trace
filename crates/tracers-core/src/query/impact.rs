@@ -42,9 +42,10 @@ impl<'a> Query<'a> {
         let mut queue = VecDeque::new();
         let mut visited: HashSet<String> = HashSet::new();
         // BFS tree parent pointers: each discovered node records the next hop
-        // toward the target, so explanatory paths are reconstructed in O(depth)
-        // instead of running a separate path search per result.
-        let mut parent_of: std::collections::HashMap<String, String> =
+        // toward the target plus the edge kind used, so explanatory paths and
+        // `via` chains are reconstructed in O(depth) instead of running a
+        // separate path search per result.
+        let mut parent_of: std::collections::HashMap<String, (String, crate::edge::EdgeKind)> =
             std::collections::HashMap::new();
         visited.insert(target.to_string());
         queue.push_back((target.to_string(), 0usize));
@@ -74,15 +75,18 @@ impl<'a> Query<'a> {
                 let Some(node) = self.graph.node(&edge.source) else {
                     continue;
                 };
-                parent_of.insert(edge.source.clone(), current.clone());
+                parent_of.insert(edge.source.clone(), (current.clone(), edge.kind));
                 // Reconstruct the path from the dependent to the target by
-                // walking the BFS parent chain.
+                // walking the BFS parent chain, collecting edge kinds along
+                // the way (in path order).
                 let mut path_ids = vec![edge.source.clone()];
+                let mut via_kinds = Vec::new();
                 let mut cursor = edge.source.clone();
                 while cursor != target {
                     match parent_of.get(&cursor) {
-                        Some(next) => {
+                        Some((next, kind)) => {
                             path_ids.push(next.clone());
+                            via_kinds.push(*kind);
                             cursor = next.clone();
                         }
                         None => break,
@@ -96,7 +100,7 @@ impl<'a> Query<'a> {
                     node: node.clone(),
                     depth: depth + 1,
                     path,
-                    via: vec![edge.kind],
+                    via: via_kinds,
                 });
                 if results.len() >= options.max_results {
                     break;

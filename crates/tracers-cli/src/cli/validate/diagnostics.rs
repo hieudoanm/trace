@@ -9,7 +9,8 @@ pub(crate) fn cmd_diagnostics(
     max_results: usize,
     graph_file: Option<&Path>,
 ) -> Result<()> {
-    let (_graph, diagnostics) = load_or_build_graph(path, graph_file)?;
+    let loaded = load_or_build_graph(path, graph_file)?;
+    let diagnostics = loaded.diagnostics;
 
     println!("Analysis diagnostics ({} total):", diagnostics.len());
     if diagnostics.is_empty() {

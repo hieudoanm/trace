@@ -14,10 +14,3 @@ repos:
         entry: bash -c 'cd "$(git rev-parse --show-toplevel)" && (./target/release/tracers scan . || ./target/debug/tracers scan .)'
         language: system
         pass_filenames: false
-
-      - id: docsify
-        name: docsify graph outputs
-        entry: bash scripts/docsify.sh
-        language: system
-        pass_filenames: false
-        stages: [commit]

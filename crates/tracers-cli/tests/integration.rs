@@ -598,3 +598,24 @@ fn check_honours_language_filter() {
     assert!(output.contains("Python: 1 file(s)"));
     assert!(!output.contains("TypeScript"));
 }
+
+#[test]
+fn scan_survives_unreadable_source_files() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(
+        temp_repo.path().join("good.ts"),
+        "export function add(a: number, b: number) { return a + b; }",
+    )
+    .unwrap();
+    // Invalid UTF-8 with NUL bytes: previously aborted the whole scan.
+    std::fs::write(temp_repo.path().join("bad.ts"), b"\xff\xfe\x00bad").unwrap();
+
+    let output = run_tracers(&[
+        "scan",
+        temp_repo.path().to_str().unwrap(),
+        "--no-tracers-dir",
+    ]);
+
+    assert!(output.contains("Files scanned: 1"));
+    assert!(output.contains("typescript: 1 nodes") || output.contains("typescript"));
+}

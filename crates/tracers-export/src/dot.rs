@@ -10,8 +10,10 @@ pub fn to_dot(graph: &Graph) -> String {
     output.push_str("  node [shape=box];\n");
     output.push_str("  edge [dir=forward];\n\n");
 
-    // Add nodes
-    for node in graph.nodes() {
+    // Deterministic ordering, matching the JSON export.
+    let mut nodes: Vec<_> = graph.nodes().iter().collect();
+    nodes.sort_by(|a, b| a.id.cmp(&b.id));
+    for node in nodes {
         let label = format!("{}\\n{}", dot_escape(&node.name), node.kind.as_str());
         let color = node_kind_color(&node.kind);
         output.push_str(&format!(
@@ -24,9 +26,19 @@ pub fn to_dot(graph: &Graph) -> String {
 
     output.push('\n');
 
-    // Add edges
-    for edge in graph.edges() {
-        let style = edge_style(&edge.kind);
+    // Add edges, sorted deterministically. Unresolved and ambiguous
+    // relationships are drawn dotted so they stand out from resolved ones.
+    let mut edges: Vec<_> = graph.edges().iter().collect();
+    edges.sort_by(|a, b| {
+        a.source
+            .cmp(&b.source)
+            .then(a.kind.cmp(&b.kind))
+            .then(a.target.cmp(&b.target))
+            .then(a.status.cmp(&b.status))
+            .then(a.origin.cmp(&b.origin))
+    });
+    for edge in edges {
+        let style = edge_style(&edge.kind, &edge.status);
         output.push_str(&format!(
             "  \"{}\" -> \"{}\" [label=\"{}\", style=\"{}\"];\n",
             dot_escape(&edge.source),
@@ -74,8 +86,16 @@ fn node_kind_color(kind: &NodeKind) -> &'static str {
     }
 }
 
-/// Get a style for an edge kind in DOT output.
-fn edge_style(kind: &EdgeKind) -> &'static str {
+/// Get a style for an edge. Resolved edges use the kind's base style;
+/// unresolved and ambiguous relationships are always dotted.
+fn edge_style(kind: &EdgeKind, status: &tracers_core::edge::ResolutionStatus) -> &'static str {
+    use tracers_core::edge::ResolutionStatus;
+    if matches!(
+        status,
+        ResolutionStatus::Unresolved | ResolutionStatus::Ambiguous
+    ) {
+        return "dotted";
+    }
     match kind {
         EdgeKind::Contains => "solid",
         EdgeKind::Imports | EdgeKind::Exports => "dashed",

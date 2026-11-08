@@ -1981,6 +1981,7 @@ name = "tracers-analysis"
 version = "0.0.1"
 dependencies = [
  "blake3",
+ "ignore",
  "insta",
  "rayon",
  "serde",

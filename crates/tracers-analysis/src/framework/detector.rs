@@ -132,7 +132,7 @@ impl FrameworkDetector {
         for (path, text) in &manifests.files {
             for sig in &self.signatures {
                 for dep in sig.manifest_deps {
-                    if text.contains(dep) {
+                    if manifest_dep_present(text, dep) {
                         signals
                             .entry(sig.name.to_string())
                             .or_default()
@@ -171,5 +171,76 @@ impl FrameworkDetector {
             frameworks,
             signals_by_framework: signals,
         }
+    }
+}
+
+/// Whether a manifest declares `dep`. A bare substring search produces false
+/// positives (`react` inside `preact`, `react-dom`, or `@types/react`), so the
+/// dependency name must sit on identifier boundaries: the preceding character
+/// may not be alphanumeric, `_`, `-`, `.`, `/` or `@`, and the following
+/// character may not be alphanumeric, `_` or `-`.
+fn manifest_dep_present(text: &str, dep: &str) -> bool {
+    let bytes = text.as_bytes();
+    let dep_bytes = dep.as_bytes();
+    let is_boundary_before =
+        |b: u8| !(b.is_ascii_alphanumeric() || matches!(b, b'_' | b'-' | b'.' | b'/' | b'@'));
+    // Deps ending in '/' (e.g. `@vue/`) are prefix patterns matching a whole
+    // package family, so no boundary is required after them.
+    let prefix_dep = dep.ends_with('/');
+    let is_boundary_after = |b: u8| !(b.is_ascii_alphanumeric() || matches!(b, b'_' | b'-'));
+    bytes
+        .windows(dep_bytes.len())
+        .enumerate()
+        .any(|(i, window)| {
+            window == dep_bytes
+                && (i == 0 || is_boundary_before(bytes[i - 1]))
+                && (prefix_dep
+                    || i + dep_bytes.len() == bytes.len()
+                    || is_boundary_after(bytes[i + dep_bytes.len()]))
+        })
+}
+
+#[cfg(test)]
+mod manifest_dep_tests {
+    use super::manifest_dep_present;
+
+    #[test]
+    fn matches_quoted_and_unquoted_declarations() {
+        assert!(manifest_dep_present(
+            r#"{"dependencies": {"react": "18"}}"#,
+            "react"
+        ));
+        assert!(manifest_dep_present("react = \"18\"", "react"));
+        assert!(manifest_dep_present("react==18.0", "react"));
+        assert!(manifest_dep_present(
+            "require github.com/gin-gonic/gin v1.9.0",
+            "github.com/gin-gonic/gin"
+        ));
+        assert!(manifest_dep_present(
+            r#"import "@vue/compiler-sfc""#,
+            "@vue/"
+        ));
+    }
+
+    #[test]
+    fn rejects_substring_false_positives() {
+        assert!(!manifest_dep_present(
+            r#"{"dependencies": {"preact": "10"}}"#,
+            "react"
+        ));
+        assert!(!manifest_dep_present(
+            r#"{"dependencies": {"react-dom": "18"}}"#,
+            "react"
+        ));
+        assert!(!manifest_dep_present(
+            r#"{"devDependencies": {"@types/react": "18"}}"#,
+            "react"
+        ));
+        assert!(!manifest_dep_present("# uses react-like patterns", "react"));
+        assert!(!manifest_dep_present("express-session = \"1\"", "express"));
+        assert!(!manifest_dep_present(
+            r#"{"deps": {"my.react": "1"}}"#,
+            "react"
+        ));
     }
 }
