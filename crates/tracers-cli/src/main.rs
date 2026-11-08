@@ -13,7 +13,17 @@ use crate::cli::commands::Commands;
 /// Tracers: a high-performance, multi-language code intelligence and graph
 /// analysis tool.
 #[derive(Parser, Debug)]
-#[command(name = "tracers", version, about, long_about = None)]
+#[command(
+    name = "tracers",
+    version = concat!(
+        env!("CARGO_PKG_VERSION"),
+        " (build ",
+        env!("TRACERS_BUILD_TIME"),
+        ")"
+    ),
+    about,
+    long_about = None
+)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -29,7 +39,9 @@ struct Cli {
 
 fn main() {
     if let Err(error) = run() {
-        eprintln!("error: {error}");
+        // `{:#}` prints the full anyhow cause chain on one line; plain `{}`
+        // would only show the outermost context and hide the real failure.
+        eprintln!("error: {error:#}");
         exit(1);
     }
 }

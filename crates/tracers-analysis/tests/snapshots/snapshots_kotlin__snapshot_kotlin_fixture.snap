@@ -753,16 +753,12 @@ expression: document
     {
       "id": "package:kotlin/com/example",
       "kind": "package",
-      "name": "package:kotlin/com/example",
-      "file": "src/Service.kt",
-      "language": "kotlin"
+      "name": "package:kotlin/com/example"
     },
     {
       "id": "package:kotlin/shapes",
       "kind": "package",
-      "name": "package:kotlin/shapes",
-      "file": "src/shapes.kt",
-      "language": "kotlin"
+      "name": "package:kotlin/shapes"
     },
     {
       "id": "property:src/Complex.kt::Circle.r",
@@ -2400,7 +2396,7 @@ expression: document
       "uses_type": 10
     },
     "byLanguage": {
-      "kotlin": 57
+      "kotlin": 55
     },
     "byStatus": {
       "resolved_external": 1,

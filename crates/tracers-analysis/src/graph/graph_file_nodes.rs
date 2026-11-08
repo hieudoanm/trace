@@ -24,11 +24,11 @@ pub(crate) fn add_file_nodes_and_edges(
     .with_language(state.language);
     graph.add_node(file_node)?;
 
-    // Package node.
+    // Package node. A package spans every file in its directory, so the node
+    // must not carry per-file metadata (`file`, `language`) — otherwise the
+    // second file in a package would conflict with the first.
     if let Some(package) = &state.package {
-        let package_node = Node::new(package.clone(), NodeKind::Package, package.clone())
-            .with_file(path.to_string())
-            .with_language(state.language);
+        let package_node = Node::new(package.clone(), NodeKind::Package, package.clone());
         graph.add_node(package_node)?;
 
         graph.add_edge(Edge::new(

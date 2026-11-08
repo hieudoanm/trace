@@ -567,30 +567,22 @@ expression: document
     {
       "id": "package:pkg/service",
       "kind": "package",
-      "name": "package:pkg/service",
-      "file": "pkg/service/service.go",
-      "language": "go"
+      "name": "package:pkg/service"
     },
     {
       "id": "package:src",
       "kind": "package",
-      "name": "package:src",
-      "file": "src/main.go",
-      "language": "go"
+      "name": "package:src"
     },
     {
       "id": "package:src/complex",
       "kind": "package",
-      "name": "package:src/complex",
-      "file": "src/complex/complex.go",
-      "language": "go"
+      "name": "package:src/complex"
     },
     {
       "id": "package:src/geometry",
       "kind": "package",
-      "name": "package:src/geometry",
-      "file": "src/geometry/geometry.go",
-      "language": "go"
+      "name": "package:src/geometry"
     },
     {
       "id": "property:pkg/service/service.go::MemoryRepository.store",
@@ -2536,7 +2528,7 @@ expression: document
       "uses_type": 13
     },
     "byLanguage": {
-      "go": 61
+      "go": 57
     },
     "byStatus": {
       "resolved_external": 3,

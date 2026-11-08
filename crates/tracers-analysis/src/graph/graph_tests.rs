@@ -117,3 +117,26 @@ fn unresolved_nodes_are_scoped_by_language() {
     assert!(graph.node("unresolved:typescript:missing").is_some());
     assert!(graph.node("unresolved:python:missing").is_some());
 }
+
+#[test]
+fn multi_file_go_package_shares_one_package_node() {
+    let dir = tempdir().unwrap();
+    let parsed = vec![
+        parse("pkg/a.go", Language::Go, "package pkg\n\nfunc Foo() {}\n"),
+        parse("pkg/b.go", Language::Go, "package pkg\n\nfunc Bar() {}\n"),
+    ];
+    let mut index = RepositoryIndex::build(dir.path(), parsed).unwrap();
+    let import_pass = resolve_imports(&mut index);
+    let builder = GraphBuilder::new();
+    // Previously failed with ConflictingNode: the package node carried
+    // per-file metadata, so the second file in a package collided.
+    let result = builder.build_from_index(&index, &import_pass, &[]).unwrap();
+    let package_nodes: Vec<_> = result
+        .graph
+        .nodes()
+        .iter()
+        .filter(|n| n.kind == NodeKind::Package)
+        .collect();
+    assert_eq!(package_nodes.len(), 1);
+    assert!(package_nodes[0].file.is_none());
+}
