@@ -4,3 +4,4 @@
 .tracers/
 *.dot
 .DS_Store
+.trace-cache/

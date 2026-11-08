@@ -22,14 +22,17 @@ pub(crate) fn build_graph_for_path(
     let (config, _config_source) =
         TracersConfig::load(path, config).context("failed to load configuration")?;
 
-    let mut options = DiscoveryOptions::default();
+    // Config patterns are defaults; CLI flags extend them. For languages the
+    // CLI flag wins outright so `--language` always narrows the scan.
+    let mut includes = config.analysis.include.clone();
     if let Some(include) = include {
-        options.includes = vec![include.to_string()];
+        includes.push(include.to_string());
     }
+    let mut excludes = config.analysis.exclude.clone();
     if let Some(exclude) = exclude {
-        options.excludes = vec![exclude.to_string()];
+        excludes.push(exclude.to_string());
     }
-    if let Some(language) = language {
+    let languages = if let Some(language) = language {
         let mut languages = Vec::new();
         for name in language.split(',') {
             let name = name.trim();
@@ -42,19 +45,27 @@ pub(crate) fn build_graph_for_path(
                 languages.push(lang);
             }
         }
-        options.languages = languages;
-    }
-    options.max_file_size = config.analysis.max_file_size;
-    options.follow_symlinks = config.analysis.follow_symlinks;
-    options.include_generated = config.analysis.include_generated;
+        languages
+    } else {
+        config.languages()
+    };
+    let options = DiscoveryOptions {
+        includes,
+        excludes,
+        languages,
+        max_file_size: config.analysis.max_file_size,
+        follow_symlinks: config.analysis.follow_symlinks,
+        include_generated: config.analysis.include_generated,
+    };
 
     let cache = SyntaxCache::from_config(path, &config, no_cache);
-    let parallel = jobs.unwrap_or(0) != 1;
+    // CLI --jobs wins over analysis.jobs; absent means the default pool.
+    let jobs = jobs.or(config.analysis.jobs);
 
     let builder = GraphBuilder {
         include_external: true,
         cache: if cache.enabled() { Some(cache) } else { None },
-        parallel,
+        jobs,
     };
 
     let result = builder
@@ -62,6 +73,22 @@ pub(crate) fn build_graph_for_path(
         .context("failed to build graph")?;
 
     Ok((result, config))
+}
+
+/// Load a graph from an exported JSON file, or build it from source.
+/// Returns the graph and its diagnostics (empty frameworks are not
+/// reconstructible from the document, so callers must not rely on them).
+pub(crate) fn load_or_build_graph(
+    path: &Path,
+    graph_file: Option<&Path>,
+) -> Result<(tracers_core::Graph, Vec<tracers_core::Diagnostic>)> {
+    if let Some(file) = graph_file {
+        let document = tracers_export::load_document(file)?;
+        let graph = tracers_export::graph_from_document(&document)?;
+        return Ok((graph, document.diagnostics));
+    }
+    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
+    Ok((result.graph, result.diagnostics))
 }
 
 /// Whether the syntax cache will actually be used for this run.
@@ -301,6 +328,8 @@ pub(crate) fn cmd_scan(
             .with_context(|| format!("failed to write {:?}", dot_path))?;
         std::fs::write(&html_path, html_content)
             .with_context(|| format!("failed to write {:?}", html_path))?;
+
+        println!("Wrote graph export to {}", tracers_dir.display());
     }
 
     Ok(())

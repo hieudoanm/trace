@@ -87,43 +87,85 @@ fn run() -> Result<()> {
             path,
             max_depth,
             max_results,
-        } => crate::cli::queries::cmd_callers(&symbol, &path, max_depth, max_results),
+            graph,
+        } => crate::cli::queries::cmd_callers(
+            &symbol,
+            &path,
+            max_depth,
+            max_results,
+            graph.as_deref(),
+        ),
         Commands::Callees {
             symbol,
             path,
             max_depth,
             max_results,
-        } => crate::cli::queries::cmd_callees(&symbol, &path, max_depth, max_results),
+            graph,
+        } => crate::cli::queries::cmd_callees(
+            &symbol,
+            &path,
+            max_depth,
+            max_results,
+            graph.as_deref(),
+        ),
         Commands::Refs {
             symbol,
             path,
             max_depth,
             max_results,
-        } => crate::cli::queries::cmd_refs(&symbol, &path, max_depth, max_results),
+            graph,
+        } => {
+            crate::cli::queries::cmd_refs(&symbol, &path, max_depth, max_results, graph.as_deref())
+        }
         Commands::Deps {
             target,
             path,
             transitive,
             max_depth,
-        } => crate::cli::queries::cmd_deps(&target, &path, transitive, max_depth),
+            max_results,
+            graph,
+        } => crate::cli::queries::cmd_deps(
+            &target,
+            &path,
+            transitive,
+            max_depth,
+            max_results,
+            graph.as_deref(),
+        ),
         Commands::Impact {
             target,
             path,
             max_depth,
             max_results,
-        } => crate::cli::queries::cmd_impact(&target, &path, max_depth, max_results),
+            graph,
+        } => crate::cli::queries::cmd_impact(
+            &target,
+            &path,
+            max_depth,
+            max_results,
+            graph.as_deref(),
+        ),
         Commands::Path {
             source,
             target,
             path,
             max_depth,
-        } => crate::cli::queries::cmd_path(&source, &target, &path, max_depth),
-        Commands::Roots { path, max_results } => crate::cli::queries::cmd_roots(&path, max_results),
-        Commands::Cycles { path } => crate::cli::validate::cmd_cycles(&path),
-        Commands::Stats { path } => crate::cli::validate::cmd_stats(&path),
+            graph,
+        } => crate::cli::queries::cmd_path(&source, &target, &path, max_depth, graph.as_deref()),
+        Commands::Roots {
+            path,
+            max_results,
+            graph,
+        } => crate::cli::queries::cmd_roots(&path, max_results, graph.as_deref()),
+        Commands::Cycles { path, graph } => {
+            crate::cli::validate::cmd_cycles(&path, graph.as_deref())
+        }
+        Commands::Stats { path, graph } => crate::cli::validate::cmd_stats(&path, graph.as_deref()),
         Commands::Languages => crate::cli::validate::cmd_languages(),
         Commands::Frameworks { path } => crate::cli::validate::cmd_frameworks(&path),
         Commands::Check { path } => crate::cli::validate::cmd_check(&path),
-        Commands::Validate { path } => crate::cli::validate::cmd_validate(&path),
+        Commands::Validate { path, graph } => {
+            crate::cli::validate::cmd_validate(&path, graph.as_deref())
+        }
     }
 }

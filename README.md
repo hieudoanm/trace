@@ -174,6 +174,7 @@ Display callers of a symbol.
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers callees <SYMBOL> [PATH]`
 
@@ -183,6 +184,7 @@ Display callees of a symbol.
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers refs <SYMBOL> [PATH]`
 
@@ -192,6 +194,7 @@ List references to a symbol.
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers deps <TARGET> [PATH]`
 
@@ -201,6 +204,8 @@ Display direct or transitive dependencies of a target.
 
 - `--transitive`: Follow transitive dependencies
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
+- `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers impact <TARGET> [PATH]`
 
@@ -210,6 +215,7 @@ Display static impact analysis for a target.
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers path <SOURCE> <TARGET> [PATH]`
 
@@ -218,6 +224,7 @@ Find a path between two symbols or nodes.
 **Options:**
 
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers roots [PATH]`
 
@@ -226,14 +233,23 @@ List callable symbols with no incoming `calls` edges (entry-point candidates). T
 **Options:**
 
 - `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers cycles [PATH]`
 
 Detect dependency cycles.
 
+**Options:**
+
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
+
 #### `tracers stats [PATH]`
 
-Report graph statistics.
+Report graph statistics, including resolution-status and framework breakdowns.
+
+**Options:**
+
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers languages`
 
@@ -246,6 +262,10 @@ Validate configuration, discovery, and parser availability.
 #### `tracers validate [PATH]`
 
 Validate graph integrity: every edge must reference an existing node. Fails if any dangling edge targets are found.
+
+**Options:**
+
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 ## Architecture
 
@@ -311,6 +331,16 @@ include_generated = false
 # Enabled languages (default: all)
 languages = ["typescript", "python", "go", "rust", "kotlin", "swift"]
 
+# Glob patterns limiting which files are discovered (default: none)
+include = []
+exclude = []
+
+# Parallel parse jobs (default: number of CPUs; 1 forces sequential)
+jobs = 4
+
+# Semantic analysis mode (default: "off"; "auto" falls back to syntax analysis)
+semantic = "off"
+
 [cache]
 # Enable caching (default: true)
 enabled = true
@@ -318,12 +348,12 @@ enabled = true
 # Cache directory (default: ".tracers-cache")
 directory = ".tracers-cache"
 
+# Evict cache entries older than this many days (default: 30; 0 disables pruning)
+max_age_days = 30
+
 [output]
 # Default output format (default: "json")
 format = "json"
-
-# Semantic analysis mode (default: "off")
-semantic_mode = "off"
 ```
 
 ### Configuration Priority

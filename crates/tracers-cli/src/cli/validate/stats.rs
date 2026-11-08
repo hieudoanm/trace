@@ -2,12 +2,11 @@ use std::path::Path;
 
 use anyhow::Result;
 
-use crate::cli::scan::build_graph_for_path;
+use crate::cli::scan::load_or_build_graph;
 
-pub(crate) fn cmd_stats(path: &Path) -> Result<()> {
-    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
-    let graph = &result.graph;
-    let stats = graph.stats(&result.diagnostics);
+pub(crate) fn cmd_stats(path: &Path, graph_file: Option<&Path>) -> Result<()> {
+    let (graph, diagnostics) = load_or_build_graph(path, graph_file)?;
+    let stats = graph.stats(&diagnostics);
 
     println!("Graph statistics:");
     println!("  files:       {}", stats.files);
@@ -34,6 +33,18 @@ pub(crate) fn cmd_stats(path: &Path) -> Result<()> {
         println!("\nBy edge kind:");
         for (kind, count) in &stats.by_edge_kind {
             println!("  {kind}: {count}");
+        }
+    }
+    if !stats.by_status.is_empty() {
+        println!("\nResolution status:");
+        for (status, count) in &stats.by_status {
+            println!("  {status}: {count}");
+        }
+    }
+    if !stats.by_framework.is_empty() {
+        println!("\nBy framework:");
+        for (framework, count) in &stats.by_framework {
+            println!("  {framework}: {count}");
         }
     }
     Ok(())

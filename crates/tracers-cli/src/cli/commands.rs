@@ -87,6 +87,10 @@ pub enum Commands {
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]
         max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Display callees of a symbol.
     Callees {
@@ -104,6 +108,10 @@ pub enum Commands {
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]
         max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// List references to a symbol.
     Refs {
@@ -121,6 +129,10 @@ pub enum Commands {
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]
         max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Display dependencies of a target.
     Deps {
@@ -138,6 +150,14 @@ pub enum Commands {
         /// Maximum traversal depth.
         #[arg(long, default_value = "32")]
         max_depth: usize,
+
+        /// Maximum number of results.
+        #[arg(long, default_value = "1000")]
+        max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Display impact analysis for a target.
     Impact {
@@ -155,6 +175,10 @@ pub enum Commands {
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]
         max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Find a path between two symbols.
     Path {
@@ -171,6 +195,10 @@ pub enum Commands {
         /// Maximum traversal depth.
         #[arg(long, default_value = "32")]
         max_depth: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// List callable symbols with no incoming call edges.
     Roots {
@@ -181,18 +209,30 @@ pub enum Commands {
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]
         max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Detect dependency cycles.
     Cycles {
         /// Repository path to scan (defaults to current directory).
         #[arg(default_value = ".")]
         path: PathBuf,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Report graph statistics.
     Stats {
         /// Repository path to scan (defaults to current directory).
         #[arg(default_value = ".")]
         path: PathBuf,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// List supported languages.
     Languages,
@@ -213,5 +253,9 @@ pub enum Commands {
         /// Repository path to scan (defaults to current directory).
         #[arg(default_value = ".")]
         path: PathBuf,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
 }

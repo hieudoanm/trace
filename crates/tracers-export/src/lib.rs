@@ -7,6 +7,7 @@
 
 pub mod dot;
 pub mod export;
+pub mod import;
 pub mod serialize;
 pub mod types;
 
@@ -15,5 +16,6 @@ mod tests;
 
 pub use dot::to_dot;
 pub use export::{export_graph, SCHEMA_VERSION, TRACERS_VERSION};
+pub use import::{graph_from_document, load_document, load_graph, ImportError};
 pub use serialize::{to_json_string, to_json_value, write_json};
 pub use types::{AnalysisMetadata, FrameworkInfo, GraphDocument, LanguageInfo, RepositoryMetadata};

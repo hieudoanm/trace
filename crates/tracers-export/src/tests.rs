@@ -171,3 +171,66 @@ fn dot_export_produces_valid_format() {
     assert!(dot.contains("file:src/a.ts"));
     assert!(dot.contains("function:src/a.ts::foo"));
 }
+
+#[test]
+fn document_round_trips_through_graph() {
+    let graph = test_graph();
+    let document = export_graph(
+        &graph,
+        "test-repo",
+        "/repo",
+        &[],
+        None,
+        &[],
+        &[],
+        false,
+        "off",
+        &[],
+    );
+    let rebuilt = crate::import::graph_from_document(&document).unwrap();
+    assert_eq!(rebuilt.nodes().len(), graph.nodes().len());
+    assert_eq!(rebuilt.edges().len(), graph.edges().len());
+    // The rebuilt graph must still answer queries.
+    let query = tracers_core::query::Query::new(&rebuilt);
+    assert!(query.node("function:src/a.ts::foo").is_some());
+}
+
+#[test]
+fn load_graph_rejects_missing_and_wrong_schema() {
+    let dir = tempfile::tempdir().unwrap();
+    let missing = dir.path().join("nope.json");
+    assert!(matches!(
+        crate::import::load_graph(&missing),
+        Err(crate::import::ImportError::Io { .. })
+    ));
+
+    let bad = dir.path().join("bad.json");
+    std::fs::write(&bad, r#"{"schemaVersion":"0.0","nodes":[],"edges":[]}"#).unwrap();
+    assert!(matches!(
+        crate::import::load_graph(&bad),
+        Err(crate::import::ImportError::SchemaVersion { .. })
+            | Err(crate::import::ImportError::Json { .. })
+    ));
+}
+
+#[test]
+fn load_graph_round_trip_via_file() {
+    let graph = test_graph();
+    let document = export_graph(
+        &graph,
+        "test-repo",
+        "/repo",
+        &[],
+        None,
+        &[],
+        &[],
+        false,
+        "off",
+        &[],
+    );
+    let dir = tempfile::tempdir().unwrap();
+    let file = dir.path().join("graph.json");
+    std::fs::write(&file, to_json_string(&document)).unwrap();
+    let loaded = crate::import::load_graph(&file).unwrap();
+    assert_eq!(loaded.nodes().len(), graph.nodes().len());
+}

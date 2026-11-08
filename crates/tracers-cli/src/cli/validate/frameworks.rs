@@ -2,12 +2,22 @@ use std::path::Path;
 
 use anyhow::{anyhow, Result};
 
+use tracers_analysis::config::TracersConfig;
 use tracers_analysis::framework::{FrameworkDetector, ManifestContents};
 use tracers_parser::discovery::{discover, DiscoveryOptions};
 use tracers_parser::parser::{read_source, SyntaxParser};
 
 pub(crate) fn cmd_frameworks(path: &Path) -> Result<()> {
-    let options = DiscoveryOptions::default();
+    let (config, _source) = TracersConfig::load(path, None)
+        .map_err(|e| anyhow!("failed to load configuration: {e}"))?;
+    let options = DiscoveryOptions {
+        includes: config.analysis.include.clone(),
+        excludes: config.analysis.exclude.clone(),
+        languages: config.languages(),
+        max_file_size: config.analysis.max_file_size,
+        follow_symlinks: config.analysis.follow_symlinks,
+        include_generated: config.analysis.include_generated,
+    };
     let report = discover(path, &options).map_err(anyhow::Error::msg)?;
 
     let mut parser = SyntaxParser::new().map_err(|e| anyhow!("parser error: {e}"))?;

@@ -2,12 +2,11 @@ use std::path::Path;
 
 use anyhow::Result;
 
-use crate::cli::scan::build_graph_for_path;
+use crate::cli::scan::load_or_build_graph;
 
-pub(crate) fn cmd_validate(path: &Path) -> Result<()> {
-    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
-
-    let graph = &result.graph;
+pub(crate) fn cmd_validate(path: &Path, graph_file: Option<&Path>) -> Result<()> {
+    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
+    let graph = &graph;
     let mut dangling = Vec::new();
 
     for edge in graph.edges() {

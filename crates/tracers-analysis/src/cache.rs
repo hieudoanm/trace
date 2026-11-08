@@ -31,9 +31,40 @@ pub struct SyntaxCache {
 
 impl SyntaxCache {
     pub fn from_config(root: &Path, config: &TracersConfig, no_cache: bool) -> Self {
-        Self {
+        let cache = Self {
             directory: config.cache_directory(root),
             enabled: config.cache.enabled && !no_cache,
+        };
+        if cache.enabled && config.cache.max_age_days > 0 {
+            cache.prune(std::time::Duration::from_secs(
+                config.cache.max_age_days * 24 * 60 * 60,
+            ));
+        }
+        cache
+    }
+
+    /// Evict cache entries older than `max_age`. Best-effort: failures are
+    /// ignored because stale entries are already rejected by key mismatch.
+    fn prune(&self, max_age: std::time::Duration) {
+        let syntax_dir = self.directory.join("syntax");
+        let Ok(shards) = std::fs::read_dir(&syntax_dir) else {
+            return;
+        };
+        let cutoff = std::time::SystemTime::now() - max_age;
+        for shard in shards.flatten() {
+            let Ok(entries) = std::fs::read_dir(shard.path()) else {
+                continue;
+            };
+            for entry in entries.flatten() {
+                let path = entry.path();
+                let expired = entry
+                    .metadata()
+                    .and_then(|m| m.modified())
+                    .is_ok_and(|mtime| mtime < cutoff);
+                if expired {
+                    let _ = std::fs::remove_file(&path);
+                }
+            }
         }
     }
 
@@ -171,6 +202,32 @@ mod tests {
         assert!(cache
             .load("src/a.ts", Language::TypeScript, "abc")
             .is_none());
+    }
+
+    #[test]
+    fn prune_evicts_only_expired_entries() {
+        let dir = tempfile::tempdir().unwrap();
+        let cache = SyntaxCache::new(dir.path().to_path_buf(), true);
+        let shard = dir.path().join("syntax").join("ab");
+        std::fs::create_dir_all(&shard).unwrap();
+
+        let old = shard.join("old.json");
+        std::fs::write(&old, b"{}").unwrap();
+        let fresh = shard.join("fresh.json");
+        std::fs::write(&fresh, b"{}").unwrap();
+
+        let past = std::time::SystemTime::now() - std::time::Duration::from_secs(60 * 60 * 24 * 60);
+        std::fs::File::options()
+            .write(true)
+            .open(&old)
+            .unwrap()
+            .set_modified(past)
+            .unwrap();
+
+        cache.prune(std::time::Duration::from_secs(60 * 60 * 24 * 30));
+
+        assert!(!old.exists());
+        assert!(fresh.exists());
     }
 
     #[test]

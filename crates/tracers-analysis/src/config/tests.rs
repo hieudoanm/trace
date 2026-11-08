@@ -41,3 +41,27 @@ fn loads_optional_file() {
     assert_eq!(source.as_deref(), Some(CONFIG_FILE_NAME));
     assert_eq!(config.languages(), vec![Language::Rust]);
 }
+
+#[test]
+fn loads_discovery_jobs_and_cache_pruning_options() {
+    let dir = tempfile::tempdir().unwrap();
+    std::fs::write(
+        dir.path().join(CONFIG_FILE_NAME),
+        r#"
+[analysis]
+include = ["src/**"]
+exclude = ["src/gen/**"]
+jobs = 2
+
+[cache]
+max_age_days = 7
+"#,
+    )
+    .unwrap();
+    let (config, _) = TracersConfig::load(dir.path(), None).unwrap();
+    config.validate().unwrap();
+    assert_eq!(config.analysis.include, vec!["src/**".to_string()]);
+    assert_eq!(config.analysis.exclude, vec!["src/gen/**".to_string()]);
+    assert_eq!(config.analysis.jobs, Some(2));
+    assert_eq!(config.cache.max_age_days, 7);
+}

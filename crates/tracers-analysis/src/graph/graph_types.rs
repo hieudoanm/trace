@@ -21,8 +21,9 @@ pub struct GraphBuilder {
     pub include_external: bool,
     /// Optional syntax cache for incremental parsing.
     pub cache: Option<SyntaxCache>,
-    /// Whether to use parallel parsing (default: true).
-    pub parallel: bool,
+    /// Parallel parsing worker count. `None` uses the rayon global pool,
+    /// `Some(1)` forces sequential parsing, `Some(n)` uses an n-thread pool.
+    pub jobs: Option<usize>,
 }
 
 /// Target of a call resolution.

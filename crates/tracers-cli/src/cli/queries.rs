@@ -6,11 +6,11 @@ use anyhow::{anyhow, Result};
 use tracers_core::query::resolve_unique;
 use tracers_core::{file_id, module_id, package_id, EdgeKind, Graph, Node, Query, QueryOptions};
 
-use crate::cli::scan::build_graph_for_path;
+use crate::cli::scan::load_or_build_graph;
 
-fn build_graph(path: &Path) -> Result<Graph> {
-    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
-    Ok(result.graph)
+fn build_graph(path: &Path, graph_file: Option<&Path>) -> Result<Graph> {
+    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
+    Ok(graph)
 }
 
 /// Resolve a user-supplied selector to a node.
@@ -85,8 +85,9 @@ pub(crate) fn cmd_callers(
     path: &Path,
     max_depth: usize,
     max_results: usize,
+    graph_file: Option<&Path>,
 ) -> Result<()> {
-    let graph = build_graph(path)?;
+    let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
     let options = node_options(max_depth, max_results);
@@ -100,8 +101,9 @@ pub(crate) fn cmd_callees(
     path: &Path,
     max_depth: usize,
     max_results: usize,
+    graph_file: Option<&Path>,
 ) -> Result<()> {
-    let graph = build_graph(path)?;
+    let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
     let options = node_options(max_depth, max_results);
@@ -115,8 +117,9 @@ pub(crate) fn cmd_refs(
     path: &Path,
     max_depth: usize,
     max_results: usize,
+    graph_file: Option<&Path>,
 ) -> Result<()> {
-    let graph = build_graph(path)?;
+    let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
     // A call site is also a reference, so `refs` covers calls, references
@@ -136,12 +139,14 @@ pub(crate) fn cmd_deps(
     path: &Path,
     transitive: bool,
     max_depth: usize,
+    max_results: usize,
+    graph_file: Option<&Path>,
 ) -> Result<()> {
-    let graph = build_graph(path)?;
+    let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
     // Without --transitive only direct (depth-1) dependencies are shown.
-    let options = node_options(if transitive { max_depth } else { 1 }, 1000);
+    let options = node_options(if transitive { max_depth } else { 1 }, max_results);
     let deps = query.transitive_dependencies(&node.id, &options);
     println!(
         "Dependencies of `{target}`{}:",
@@ -168,7 +173,7 @@ pub(crate) fn cmd_deps(
             println!("    {}", node.id);
         }
         if deps.len() >= options.max_results {
-            println!("  … result limit reached; refine with --max-depth");
+            println!("  … result limit reached; refine with --max-results or --max-depth");
         }
     }
     Ok(())
@@ -179,8 +184,9 @@ pub(crate) fn cmd_impact(
     path: &Path,
     max_depth: usize,
     max_results: usize,
+    graph_file: Option<&Path>,
 ) -> Result<()> {
-    let graph = build_graph(path)?;
+    let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
     let options = node_options(max_depth, max_results);
@@ -224,8 +230,14 @@ pub(crate) fn cmd_impact(
     Ok(())
 }
 
-pub(crate) fn cmd_path(source: &str, target: &str, path: &Path, max_depth: usize) -> Result<()> {
-    let graph = build_graph(path)?;
+pub(crate) fn cmd_path(
+    source: &str,
+    target: &str,
+    path: &Path,
+    max_depth: usize,
+    graph_file: Option<&Path>,
+) -> Result<()> {
+    let graph = build_graph(path, graph_file)?;
     let source_node = resolve_target(&graph, source)?;
     let target_node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
@@ -257,8 +269,8 @@ pub(crate) fn cmd_path(source: &str, target: &str, path: &Path, max_depth: usize
     Ok(())
 }
 
-pub(crate) fn cmd_roots(path: &Path, max_results: usize) -> Result<()> {
-    let graph = build_graph(path)?;
+pub(crate) fn cmd_roots(path: &Path, max_results: usize, graph_file: Option<&Path>) -> Result<()> {
+    let graph = build_graph(path, graph_file)?;
     let query = Query::new(&graph);
     let roots = query.no_incoming_calls();
 

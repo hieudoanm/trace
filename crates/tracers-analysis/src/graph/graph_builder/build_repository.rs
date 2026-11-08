@@ -27,7 +27,7 @@ pub(crate) fn build_repository_with_options(
 
     let files: Vec<_> = report.files.to_vec();
 
-    let parsed_files = parse_files(&files, builder.parallel, cache)?;
+    let parsed_files = parse_files(&files, builder.jobs, cache)?;
 
     let mut diagnostics = Vec::new();
     let mut parsed_files_ok = Vec::new();

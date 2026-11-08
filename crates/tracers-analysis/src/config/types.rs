@@ -66,6 +66,9 @@ pub struct CacheConfig {
     pub enabled: bool,
     /// Relative paths are resolved against the repository root.
     pub directory: String,
+    /// Evict syntax-cache entries older than this many days on each scan.
+    /// `0` disables pruning.
+    pub max_age_days: u64,
 }
 
 impl Default for CacheConfig {
@@ -73,6 +76,7 @@ impl Default for CacheConfig {
         Self {
             enabled: true,
             directory: super::DEFAULT_CACHE_DIR.to_string(),
+            max_age_days: 30,
         }
     }
 }

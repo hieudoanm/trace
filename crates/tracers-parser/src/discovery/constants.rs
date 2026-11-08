@@ -3,6 +3,7 @@ pub const DEFAULT_EXCLUDED_DIRS: &[&str] = &[
     ".hg",
     ".svn",
     ".tracers-cache",
+    ".tracers",
     ".idea",
     ".vscode",
     ".gradle",

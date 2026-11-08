@@ -3,11 +3,11 @@ use std::path::Path;
 use anyhow::Result;
 use tracers_core::Query;
 
-use crate::cli::scan::build_graph_for_path;
+use crate::cli::scan::load_or_build_graph;
 
-pub(crate) fn cmd_cycles(path: &Path) -> Result<()> {
-    let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
-    let graph = &result.graph;
+pub(crate) fn cmd_cycles(path: &Path, graph_file: Option<&Path>) -> Result<()> {
+    let (graph, _diagnostics) = load_or_build_graph(path, graph_file)?;
+    let graph = &graph;
     let query = Query::new(graph);
     let cycles = query.cycles(&[]);
 
@@ -19,6 +19,7 @@ pub(crate) fn cmd_cycles(path: &Path) -> Result<()> {
             println!("  cycle {}: {} node(s)", idx + 1, component.len());
             for node in component {
                 println!("    - {} [{}]", node.name, node.kind.as_str());
+                println!("      {}", node.id);
             }
         }
     }

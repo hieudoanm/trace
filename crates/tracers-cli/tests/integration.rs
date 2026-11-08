@@ -323,3 +323,88 @@ fn graph_rejects_unknown_format() {
     let stderr = String::from_utf8_lossy(&output.stderr);
     assert!(stderr.contains("unsupported graph format"));
 }
+
+#[test]
+fn scan_reports_tracers_dir_write() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(
+        temp_repo.path().join("main.ts"),
+        "export function add(a: number, b: number) { return a + b; }",
+    )
+    .unwrap();
+
+    let output = run_tracers(&["scan", temp_repo.path().to_str().unwrap()]);
+    assert!(output.contains("Wrote graph export to"));
+    assert!(output.contains(".tracers"));
+}
+
+#[test]
+fn query_commands_accept_exported_graph_file() {
+    let path = fixtures_dir().join("typescript");
+    let temp_dir = tempfile::tempdir().unwrap();
+    let graph_file = temp_dir.path().join("graph.json");
+
+    // Produce an export once, then answer queries from it without rescanning.
+    run_tracers(&[
+        "graph",
+        path.to_str().unwrap(),
+        "-o",
+        graph_file.to_str().unwrap(),
+    ]);
+    assert!(graph_file.exists());
+
+    let output = run_tracers(&[
+        "callers",
+        "twice",
+        path.to_str().unwrap(),
+        "--graph",
+        graph_file.to_str().unwrap(),
+    ]);
+    assert!(output.contains("Callers of `twice`:"));
+    assert!(output.contains("run"));
+
+    let stats = run_tracers(&[
+        "stats",
+        path.to_str().unwrap(),
+        "--graph",
+        graph_file.to_str().unwrap(),
+    ]);
+    assert!(stats.contains("Graph statistics:"));
+}
+
+#[test]
+fn query_graph_file_rejects_bad_schema() {
+    let dir = tempfile::tempdir().unwrap();
+    let bad = dir.path().join("bad.json");
+    std::fs::write(&bad, "{}").unwrap();
+    let path = fixtures_dir().join("typescript");
+
+    let output = Command::new(tracers_bin())
+        .args([
+            "callers",
+            "twice",
+            path.to_str().unwrap(),
+            "--graph",
+            bad.to_str().unwrap(),
+        ])
+        .output()
+        .expect("Failed to execute tracers");
+
+    assert!(!output.status.success());
+}
+
+#[test]
+fn deps_max_results_bounds_output() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_tracers(&[
+        "deps",
+        "src/service.ts",
+        path.to_str().unwrap(),
+        "--transitive",
+        "--max-results",
+        "1",
+    ]);
+
+    assert!(output.contains("Dependencies of `src/service.ts`"));
+    assert!(output.contains("result limit reached"));
+}

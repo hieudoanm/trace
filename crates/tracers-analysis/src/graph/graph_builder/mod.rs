@@ -29,7 +29,12 @@ impl GraphBuilder {
     }
 
     pub fn with_parallel(mut self, parallel: bool) -> Self {
-        self.parallel = parallel;
+        self.jobs = if parallel { None } else { Some(1) };
+        self
+    }
+
+    pub fn with_jobs(mut self, jobs: Option<usize>) -> Self {
+        self.jobs = jobs;
         self
     }
 

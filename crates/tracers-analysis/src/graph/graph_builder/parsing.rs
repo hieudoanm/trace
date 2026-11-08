@@ -11,27 +11,43 @@ use crate::error::AnalysisError;
 
 pub(crate) fn parse_files(
     files: &[DiscoveredFile],
-    parallel: bool,
+    jobs: Option<usize>,
     cache: Option<&SyntaxCache>,
 ) -> Result<Vec<ParsedFile>, AnalysisError> {
-    if parallel {
-        parse_files_parallel(files, cache)
-    } else {
-        parse_files_sequential(files, cache)
+    match jobs {
+        Some(1) => parse_files_sequential(files, cache),
+        Some(n) => parse_files_parallel(files, cache, n),
+        None => parse_files_parallel(files, cache, 0),
     }
 }
 
 fn parse_files_parallel(
     files: &[DiscoveredFile],
     cache: Option<&SyntaxCache>,
+    jobs: usize,
 ) -> Result<Vec<ParsedFile>, AnalysisError> {
     use rayon::prelude::*;
 
     let cache_ref = cache.cloned();
-    files
-        .par_iter()
-        .map(|file| parse_one_file(file, &cache_ref))
-        .collect()
+    let run = || {
+        files
+            .par_iter()
+            // One parser per worker thread instead of one per file.
+            .map_init(
+                || SyntaxParser::new().map_err(|e| e.to_string()).ok(),
+                |parser, file| parse_one_file(parser.as_mut(), file, &cache_ref),
+            )
+            .collect()
+    };
+    if jobs == 0 {
+        run()
+    } else {
+        let pool = rayon::ThreadPoolBuilder::new()
+            .num_threads(jobs)
+            .build()
+            .map_err(|e| AnalysisError::Parser(format!("failed to build thread pool: {e}")))?;
+        pool.install(run)
+    }
 }
 
 fn parse_files_sequential(
@@ -70,6 +86,7 @@ fn parse_files_sequential(
 }
 
 fn parse_one_file(
+    parser: Option<&mut SyntaxParser>,
     file: &DiscoveredFile,
     cache: &Option<SyntaxCache>,
 ) -> Result<ParsedFile, AnalysisError> {
@@ -82,8 +99,9 @@ fn parse_one_file(
         if let Some(cached) = cache.load(&file.path, file.language, &source_hash) {
             cached
         } else {
-            let mut parser =
-                SyntaxParser::new().map_err(|error| AnalysisError::Parser(error.to_string()))?;
+            let parser = parser.ok_or_else(|| {
+                AnalysisError::Parser("syntax parser unavailable on this worker".to_string())
+            })?;
             let parsed = parser
                 .parse(&file.path, file.language, &source)
                 .map_err(|error| AnalysisError::Parser(error.to_string()))?;
@@ -91,8 +109,9 @@ fn parse_one_file(
             parsed
         }
     } else {
-        let mut parser =
-            SyntaxParser::new().map_err(|error| AnalysisError::Parser(error.to_string()))?;
+        let parser = parser.ok_or_else(|| {
+            AnalysisError::Parser("syntax parser unavailable on this worker".to_string())
+        })?;
         parser
             .parse(&file.path, file.language, &source)
             .map_err(|error| AnalysisError::Parser(error.to_string()))?
