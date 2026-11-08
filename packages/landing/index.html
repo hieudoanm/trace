@@ -42,6 +42,7 @@
   <main id="top">
     <section class="hero">
       <div class="container hero-inner">
+        <div class="hero-content">
         <h1>See your codebase as a graph.</h1>
         <p class="lede">
           tracers parses 20+ languages with Tree-sitter and builds a unified
@@ -58,6 +59,16 @@
           <div><dt>0</dt><dd>cloud calls</dd></div>
           <div><dt>deterministic</dt><dd>reproducible exports</dd></div>
         </dl>
+        </div>
+        <figure class="terminal hero-demo">
+          <figcaption>Scan a repository</figcaption>
+          <pre><code><span class="prompt">$</span> tracers scan .
+<span class="out">=== Tracers scan summary ===</span>
+<span class="out">Files scanned: 4</span>
+<span class="out">Nodes: 59</span>
+<span class="out">Edges: 142</span>
+<span class="out">Wrote graph export to .tracers</span></code></pre>
+        </figure>
       </div>
     </section>
 
