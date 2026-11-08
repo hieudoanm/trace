@@ -17,17 +17,38 @@ pub(crate) fn cmd_check(path: &Path) -> Result<()> {
 
     println!("\nDiscovery:");
     let options = DiscoveryOptions {
+        includes: config.analysis.include.clone(),
+        excludes: config.analysis.exclude.clone(),
         max_file_size: config.analysis.max_file_size,
         follow_symlinks: config.analysis.follow_symlinks,
         include_generated: config.analysis.include_generated,
         languages: config.languages(),
-        ..DiscoveryOptions::default()
     };
     let report = discover(path, &options).map_err(anyhow::Error::msg)?;
     println!("  root:        {}", report.root.display());
     println!("  files:       {}", report.files.len());
     println!("  skipped:     {}", report.skipped.len());
     println!("  unsupported: {}", report.unsupported_files);
+    let skip_counts = report.skip_counts();
+    if !skip_counts.is_empty() {
+        let breakdown = skip_counts
+            .iter()
+            .map(|(reason, count)| format!("{reason}={count}"))
+            .collect::<Vec<_>>()
+            .join(", ");
+        println!("  skip reasons: {breakdown}");
+    }
+
+    let cache_dir = config.cache_directory(path);
+    println!(
+        "\nCache: {} ({})",
+        if config.cache.enabled {
+            "enabled"
+        } else {
+            "disabled"
+        },
+        cache_dir.display()
+    );
 
     let mut languages: Vec<Language> = report.files.iter().map(|file| file.language).collect();
     languages.sort();
@@ -68,6 +89,25 @@ pub(crate) fn cmd_check(path: &Path) -> Result<()> {
                 "not found"
             };
             println!("  {tool}: {status}");
+        }
+    }
+
+    if !config.tools.is_empty() {
+        println!("\nConfigured tools ([tools] in tracers.toml):");
+        for (name, tool_path) in &config.tools {
+            let candidate = Path::new(tool_path);
+            let resolved = if candidate.is_absolute() {
+                candidate.to_path_buf()
+            } else {
+                // Relative paths resolve against the repository root.
+                path.join(candidate)
+            };
+            let status = if is_executable(&resolved) {
+                "found"
+            } else {
+                "not executable"
+            };
+            println!("  {name}: {tool_path} ({status})");
         }
     }
 

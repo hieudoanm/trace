@@ -22,7 +22,13 @@ fn resolve_target(graph: &Graph, selector: &str) -> Result<Node> {
     if let Some(node) = graph.node(selector) {
         return Ok(node.clone());
     }
-    for candidate in [file_id(selector), module_id(selector), package_id(selector)] {
+    // Accept `./src/a.ts` as well as `src/a.ts` for file-like selectors.
+    let normalized = selector.strip_prefix("./").unwrap_or(selector);
+    for candidate in [
+        file_id(normalized),
+        module_id(normalized),
+        package_id(normalized),
+    ] {
         if let Some(node) = graph.node(&candidate) {
             return Ok(node.clone());
         }
@@ -266,6 +272,38 @@ pub(crate) fn cmd_path(
             node.id
         );
     }
+    Ok(())
+}
+
+pub(crate) fn cmd_dependents(
+    target: &str,
+    path: &Path,
+    max_depth: usize,
+    max_results: usize,
+    graph_file: Option<&Path>,
+) -> Result<()> {
+    let graph = build_graph(path, graph_file)?;
+    let node = resolve_target(&graph, target)?;
+    let query = Query::new(&graph);
+    let options = node_options(max_depth, max_results);
+    let dependents = query.reverse_dependencies_refs(&node.id, &options);
+    print_neighbors("Dependents", target, &dependents, max_results);
+    Ok(())
+}
+
+pub(crate) fn cmd_reach(
+    symbol: &str,
+    path: &Path,
+    max_depth: usize,
+    max_results: usize,
+    graph_file: Option<&Path>,
+) -> Result<()> {
+    let graph = build_graph(path, graph_file)?;
+    let node = resolve_target(&graph, symbol)?;
+    let query = Query::new(&graph);
+    let options = node_options(max_depth, max_results);
+    let reachable = query.reachable(&node.id, &options);
+    print_neighbors("Reachable nodes", symbol, &reachable, max_results);
     Ok(())
 }
 

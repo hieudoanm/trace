@@ -408,3 +408,153 @@ fn deps_max_results_bounds_output() {
     assert!(output.contains("Dependencies of `src/service.ts`"));
     assert!(output.contains("result limit reached"));
 }
+
+#[test]
+fn dependents_command_shows_reverse_dependencies() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_tracers(&["dependents", "src/math.ts", path.to_str().unwrap()]);
+
+    assert!(output.contains("Dependents of `src/math.ts`:"));
+    assert!(output.contains("src/service.ts"));
+    assert!(output.contains("via imports"));
+}
+
+#[test]
+fn reach_command_lists_reachable_nodes() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_tracers(&["reach", "run", path.to_str().unwrap(), "--max-results", "5"]);
+
+    assert!(output.contains("Reachable nodes of `run`:"));
+    assert!(output.contains("twice"));
+}
+
+#[test]
+fn diagnostics_command_lists_findings() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_tracers(&["diagnostics", path.to_str().unwrap()]);
+
+    assert!(output.contains("Analysis diagnostics"));
+    assert!(output.contains("unresolved_import"));
+}
+
+#[test]
+fn graph_from_exported_file_applies_filters() {
+    let path = fixtures_dir().join("typescript");
+    let temp_dir = tempfile::tempdir().unwrap();
+    let graph_file = temp_dir.path().join("graph.json");
+
+    run_tracers(&[
+        "graph",
+        path.to_str().unwrap(),
+        "-o",
+        graph_file.to_str().unwrap(),
+    ]);
+
+    let output = run_tracers(&[
+        "graph",
+        path.to_str().unwrap(),
+        "--graph",
+        graph_file.to_str().unwrap(),
+        "--kind",
+        "function",
+    ]);
+    let json: serde_json::Value = serde_json::from_str(&output).expect("Invalid JSON");
+    let nodes = json["nodes"].as_array().expect("nodes array");
+    assert!(!nodes.is_empty());
+    assert!(nodes.iter().all(|n| n["kind"] == "function"));
+}
+
+#[test]
+fn selector_accepts_dot_slash_prefix() {
+    let path = fixtures_dir().join("typescript");
+    let output = run_tracers(&["deps", "./src/math.ts", path.to_str().unwrap()]);
+
+    assert!(output.contains("Dependencies of `./src/math.ts`"));
+}
+
+#[test]
+fn scan_reports_cache_activity() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(
+        temp_repo.path().join("main.ts"),
+        "export function add(a: number, b: number) { return a + b; }",
+    )
+    .unwrap();
+
+    // First scan populates the cache; the second reports hits.
+    run_tracers(&["scan", temp_repo.path().to_str().unwrap()]);
+    let output = run_tracers(&["scan", temp_repo.path().to_str().unwrap()]);
+    assert!(output.contains("Cache:"));
+    assert!(output.contains("hits"));
+}
+
+#[test]
+fn export_records_effective_languages() {
+    let path = fixtures_dir().join("typescript");
+    let temp_dir = tempfile::tempdir().unwrap();
+    let output_file = temp_dir.path().join("out.json");
+
+    run_tracers(&[
+        "scan",
+        path.to_str().unwrap(),
+        "--language",
+        "typescript",
+        "-o",
+        output_file.to_str().unwrap(),
+        "--no-tracers-dir",
+    ]);
+
+    let json: serde_json::Value =
+        serde_json::from_str(&std::fs::read_to_string(&output_file).unwrap()).unwrap();
+    assert_eq!(
+        json["analysis"]["languages"],
+        serde_json::json!(["typescript"])
+    );
+}
+
+#[test]
+fn scan_rejects_zero_jobs() {
+    let path = fixtures_dir().join("typescript");
+    let output = Command::new(tracers_bin())
+        .args(["scan", path.to_str().unwrap(), "--jobs", "0"])
+        .output()
+        .expect("Failed to execute tracers");
+
+    assert!(!output.status.success());
+    let stderr = String::from_utf8_lossy(&output.stderr);
+    assert!(stderr.contains("--jobs must be at least 1"));
+}
+
+#[test]
+fn check_reports_skip_reasons_and_cache() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(
+        temp_repo.path().join("main.ts"),
+        "export function add(a: number, b: number) { return a + b; }",
+    )
+    .unwrap();
+    // A generated-looking file is skipped, producing a skip-reason breakdown.
+    std::fs::write(temp_repo.path().join("app.min.js"), "var x=1;").unwrap();
+
+    let output = run_tracers(&["check", temp_repo.path().to_str().unwrap()]);
+
+    assert!(output.contains("skip reasons:"));
+    assert!(output.contains("generated"));
+    assert!(output.contains("Cache:"));
+}
+
+#[test]
+fn graph_html_embeds_graph_data() {
+    let temp_repo = tempfile::tempdir().unwrap();
+    std::fs::write(
+        temp_repo.path().join("main.ts"),
+        "export function add(a: number, b: number) { return a + b; }",
+    )
+    .unwrap();
+
+    run_tracers(&["scan", temp_repo.path().to_str().unwrap()]);
+
+    let html = std::fs::read_to_string(temp_repo.path().join(".tracers/graph.html")).unwrap();
+    assert!(html.contains("window.__TRACERS_DATA__"));
+    assert!(html.contains("function:main.ts::add") || html.contains("main.ts"));
+}

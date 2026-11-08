@@ -61,6 +61,9 @@ pub(crate) fn build_graph_for_path(
     let cache = SyntaxCache::from_config(path, &config, no_cache);
     // CLI --jobs wins over analysis.jobs; absent means the default pool.
     let jobs = jobs.or(config.analysis.jobs);
+    if jobs == Some(0) {
+        anyhow::bail!("--jobs must be at least 1");
+    }
 
     let builder = GraphBuilder {
         include_external: true,
@@ -89,6 +92,22 @@ pub(crate) fn load_or_build_graph(
     }
     let (result, _config) = build_graph_for_path(path, None, None, None, false, None, None)?;
     Ok((result.graph, result.diagnostics))
+}
+
+/// Embed the graph document into the HTML explorer so `graph.html` works
+/// standalone (e.g. opened directly from disk). `<` is escaped as `<`
+/// inside the JSON string, which is valid JSON and cannot terminate the
+/// surrounding `<script>` element.
+fn graph_html(template: &str, json: &str) -> String {
+    let data = json.replace('<', "\\u003c");
+    let injection = format!("<script>window.__TRACERS_DATA__ = {data};</script>\n");
+    match template.find("</head>") {
+        Some(index) => {
+            let (head, rest) = template.split_at(index);
+            format!("{head}{injection}{rest}")
+        }
+        None => format!("{injection}{template}"),
+    }
 }
 
 /// Whether the syntax cache will actually be used for this run.
@@ -136,6 +155,24 @@ fn repository_root(path: &Path) -> String {
     path.to_string_lossy().replace('\\', "/")
 }
 
+/// Names of the languages enabled for a build, for export metadata.
+/// Falls back to the raw config list when the build did not record them.
+pub(crate) fn enabled_language_names(
+    result_languages: &[tracers_core::Language],
+    config: &TracersConfig,
+) -> Vec<String> {
+    if result_languages.is_empty() {
+        return config.analysis.languages.clone();
+    }
+    let mut names: Vec<String> = result_languages
+        .iter()
+        .map(|language| language.as_str().to_string())
+        .collect();
+    names.sort();
+    names.dedup();
+    names
+}
+
 /// Build the versioned export document shared by `scan` and `graph`.
 #[allow(clippy::too_many_arguments)]
 pub(crate) fn build_document(
@@ -145,6 +182,7 @@ pub(crate) fn build_document(
     config: &TracersConfig,
     path: &Path,
     cache_enabled: bool,
+    enabled_languages: &[String],
 ) -> GraphDocument {
     let languages = supported_languages();
     let framework_infos: Vec<FrameworkInfo> = frameworks.iter().map(framework_info).collect();
@@ -160,7 +198,7 @@ pub(crate) fn build_document(
         &framework_infos,
         cache_enabled,
         config.analysis.semantic.as_str(),
-        &config.analysis.languages,
+        enabled_languages,
     )
 }
 
@@ -267,15 +305,22 @@ pub(crate) fn cmd_scan(
         &config,
         path,
         cache_enabled(&config, no_cache),
+        &enabled_language_names(&result.languages, &config),
     );
 
     let json_content = tracers_export::to_json_string(&document);
     let dot_content = tracers_export::to_dot(&result.graph);
-    let html_content = include_str!("../graph_template.html");
+    let html_content = graph_html(include_str!("../graph_template.html"), &json_content);
 
     // Output summary to stdout if output path is not provided
     if output.is_none() {
         print_summary(&stats, &languages, &framework_infos);
+        if let Some(counts) = &result.cache_counts {
+            println!(
+                "Cache: {} hits, {} misses, {} writes",
+                counts.hits, counts.misses, counts.writes
+            );
+        }
     }
 
     // Output all formats if an output path is provided
@@ -291,7 +336,7 @@ pub(crate) fn cmd_scan(
                 .with_context(|| format!("failed to write {:?}", output_path.join("graph.json")))?;
             std::fs::write(output_path.join("graph.dot"), &dot_content)
                 .with_context(|| format!("failed to write {:?}", output_path.join("graph.dot")))?;
-            std::fs::write(output_path.join("graph.html"), html_content)
+            std::fs::write(output_path.join("graph.html"), html_content.as_bytes())
                 .with_context(|| format!("failed to write {:?}", output_path.join("graph.html")))?;
         } else {
             if let Some(parent) = output_path.parent() {
@@ -307,7 +352,7 @@ pub(crate) fn cmd_scan(
                 .with_context(|| format!("failed to write {:?}", json_path))?;
             std::fs::write(&dot_path, &dot_content)
                 .with_context(|| format!("failed to write {:?}", dot_path))?;
-            std::fs::write(&html_path, html_content)
+            std::fs::write(&html_path, html_content.as_bytes())
                 .with_context(|| format!("failed to write {:?}", html_path))?;
         }
     }
@@ -326,7 +371,7 @@ pub(crate) fn cmd_scan(
             .with_context(|| format!("failed to write {:?}", json_path))?;
         std::fs::write(&dot_path, &dot_content)
             .with_context(|| format!("failed to write {:?}", dot_path))?;
-        std::fs::write(&html_path, html_content)
+        std::fs::write(&html_path, html_content.as_bytes())
             .with_context(|| format!("failed to write {:?}", html_path))?;
 
         println!("Wrote graph export to {}", tracers_dir.display());

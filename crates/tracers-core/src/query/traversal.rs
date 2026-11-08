@@ -48,8 +48,11 @@ impl<'a> Query<'a> {
         )
     }
 
+    /// Direct (depth-1) dependencies only, regardless of `options.max_depth`.
     pub fn direct_dependencies(&self, node_id: &str, options: &QueryOptions) -> Vec<Neighbor> {
-        self.forward_traverse(node_id, options, DEPENDENCY_EDGES)
+        let mut direct = options.clone();
+        direct.max_depth = direct.max_depth.min(1);
+        self.forward_traverse(node_id, &direct, DEPENDENCY_EDGES)
     }
 
     pub fn transitive_dependencies(&self, node_id: &str, options: &QueryOptions) -> Vec<Neighbor> {

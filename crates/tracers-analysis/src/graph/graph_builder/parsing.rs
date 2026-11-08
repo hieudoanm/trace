@@ -97,8 +97,10 @@ fn parse_one_file(
     let source_hash = blake3::hash(source.as_bytes()).to_hex().to_string();
     let parsed = if let Some(cache) = cache {
         if let Some(cached) = cache.load(&file.path, file.language, &source_hash) {
+            tracing::trace!(path = %file.path, "syntax cache hit");
             cached
         } else {
+            tracing::trace!(path = %file.path, "syntax cache miss");
             let parser = parser.ok_or_else(|| {
                 AnalysisError::Parser("syntax parser unavailable on this worker".to_string())
             })?;

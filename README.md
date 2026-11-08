@@ -165,6 +165,7 @@ Load or construct a graph and provide filtered graph output.
 - `-o, --output <PATH>`: Write output to PATH instead of stdout
 - `--language <LANGUAGE>`: Filter by language
 - `--kind <KIND>`: Filter by node kind
+- `--graph <PATH>`: Load the graph from an exported JSON file instead of rescanning, then apply filters and re-emit
 
 #### `tracers callers <SYMBOL> [PATH]`
 
@@ -203,6 +204,26 @@ Display direct or transitive dependencies of a target.
 **Options:**
 
 - `--transitive`: Follow transitive dependencies
+- `--max-depth <N>`: Maximum traversal depth (default: 32)
+- `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
+
+#### `tracers dependents <TARGET> [PATH]`
+
+Display symbols and files that depend on a target (reverse dependency traversal over imports, `depends_on`, `uses_type`, `inherits` and `implements` edges).
+
+**Options:**
+
+- `--max-depth <N>`: Maximum traversal depth (default: 32)
+- `--max-results <N>`: Maximum number of results (default: 1000)
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
+
+#### `tracers reach <SYMBOL> [PATH]`
+
+List nodes reachable from a symbol through calls, references, imports and other dependency edges.
+
+**Options:**
+
 - `--max-depth <N>`: Maximum traversal depth (default: 32)
 - `--max-results <N>`: Maximum number of results (default: 1000)
 - `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
@@ -249,6 +270,15 @@ Report graph statistics, including resolution-status and framework breakdowns.
 
 **Options:**
 
+- `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
+
+#### `tracers diagnostics [PATH]`
+
+List analysis diagnostics collected during the scan: parse errors, unresolved imports, ambiguous symbols, skipped files and similar findings, sorted by severity.
+
+**Options:**
+
+- `--max-results <N>`: Maximum number of results (default: 1000)
 - `--graph <PATH>`: Load the graph from an exported JSON file (e.g. `.tracers/graph.json`) instead of rescanning
 
 #### `tracers languages`

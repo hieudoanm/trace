@@ -75,12 +75,14 @@ fn run() -> Result<()> {
             output,
             language,
             kind,
+            graph,
         } => crate::cli::graph::cmd_graph(
             &path,
             format.as_deref(),
             output.as_deref(),
             language.as_deref(),
             kind.as_deref(),
+            graph.as_deref(),
         ),
         Commands::Callers {
             symbol,
@@ -145,6 +147,33 @@ fn run() -> Result<()> {
             max_results,
             graph.as_deref(),
         ),
+        Commands::Dependents {
+            target,
+            path,
+            max_depth,
+            max_results,
+            graph,
+        } => crate::cli::queries::cmd_dependents(
+            &target,
+            &path,
+            max_depth,
+            max_results,
+            graph.as_deref(),
+        ),
+        Commands::Reach {
+            symbol,
+            path,
+            max_depth,
+            max_results,
+            graph,
+        } => {
+            crate::cli::queries::cmd_reach(&symbol, &path, max_depth, max_results, graph.as_deref())
+        }
+        Commands::Diagnostics {
+            path,
+            max_results,
+            graph,
+        } => crate::cli::validate::cmd_diagnostics(&path, max_results, graph.as_deref()),
         Commands::Path {
             source,
             target,

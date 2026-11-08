@@ -25,9 +25,27 @@ pub(crate) fn build_repository_with_options(
     let report = tracers_parser::discovery::discover(root, options)
         .map_err(crate::error::AnalysisError::Discovery)?;
 
+    tracing::debug!(
+        files = report.files.len(),
+        skipped = report.skipped.len(),
+        unsupported = report.unsupported_files,
+        jobs = ?builder.jobs,
+        "discovery complete"
+    );
+    for skipped in &report.skipped {
+        tracing::debug!(
+            path = %skipped.path,
+            reason = ?skipped.reason,
+            detail = %skipped.detail,
+            "file skipped"
+        );
+    }
+
     let files: Vec<_> = report.files.to_vec();
 
     let parsed_files = parse_files(&files, builder.jobs, cache)?;
+
+    tracing::debug!(parsed = parsed_files.len(), "parsing complete");
 
     let mut diagnostics = Vec::new();
     let mut parsed_files_ok = Vec::new();
@@ -46,6 +64,14 @@ pub(crate) fn build_repository_with_options(
     let import_pass = crate::resolve::resolve_imports(&mut index);
 
     let mut result = build_from_index(builder, &index, &import_pass, &detection.frameworks)?;
+    // Record the effective language set: an empty filter means every
+    // supported language was enabled for this scan.
+    result.languages = if options.languages.is_empty() {
+        tracers_core::Language::ALL.to_vec()
+    } else {
+        options.languages.clone()
+    };
+    result.cache_counts = cache.map(|cache| cache.counts());
     diagnostics.extend(import_pass.diagnostics);
     diagnostics.extend(report.diagnostics.clone());
     diagnostics.sort_by_key(|d| d.sort_key());

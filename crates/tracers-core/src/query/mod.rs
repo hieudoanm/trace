@@ -4,7 +4,6 @@ pub mod constants;
 pub mod convenience;
 pub mod cycles;
 pub mod direction;
-pub mod distances;
 pub mod impact;
 pub mod options;
 pub mod path;

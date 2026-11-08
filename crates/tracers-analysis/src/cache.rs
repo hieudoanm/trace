@@ -11,7 +11,9 @@ use std::path::{Path, PathBuf};
 use tracers_core::Language;
 use tracers_parser::{grammar_version, ParsedFile};
 
-use crate::config::{CacheConfig, TracersConfig};
+#[cfg(test)]
+use crate::config::CacheConfig;
+use crate::config::TracersConfig;
 
 const CACHE_FORMAT_VERSION: &str = "1";
 const TRACERS_VERSION: &str = env!("CARGO_PKG_VERSION");
@@ -23,10 +25,19 @@ pub struct CacheCounts {
     pub writes: usize,
 }
 
+#[derive(Debug, Default)]
+struct CacheStats {
+    hits: std::sync::atomic::AtomicUsize,
+    misses: std::sync::atomic::AtomicUsize,
+    writes: std::sync::atomic::AtomicUsize,
+}
+
 #[derive(Debug, Clone)]
 pub struct SyntaxCache {
     directory: PathBuf,
     enabled: bool,
+    /// Shared across clones so parallel workers accumulate one count.
+    stats: std::sync::Arc<CacheStats>,
 }
 
 impl SyntaxCache {
@@ -34,6 +45,7 @@ impl SyntaxCache {
         let cache = Self {
             directory: config.cache_directory(root),
             enabled: config.cache.enabled && !no_cache,
+            stats: std::sync::Arc::new(CacheStats::default()),
         };
         if cache.enabled && config.cache.max_age_days > 0 {
             cache.prune(std::time::Duration::from_secs(
@@ -69,7 +81,21 @@ impl SyntaxCache {
     }
 
     pub fn new(directory: PathBuf, enabled: bool) -> Self {
-        Self { directory, enabled }
+        Self {
+            directory,
+            enabled,
+            stats: std::sync::Arc::new(CacheStats::default()),
+        }
+    }
+
+    /// Accumulated cache activity across all clones of this cache.
+    pub fn counts(&self) -> CacheCounts {
+        use std::sync::atomic::Ordering;
+        CacheCounts {
+            hits: self.stats.hits.load(Ordering::Relaxed),
+            misses: self.stats.misses.load(Ordering::Relaxed),
+            writes: self.stats.writes.load(Ordering::Relaxed),
+        }
     }
 
     pub fn enabled(&self) -> bool {
@@ -103,6 +129,17 @@ impl SyntaxCache {
         if !self.enabled {
             return None;
         }
+        let loaded = self.lookup(path, language, source_hash);
+        let counter = if loaded.is_some() {
+            &self.stats.hits
+        } else {
+            &self.stats.misses
+        };
+        counter.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
+        loaded
+    }
+
+    fn lookup(&self, path: &str, language: Language, source_hash: &str) -> Option<ParsedFile> {
         let key = self.key(path, language, source_hash);
         let entry = self.entry_path(&key);
         let bytes = std::fs::read(&entry).ok()?;
@@ -138,12 +175,16 @@ impl SyntaxCache {
             let _ = std::fs::remove_file(&temporary);
             return false;
         }
+        self.stats
+            .writes
+            .fetch_add(1, std::sync::atomic::Ordering::Relaxed);
         true
     }
 }
 
 /// Cached vs fresh parsing is tested through this helper in integration tests.
-pub fn cache_key_for(
+#[cfg(test)]
+fn cache_key_for(
     path: &str,
     language: Language,
     source_hash: &str,
@@ -192,6 +233,26 @@ mod tests {
         assert!(cache
             .load("src/a.ts", Language::TypeScript, "def")
             .is_none());
+    }
+
+    #[test]
+    fn counts_track_hits_misses_and_writes() {
+        let dir = tempfile::tempdir().unwrap();
+        let cache = SyntaxCache::new(dir.path().to_path_buf(), true);
+        let parsed = parsed();
+
+        assert!(cache
+            .load("src/a.ts", Language::TypeScript, "abc")
+            .is_none());
+        assert!(cache.store(&parsed));
+        assert!(cache
+            .load("src/a.ts", Language::TypeScript, "abc")
+            .is_some());
+
+        let counts = cache.counts();
+        assert_eq!(counts.hits, 1);
+        assert_eq!(counts.misses, 1);
+        assert_eq!(counts.writes, 1);
     }
 
     #[test]

@@ -12,11 +12,13 @@ pub fn to_dot(graph: &Graph) -> String {
 
     // Add nodes
     for node in graph.nodes() {
-        let label = format!("{}\\n{}", node.name, node.kind.as_str());
+        let label = format!("{}\\n{}", dot_escape(&node.name), node.kind.as_str());
         let color = node_kind_color(&node.kind);
         output.push_str(&format!(
             "  \"{}\" [label=\"{}\", color=\"{}\"];\n",
-            node.id, label, color
+            dot_escape(&node.id),
+            label,
+            color
         ));
     }
 
@@ -27,8 +29,8 @@ pub fn to_dot(graph: &Graph) -> String {
         let style = edge_style(&edge.kind);
         output.push_str(&format!(
             "  \"{}\" -> \"{}\" [label=\"{}\", style=\"{}\"];\n",
-            edge.source,
-            edge.target,
+            dot_escape(&edge.source),
+            dot_escape(&edge.target),
             edge.kind.as_str(),
             style
         ));
@@ -36,6 +38,21 @@ pub fn to_dot(graph: &Graph) -> String {
 
     output.push_str("}\n");
     output
+}
+
+/// Escape a string for use inside a DOT double-quoted string.
+fn dot_escape(text: &str) -> String {
+    let mut escaped = String::with_capacity(text.len());
+    for ch in text.chars() {
+        match ch {
+            '\\' => escaped.push_str("\\\\"),
+            '"' => escaped.push_str("\\\""),
+            '\n' => escaped.push_str("\\n"),
+            '\r' => escaped.push_str("\\r"),
+            _ => escaped.push(ch),
+        }
+    }
+    escaped
 }
 
 /// Get a color for a node kind in DOT output.

@@ -154,6 +154,38 @@ fn dependency_traversal_uses_import_edges() {
 }
 
 #[test]
+fn direct_dependencies_stops_at_depth_one() {
+    let mut graph = crate::graph::Graph::new();
+    for id in ["file:a.ts", "file:b.ts", "file:c.ts"] {
+        graph.add_node(Node::new(id, NodeKind::File, id)).unwrap();
+    }
+    for (source, target) in [("file:a.ts", "file:b.ts"), ("file:b.ts", "file:c.ts")] {
+        graph
+            .add_edge(
+                Edge::new(
+                    source,
+                    target,
+                    EdgeKind::Imports,
+                    ResolutionStatus::ResolvedInternal,
+                    ResolutionOrigin::Lexical,
+                )
+                .at(site()),
+            )
+            .unwrap();
+    }
+    graph.finalize();
+    let query = Query::new(&graph);
+    // Even with a deep max_depth, direct_dependencies returns depth-1 only.
+    let options = QueryOptions::default().with_depth(32);
+    let direct = query.direct_dependencies("file:a.ts", &options);
+    assert_eq!(direct.len(), 1);
+    assert_eq!(direct[0].node.id, "file:b.ts");
+    assert_eq!(direct[0].depth, 1);
+    let transitive = query.transitive_dependencies("file:a.ts", &options);
+    assert_eq!(transitive.len(), 2);
+}
+
+#[test]
 fn unique_resolution_reports_ambiguity() {
     let mut graph = graph();
     graph

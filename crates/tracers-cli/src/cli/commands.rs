@@ -70,6 +70,10 @@ pub enum Commands {
         /// Filter by node kind.
         #[arg(long)]
         kind: Option<String>,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
     },
     /// Display callers of a symbol.
     Callers {
@@ -171,6 +175,62 @@ pub enum Commands {
         /// Maximum traversal depth.
         #[arg(long, default_value = "32")]
         max_depth: usize,
+
+        /// Maximum number of results.
+        #[arg(long, default_value = "1000")]
+        max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
+    },
+    /// Display symbols and files that depend on a target (reverse dependencies).
+    Dependents {
+        /// Target symbol or file.
+        target: String,
+
+        /// Repository path to scan (defaults to current directory).
+        #[arg(default_value = ".")]
+        path: PathBuf,
+
+        /// Maximum traversal depth.
+        #[arg(long, default_value = "32")]
+        max_depth: usize,
+
+        /// Maximum number of results.
+        #[arg(long, default_value = "1000")]
+        max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
+    },
+    /// List nodes reachable from a symbol through calls, references and dependencies.
+    Reach {
+        /// Symbol selector (ID, qualified name, or short name).
+        symbol: String,
+
+        /// Repository path to scan (defaults to current directory).
+        #[arg(default_value = ".")]
+        path: PathBuf,
+
+        /// Maximum traversal depth.
+        #[arg(long, default_value = "32")]
+        max_depth: usize,
+
+        /// Maximum number of results.
+        #[arg(long, default_value = "1000")]
+        max_results: usize,
+
+        /// Load the graph from an exported JSON file instead of rescanning.
+        #[arg(long)]
+        graph: Option<PathBuf>,
+    },
+    /// List analysis diagnostics (parse errors, unresolved imports, skipped files).
+    Diagnostics {
+        /// Repository path to scan (defaults to current directory).
+        #[arg(default_value = ".")]
+        path: PathBuf,
 
         /// Maximum number of results.
         #[arg(long, default_value = "1000")]

@@ -678,11 +678,18 @@
         }
 
         // ── Fetch & Ingest Data ───────────────────────────────────
-        fetch('graph.json')
-            .then(res => {
-                if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
-                return res.json();
-            })
+        // `tracers scan`/`graph` embed the document as window.__TRACERS_DATA__
+        // so the file works standalone (including file://); the fetch below is
+        // a fallback for a bare template opened next to graph.json.
+        const loadData = window.__TRACERS_DATA__
+            ? Promise.resolve(window.__TRACERS_DATA__)
+            : fetch('graph.json')
+                .then(res => {
+                    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+                    return res.json();
+                });
+
+        loadData
             .then(data => {
                 initGraph(data);
                 document.getElementById('loader').classList.add('fade-out');

@@ -2006,7 +2006,6 @@ dependencies = [
  "tracers-core",
  "tracers-export",
  "tracers-parser",
- "tracing",
  "tracing-subscriber",
 ]
 

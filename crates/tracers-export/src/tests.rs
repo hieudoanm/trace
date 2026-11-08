@@ -173,6 +173,22 @@ fn dot_export_produces_valid_format() {
 }
 
 #[test]
+fn dot_export_escapes_special_characters() {
+    use crate::dot::to_dot;
+    let mut graph = tracers_core::graph::Graph::new();
+    graph
+        .add_node(
+            tracers_core::Node::new("file:src/we\"ird.ts", NodeKind::File, "we\"ird\nname.ts")
+                .with_file("src/we\"ird.ts".to_string()),
+        )
+        .unwrap();
+    graph.finalize();
+    let dot = to_dot(&graph);
+    assert!(dot.contains("\\\""), "{dot}");
+    assert!(dot.contains("we\\\"ird\\nname.ts"), "{dot}");
+}
+
+#[test]
 fn document_round_trips_through_graph() {
     let graph = test_graph();
     let document = export_graph(

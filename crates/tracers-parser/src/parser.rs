@@ -140,7 +140,12 @@ pub fn read_source(path: &Path, max_bytes: u64) -> Result<String, ReadError> {
         return Err(ReadError::Binary);
     }
     let content = String::from_utf8(bytes).map_err(|_| ReadError::InvalidUtf8)?;
-    Ok(content.replace("\r\n", "\n"))
+    // Only pay for the normalization pass when CRLF is actually present.
+    Ok(if content.contains("\r\n") {
+        content.replace("\r\n", "\n")
+    } else {
+        content
+    })
 }
 
 #[cfg(test)]

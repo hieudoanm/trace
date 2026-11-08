@@ -139,5 +139,7 @@ pub(crate) fn build_from_index(
         graph,
         diagnostics: Vec::new(),
         frameworks: frameworks.to_vec(),
+        languages: Vec::new(),
+        cache_counts: None,
     })
 }

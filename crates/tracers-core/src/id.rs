@@ -4,7 +4,7 @@
 //! qualified names and a deterministic disambiguating ordinal. They never use
 //! absolute paths, timestamps, memory addresses or transient indices.
 //!
-//! Format (documented in `docs/architecture.md`):
+//! Format (documented in `AGENTS.md` section 5.4):
 //!
 //! * repository: `repository:.`
 //! * file:       `file:<path>`

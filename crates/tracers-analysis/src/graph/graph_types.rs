@@ -12,6 +12,11 @@ pub struct GraphBuildResult {
     pub diagnostics: Vec<tracers_core::Diagnostic>,
     /// Frameworks detected during the build.
     pub frameworks: Vec<Framework>,
+    /// Languages the scan was configured to analyse. Empty when the build
+    /// path did not perform discovery (e.g. `build_from_parsed`).
+    pub languages: Vec<tracers_core::Language>,
+    /// Syntax-cache activity for this build, when a cache was used.
+    pub cache_counts: Option<crate::cache::CacheCounts>,
 }
 
 /// Builds a [`Graph`] from discovered, parsed, and resolved source files.
