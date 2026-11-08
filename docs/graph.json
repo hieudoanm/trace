@@ -5,7 +5,7 @@
     "id": "repository:.",
     "name": "repository",
     "root": ".",
-    "fileCount": 345,
+    "fileCount": 346,
     "languageCount": 22
   },
   "analysis": {
@@ -9351,6 +9351,12 @@
       "language": "rust"
     },
     {
+      "id": "external:rust:SystemTime.now",
+      "kind": "external_symbol",
+      "name": "now",
+      "language": "rust"
+    },
+    {
       "id": "external:rust:TracersConfig",
       "kind": "external_symbol",
       "name": "TracersConfig",
@@ -10780,6 +10786,13 @@
       "kind": "file",
       "name": "crates/tracers-analysis/tests/snapshots_typescript.rs",
       "file": "crates/tracers-analysis/tests/snapshots_typescript.rs",
+      "language": "rust"
+    },
+    {
+      "id": "file:crates/tracers-cli/build.rs",
+      "kind": "file",
+      "name": "crates/tracers-cli/build.rs",
+      "file": "crates/tracers-cli/build.rs",
       "language": "rust"
     },
     {
@@ -13714,7 +13727,7 @@
         "end": {
           "line": 120,
           "column": 2,
-          "byte": 3685
+          "byte": 3800
         }
       },
       "language": "rust",
@@ -13913,6 +13926,28 @@
           "line": 33,
           "column": 2,
           "byte": 1172
+        }
+      },
+      "language": "rust",
+      "parent": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "exported": false
+    },
+    {
+      "id": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "kind": "function",
+      "name": "multi_file_go_package_shares_one_package_node",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 122,
+          "column": 1,
+          "byte": 4243
+        },
+        "end": {
+          "line": 142,
+          "column": 2,
+          "byte": 5135
         }
       },
       "language": "rust",
@@ -16186,6 +16221,72 @@
       "exported": false
     },
     {
+      "id": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "kind": "function",
+      "name": "civil_from_days",
+      "qualifiedName": "civil_from_days",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 26,
+          "column": 1,
+          "byte": 892
+        },
+        "end": {
+          "line": 37,
+          "column": 2,
+          "byte": 1400
+        }
+      },
+      "language": "rust",
+      "parent": "module:crates/tracers-cli/build.rs",
+      "exported": false
+    },
+    {
+      "id": "function:crates/tracers-cli/build.rs::main",
+      "kind": "function",
+      "name": "main",
+      "qualifiedName": "main",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 6,
+          "column": 1,
+          "byte": 163
+        },
+        "end": {
+          "line": 22,
+          "column": 2,
+          "byte": 778
+        }
+      },
+      "language": "rust",
+      "parent": "module:crates/tracers-cli/build.rs",
+      "exported": false
+    },
+    {
+      "id": "function:crates/tracers-cli/build.rs::tests.known_dates",
+      "kind": "function",
+      "name": "known_dates",
+      "qualifiedName": "tests.known_dates",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 44,
+          "column": 5,
+          "byte": 1476
+        },
+        "end": {
+          "line": 48,
+          "column": 6,
+          "byte": 1673
+        }
+      },
+      "language": "rust",
+      "parent": "module:crates/tracers-cli/build.rs::tests",
+      "exported": false
+    },
+    {
       "id": "function:crates/tracers-cli/src/cli/graph.rs::apply_filter",
       "kind": "function",
       "name": "apply_filter",
@@ -17095,14 +17196,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 30,
+          "line": 40,
           "column": 1,
-          "byte": 619
+          "byte": 757
         },
         "end": {
-          "line": 35,
+          "line": 47,
           "column": 2,
-          "byte": 724
+          "byte": 1017
         }
       },
       "language": "rust",
@@ -17117,14 +17218,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 37,
+          "line": 49,
           "column": 1,
-          "byte": 726
+          "byte": 1019
         },
         "end": {
-          "line": 210,
+          "line": 222,
           "column": 2,
-          "byte": 5467
+          "byte": 5760
         }
       },
       "language": "rust",
@@ -35700,6 +35801,35 @@
       "language": "rust"
     },
     {
+      "id": "module:crates/tracers-cli/build.rs",
+      "kind": "module",
+      "name": "crate::build",
+      "file": "crates/tracers-cli/build.rs",
+      "language": "rust"
+    },
+    {
+      "id": "module:crates/tracers-cli/build.rs::tests",
+      "kind": "module",
+      "name": "tests",
+      "qualifiedName": "tests",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 40,
+          "column": 1,
+          "byte": 1415
+        },
+        "end": {
+          "line": 49,
+          "column": 2,
+          "byte": 1675
+        }
+      },
+      "language": "rust",
+      "parent": "module:crates/tracers-cli/build.rs",
+      "exported": false
+    },
+    {
       "id": "module:crates/tracers-cli/src/cli/commands.rs",
       "kind": "module",
       "name": "crate::cli::commands",
@@ -41351,65 +41481,47 @@
     {
       "id": "package:fixtures/frameworks/cobra/src",
       "kind": "package",
-      "name": "package:fixtures/frameworks/cobra/src",
-      "file": "fixtures/frameworks/cobra/src/main.go",
-      "language": "go"
+      "name": "package:fixtures/frameworks/cobra/src"
     },
     {
       "id": "package:fixtures/frameworks/echo/src",
       "kind": "package",
-      "name": "package:fixtures/frameworks/echo/src",
-      "file": "fixtures/frameworks/echo/src/main.go",
-      "language": "go"
+      "name": "package:fixtures/frameworks/echo/src"
     },
     {
       "id": "package:fixtures/frameworks/gin/src",
       "kind": "package",
-      "name": "package:fixtures/frameworks/gin/src",
-      "file": "fixtures/frameworks/gin/src/main.go",
-      "language": "go"
+      "name": "package:fixtures/frameworks/gin/src"
     },
     {
       "id": "package:fixtures/languages/go/pkg/service",
       "kind": "package",
-      "name": "package:fixtures/languages/go/pkg/service",
-      "file": "fixtures/languages/go/pkg/service/service.go",
-      "language": "go"
+      "name": "package:fixtures/languages/go/pkg/service"
     },
     {
       "id": "package:fixtures/languages/go/src",
       "kind": "package",
-      "name": "package:fixtures/languages/go/src",
-      "file": "fixtures/languages/go/src/main.go",
-      "language": "go"
+      "name": "package:fixtures/languages/go/src"
     },
     {
       "id": "package:fixtures/languages/go/src/complex",
       "kind": "package",
-      "name": "package:fixtures/languages/go/src/complex",
-      "file": "fixtures/languages/go/src/complex/complex.go",
-      "language": "go"
+      "name": "package:fixtures/languages/go/src/complex"
     },
     {
       "id": "package:fixtures/languages/go/src/geometry",
       "kind": "package",
-      "name": "package:fixtures/languages/go/src/geometry",
-      "file": "fixtures/languages/go/src/geometry/geometry.go",
-      "language": "go"
+      "name": "package:fixtures/languages/go/src/geometry"
     },
     {
       "id": "package:kotlin/com/example",
       "kind": "package",
-      "name": "package:kotlin/com/example",
-      "file": "fixtures/languages/kotlin/src/Service.kt",
-      "language": "kotlin"
+      "name": "package:kotlin/com/example"
     },
     {
       "id": "package:kotlin/shapes",
       "kind": "package",
-      "name": "package:kotlin/shapes",
-      "file": "fixtures/languages/kotlin/src/shapes.kt",
-      "language": "kotlin"
+      "name": "package:kotlin/shapes"
     },
     {
       "id": "property:crates/tracers-analysis/src/cache.rs::CacheCounts.hits",
@@ -44477,14 +44589,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 19,
+          "line": 29,
           "column": 5,
-          "byte": 411
+          "byte": 549
         },
         "end": {
-          "line": 19,
+          "line": 29,
           "column": 22,
-          "byte": 428
+          "byte": 566
         }
       },
       "language": "rust",
@@ -44499,14 +44611,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 27,
+          "line": 37,
           "column": 5,
-          "byte": 603
+          "byte": 741
         },
         "end": {
-          "line": 27,
+          "line": 37,
           "column": 16,
-          "byte": 614
+          "byte": 752
         }
       },
       "language": "rust",
@@ -44521,14 +44633,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 23,
+          "line": 33,
           "column": 5,
-          "byte": 506
+          "byte": 644
         },
         "end": {
-          "line": 23,
+          "line": 33,
           "column": 18,
-          "byte": 519
+          "byte": 657
         }
       },
       "language": "rust",
@@ -50136,14 +50248,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 17,
+          "line": 27,
           "column": 1,
-          "byte": 367
+          "byte": 505
         },
         "end": {
-          "line": 28,
+          "line": 38,
           "column": 2,
-          "byte": 617
+          "byte": 755
         }
       },
       "language": "rust",
@@ -52627,6 +52739,12 @@
       "language": "rust"
     },
     {
+      "id": "unresolved:rust:as_secs",
+      "kind": "unknown",
+      "name": "as_secs",
+      "language": "rust"
+    },
+    {
       "id": "unresolved:rust:as_str",
       "kind": "unknown",
       "name": "as_str",
@@ -53080,6 +53198,12 @@
       "id": "unresolved:rust:display_name",
       "kind": "unknown",
       "name": "display_name",
+      "language": "rust"
+    },
+    {
+      "id": "unresolved:rust:duration_since",
+      "kind": "unknown",
+      "name": "duration_since",
       "language": "rust"
     },
     {
@@ -58168,12 +58292,12 @@
         "start": {
           "line": 44,
           "column": 5,
-          "byte": 1321
+          "byte": 1436
         },
         "end": {
           "line": 50,
           "column": 36,
-          "byte": 1518
+          "byte": 1633
         }
       },
       "language": "rust",
@@ -58190,12 +58314,12 @@
         "start": {
           "line": 64,
           "column": 9,
-          "byte": 1894
+          "byte": 2009
         },
         "end": {
           "line": 68,
           "column": 45,
-          "byte": 2164
+          "byte": 2279
         }
       },
       "language": "rust",
@@ -58210,14 +58334,14 @@
       "file": "crates/tracers-analysis/src/graph/graph_file_nodes.rs",
       "range": {
         "start": {
-          "line": 29,
+          "line": 31,
           "column": 9,
-          "byte": 848
+          "byte": 1047
         },
         "end": {
           "line": 31,
-          "column": 44,
-          "byte": 1014
+          "column": 91,
+          "byte": 1129
         }
       },
       "language": "rust",
@@ -58234,12 +58358,12 @@
         "start": {
           "line": 63,
           "column": 9,
-          "byte": 1834
+          "byte": 1949
         },
         "end": {
           "line": 63,
           "column": 60,
-          "byte": 1885
+          "byte": 2000
         }
       },
       "language": "rust",
@@ -59234,6 +59358,160 @@
       },
       "language": "rust",
       "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::builds_file_and_symbol_nodes",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.builder",
+      "kind": "variable",
+      "name": "builder",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.builder",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 130,
+          "column": 5,
+          "byte": 4638
+        },
+        "end": {
+          "line": 130,
+          "column": 39,
+          "byte": 4672
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.dir",
+      "kind": "variable",
+      "name": "dir",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.dir",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 123,
+          "column": 5,
+          "byte": 4300
+        },
+        "end": {
+          "line": 123,
+          "column": 34,
+          "byte": 4329
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.import_pass",
+      "kind": "variable",
+      "name": "import_pass",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.import_pass",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 129,
+          "column": 5,
+          "byte": 4587
+        },
+        "end": {
+          "line": 129,
+          "column": 51,
+          "byte": 4633
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.index",
+      "kind": "variable",
+      "name": "index",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.index",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 128,
+          "column": 5,
+          "byte": 4514
+        },
+        "end": {
+          "line": 128,
+          "column": 73,
+          "byte": 4582
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.package_nodes",
+      "kind": "variable",
+      "name": "package_nodes",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.package_nodes",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 134,
+          "column": 5,
+          "byte": 4896
+        },
+        "end": {
+          "line": 139,
+          "column": 20,
+          "byte": 5047
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.parsed",
+      "kind": "variable",
+      "name": "parsed",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.parsed",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 124,
+          "column": 5,
+          "byte": 4334
+        },
+        "end": {
+          "line": 127,
+          "column": 7,
+          "byte": 4509
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.result",
+      "kind": "variable",
+      "name": "result",
+      "qualifiedName": "multi_file_go_package_shares_one_package_node.result",
+      "file": "crates/tracers-analysis/src/graph/graph_tests.rs",
+      "range": {
+        "start": {
+          "line": 133,
+          "column": 5,
+          "byte": 4817
+        },
+        "end": {
+          "line": 133,
+          "column": 79,
+          "byte": 4891
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
       "exported": false
     },
     {
@@ -65573,6 +65851,270 @@
       "exported": false
     },
     {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.d",
+      "kind": "variable",
+      "name": "d",
+      "qualifiedName": "civil_from_days.d",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 34,
+          "column": 5,
+          "byte": 1253
+        },
+        "end": {
+          "line": 34,
+          "column": 42,
+          "byte": 1290
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.doe",
+      "kind": "variable",
+      "name": "doe",
+      "qualifiedName": "civil_from_days.doe",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 29,
+          "column": 5,
+          "byte": 1031
+        },
+        "end": {
+          "line": 29,
+          "column": 33,
+          "byte": 1059
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.doy",
+      "kind": "variable",
+      "name": "doy",
+      "qualifiedName": "civil_from_days.doy",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 32,
+          "column": 5,
+          "byte": 1164
+        },
+        "end": {
+          "line": 32,
+          "column": 55,
+          "byte": 1214
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.era",
+      "kind": "variable",
+      "name": "era",
+      "qualifiedName": "civil_from_days.era",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 28,
+          "column": 5,
+          "byte": 969
+        },
+        "end": {
+          "line": 28,
+          "column": 62,
+          "byte": 1026
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.m",
+      "kind": "variable",
+      "name": "m",
+      "qualifiedName": "civil_from_days.m",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 35,
+          "column": 5,
+          "byte": 1295
+        },
+        "end": {
+          "line": 35,
+          "column": 51,
+          "byte": 1341
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.mp",
+      "kind": "variable",
+      "name": "mp",
+      "qualifiedName": "civil_from_days.mp",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 33,
+          "column": 5,
+          "byte": 1219
+        },
+        "end": {
+          "line": 33,
+          "column": 34,
+          "byte": 1248
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.y",
+      "kind": "variable",
+      "name": "y",
+      "qualifiedName": "civil_from_days.y",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 31,
+          "column": 5,
+          "byte": 1135
+        },
+        "end": {
+          "line": 31,
+          "column": 29,
+          "byte": 1159
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.yoe",
+      "kind": "variable",
+      "name": "yoe",
+      "qualifiedName": "civil_from_days.yoe",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 30,
+          "column": 5,
+          "byte": 1064
+        },
+        "end": {
+          "line": 30,
+          "column": 71,
+          "byte": 1130
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::civil_from_days.z",
+      "kind": "variable",
+      "name": "z",
+      "qualifiedName": "civil_from_days.z",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 27,
+          "column": 5,
+          "byte": 944
+        },
+        "end": {
+          "line": 27,
+          "column": 25,
+          "byte": 964
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::main.days",
+      "kind": "variable",
+      "name": "days",
+      "qualifiedName": "main.days",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 11,
+          "column": 5,
+          "byte": 301
+        },
+        "end": {
+          "line": 11,
+          "column": 39,
+          "byte": 335
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::main",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::main.secs",
+      "kind": "variable",
+      "name": "secs",
+      "qualifiedName": "main.secs",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 7,
+          "column": 5,
+          "byte": 179
+        },
+        "end": {
+          "line": 10,
+          "column": 23,
+          "byte": 296
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::main",
+      "exported": false
+    },
+    {
+      "id": "variable:crates/tracers-cli/build.rs::main.secs_of_day",
+      "kind": "variable",
+      "name": "secs_of_day",
+      "qualifiedName": "main.secs_of_day",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 12,
+          "column": 5,
+          "byte": 340
+        },
+        "end": {
+          "line": 12,
+          "column": 37,
+          "byte": 372
+        }
+      },
+      "language": "rust",
+      "parent": "function:crates/tracers-cli/build.rs::main",
+      "exported": false
+    },
+    {
       "id": "variable:crates/tracers-cli/src/cli/graph.rs::apply_filter.view",
       "kind": "variable",
       "name": "view",
@@ -68748,14 +69290,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 38,
+          "line": 50,
           "column": 5,
-          "byte": 755
+          "byte": 1048
         },
         "end": {
-          "line": 38,
+          "line": 50,
           "column": 28,
-          "byte": 778
+          "byte": 1071
         }
       },
       "language": "rust",
@@ -68770,14 +69312,14 @@
       "file": "crates/tracers-cli/src/main.rs",
       "range": {
         "start": {
-          "line": 40,
+          "line": 52,
           "column": 5,
-          "byte": 784
+          "byte": 1077
         },
         "end": {
-          "line": 46,
+          "line": 58,
           "column": 7,
-          "byte": 954
+          "byte": 1247
         }
       },
       "language": "rust",
@@ -95315,6 +95857,13 @@
     },
     {
       "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
       "target": "function:crates/tracers-analysis/src/graph/graph_tests.rs::parse",
       "kind": "contains",
       "status": "resolved_internal",
@@ -95456,6 +96005,55 @@
     {
       "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
       "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::builds_file_and_symbol_nodes.result",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.builder",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.dir",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.import_pass",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.index",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.package_nodes",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.parsed",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.result",
       "kind": "contains",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -105076,6 +105674,146 @@
             "line": 4,
             "column": 50,
             "byte": 117
+          }
+        }
+      ]
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::main",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::tests.known_dates",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "module:crates/tracers-cli/build.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "module:crates/tracers-cli/build.rs::tests",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.d",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.doe",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.doy",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.era",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.m",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.mp",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.y",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.yoe",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.z",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.days",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.secs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.secs_of_day",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "file:crates/tracers-cli/build.rs",
+      "target": "external:unknown:std",
+      "kind": "imports",
+      "status": "resolved_external",
+      "origin": "import",
+      "sites": [
+        {
+          "start": {
+            "line": 4,
+            "column": 1,
+            "byte": 121
+          },
+          "end": {
+            "line": 4,
+            "column": 41,
+            "byte": 161
           }
         }
       ]
@@ -156577,72 +157315,72 @@
           "start": {
             "line": 34,
             "column": 24,
-            "byte": 1078
+            "byte": 1193
           },
           "end": {
             "line": 40,
             "column": 10,
-            "byte": 1286
+            "byte": 1401
           }
         },
         {
           "start": {
             "line": 53,
             "column": 20,
-            "byte": 1573
+            "byte": 1688
           },
           "end": {
             "line": 59,
             "column": 6,
-            "byte": 1765
+            "byte": 1880
           }
         },
         {
           "start": {
             "line": 78,
             "column": 24,
-            "byte": 2466
+            "byte": 2581
           },
           "end": {
             "line": 84,
             "column": 10,
-            "byte": 2676
+            "byte": 2791
           }
         },
         {
           "start": {
             "line": 87,
             "column": 24,
-            "byte": 2737
+            "byte": 2852
           },
           "end": {
             "line": 93,
             "column": 10,
-            "byte": 2952
+            "byte": 3067
           }
         },
         {
           "start": {
             "line": 97,
             "column": 28,
-            "byte": 3045
+            "byte": 3160
           },
           "end": {
             "line": 103,
             "column": 14,
-            "byte": 3283
+            "byte": 3398
           }
         },
         {
           "start": {
             "line": 110,
             "column": 28,
-            "byte": 3427
+            "byte": 3542
           },
           "end": {
             "line": 116,
             "column": 14,
-            "byte": 3653
+            "byte": 3768
           }
         }
       ]
@@ -156668,38 +157406,38 @@
         },
         {
           "start": {
-            "line": 29,
+            "line": 31,
             "column": 28,
-            "byte": 867
+            "byte": 1066
           },
           "end": {
-            "line": 29,
+            "line": 31,
             "column": 90,
-            "byte": 929
+            "byte": 1128
           }
         },
         {
           "start": {
             "line": 44,
             "column": 23,
-            "byte": 1339
+            "byte": 1454
           },
           "end": {
             "line": 48,
             "column": 6,
-            "byte": 1449
+            "byte": 1564
           }
         },
         {
           "start": {
             "line": 64,
             "column": 24,
-            "byte": 1909
+            "byte": 2024
           },
           "end": {
             "line": 64,
             "column": 91,
-            "byte": 1976
+            "byte": 2091
           }
         }
       ]
@@ -156715,12 +157453,12 @@
           "start": {
             "line": 72,
             "column": 30,
-            "byte": 2294
+            "byte": 2409
           },
           "end": {
             "line": 72,
             "column": 57,
-            "byte": 2321
+            "byte": 2436
           }
         }
       ]
@@ -156736,12 +157474,12 @@
           "start": {
             "line": 119,
             "column": 5,
-            "byte": 3677
+            "byte": 3792
           },
           "end": {
             "line": 119,
             "column": 11,
-            "byte": 3683
+            "byte": 3798
           }
         }
       ]
@@ -156757,72 +157495,72 @@
           "start": {
             "line": 34,
             "column": 9,
-            "byte": 1063
+            "byte": 1178
           },
           "end": {
             "line": 40,
             "column": 11,
-            "byte": 1287
+            "byte": 1402
           }
         },
         {
           "start": {
             "line": 53,
             "column": 5,
-            "byte": 1558
+            "byte": 1673
           },
           "end": {
             "line": 59,
             "column": 7,
-            "byte": 1766
+            "byte": 1881
           }
         },
         {
           "start": {
             "line": 78,
             "column": 9,
-            "byte": 2451
+            "byte": 2566
           },
           "end": {
             "line": 84,
             "column": 11,
-            "byte": 2677
+            "byte": 2792
           }
         },
         {
           "start": {
             "line": 87,
             "column": 9,
-            "byte": 2722
+            "byte": 2837
           },
           "end": {
             "line": 93,
             "column": 11,
-            "byte": 2953
+            "byte": 3068
           }
         },
         {
           "start": {
             "line": 97,
             "column": 13,
-            "byte": 3030
+            "byte": 3145
           },
           "end": {
             "line": 103,
             "column": 15,
-            "byte": 3284
+            "byte": 3399
           }
         },
         {
           "start": {
             "line": 110,
             "column": 13,
-            "byte": 3412
+            "byte": 3527
           },
           "end": {
             "line": 116,
             "column": 15,
-            "byte": 3654
+            "byte": 3769
           }
         }
       ]
@@ -156850,36 +157588,36 @@
           "start": {
             "line": 32,
             "column": 9,
-            "byte": 1023
+            "byte": 1138
           },
           "end": {
             "line": 32,
             "column": 37,
-            "byte": 1051
+            "byte": 1166
           }
         },
         {
           "start": {
             "line": 51,
             "column": 5,
-            "byte": 1523
+            "byte": 1638
           },
           "end": {
             "line": 51,
             "column": 32,
-            "byte": 1550
+            "byte": 1665
           }
         },
         {
           "start": {
             "line": 75,
             "column": 9,
-            "byte": 2385
+            "byte": 2500
           },
           "end": {
             "line": 75,
             "column": 29,
-            "byte": 2405
+            "byte": 2520
           }
         }
       ]
@@ -156893,170 +157631,170 @@
       "sites": [
         {
           "start": {
-            "line": 29,
+            "line": 31,
             "column": 38,
-            "byte": 877
+            "byte": 1076
           },
           "end": {
-            "line": 29,
+            "line": 31,
             "column": 53,
-            "byte": 892
+            "byte": 1091
           }
         },
         {
           "start": {
-            "line": 29,
+            "line": 31,
             "column": 74,
-            "byte": 913
+            "byte": 1112
           },
           "end": {
-            "line": 29,
+            "line": 31,
             "column": 89,
-            "byte": 928
+            "byte": 1127
           }
         },
         {
           "start": {
             "line": 35,
             "column": 13,
-            "byte": 1101
+            "byte": 1216
           },
           "end": {
             "line": 35,
             "column": 28,
-            "byte": 1116
+            "byte": 1231
           }
         },
         {
           "start": {
             "line": 45,
             "column": 9,
-            "byte": 1358
+            "byte": 1473
           },
           "end": {
             "line": 45,
             "column": 32,
-            "byte": 1381
+            "byte": 1496
           }
         },
         {
           "start": {
             "line": 47,
             "column": 9,
-            "byte": 1417
+            "byte": 1532
           },
           "end": {
             "line": 47,
             "column": 34,
-            "byte": 1442
+            "byte": 1557
           }
         },
         {
           "start": {
             "line": 55,
             "column": 9,
-            "byte": 1629
+            "byte": 1744
           },
           "end": {
             "line": 55,
             "column": 32,
-            "byte": 1652
+            "byte": 1767
           }
         },
         {
           "start": {
             "line": 64,
             "column": 34,
-            "byte": 1919
+            "byte": 2034
           },
           "end": {
             "line": 64,
             "column": 56,
-            "byte": 1941
+            "byte": 2056
           }
         },
         {
           "start": {
             "line": 64,
             "column": 71,
-            "byte": 1956
+            "byte": 2071
           },
           "end": {
             "line": 64,
             "column": 90,
-            "byte": 1975
+            "byte": 2090
           }
         },
         {
           "start": {
             "line": 67,
             "column": 34,
-            "byte": 2094
+            "byte": 2209
           },
           "end": {
             "line": 67,
             "column": 58,
-            "byte": 2118
+            "byte": 2233
           }
         },
         {
           "start": {
             "line": 79,
             "column": 13,
-            "byte": 2489
+            "byte": 2604
           },
           "end": {
             "line": 79,
             "column": 36,
-            "byte": 2512
+            "byte": 2627
           }
         },
         {
           "start": {
             "line": 80,
             "column": 13,
-            "byte": 2526
+            "byte": 2641
           },
           "end": {
             "line": 80,
             "column": 35,
-            "byte": 2548
+            "byte": 2663
           }
         },
         {
           "start": {
             "line": 89,
             "column": 13,
-            "byte": 2801
+            "byte": 2916
           },
           "end": {
             "line": 89,
             "column": 35,
-            "byte": 2823
+            "byte": 2938
           }
         },
         {
           "start": {
             "line": 99,
             "column": 17,
-            "byte": 3117
+            "byte": 3232
           },
           "end": {
             "line": 99,
             "column": 39,
-            "byte": 3139
+            "byte": 3254
           }
         },
         {
           "start": {
             "line": 112,
             "column": 17,
-            "byte": 3499
+            "byte": 3614
           },
           "end": {
             "line": 112,
             "column": 27,
-            "byte": 3509
+            "byte": 3624
           }
         }
       ]
@@ -157084,60 +157822,60 @@
           "start": {
             "line": 36,
             "column": 13,
-            "byte": 1130
+            "byte": 1245
           },
           "end": {
             "line": 36,
             "column": 40,
-            "byte": 1157
+            "byte": 1272
           }
         },
         {
           "start": {
             "line": 54,
             "column": 9,
-            "byte": 1592
+            "byte": 1707
           },
           "end": {
             "line": 54,
             "column": 36,
-            "byte": 1619
+            "byte": 1734
           }
         },
         {
           "start": {
             "line": 88,
             "column": 13,
-            "byte": 2760
+            "byte": 2875
           },
           "end": {
             "line": 88,
             "column": 40,
-            "byte": 2787
+            "byte": 2902
           }
         },
         {
           "start": {
             "line": 98,
             "column": 17,
-            "byte": 3072
+            "byte": 3187
           },
           "end": {
             "line": 98,
             "column": 44,
-            "byte": 3099
+            "byte": 3214
           }
         },
         {
           "start": {
             "line": 111,
             "column": 17,
-            "byte": 3454
+            "byte": 3569
           },
           "end": {
             "line": 111,
             "column": 44,
-            "byte": 3481
+            "byte": 3596
           }
         }
       ]
@@ -157153,12 +157891,12 @@
           "start": {
             "line": 63,
             "column": 22,
-            "byte": 1847
+            "byte": 1962
           },
           "end": {
             "line": 63,
             "column": 59,
-            "byte": 1884
+            "byte": 1999
           }
         }
       ]
@@ -157196,38 +157934,26 @@
         },
         {
           "start": {
-            "line": 30,
-            "column": 24,
-            "byte": 953
-          },
-          "end": {
-            "line": 30,
-            "column": 40,
-            "byte": 969
-          }
-        },
-        {
-          "start": {
             "line": 49,
             "column": 16,
-            "byte": 1465
+            "byte": 1580
           },
           "end": {
             "line": 49,
             "column": 32,
-            "byte": 1481
+            "byte": 1596
           }
         },
         {
           "start": {
             "line": 65,
             "column": 24,
-            "byte": 2000
+            "byte": 2115
           },
           "end": {
             "line": 65,
             "column": 40,
-            "byte": 2016
+            "byte": 2131
           }
         }
       ]
@@ -157243,12 +157969,12 @@
           "start": {
             "line": 108,
             "column": 16,
-            "byte": 3351
+            "byte": 3466
           },
           "end": {
             "line": 108,
             "column": 38,
-            "byte": 3373
+            "byte": 3488
           }
         }
       ]
@@ -157264,12 +157990,12 @@
           "start": {
             "line": 64,
             "column": 24,
-            "byte": 1909
+            "byte": 2024
           },
           "end": {
             "line": 68,
             "column": 44,
-            "byte": 2163
+            "byte": 2278
           }
         }
       ]
@@ -157295,38 +158021,26 @@
         },
         {
           "start": {
-            "line": 29,
-            "column": 28,
-            "byte": 867
-          },
-          "end": {
-            "line": 30,
-            "column": 41,
-            "byte": 970
-          }
-        },
-        {
-          "start": {
             "line": 44,
             "column": 23,
-            "byte": 1339
+            "byte": 1454
           },
           "end": {
             "line": 49,
             "column": 33,
-            "byte": 1482
+            "byte": 1597
           }
         },
         {
           "start": {
             "line": 64,
             "column": 24,
-            "byte": 1909
+            "byte": 2024
           },
           "end": {
             "line": 65,
             "column": 41,
-            "byte": 2017
+            "byte": 2132
           }
         }
       ]
@@ -157352,38 +158066,26 @@
         },
         {
           "start": {
-            "line": 29,
-            "column": 28,
-            "byte": 867
-          },
-          "end": {
-            "line": 31,
-            "column": 43,
-            "byte": 1013
-          }
-        },
-        {
-          "start": {
             "line": 44,
             "column": 23,
-            "byte": 1339
+            "byte": 1454
           },
           "end": {
             "line": 50,
             "column": 35,
-            "byte": 1517
+            "byte": 1632
           }
         },
         {
           "start": {
             "line": 64,
             "column": 24,
-            "byte": 1909
+            "byte": 2024
           },
           "end": {
             "line": 66,
             "column": 43,
-            "byte": 2060
+            "byte": 2175
           }
         }
       ]
@@ -157399,12 +158101,12 @@
           "start": {
             "line": 70,
             "column": 20,
-            "byte": 2226
+            "byte": 2341
           },
           "end": {
             "line": 70,
             "column": 47,
-            "byte": 2253
+            "byte": 2368
           }
         }
       ]
@@ -157420,12 +158122,12 @@
           "start": {
             "line": 64,
             "column": 24,
-            "byte": 1909
+            "byte": 2024
           },
           "end": {
             "line": 67,
             "column": 59,
-            "byte": 2119
+            "byte": 2234
           }
         }
       ]
@@ -157441,12 +158143,12 @@
           "start": {
             "line": 73,
             "column": 20,
-            "byte": 2343
+            "byte": 2458
           },
           "end": {
             "line": 73,
             "column": 42,
-            "byte": 2365
+            "byte": 2480
           }
         }
       ]
@@ -160132,6 +160834,324 @@
             "line": 22,
             "column": 7,
             "byte": 664
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "external:rust:GraphBuilder.new",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 130,
+            "column": 19,
+            "byte": 4652
+          },
+          "end": {
+            "line": 130,
+            "column": 38,
+            "byte": 4671
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "external:rust:RepositoryIndex.build",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 128,
+            "column": 21,
+            "byte": 4530
+          },
+          "end": {
+            "line": 128,
+            "column": 63,
+            "byte": 4572
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "external:unresolved:tempfile::tempdir",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 123,
+            "column": 15,
+            "byte": 4310
+          },
+          "end": {
+            "line": 123,
+            "column": 24,
+            "byte": 4319
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:assert",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 141,
+            "column": 5,
+            "byte": 5092
+          },
+          "end": {
+            "line": 141,
+            "column": 45,
+            "byte": 5132
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:assert_eq",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 140,
+            "column": 5,
+            "byte": 5052
+          },
+          "end": {
+            "line": 140,
+            "column": 39,
+            "byte": 5086
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:build_from_index",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 133,
+            "column": 18,
+            "byte": 4830
+          },
+          "end": {
+            "line": 133,
+            "column": 69,
+            "byte": 4881
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:collect",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 33,
+            "byte": 4924
+          },
+          "end": {
+            "line": 139,
+            "column": 19,
+            "byte": 5046
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:filter",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 33,
+            "byte": 4924
+          },
+          "end": {
+            "line": 138,
+            "column": 49,
+            "byte": 5027
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:iter",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 33,
+            "byte": 4924
+          },
+          "end": {
+            "line": 137,
+            "column": 16,
+            "byte": 4978
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:nodes",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 134,
+            "column": 33,
+            "byte": 4924
+          },
+          "end": {
+            "line": 136,
+            "column": 17,
+            "byte": 4962
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:path",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 128,
+            "column": 44,
+            "byte": 4553
+          },
+          "end": {
+            "line": 128,
+            "column": 54,
+            "byte": 4563
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:resolve_imports",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 129,
+            "column": 23,
+            "byte": 4605
+          },
+          "end": {
+            "line": 129,
+            "column": 50,
+            "byte": 4632
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:unwrap",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 123,
+            "column": 15,
+            "byte": 4310
+          },
+          "end": {
+            "line": 123,
+            "column": 33,
+            "byte": 4328
+          }
+        },
+        {
+          "start": {
+            "line": 128,
+            "column": 21,
+            "byte": 4530
+          },
+          "end": {
+            "line": 128,
+            "column": 72,
+            "byte": 4581
+          }
+        },
+        {
+          "start": {
+            "line": 133,
+            "column": 18,
+            "byte": 4830
+          },
+          "end": {
+            "line": 133,
+            "column": 78,
+            "byte": 4890
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "target": "unresolved:rust:vec",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 124,
+            "column": 18,
+            "byte": 4347
+          },
+          "end": {
+            "line": 127,
+            "column": 6,
+            "byte": 4508
           }
         }
       ]
@@ -181284,6 +182304,198 @@
       ]
     },
     {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "external:rust:SystemTime.now",
+      "kind": "calls",
+      "status": "resolved_external",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 16,
+            "byte": 190
+          },
+          "end": {
+            "line": 7,
+            "column": 33,
+            "byte": 207
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "kind": "calls",
+      "status": "resolved_internal",
+      "origin": "lexical",
+      "sites": [
+        {
+          "start": {
+            "line": 13,
+            "column": 30,
+            "byte": 402
+          },
+          "end": {
+            "line": 13,
+            "column": 51,
+            "byte": 423
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "unresolved:rust:as_secs",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 9,
+            "column": 18,
+            "byte": 261
+          },
+          "end": {
+            "line": 9,
+            "column": 29,
+            "byte": 272
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "unresolved:rust:duration_since",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 16,
+            "byte": 190
+          },
+          "end": {
+            "line": 8,
+            "column": 36,
+            "byte": 243
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "unresolved:rust:map",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 16,
+            "byte": 190
+          },
+          "end": {
+            "line": 9,
+            "column": 30,
+            "byte": 273
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "unresolved:rust:println",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 14,
+            "column": 5,
+            "byte": 429
+          },
+          "end": {
+            "line": 19,
+            "column": 6,
+            "byte": 627
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::main",
+      "target": "unresolved:rust:unwrap_or",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 7,
+            "column": 16,
+            "byte": 190
+          },
+          "end": {
+            "line": 10,
+            "column": 22,
+            "byte": 295
+          }
+        }
+      ]
+    },
+    {
+      "source": "function:crates/tracers-cli/build.rs::tests.known_dates",
+      "target": "unresolved:rust:assert_eq",
+      "kind": "calls",
+      "status": "unresolved",
+      "origin": "syntax",
+      "sites": [
+        {
+          "start": {
+            "line": 45,
+            "column": 9,
+            "byte": 1503
+          },
+          "end": {
+            "line": 45,
+            "column": 53,
+            "byte": 1547
+          }
+        },
+        {
+          "start": {
+            "line": 46,
+            "column": 9,
+            "byte": 1557
+          },
+          "end": {
+            "line": 46,
+            "column": 59,
+            "byte": 1607
+          }
+        },
+        {
+          "start": {
+            "line": 47,
+            "column": 9,
+            "byte": 1617
+          },
+          "end": {
+            "line": 47,
+            "column": 58,
+            "byte": 1666
+          }
+        }
+      ]
+    },
+    {
       "source": "function:crates/tracers-cli/src/cli/graph.rs::apply_filter",
       "target": "external:rust:Graph.new",
       "kind": "calls",
@@ -193958,14 +195170,14 @@
       "sites": [
         {
           "start": {
-            "line": 33,
+            "line": 45,
             "column": 9,
-            "byte": 708
+            "byte": 1001
           },
           "end": {
-            "line": 33,
+            "line": 45,
             "column": 16,
-            "byte": 715
+            "byte": 1008
           }
         }
       ]
@@ -193979,14 +195191,14 @@
       "sites": [
         {
           "start": {
-            "line": 31,
+            "line": 41,
             "column": 25,
-            "byte": 655
+            "byte": 793
           },
           "end": {
-            "line": 31,
+            "line": 41,
             "column": 30,
-            "byte": 660
+            "byte": 798
           }
         }
       ]
@@ -194000,14 +195212,14 @@
       "sites": [
         {
           "start": {
-            "line": 32,
+            "line": 44,
             "column": 9,
-            "byte": 671
+            "byte": 962
           },
           "end": {
-            "line": 32,
-            "column": 36,
-            "byte": 698
+            "line": 44,
+            "column": 38,
+            "byte": 991
           }
         }
       ]
@@ -194021,14 +195233,14 @@
       "sites": [
         {
           "start": {
-            "line": 38,
+            "line": 50,
             "column": 15,
-            "byte": 765
+            "byte": 1058
           },
           "end": {
-            "line": 38,
+            "line": 50,
             "column": 27,
-            "byte": 777
+            "byte": 1070
           }
         }
       ]
@@ -194042,38 +195254,38 @@
       "sites": [
         {
           "start": {
-            "line": 41,
+            "line": 53,
             "column": 9,
-            "byte": 822
+            "byte": 1115
           },
           "end": {
-            "line": 41,
+            "line": 53,
             "column": 32,
-            "byte": 845
+            "byte": 1138
           }
         },
         {
           "start": {
-            "line": 43,
+            "line": 55,
             "column": 9,
-            "byte": 880
+            "byte": 1173
           },
           "end": {
-            "line": 43,
+            "line": 55,
             "column": 32,
-            "byte": 903
+            "byte": 1196
           }
         },
         {
           "start": {
-            "line": 45,
+            "line": 57,
             "column": 9,
-            "byte": 925
+            "byte": 1218
           },
           "end": {
-            "line": 45,
+            "line": 57,
             "column": 31,
-            "byte": 947
+            "byte": 1240
           }
         }
       ]
@@ -194087,14 +195299,14 @@
       "sites": [
         {
           "start": {
-            "line": 47,
+            "line": 59,
             "column": 5,
-            "byte": 959
+            "byte": 1252
           },
           "end": {
-            "line": 47,
+            "line": 59,
             "column": 10,
-            "byte": 964
+            "byte": 1257
           }
         }
       ]
@@ -194108,278 +195320,278 @@
       "sites": [
         {
           "start": {
-            "line": 63,
+            "line": 75,
             "column": 13,
-            "byte": 1340
+            "byte": 1633
           },
           "end": {
-            "line": 63,
+            "line": 75,
             "column": 30,
-            "byte": 1357
+            "byte": 1650
           }
         },
         {
           "start": {
-            "line": 66,
+            "line": 78,
             "column": 13,
-            "byte": 1415
+            "byte": 1708
           },
           "end": {
-            "line": 66,
+            "line": 78,
             "column": 32,
-            "byte": 1434
-          }
-        },
-        {
-          "start": {
-            "line": 69,
-            "column": 13,
-            "byte": 1488
-          },
-          "end": {
-            "line": 69,
-            "column": 30,
-            "byte": 1505
+            "byte": 1727
           }
         },
         {
           "start": {
             "line": 81,
             "column": 13,
-            "byte": 1785
+            "byte": 1781
           },
           "end": {
             "line": 81,
             "column": 30,
-            "byte": 1802
+            "byte": 1798
           }
         },
         {
           "start": {
-            "line": 82,
+            "line": 93,
             "column": 13,
-            "byte": 1816
+            "byte": 2078
           },
           "end": {
-            "line": 82,
+            "line": 93,
             "column": 30,
-            "byte": 1833
+            "byte": 2095
           }
         },
         {
           "start": {
-            "line": 83,
+            "line": 94,
             "column": 13,
-            "byte": 1847
+            "byte": 2109
           },
           "end": {
-            "line": 83,
+            "line": 94,
+            "column": 30,
+            "byte": 2126
+          }
+        },
+        {
+          "start": {
+            "line": 95,
+            "column": 13,
+            "byte": 2140
+          },
+          "end": {
+            "line": 95,
             "column": 32,
-            "byte": 1866
+            "byte": 2159
           }
         },
         {
           "start": {
-            "line": 84,
+            "line": 96,
             "column": 13,
-            "byte": 1880
+            "byte": 2173
           },
           "end": {
-            "line": 84,
+            "line": 96,
             "column": 28,
-            "byte": 1895
+            "byte": 2188
           }
         },
         {
           "start": {
-            "line": 85,
+            "line": 97,
             "column": 13,
-            "byte": 1909
+            "byte": 2202
           },
           "end": {
-            "line": 85,
+            "line": 97,
             "column": 29,
-            "byte": 1925
-          }
-        },
-        {
-          "start": {
-            "line": 98,
-            "column": 13,
             "byte": 2218
-          },
-          "end": {
-            "line": 98,
-            "column": 29,
-            "byte": 2234
           }
         },
         {
           "start": {
-            "line": 111,
+            "line": 110,
             "column": 13,
+            "byte": 2511
+          },
+          "end": {
+            "line": 110,
+            "column": 29,
             "byte": 2527
-          },
-          "end": {
-            "line": 111,
-            "column": 29,
-            "byte": 2543
           }
         },
         {
           "start": {
-            "line": 120,
+            "line": 123,
+            "column": 13,
+            "byte": 2820
+          },
+          "end": {
+            "line": 123,
+            "column": 29,
+            "byte": 2836
+          }
+        },
+        {
+          "start": {
+            "line": 132,
             "column": 83,
-            "byte": 2783
+            "byte": 3076
           },
           "end": {
-            "line": 120,
+            "line": 132,
             "column": 99,
-            "byte": 2799
+            "byte": 3092
           }
         },
         {
           "start": {
-            "line": 135,
+            "line": 147,
             "column": 13,
-            "byte": 3133
+            "byte": 3426
           },
           "end": {
-            "line": 135,
+            "line": 147,
             "column": 29,
-            "byte": 3149
+            "byte": 3442
           }
         },
         {
           "start": {
-            "line": 148,
+            "line": 160,
             "column": 13,
-            "byte": 3440
+            "byte": 3733
           },
           "end": {
-            "line": 148,
+            "line": 160,
             "column": 29,
-            "byte": 3456
+            "byte": 3749
           }
         },
         {
           "start": {
-            "line": 161,
+            "line": 173,
             "column": 13,
-            "byte": 3755
+            "byte": 4048
           },
           "end": {
-            "line": 161,
+            "line": 173,
             "column": 29,
-            "byte": 3771
+            "byte": 4064
           }
         },
         {
           "start": {
-            "line": 170,
+            "line": 182,
             "column": 84,
-            "byte": 4013
+            "byte": 4306
           },
           "end": {
-            "line": 170,
+            "line": 182,
             "column": 100,
-            "byte": 4029
+            "byte": 4322
           }
         },
         {
           "start": {
-            "line": 176,
+            "line": 188,
             "column": 72,
-            "byte": 4206
+            "byte": 4499
           },
           "end": {
-            "line": 176,
+            "line": 188,
             "column": 88,
-            "byte": 4222
+            "byte": 4515
           }
         },
         {
           "start": {
-            "line": 183,
+            "line": 195,
             "column": 80,
-            "byte": 4429
+            "byte": 4722
           },
           "end": {
-            "line": 183,
+            "line": 195,
             "column": 96,
-            "byte": 4445
+            "byte": 4738
           }
         },
         {
           "start": {
-            "line": 188,
+            "line": 200,
             "column": 65,
-            "byte": 4600
+            "byte": 4893
           },
           "end": {
-            "line": 188,
+            "line": 200,
             "column": 81,
-            "byte": 4616
+            "byte": 4909
           }
         },
         {
           "start": {
-            "line": 190,
+            "line": 202,
             "column": 53,
-            "byte": 4717
+            "byte": 5010
           },
           "end": {
-            "line": 190,
+            "line": 202,
             "column": 69,
-            "byte": 4733
+            "byte": 5026
           }
         },
         {
           "start": {
-            "line": 192,
+            "line": 204,
             "column": 83,
-            "byte": 4827
+            "byte": 5120
           },
           "end": {
-            "line": 192,
+            "line": 204,
             "column": 99,
-            "byte": 4843
+            "byte": 5136
           }
         },
         {
           "start": {
-            "line": 199,
+            "line": 211,
             "column": 78,
-            "byte": 5106
+            "byte": 5399
           },
           "end": {
-            "line": 199,
+            "line": 211,
             "column": 97,
-            "byte": 5125
+            "byte": 5418
           }
         },
         {
           "start": {
-            "line": 205,
+            "line": 217,
             "column": 73,
-            "byte": 5308
+            "byte": 5601
           },
           "end": {
-            "line": 205,
+            "line": 217,
             "column": 92,
-            "byte": 5327
+            "byte": 5620
           }
         },
         {
           "start": {
-            "line": 207,
+            "line": 219,
             "column": 55,
-            "byte": 5432
+            "byte": 5725
           },
           "end": {
-            "line": 207,
+            "line": 219,
             "column": 71,
-            "byte": 5448
+            "byte": 5741
           }
         }
       ]
@@ -194393,14 +195605,14 @@
       "sites": [
         {
           "start": {
-            "line": 106,
+            "line": 118,
             "column": 14,
-            "byte": 2393
+            "byte": 2686
           },
           "end": {
-            "line": 112,
+            "line": 124,
             "column": 10,
-            "byte": 2554
+            "byte": 2847
           }
         }
       ]
@@ -194414,14 +195626,14 @@
       "sites": [
         {
           "start": {
-            "line": 93,
+            "line": 105,
             "column": 14,
-            "byte": 2084
+            "byte": 2377
           },
           "end": {
-            "line": 99,
+            "line": 111,
             "column": 10,
-            "byte": 2245
+            "byte": 2538
           }
         }
       ]
@@ -194435,14 +195647,14 @@
       "sites": [
         {
           "start": {
-            "line": 205,
+            "line": 217,
             "column": 14,
-            "byte": 5249
+            "byte": 5542
           },
           "end": {
-            "line": 205,
+            "line": 217,
             "column": 93,
-            "byte": 5328
+            "byte": 5621
           }
         }
       ]
@@ -194456,14 +195668,14 @@
       "sites": [
         {
           "start": {
-            "line": 190,
+            "line": 202,
             "column": 13,
-            "byte": 4677
+            "byte": 4970
           },
           "end": {
-            "line": 190,
+            "line": 202,
             "column": 70,
-            "byte": 4734
+            "byte": 5027
           }
         }
       ]
@@ -194477,14 +195689,14 @@
       "sites": [
         {
           "start": {
-            "line": 156,
+            "line": 168,
             "column": 14,
-            "byte": 3618
+            "byte": 3911
           },
           "end": {
-            "line": 162,
+            "line": 174,
             "column": 10,
-            "byte": 3782
+            "byte": 4075
           }
         }
       ]
@@ -194498,14 +195710,14 @@
       "sites": [
         {
           "start": {
-            "line": 129,
+            "line": 141,
             "column": 14,
-            "byte": 2978
+            "byte": 3271
           },
           "end": {
-            "line": 136,
+            "line": 148,
             "column": 10,
-            "byte": 3160
+            "byte": 3453
           }
         }
       ]
@@ -194519,14 +195731,14 @@
       "sites": [
         {
           "start": {
-            "line": 176,
+            "line": 188,
             "column": 14,
-            "byte": 4148
+            "byte": 4441
           },
           "end": {
-            "line": 176,
+            "line": 188,
             "column": 89,
-            "byte": 4223
+            "byte": 4516
           }
         }
       ]
@@ -194540,14 +195752,14 @@
       "sites": [
         {
           "start": {
-            "line": 199,
+            "line": 211,
             "column": 14,
-            "byte": 5042
+            "byte": 5335
           },
           "end": {
-            "line": 199,
+            "line": 211,
             "column": 98,
-            "byte": 5126
+            "byte": 5419
           }
         }
       ]
@@ -194561,14 +195773,14 @@
       "sites": [
         {
           "start": {
-            "line": 79,
+            "line": 91,
             "column": 14,
-            "byte": 1724
+            "byte": 2017
           },
           "end": {
-            "line": 86,
+            "line": 98,
             "column": 10,
-            "byte": 1936
+            "byte": 2229
           }
         }
       ]
@@ -194582,14 +195794,14 @@
       "sites": [
         {
           "start": {
-            "line": 143,
+            "line": 155,
             "column": 14,
-            "byte": 3307
+            "byte": 3600
           },
           "end": {
-            "line": 149,
+            "line": 161,
             "column": 10,
-            "byte": 3467
+            "byte": 3760
           }
         }
       ]
@@ -194603,14 +195815,14 @@
       "sites": [
         {
           "start": {
-            "line": 193,
+            "line": 205,
             "column": 32,
-            "byte": 4877
+            "byte": 5170
           },
           "end": {
-            "line": 193,
+            "line": 205,
             "column": 69,
-            "byte": 4914
+            "byte": 5207
           }
         }
       ]
@@ -194624,14 +195836,14 @@
       "sites": [
         {
           "start": {
-            "line": 183,
+            "line": 195,
             "column": 14,
-            "byte": 4363
+            "byte": 4656
           },
           "end": {
-            "line": 183,
+            "line": 195,
             "column": 97,
-            "byte": 4446
+            "byte": 4739
           }
         }
       ]
@@ -194645,14 +195857,14 @@
       "sites": [
         {
           "start": {
-            "line": 170,
+            "line": 182,
             "column": 13,
-            "byte": 3942
+            "byte": 4235
           },
           "end": {
-            "line": 170,
+            "line": 182,
             "column": 101,
-            "byte": 4030
+            "byte": 4323
           }
         }
       ]
@@ -194666,14 +195878,14 @@
       "sites": [
         {
           "start": {
-            "line": 120,
+            "line": 132,
             "column": 13,
-            "byte": 2713
+            "byte": 3006
           },
           "end": {
-            "line": 120,
+            "line": 132,
             "column": 100,
-            "byte": 2800
+            "byte": 3093
           }
         }
       ]
@@ -194687,14 +195899,14 @@
       "sites": [
         {
           "start": {
-            "line": 188,
+            "line": 200,
             "column": 14,
-            "byte": 4549
+            "byte": 4842
           },
           "end": {
-            "line": 188,
+            "line": 200,
             "column": 82,
-            "byte": 4617
+            "byte": 4910
           }
         }
       ]
@@ -194708,14 +195920,14 @@
       "sites": [
         {
           "start": {
-            "line": 61,
+            "line": 73,
             "column": 14,
-            "byte": 1281
+            "byte": 1574
           },
           "end": {
-            "line": 71,
+            "line": 83,
             "column": 10,
-            "byte": 1566
+            "byte": 1859
           }
         }
       ]
@@ -194729,14 +195941,14 @@
       "sites": [
         {
           "start": {
-            "line": 192,
+            "line": 204,
             "column": 44,
-            "byte": 4788
+            "byte": 5081
           },
           "end": {
-            "line": 192,
+            "line": 204,
             "column": 100,
-            "byte": 4844
+            "byte": 5137
           }
         }
       ]
@@ -194750,14 +195962,14 @@
       "sites": [
         {
           "start": {
-            "line": 207,
+            "line": 219,
             "column": 13,
-            "byte": 5390
+            "byte": 5683
           },
           "end": {
-            "line": 207,
+            "line": 219,
             "column": 72,
-            "byte": 5449
+            "byte": 5742
           }
         }
       ]
@@ -194771,14 +195983,14 @@
       "sites": [
         {
           "start": {
-            "line": 47,
+            "line": 59,
             "column": 5,
-            "byte": 959
+            "byte": 1252
           },
           "end": {
-            "line": 47,
+            "line": 59,
             "column": 41,
-            "byte": 995
+            "byte": 1288
           }
         }
       ]
@@ -194792,14 +196004,14 @@
       "sites": [
         {
           "start": {
-            "line": 47,
+            "line": 59,
             "column": 5,
-            "byte": 959
+            "byte": 1252
           },
           "end": {
-            "line": 47,
+            "line": 59,
             "column": 34,
-            "byte": 988
+            "byte": 1281
           }
         }
       ]
@@ -325193,6 +326405,13 @@
     },
     {
       "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "function:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
       "target": "function:crates/tracers-analysis/src/graph/graph_tests.rs::parse",
       "kind": "defines",
       "status": "resolved_internal",
@@ -325327,6 +326546,55 @@
     {
       "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
       "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::builds_file_and_symbol_nodes.result",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.builder",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.dir",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.import_pass",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.index",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.package_nodes",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.parsed",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-analysis/src/graph/graph_tests.rs",
+      "target": "variable:crates/tracers-analysis/src/graph/graph_tests.rs::multi_file_go_package_shares_one_package_node.result",
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -329863,6 +331131,118 @@
     {
       "source": "module:crates/tracers-analysis/tests/snapshots_typescript.rs",
       "target": "variable:crates/tracers-analysis/tests/snapshots_typescript.rs::snapshot_typescript_fixture.path",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::civil_from_days",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::main",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "function:crates/tracers-cli/build.rs::tests.known_dates",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "module:crates/tracers-cli/build.rs::tests",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.d",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.doe",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.doy",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.era",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.m",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.mp",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.y",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.yoe",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::civil_from_days.z",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.days",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.secs",
+      "kind": "defines",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "module:crates/tracers-cli/build.rs",
+      "target": "variable:crates/tracers-cli/build.rs::main.secs_of_day",
       "kind": "defines",
       "status": "resolved_internal",
       "origin": "syntax"
@@ -349557,6 +350937,13 @@
     },
     {
       "source": "repository:.",
+      "target": "file:crates/tracers-cli/build.rs",
+      "kind": "contains",
+      "status": "resolved_internal",
+      "origin": "syntax"
+    },
+    {
+      "source": "repository:.",
       "target": "file:crates/tracers-cli/src/cli/commands.rs",
       "kind": "contains",
       "status": "resolved_internal",
@@ -353066,14 +354453,14 @@
       "sites": [
         {
           "start": {
-            "line": 19,
+            "line": 29,
             "column": 14,
-            "byte": 420
+            "byte": 558
           },
           "end": {
-            "line": 19,
+            "line": 29,
             "column": 22,
-            "byte": 428
+            "byte": 566
           }
         }
       ]
@@ -355236,6 +356623,25 @@
     {
       "severity": "warning",
       "kind": "unresolved_import",
+      "message": "cannot resolve import `super::civil_from_days`",
+      "file": "crates/tracers-cli/build.rs",
+      "range": {
+        "start": {
+          "line": 41,
+          "column": 5,
+          "byte": 1431
+        },
+        "end": {
+          "line": 41,
+          "column": 32,
+          "byte": 1458
+        }
+      },
+      "language": "rust"
+    },
+    {
+      "severity": "warning",
+      "kind": "unresolved_import",
       "message": "cannot resolve import `super::parse_item`",
       "file": "crates/tracers-parser/src/adapters/csharp/declarations.rs",
       "range": {
@@ -355881,25 +357287,25 @@
     }
   ],
   "statistics": {
-    "files": 345,
+    "files": 346,
     "packages": 9,
-    "nodes": 5102,
-    "edges": 17132,
-    "symbols": 3883,
-    "unresolvedEdges": 5129,
-    "diagnostics": 39,
+    "nodes": 5131,
+    "edges": 17205,
+    "symbols": 3908,
+    "unresolvedEdges": 5146,
+    "diagnostics": 40,
     "byNodeKind": {
       "class": 66,
       "constant": 256,
       "constructor": 22,
       "enum": 30,
-      "external_symbol": 271,
-      "file": 345,
+      "external_symbol": 272,
+      "file": 346,
       "framework": 26,
-      "function": 588,
+      "function": 592,
       "interface": 11,
       "method": 338,
-      "module": 593,
+      "module": 595,
       "namespace": 1,
       "package": 9,
       "property": 369,
@@ -355907,16 +357313,16 @@
       "struct": 74,
       "trait": 5,
       "type": 4,
-      "unknown": 660,
-      "variable": 1433
+      "unknown": 662,
+      "variable": 1452
     },
     "byEdgeKind": {
-      "calls": 5610,
-      "contains": 4153,
-      "defines": 3445,
+      "calls": 5632,
+      "contains": 4179,
+      "defines": 3469,
       "exports": 1500,
       "implements": 21,
-      "imports": 988,
+      "imports": 989,
       "inherits": 13,
       "uses_framework": 26,
       "uses_type": 1376
@@ -355928,17 +357334,17 @@
       "csharp": 40,
       "dart": 4,
       "gdscript": 2,
-      "go": 98,
+      "go": 91,
       "java": 60,
       "javascript": 11,
-      "kotlin": 79,
+      "kotlin": 77,
       "markdown": 14,
       "matlab": 2,
       "php": 35,
       "python": 104,
       "r": 4,
       "ruby": 38,
-      "rust": 4404,
+      "rust": 4433,
       "scala": 7,
       "swift": 61,
       "tsx": 8,
@@ -355947,9 +357353,9 @@
     },
     "byStatus": {
       "ambiguous": 220,
-      "resolved_external": 983,
-      "resolved_internal": 11020,
-      "unresolved": 4909
+      "resolved_external": 987,
+      "resolved_internal": 11072,
+      "unresolved": 4926
     },
     "byFramework": {
       "actix-web": 1,
