@@ -6,7 +6,7 @@ Tracers is a high-performance, multi-language code intelligence and graph analys
 
 ## Features
 
-- **Multi-language support**: TypeScript, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, and R
+- **Multi-language support**: 23 languages via Tree-sitter — TypeScript/TSX, JavaScript/JSX, Python, Go, Rust, Kotlin, Swift, Java, C#, PHP, Ruby, C, C++, Dart, Scala, R, Zig, MATLAB, GDScript, Bash, and Markdown (opt-in via `--language markdown`)
 - **Framework detection**: Detects React, Vue, Angular, Express, Next.js, NestJS, Svelte, SvelteKit, Nuxt, Hono, tRPC, Prisma, and Drizzle ORM
 - **Interactive Visual Explorer**: Built-in Obsidian-style graph view powered by D3.js & HTML5 Canvas with real-time physics, ego-network hover, search, and filtering
 - **Syntax-level analysis**: Tree-sitter based parsing across all supported languages
@@ -336,7 +336,7 @@ Validate graph integrity: every edge must reference an existing node. Fails if a
 Tracers is organized as a Rust workspace with the following crates:
 
 - **tracers-core**: Core graph model, stable identities, graph validation, and query engine
-- **tracers-parser**: Repository discovery and Tree-sitter syntax extraction across all 10 supported languages
+- **tracers-parser**: Repository discovery and Tree-sitter syntax extraction across all 23 supported languages
 - **tracers-analysis**: Symbol resolution (`resolve/`), graph construction (`graph/`), and incremental caching
 - **tracers-export**: Deterministic JSON and DOT export with schema validation
 - **tracers-cli**: Command-line interface (`cli/`) and embedded Obsidian-style D3 graph template
@@ -345,20 +345,51 @@ The core engine is independent of the visualization layer and does not execute o
 
 ## Language Support
 
-Tracers supports the following languages with syntax-level analysis:
+Tracers supports 23 languages. Analysis depth varies by adapter — run
+`tracers languages` for the live capability matrix. Markdown is opt-in
+(`--language markdown` or `languages = ["markdown"]`) so documentation is
+not indexed by default.
 
-| Language   | Extensions | Syntax | Symbols | Imports | Calls | Cross-file | Semantic |
-| ---------- | ---------- | ------ | ------- | ------- | ----- | ---------- | -------- |
-| TypeScript | .ts, .tsx  | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Python     | .py        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Go         | .go        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Rust       | .rs        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Kotlin     | .kt, .kts  | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Swift      | .swift     | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Java       | .java      | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| C#         | .cs        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| PHP        | .php       | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
-| Ruby       | .rb        | ✅      | ✅       | ✅       | ✅     | ✅          | Planned  |
+### Full analysis (symbols, imports, calls, cross-file references)
+
+| Language   | Extensions              |
+| ---------- | ----------------------- |
+| TypeScript | .ts, .mts, .cts         |
+| TSX        | .tsx                    |
+| JavaScript | .js, .mjs, .cjs         |
+| JSX        | .jsx                    |
+| Python     | .py, .pyi               |
+| Go         | .go                     |
+| Rust       | .rs                     |
+| Kotlin     | .kt, .kts               |
+| Swift      | .swift                  |
+| Java       | .java                   |
+| C#         | .cs                     |
+| PHP        | .php                    |
+| Ruby       | .rb                     |
+
+### Partial analysis
+
+| Language   | Extensions                    | Extracts                              |
+| ---------- | ----------------------------- | ------------------------------------- |
+| C          | .c, .h                        | Symbols (functions, structs, enums)   |
+| C++        | .cpp, .cc, .cxx, .hpp, .hh, .hxx | Symbols (functions, classes, structs) |
+| Dart       | .dart                        | Symbols (functions, classes, mixins)  |
+| Scala      | .scala, .sc                   | Symbols (functions, classes, traits)  |
+| R          | .r, .rmd                      | Symbols (functions)                   |
+| Markdown   | .md, .markdown                | Wiki-link and markdown-link imports   |
+
+### Syntax tree only
+
+These languages are parsed into syntax trees (and counted in diagnostics)
+but their adapters do not yet extract symbols, imports, or calls:
+
+| Language   | Extensions      |
+| ---------- | --------------- |
+| Zig        | .zig            |
+| MATLAB     | .m              |
+| GDScript   | .gd             |
+| Bash       | .sh, .bash      |
 
 ### Current Limitations
 

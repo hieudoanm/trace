@@ -128,3 +128,28 @@ fn filters_nodes_and_prunes_dangling_edges() {
     assert_eq!(nodes.len(), 1);
     assert_eq!(edges.len(), 0);
 }
+
+#[test]
+fn stats_symbols_excludes_framework_and_unresolved_nodes() {
+    use crate::graph::stats::Stats;
+    let mut graph = Graph::new();
+    graph
+        .add_node(Node::new("function:a.ts::main", NodeKind::Function, "main"))
+        .unwrap();
+    graph
+        .add_node(Node::new("framework:react", NodeKind::Framework, "react"))
+        .unwrap();
+    graph
+        .add_node(Node::new(
+            "unresolved:typescript:missing",
+            NodeKind::Unknown,
+            "missing",
+        ))
+        .unwrap();
+    graph
+        .add_node(Node::new("file:a.ts", NodeKind::File, "a.ts"))
+        .unwrap();
+    graph.finalize();
+    let stats = Stats::compute(&graph, &[]);
+    assert_eq!(stats.symbols, 1);
+}

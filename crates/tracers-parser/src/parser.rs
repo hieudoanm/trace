@@ -49,8 +49,11 @@ impl SyntaxParser {
         source: &str,
     ) -> Result<ParsedFile, ParseError> {
         if language == Language::Markdown {
-            let builder = crate::util::SyntaxBuilder::new(source, language, path);
-            return Ok(builder.finish());
+            // Markdown has no tree-sitter grammar; the adapter scans
+            // wikilink/markdown-link targets directly from the source.
+            return Ok(crate::adapters::markdown::parse_source(
+                language, path, source,
+            ));
         }
         let grammar = tree_sitter_language(language);
         self.parser
@@ -184,5 +187,25 @@ mod tests {
         let big = dir.path().join("big.ts");
         std::fs::write(&big, "a".repeat(64)).unwrap();
         assert!(matches!(read_source(&big, 16), Err(ReadError::TooLarge(_))));
+    }
+}
+
+#[cfg(test)]
+mod markdown_tests {
+    use super::*;
+
+    #[test]
+    fn markdown_extracts_link_imports() {
+        let mut parser = SyntaxParser::new().unwrap();
+        let parsed = parser
+            .parse(
+                "note.md",
+                Language::Markdown,
+                "See [[Other Note]] and [a link](docs/page.md).",
+            )
+            .unwrap();
+        assert_eq!(parsed.imports.len(), 2);
+        assert_eq!(parsed.imports[0].module, "Other Note");
+        assert_eq!(parsed.imports[1].module, "docs/page.md");
     }
 }

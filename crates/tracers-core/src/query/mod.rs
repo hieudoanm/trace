@@ -12,7 +12,7 @@ pub mod traversal;
 pub mod types;
 
 pub use constants::{DEPENDENCY_EDGES, IMPACT_EDGES, PATH_EDGES};
-pub use convenience::{callable_kinds, resolve_unique};
+pub use convenience::resolve_unique;
 pub use options::QueryOptions;
 pub use traversal::Query;
 pub use types::{ImpactNode, Neighbor, PathEdge, PathResult};

@@ -51,6 +51,12 @@ fn location_suffix(node: &Node) -> String {
     }
 }
 
+/// Fetch one extra row so we can tell "exactly max_results results" apart
+/// from "results were truncated".
+fn fetch_limit(max_results: usize) -> usize {
+    max_results.saturating_add(1)
+}
+
 fn print_neighbors(
     heading: &str,
     selector: &str,
@@ -62,7 +68,7 @@ fn print_neighbors(
         println!("  (none)");
         return;
     }
-    for neighbor in neighbors {
+    for neighbor in neighbors.iter().take(max_results) {
         let node = &neighbor.node;
         let origin = match neighbor.edge.origin {
             tracers_core::ResolutionOrigin::Syntax => String::new(),
@@ -80,7 +86,7 @@ fn print_neighbors(
         );
         println!("    {}", node.id);
     }
-    if neighbors.len() >= max_results {
+    if neighbors.len() > max_results {
         println!("  … result limit reached; refine with --max-results or --max-depth");
     }
 }
@@ -95,7 +101,7 @@ pub(crate) fn cmd_callers(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
-    let options = node_options(max_depth, max_results);
+    let options = node_options(max_depth, fetch_limit(max_results));
     let callers = query.callers(&node.id, &options);
     print_neighbors("Callers", symbol, &callers, max_results);
     Ok(())
@@ -111,7 +117,7 @@ pub(crate) fn cmd_callees(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
-    let options = node_options(max_depth, max_results);
+    let options = node_options(max_depth, fetch_limit(max_results));
     let callees = query.callees(&node.id, &options);
     print_neighbors("Callees", symbol, &callees, max_results);
     Ok(())
@@ -129,7 +135,7 @@ pub(crate) fn cmd_refs(
     let query = Query::new(&graph);
     // A call site is also a reference, so `refs` covers calls, references
     // and type usages; `callers` remains the calls-only view.
-    let options = node_options(max_depth, max_results).with_edges(&[
+    let options = node_options(max_depth, fetch_limit(max_results)).with_edges(&[
         EdgeKind::Calls,
         EdgeKind::References,
         EdgeKind::UsesType,
@@ -150,9 +156,14 @@ pub(crate) fn cmd_deps(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
-    // Without --transitive only direct (depth-1) dependencies are shown.
-    let options = node_options(if transitive { max_depth } else { 1 }, max_results);
-    let deps = query.transitive_dependencies(&node.id, &options);
+    let deps = if transitive {
+        let options = node_options(max_depth, fetch_limit(max_results));
+        query.transitive_dependencies(&node.id, &options)
+    } else {
+        // Direct dependencies are depth-1 regardless of --max-depth.
+        let options = node_options(1, fetch_limit(max_results));
+        query.direct_dependencies(&node.id, &options)
+    };
     println!(
         "Dependencies of `{target}`{}:",
         if transitive {
@@ -164,7 +175,7 @@ pub(crate) fn cmd_deps(
     if deps.is_empty() {
         println!("  (none)");
     } else {
-        for neighbor in &deps {
+        for neighbor in deps.iter().take(max_results) {
             let node = &neighbor.node;
             println!(
                 "  - {} [{}] via {} ({}) depth {}{}",
@@ -177,7 +188,7 @@ pub(crate) fn cmd_deps(
             );
             println!("    {}", node.id);
         }
-        if deps.len() >= options.max_results {
+        if deps.len() > max_results {
             println!("  … result limit reached; refine with --max-results or --max-depth");
         }
     }
@@ -194,14 +205,14 @@ pub(crate) fn cmd_impact(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
-    let options = node_options(max_depth, max_results);
+    let options = node_options(max_depth, fetch_limit(max_results));
     let impacts = query.impact(&node.id, &options);
 
     println!("Impact of `{target}` (static reachability, not runtime breakage):");
     if impacts.is_empty() {
         println!("  (none)");
     } else {
-        for impact in &impacts {
+        for impact in impacts.iter().take(max_results) {
             println!(
                 "  - {} [{}] depth {}",
                 impact.node.name,
@@ -228,7 +239,7 @@ pub(crate) fn cmd_impact(
             }
             println!("    {}", impact.node.id);
         }
-        if impacts.len() >= max_results {
+        if impacts.len() > max_results {
             println!("  … result limit reached; refine with --max-results or --max-depth");
         }
     }
@@ -284,7 +295,7 @@ pub(crate) fn cmd_dependents(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, target)?;
     let query = Query::new(&graph);
-    let options = node_options(max_depth, max_results);
+    let options = node_options(max_depth, fetch_limit(max_results));
     let dependents = query.reverse_dependencies_refs(&node.id, &options);
     print_neighbors("Dependents", target, &dependents, max_results);
     Ok(())
@@ -300,7 +311,7 @@ pub(crate) fn cmd_reach(
     let graph = build_graph(path, graph_file)?;
     let node = resolve_target(&graph, symbol)?;
     let query = Query::new(&graph);
-    let options = node_options(max_depth, max_results);
+    let options = node_options(max_depth, fetch_limit(max_results));
     let reachable = query.reachable(&node.id, &options);
     print_neighbors("Reachable nodes", symbol, &reachable, max_results);
     Ok(())

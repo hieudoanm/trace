@@ -5,7 +5,7 @@ use ignore::WalkBuilder;
 
 use tracers_core::{Diagnostic, DiagnosticKind, Language};
 
-use super::constants::DEFAULT_EXCLUDED_DIRS;
+use super::constants::{DEFAULT_EXCLUDED_DIRS, NON_SOURCE_EXTENSIONS};
 use super::filters::{compile_globs, looks_generated, relative_path};
 use super::types::{DiscoveredFile, DiscoveryOptions, DiscoveryReport, SkipReason, SkippedFile};
 
@@ -81,7 +81,12 @@ pub(crate) fn discover_directory(
             continue;
         };
         let Some(language) = Language::from_extension(extension) else {
-            unsupported_files += 1;
+            // Well-known non-source files (images, data, docs, binaries) are
+            // not language candidates either, so they don't count as
+            // unsupported. Unknown extensions still do.
+            if !NON_SOURCE_EXTENSIONS.contains(&extension.to_ascii_lowercase().as_str()) {
+                unsupported_files += 1;
+            }
             continue;
         };
         if !options.languages.is_empty() && !options.languages.contains(&language) {

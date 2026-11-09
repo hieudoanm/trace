@@ -7,7 +7,7 @@ mod gdscript;
 mod go;
 mod java;
 mod kotlin;
-mod markdown;
+pub(crate) mod markdown;
 mod matlab;
 mod php;
 mod python;

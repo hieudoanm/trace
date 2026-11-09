@@ -51,6 +51,12 @@ pub(crate) fn cmd_check(
         },
         cache_dir.display()
     );
+    if config.cache.enabled {
+        match probe_writable(&cache_dir) {
+            Ok(()) => println!("  writable: yes"),
+            Err(error) => println!("  writable: no ({error})"),
+        }
+    }
 
     let mut languages: Vec<Language> = report.files.iter().map(|file| file.language).collect();
     languages.sort();
@@ -114,6 +120,17 @@ pub(crate) fn cmd_check(
     }
 
     println!("\nCheck passed.");
+    Ok(())
+}
+
+/// Verifies the cache directory can be created and written to by creating
+/// and removing a probe file.
+fn probe_writable(cache_dir: &Path) -> Result<(), String> {
+    std::fs::create_dir_all(cache_dir)
+        .map_err(|error| format!("cannot create directory: {error}"))?;
+    let probe = cache_dir.join(".writability-probe");
+    std::fs::write(&probe, b"").map_err(|error| format!("cannot write: {error}"))?;
+    let _ = std::fs::remove_file(&probe);
     Ok(())
 }
 

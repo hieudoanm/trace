@@ -72,3 +72,17 @@ fn write(root: &Path, path: &str, content: &str) {
     }
     fs::write(full, content).unwrap();
 }
+
+#[test]
+fn non_source_extensions_are_not_counted_as_unsupported() {
+    let dir = tempfile::tempdir().unwrap();
+    let root = dir.path();
+    write(root, "a.ts", "export const a = 1;");
+    write(root, "logo.png", "binary");
+    write(root, "data.json", "{}");
+    write(root, "notes.lock", "lock");
+    write(root, "weird.xyz", "unknown extension");
+    let report = discover(root, &DiscoveryOptions::default()).unwrap();
+    // Only the unrecognized .xyz extension counts as unsupported.
+    assert_eq!(report.unsupported_files, 1);
+}

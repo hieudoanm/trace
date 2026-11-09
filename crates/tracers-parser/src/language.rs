@@ -34,7 +34,12 @@ pub fn tree_sitter_language(language: Language) -> tree_sitter::Language {
         Language::Dart => tree_sitter_dart::LANGUAGE.into(),
         Language::Scala => tree_sitter_scala::LANGUAGE.into(),
         Language::R => tree_sitter_r::LANGUAGE.into(),
-        Language::Markdown => tree_sitter_r::LANGUAGE.into(),
+        // Markdown is handled without a tree-sitter grammar: the adapter
+        // scans wikilinks directly. Returning another language's grammar
+        // here previously masked that invariant.
+        Language::Markdown => {
+            unreachable!("markdown parsing does not use a tree-sitter grammar")
+        }
         Language::Zig => tree_sitter_zig::LANGUAGE.into(),
         Language::Matlab => tree_sitter_matlab::LANGUAGE.into(),
         Language::GdScript => tree_sitter_gdscript::LANGUAGE.into(),
@@ -81,6 +86,10 @@ mod tests {
     #[test]
     fn every_language_builds_a_grammar() {
         for language in Language::ALL {
+            // Markdown is parsed without a grammar (see tree_sitter_language).
+            if language == Language::Markdown {
+                continue;
+            }
             let grammar = tree_sitter_language(language);
             assert!(grammar.node_kind_count() > 0, "{language}");
             assert!(!grammar_version(language).is_empty());

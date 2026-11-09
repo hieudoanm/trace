@@ -5,6 +5,12 @@ use tracers_core::{Position, SourceRange};
 use tree_sitter::Tree;
 
 pub fn parse(language: Language, path: &str, source: &str, _tree: &Tree) -> ParsedFile {
+    parse_source(language, path, source)
+}
+
+/// Markdown has no tree-sitter grammar; the adapter scans link targets
+/// directly from the source text.
+pub fn parse_source(language: Language, path: &str, source: &str) -> ParsedFile {
     let mut builder = SyntaxBuilder::new(source, language, path);
     let mut i = 0;
     while i < source.len() {

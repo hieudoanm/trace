@@ -67,7 +67,7 @@ pub enum Commands {
         #[arg(long)]
         language: Option<String>,
 
-        /// Filter by node kind.
+        /// Filter by node kind (comma-separated for multiple).
         #[arg(long)]
         kind: Option<String>,
 

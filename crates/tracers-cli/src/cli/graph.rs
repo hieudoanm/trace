@@ -11,9 +11,17 @@ use super::scan::{build_document, build_graph_for_path, cache_enabled};
 fn node_filter(kind: Option<&str>, language: Option<&str>) -> Result<NodeFilter> {
     let mut filter = NodeFilter::default();
     if let Some(kind_name) = kind {
-        let kind = NodeKind::parse_name(kind_name)
-            .ok_or_else(|| anyhow!("unknown node kind `{kind_name}`"))?;
-        filter.kinds = vec![kind];
+        for name in kind_name.split(',') {
+            let name = name.trim();
+            if name.is_empty() {
+                continue;
+            }
+            let kind =
+                NodeKind::parse_name(name).ok_or_else(|| anyhow!("unknown node kind `{name}`"))?;
+            if !filter.kinds.contains(&kind) {
+                filter.kinds.push(kind);
+            }
+        }
     }
     if let Some(language) = language {
         for name in language.split(',') {

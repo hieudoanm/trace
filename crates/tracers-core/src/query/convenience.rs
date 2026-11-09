@@ -1,5 +1,5 @@
 use crate::graph::Graph;
-use crate::node::{Node, NodeKind};
+use crate::node::Node;
 
 /// Convenience: resolve a selector and report ambiguity.
 pub fn resolve_unique<'a>(graph: &'a Graph, selector: &str) -> Result<&'a Node, String> {
@@ -21,14 +21,4 @@ pub fn resolve_unique<'a>(graph: &'a Graph, selector: &str) -> Result<&'a Node, 
         ));
     }
     Ok(matches.remove(0))
-}
-
-/// Convenience for tests and CLI display.
-pub fn callable_kinds() -> [NodeKind; 4] {
-    [
-        NodeKind::Function,
-        NodeKind::Method,
-        NodeKind::Constructor,
-        NodeKind::Unknown,
-    ]
 }

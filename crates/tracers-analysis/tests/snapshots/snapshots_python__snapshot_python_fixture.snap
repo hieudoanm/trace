@@ -2345,7 +2345,7 @@ expression: document
     "packages": 0,
     "nodes": 52,
     "edges": 140,
-    "symbols": 41,
+    "symbols": 33,
     "unresolvedEdges": 15,
     "diagnostics": 6,
     "byNodeKind": {

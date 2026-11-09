@@ -70,11 +70,9 @@ impl EdgeKind {
     }
 
     /// Whether traversing this edge forwards represents a dependency.
+    /// Kept in sync with [`crate::query::DEPENDENCY_EDGES`].
     pub fn is_dependency(self) -> bool {
-        matches!(
-            self,
-            EdgeKind::Imports | EdgeKind::DependsOn | EdgeKind::UsesType | EdgeKind::UsesFramework
-        )
+        crate::query::DEPENDENCY_EDGES.contains(&self)
     }
 }
 
@@ -208,8 +206,11 @@ mod tests {
 
     #[test]
     fn dependency_classification() {
-        assert!(EdgeKind::Imports.is_dependency());
+        for kind in crate::query::DEPENDENCY_EDGES {
+            assert!(kind.is_dependency(), "{kind:?} should be a dependency edge");
+        }
         assert!(!EdgeKind::Calls.is_dependency());
+        assert!(!EdgeKind::UsesFramework.is_dependency());
     }
 
     #[test]

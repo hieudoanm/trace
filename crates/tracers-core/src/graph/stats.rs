@@ -93,7 +93,8 @@ impl Stats {
                             | NodeKind::Module
                             | NodeKind::Package
                             | NodeKind::ExternalSymbol
-                    )
+                            | NodeKind::Framework
+                    ) && !n.id.starts_with("unresolved:")
                 })
                 .count(),
             unresolved_edges,

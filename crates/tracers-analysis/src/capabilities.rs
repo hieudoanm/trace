@@ -99,10 +99,32 @@ pub fn capabilities(language: Language, files: usize) -> LanguageCapability {
                 "Dynamic method definition and metaprogramming are not modelled.",
             ],
         ),
-        Language::C | Language::Cpp | Language::Dart | Language::Scala | Language::R | Language::Zig | Language::Matlab | Language::GdScript | Language::Bash | Language::Markdown => (
+        Language::C | Language::Cpp | Language::Dart | Language::Scala | Language::R => (
             None,
-            &["Syntax-level parsing only; no semantic integration."],
+            &["Symbol extraction only; imports, calls and cross-file resolution are not implemented."],
         ),
+        Language::Zig | Language::Bash | Language::Matlab | Language::GdScript => (
+            None,
+            &["Grammar is parsed for syntax trees only; no symbols, imports or calls are extracted."],
+        ),
+        Language::Markdown => (
+            None,
+            &["Wiki-link and markdown-link targets are recorded as imports; no symbols or calls."],
+        ),
+    };
+    // Report what each adapter actually extracts rather than claiming
+    // uniform coverage. Only the primary adapters emit imports and calls;
+    // C-family and scripting adapters are symbol-only; Zig/Bash emit nothing;
+    // Markdown records link targets as imports.
+    let (symbol_extraction, import_resolution, call_resolution, cross_file) = match language {
+        Language::Zig | Language::Bash | Language::Matlab | Language::GdScript => {
+            (false, false, false, false)
+        }
+        Language::Markdown => (false, true, false, false),
+        Language::C | Language::Cpp | Language::Dart | Language::Scala | Language::R => {
+            (true, false, false, false)
+        }
+        _ => (true, true, true, true),
     };
     LanguageCapability {
         language,
@@ -110,10 +132,10 @@ pub fn capabilities(language: Language, files: usize) -> LanguageCapability {
         files,
         grammar: grammar_version(language).to_string(),
         syntax_parsing: true,
-        symbol_extraction: true,
-        import_resolution: true,
-        call_resolution: true,
-        cross_file_references: true,
+        symbol_extraction,
+        import_resolution,
+        call_resolution,
+        cross_file_references: cross_file,
         type_aware_resolution: false,
         semantic_integration: false,
         semantic_tool: tool.map(|t| t.to_string()),
@@ -122,9 +144,13 @@ pub fn capabilities(language: Language, files: usize) -> LanguageCapability {
 }
 
 pub fn all_capabilities() -> Vec<LanguageCapability> {
+    // Markdown is not in Language::ALL (it is opt-in via --language to avoid
+    // indexing documentation in every repository), but it is still a
+    // supported language and must appear in capability reports.
     Language::ALL
         .iter()
         .copied()
+        .chain(std::iter::once(Language::Markdown))
         .map(|language| capabilities(language, 0))
         .collect()
 }
@@ -141,5 +167,46 @@ mod tests {
             assert!(!capability.semantic_integration);
             assert!(!capability.grammar.is_empty());
         }
+    }
+
+    #[test]
+    fn stub_and_partial_adapters_report_honest_capabilities() {
+        // Grammar-only adapters extract nothing.
+        for language in [
+            Language::Zig,
+            Language::Bash,
+            Language::Matlab,
+            Language::GdScript,
+        ] {
+            let capability = capabilities(language, 0);
+            assert!(!capability.symbol_extraction, "{language}");
+            assert!(!capability.import_resolution, "{language}");
+            assert!(!capability.call_resolution, "{language}");
+            assert!(!capability.cross_file_references, "{language}");
+        }
+        // Symbol-only adapters extract symbols but no imports/calls.
+        for language in [
+            Language::C,
+            Language::Cpp,
+            Language::Dart,
+            Language::Scala,
+            Language::R,
+        ] {
+            let capability = capabilities(language, 0);
+            assert!(capability.symbol_extraction, "{language}");
+            assert!(!capability.import_resolution, "{language}");
+            assert!(!capability.call_resolution, "{language}");
+        }
+        // Markdown records link targets as imports only.
+        let markdown = capabilities(Language::Markdown, 0);
+        assert!(!markdown.symbol_extraction);
+        assert!(markdown.import_resolution);
+        assert!(!markdown.call_resolution);
+        // Primary adapters keep full claims.
+        let typescript = capabilities(Language::TypeScript, 0);
+        assert!(typescript.symbol_extraction);
+        assert!(typescript.import_resolution);
+        assert!(typescript.call_resolution);
+        assert!(typescript.cross_file_references);
     }
 }
