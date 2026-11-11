@@ -208,4 +208,20 @@ mod markdown_tests {
         assert_eq!(parsed.imports[0].module, "Other Note");
         assert_eq!(parsed.imports[1].module, "docs/page.md");
     }
+
+    #[test]
+    fn markdown_handles_multi_byte_characters() {
+        let mut parser = SyntaxParser::new().unwrap();
+        // '—' is 3 bytes; byte-wise scanning must not split it.
+        let parsed = parser
+            .parse(
+                "unicode.md",
+                Language::Markdown,
+                "A — dash — then [[Linked Page]] and café → [x](ü.md).",
+            )
+            .unwrap();
+        assert_eq!(parsed.imports.len(), 2);
+        assert_eq!(parsed.imports[0].module, "Linked Page");
+        assert_eq!(parsed.imports[1].module, "ü.md");
+    }
 }

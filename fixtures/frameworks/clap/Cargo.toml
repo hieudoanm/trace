@@ -5,3 +5,6 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "=4.6.7", features = ["derive"] }
+
+# Standalone fixture crate: keep it out of the parent tracers workspace.
+[workspace]
