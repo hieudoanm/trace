@@ -5,3 +5,6 @@ edition = "2021"
 
 [dependencies]
 actix-web = "=4.19.0"
+
+# Standalone fixture crate: keep it out of the parent tracers workspace.
+[workspace]

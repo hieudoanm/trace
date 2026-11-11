@@ -13,6 +13,8 @@ pub fn parse(language: Language, path: &str, source: &str, _tree: &Tree) -> Pars
 pub fn parse_source(language: Language, path: &str, source: &str) -> ParsedFile {
     let mut builder = SyntaxBuilder::new(source, language, path);
     let mut i = 0;
+    // `i` must always be a char boundary: every jump target below lands on
+    // an ASCII delimiter, and the fallback step advances a whole char.
     while i < source.len() {
         if source[i..].starts_with("[[") {
             if let Some(end) = source[i..].find("]]") {
@@ -77,7 +79,7 @@ pub fn parse_source(language: Language, path: &str, source: &str) -> ParsedFile 
                 }
             }
         }
-        i += 1;
+        i += source[i..].chars().next().map_or(1, char::len_utf8);
     }
     builder.finish()
 }
