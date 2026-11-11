@@ -1,5 +1,8 @@
 # Tracers
 
+[![CI](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+
 <img src="assets/images/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="1280" height="640" style="max-width: 100%; height: auto;">
 
 Tracers is a high-performance, multi-language code intelligence and graph analysis tool. It analyses source code repositories and builds a unified graph of their internal structure and relationships, enabling developers to understand codebase organization, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
@@ -352,44 +355,44 @@ not indexed by default.
 
 ### Full analysis (symbols, imports, calls, cross-file references)
 
-| Language   | Extensions              |
-| ---------- | ----------------------- |
-| TypeScript | .ts, .mts, .cts         |
-| TSX        | .tsx                    |
-| JavaScript | .js, .mjs, .cjs         |
-| JSX        | .jsx                    |
-| Python     | .py, .pyi               |
-| Go         | .go                     |
-| Rust       | .rs                     |
-| Kotlin     | .kt, .kts               |
-| Swift      | .swift                  |
-| Java       | .java                   |
-| C#         | .cs                     |
-| PHP        | .php                    |
-| Ruby       | .rb                     |
+| Language   | Extensions      |
+| ---------- | --------------- |
+| TypeScript | .ts, .mts, .cts |
+| TSX        | .tsx            |
+| JavaScript | .js, .mjs, .cjs |
+| JSX        | .jsx            |
+| Python     | .py, .pyi       |
+| Go         | .go             |
+| Rust       | .rs             |
+| Kotlin     | .kt, .kts       |
+| Swift      | .swift          |
+| Java       | .java           |
+| C#         | .cs             |
+| PHP        | .php            |
+| Ruby       | .rb             |
 
 ### Partial analysis
 
-| Language   | Extensions                    | Extracts                              |
-| ---------- | ----------------------------- | ------------------------------------- |
-| C          | .c, .h                        | Symbols (functions, structs, enums)   |
-| C++        | .cpp, .cc, .cxx, .hpp, .hh, .hxx | Symbols (functions, classes, structs) |
-| Dart       | .dart                        | Symbols (functions, classes, mixins)  |
-| Scala      | .scala, .sc                   | Symbols (functions, classes, traits)  |
-| R          | .r, .rmd                      | Symbols (functions)                   |
-| Markdown   | .md, .markdown                | Wiki-link and markdown-link imports   |
+| Language | Extensions                       | Extracts                              |
+| -------- | -------------------------------- | ------------------------------------- |
+| C        | .c, .h                           | Symbols (functions, structs, enums)   |
+| C++      | .cpp, .cc, .cxx, .hpp, .hh, .hxx | Symbols (functions, classes, structs) |
+| Dart     | .dart                            | Symbols (functions, classes, mixins)  |
+| Scala    | .scala, .sc                      | Symbols (functions, classes, traits)  |
+| R        | .r, .rmd                         | Symbols (functions)                   |
+| Markdown | .md, .markdown                   | Wiki-link and markdown-link imports   |
 
 ### Syntax tree only
 
 These languages are parsed into syntax trees (and counted in diagnostics)
 but their adapters do not yet extract symbols, imports, or calls:
 
-| Language   | Extensions      |
-| ---------- | --------------- |
-| Zig        | .zig            |
-| MATLAB     | .m              |
-| GDScript   | .gd             |
-| Bash       | .sh, .bash      |
+| Language | Extensions |
+| -------- | ---------- |
+| Zig      | .zig       |
+| MATLAB   | .m         |
+| GDScript | .gd        |
+| Bash     | .sh, .bash |
 
 ### Current Limitations
 
