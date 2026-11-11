@@ -19,13 +19,13 @@ env:
   RUST_BACKTRACE: 1
 
 jobs:
-  check:
-    name: Check
+  build:
+    name: Build (${{ matrix.os }})
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        rust: [stable]
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -33,82 +33,83 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: ${{ matrix.rust }}
           components: rustfmt, clippy
 
       - name: Cache cargo
-        uses: Swatinem/rust-cache@v2\.9\.3
+        uses: Swatinem/rust-cache@v2.9.3
+
       - name: Check formatting
         run: cargo fmt --all -- --check
 
       - name: Run Clippy
         run: cargo clippy --workspace --all-targets --all-features -- -D warnings
 
+      - name: Run tests
+        run: cargo test --workspace
+
       - name: Build
         run: cargo build --workspace
 
-  test:
-    name: Test
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
-        rust: [stable]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: ${{ matrix.rust }}
-
-      - name: Cache cargo
-        uses: Swatinem/rust-cache@v2\.9\.3
-      - name: Run tests
-        run: cargo test --workspace --verbose
-
-  schema-validation:
-    name: Validate JSON Schema
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Cache cargo
-        uses: Swatinem/rust-cache@v2\.9\.3
-      - name: Run schema validation test
-        run: cargo test -p tracers-export exported_document_conforms_to_schema
-
-  build-release:
-    name: Build Release
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macos-latest]
-        rust: [stable]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7.0.1
-
-      - name: Install Rust toolchain
-        uses: dtolnay/rust-toolchain@stable
-        with:
-          toolchain: ${{ matrix.rust }}
-
-      - name: Cache cargo
-        uses: Swatinem/rust-cache@v2\.9\.3
+      # Release binaries are only produced on master; PRs skip these steps.
       - name: Build release
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: cargo build --release
 
+      - name: Package release binary
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        shell: bash
+        run: |
+          mkdir -p dist
+          case "${{ matrix.os }}" in
+            ubuntu-latest)  name="tracers-linux-$(uname -m)" ;;
+            macos-latest)   name="tracers-darwin-$(uname -m | sed 's/arm64/aarch64/')" ;;
+            windows-latest) name="tracers-windows-x86_64" ;;
+          esac
+          if [ "${{ matrix.os }}" = "windows-latest" ]; then
+            cp target/release/tracers.exe "dist/${name}.exe"
+          else
+            cp target/release/tracers "dist/${name}"
+            chmod +x "dist/${name}"
+          fi
+          echo "packaged dist/${name}$( [ "${{ matrix.os }}" = "windows-latest" ] && echo .exe )"
+
       - name: Upload artifact
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-artifact@v7.0.2
         with:
           name: tracers-${{ matrix.os }}
-          path: target/release/tracers*
+          path: dist/*
+          if-no-files-found: error
+
+  release:
+    name: Release
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v8.0.2
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Publish GitHub release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh release view latest >/dev/null 2>&1; then
+            gh release upload latest dist/* --clobber
+          else
+            gh release create latest dist/* \
+              --title "Tracers (latest)" \
+              --notes-file README.md \
+              --target "${{ github.sha }}"
+          fi
 
   landing:
     name: Deploy landing page
