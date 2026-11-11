@@ -2,6 +2,6 @@
     "name": "laravel-app",
     "version": "1.0.0",
     "require": {
-        "laravel/framework": "13.40.0"
+        "laravel/framework": "13.42.0"
     }
 }
