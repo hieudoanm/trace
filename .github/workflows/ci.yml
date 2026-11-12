@@ -19,13 +19,9 @@ env:
   RUST_BACKTRACE: 1
 
 jobs:
-  cli-build:
-    name: CLI build (${{ matrix.os }})
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+  cli-check:
+    name: CLI check
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v7.0.1
@@ -46,6 +42,27 @@ jobs:
 
       - name: Run tests
         run: cargo test --workspace
+
+  cli-build:
+    name: CLI build (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    # Release binaries are only needed for the master-branch release job;
+    # PRs are covered by the `cli-check` job.
+    if: github.event_name != 'pull_request'
+    needs: cli-check
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache cargo
+        uses: Swatinem/rust-cache@v2.9.3
 
       - name: Build release binary
         run: cargo build --release -p tracers-cli
