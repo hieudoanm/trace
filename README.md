@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-keywords: `code-analysis`, `static-analysis`, `tree-sitter`, `rust`, `cli`, `graph`
+Topics: `code-analysis`, `static-analysis`, `tree-sitter`, `rust`, `cli`, `graph`
 
 
 <p align="center">
