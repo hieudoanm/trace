@@ -40,9 +40,6 @@ impl NodeFilter {
                 return false;
             }
         }
-        if self.exported_only && node.exported != Some(true) {
-            return false;
-        }
-        true
+        !(self.exported_only && node.exported != Some(true))
     }
 }
