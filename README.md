@@ -1,11 +1,29 @@
-# Tracers
+# tracers
 
 [![CI](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 
-<img src="assets/images/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="1280" height="640" style="max-width: 100%; height: auto;">
+<p align="center">
+  <img src="assets/branding/png/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="720">
+</p>
 
 Tracers is a high-performance, multi-language code intelligence and graph analysis tool. It analyses source code repositories and builds a unified graph of their internal structure and relationships, enabling developers to understand codebase organization, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
+
+## Table of Contents
+
+- [Features](#features)
+- [Get Started](#get-started)
+- [Usage](#usage)
+- [Interactive Visual Graph Explorer](#interactive-visual-graph-explorer)
+- [CLI Reference](#cli-reference)
+- [Architecture](#architecture)
+- [Language Support](#language-support)
+- [Configuration](#configuration)
+- [Graph Schema](#graph-schema)
+- [Development](#development)
+- [Contributing](#contributing)
+- [Acknowledgments](#acknowledgments)
+- [License](#license)
 
 ## Features
 
@@ -22,7 +40,7 @@ Tracers is a high-performance, multi-language code intelligence and graph analys
 - **Graph validation**: `tracers validate` checks every edge references an existing node
 - **Local analysis**: No cloud services or external APIs required
 
-## Installation
+## Get Started
 
 ### From a release binary
 
@@ -58,7 +76,7 @@ cargo build --release
 - Rust 1.85 or later
 - Cargo (comes with Rust)
 
-## Quick Start
+## Usage
 
 ### Scan a repository
 
@@ -550,10 +568,6 @@ cargo run -- scan /path/to/repo
 
 Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
 ## Acknowledgments
 
 Tracers uses:
@@ -561,3 +575,7 @@ Tracers uses:
 - [tree-sitter](https://tree-sitter.github.io/) for incremental syntax parsing
 - [petgraph](https://github.com/petgraph/petgraph) for graph algorithms
 - [serde](https://serde.rs/) for serialization
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
