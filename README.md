@@ -2,10 +2,16 @@
 
 [![CI](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml/badge.svg?branch=master)](https://github.com/hieudoanm/tracers/actions/workflows/ci.yml?branch=master)  [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+keywords: `code-analysis`, `static-analysis`, `tree-sitter`, `rust`, `cli`, `graph`
+
 
 <p align="center">
   <img src="assets/branding/png/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="720">
 </p>
+
+**Live demo:** <https://hieudoanm.github.io/tracers/>
+
+![tracers demo](assets/demo/gif/demo.gif)
 
 Tracers is a high-performance, multi-language code intelligence and graph analysis tool. It analyses source code repositories and builds a unified graph of their internal structure and relationships, enabling developers to understand codebase organization, follow function call chains, inspect dependencies, explore symbol references, and determine the impact of code changes.
 

@@ -30,7 +30,14 @@ elif [ "$ARCH" = "arm64" ] || [ "$ARCH" = "aarch64" ]; then
   ARCH="aarch64"
 fi
 
-BINARY_URL="https://github.com/${REPO}/releases/latest/download/tracers-${OS}-${ARCH}"
+case "$OS" in
+  linux)  TRIPLE="${ARCH}-unknown-linux-gnu" ;;
+  darwin) TRIPLE="${ARCH}-apple-darwin" ;;
+  *)      TRIPLE="x86_64-pc-windows-msvc" ;;
+esac
+
+BINARY_URL="https://github.com/${REPO}/releases/latest/download/tracers-${TRIPLE}"
+[[ "$OS" != "linux" && "$OS" != "darwin" ]] && BINARY_URL="${BINARY_URL}.exe"
 TMP_BIN="$(mktemp -t tracers)"
 if command -v curl >/dev/null 2>&1 \
   && curl -fsSL "$BINARY_URL" -o "${TMP_BIN}" 2>/dev/null \
