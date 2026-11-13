@@ -5,9 +5,7 @@
 Topics: `code-analysis`, `static-analysis`, `tree-sitter`, `rust`, `cli`, `graph`
 
 
-<p align="center">
-  <img src="assets/branding/png/og.png" alt="Tracers — Code Intelligence Graph Analysis" width="720">
-</p>
+![Tracers — Code Intelligence Graph Analysis](assets/branding/png/og.png)
 
 **Live demo:** <https://hieudoanm.github.io/tracers/>
 
@@ -358,7 +356,7 @@ Validate graph integrity: every edge must reference an existing node. Fails if a
 
 ## Architecture
 
-<img src="assets/images/logo.png" alt="Tracers logo" width="120" height="120" align="right" style="margin: 0 0 1em 1em;">
+![Tracers logo](assets/images/logo.png)
 
 Tracers is organized as a Rust workspace with the following crates:
 
