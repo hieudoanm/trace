@@ -7,6 +7,7 @@ import SectionHead from '@/components/molecules/SectionHead';
 import Terminal from '@/components/molecules/Terminal';
 import {
   LuActivity,
+  LuBot,
   LuBoxes,
   LuCrosshair,
   LuGlobe,
@@ -50,6 +51,11 @@ const FEATURES: Feature[] = [
     icon: LuZap,
     title: 'Fast & incremental',
     body: 'Parallel parsing with per-worker parsers and a content-addressed syntax cache — rescans only re-parse what changed.',
+  },
+  {
+    icon: LuBot,
+    title: 'MCP server',
+    body: 'tracers mcp exposes the whole graph — callers, callees, deps, impact, cycles — to MCP clients like Claude Desktop and Cursor over stdio.',
   },
 ];
 
