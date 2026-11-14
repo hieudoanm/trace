@@ -1,6 +1,7 @@
 //! Tracers CLI entry point.
 
 mod cli;
+mod mcp;
 
 use std::process::exit;
 
@@ -56,9 +57,15 @@ fn run() -> Result<()> {
     } else {
         EnvFilter::new("warn")
     };
-    fmt().with_env_filter(filter).init();
+    let builder = fmt().with_env_filter(filter);
+    if matches!(cli.command, Commands::Mcp) {
+        builder.with_writer(std::io::stderr).init();
+    } else {
+        builder.init();
+    }
 
     match cli.command {
+        Commands::Mcp => mcp::run().map_err(Into::into),
         Commands::Scan {
             path,
             output,

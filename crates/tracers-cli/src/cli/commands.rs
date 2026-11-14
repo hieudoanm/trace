@@ -284,6 +284,8 @@ pub enum Commands {
         #[arg(long)]
         graph: Option<PathBuf>,
     },
+    /// Run an MCP server over stdio JSON-RPC.
+    Mcp,
     /// Report graph statistics.
     Stats {
         /// Repository path to scan (defaults to current directory).
